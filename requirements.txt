@@ -1,0 +1,5 @@
+# local dataset tooling only. training deps live in train.ipynb (colab installs its own).
+anthropic>=0.40.0
+
+# gen_anchors.py and the fetch/filter/build stages are pure stdlib on purpose —
+# only `gen_bulk.py rewrite` needs the sdk above.

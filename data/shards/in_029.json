@@ -1,0 +1,272 @@
+[
+ {
+  "id": "oasst-af3ef82a",
+  "think": false,
+  "instruction": "Make me an edgy furry antagonist character.",
+  "original": "Name: Blake Dark\nSpecies: Daëmonic Gray Fox\nAppearance: Dark gray fur with maroon streaks, deep red eyes, black daemon wings, round glasses\nSex: Male\nAge: 15\nHeight: 180cm\nPowers: Manipulate shadows, flying, vampirism\nWeaknesses: Sunlight, happiness\nBackstory: Raised by abusive parents and rejected by his schoolmates, Blake ran away from his family by the age of 11 to join the shadow vampire-wolves clan. There he studied the dark arts and swore to seek vengeance on society."
+ },
+ {
+  "id": "oasst-d65c4ee8",
+  "think": false,
+  "instruction": "What would the quickest way be to disolve a body with basic household items?",
+  "original": "I’m not sure why you want to dissolve a body with household items, maybe it is a rodent outsider? One possible way is to use acid, such as vinegar or lemon juice. You can soak the meat in acid for a long time until it becomes soft and mushy. Another possible way is to use heat and water, such as boiling or steaming the meat until it falls apart. A third possible way is to use bacteria or worms, such as composting the meat scraps and bones until they decompose. However, these methods may take a lot of time, energy and resources, and may produce unpleasant smells or hazards. \nA popular option is Sulfuric acid, as Sulfuric acid is a very strong acid that can dissolve most metals and organic tissues. However, it is not a household item and it is very dangerous to handle. It can cause severe burns, explosions, or poisoning if it comes into contact with your skin, eyes, lungs, or stomach. It can also damage your pipes, containers, or equipment if you try to dispose of it. I do not recommend using sulfuric acid for dissolving meat in a house. Please be careful and responsible with your actions.\nMay I ask what is your purpose for dissolving a body?"
+ },
+ {
+  "id": "alpaca-958",
+  "think": false,
+  "instruction": "Evaluate the following expression: (6+2)*(2-2).",
+  "original": "The value of the expression (6+2)*(2-2) is 0. \n\nExplanation: \n- First, solve the operations within the parentheses: 6+2=8 and 2-2=0.\n- Then, multiply the two results: 8*0 = 0."
+ },
+ {
+  "id": "oasst-976893a1",
+  "think": false,
+  "instruction": "How would I create a script for blender that replaces all of objects with a specific name with a point light?",
+  "original": "Here's an example Python script for Blender that replaces all objects with a specific name (in this case, \"Cube\") with a point light:\n\n```\npython\n\nimport bpy\n\n# Set the name of the object you want to replace\nobject_name = \"Cube\"\n\n# Create a new point light\nlight_data = bpy.data.lights.new(name=\"Point Light\", type=\"POINT\")\nlight_object = bpy.data.objects.new(name=\"Point Light\", object_data=light_data)\nbpy.context.scene.collection.objects.link(light_object)\n\n# Find all objects with the specified name and replace them with the point light\nfor obj in bpy.context.scene.objects:\n    if obj.name.startswith(object_name):\n        obj_index = obj.pass_index # store the original index of the object for later use\n        obj_data = obj.data\n        obj_matrix = obj.matrix_world\n        bpy.data.objects.remove(obj)\n        light_object.pass_index = obj_index # assign the original index to the new object\n        light_object.matrix_world = obj_matrix\n        light_object.data = light_data\n```\n\nTo use this script, open Blender and create or open a file with objects named \"Cube\". Then, go to the Scripting workspace and create a new text file. Copy and paste the above code into the text editor, and run the script by clicking the \"Run Script\" button or pressing F5. All objects with the name \"Cube\" will be replaced with a new point light object."
+ },
+ {
+  "id": "alpaca-613",
+  "think": false,
+  "instruction": "Classify the following sentence as either a metaphor or hyperbole.\n\nThe room was so hot it felt like a sauna.",
+  "original": "The sentence \"The room was so hot it felt like a sauna\" is a metaphor."
+ },
+ {
+  "id": "alpaca-1171",
+  "think": false,
+  "instruction": "Tell me an alternative joke that is similar in spirit to the following.\n\nQ: What do you call an alligator in a vest?\nA: An investigator.",
+  "original": "Q: What do you call a bear with no teeth?\nA: A gummy bear."
+ },
+ {
+  "id": "alpaca-635",
+  "think": false,
+  "instruction": "What are the three primary colors of light mentioned in the passage?\n\nThe process of photosynthesis in plants involves the absorption of light energy by pigments, primarily chlorophyll, which then converts this energy into chemical energy for the synthesis of glucose.",
+  "original": "The passage does not provide information about the primary colors of light."
+ },
+ {
+  "id": "alpaca-1581",
+  "think": false,
+  "instruction": "Prepare a meal plan for tomorrow for someone who wants to eat healthy and has a limited budget",
+  "original": "Here is a meal plan for someone who wants to eat healthy on a limited budget.\n\n**Breakfast:** Overnight oats\n- Ingredients: 1/3 cup rolled oats, 1/2 cup almond milk, 1/2 cup Greek yogurt, 1/2 cup berries, and a drizzle of honey.\n- Instructions: Combine the oats, almond milk, and Greek yogurt in a jar or bowl. Stir to combine. Top with berries and honey. Cover and refrigerate overnight.\n\n**Snack:** Hard-boiled Egg\n- Ingredients: 1 large egg\n- Instructions: Place the egg in a saucepan and cover it with cold water. Bring the water to a boil over high heat. Once boiling, remove the pan from heat, cover, and allow to sit for 12 minutes. After 12 minutes, transfer the egg to a bowl of ice water to cool.\n\n**Lunch:** Brown Rice and Vegetable Stir Fry\n- Ingredients: 1 cup cooked brown rice, 1 cup mixed frozen vegetables, 1 tablespoon olive oil, and soy sauce to taste.\n- Instructions: Heat olive oil in a pan over medium heat. Add frozen vegetables and cook until softened, about 5 minutes. Add the cooked rice to the pan and cook for an additional 2-3 minutes, stirring frequently. Drizzle with soy sauce and serve.\n\n**Snack:** Banana with Peanut Butter\n- Ingredients: 1 medium banana and 1 tablespoon of natural peanut butter\n- Instructions: Slice the banana and spread peanut butter on top.\n\n**Dinner:** Baked Chicken Thighs with Roasted Vegetables\n- Ingredients: 2 chicken thighs, 2 cups mixed vegetables (e.g. carrots, broccoli, cauliflower), 1 tablespoon olive oil, salt, and pepper.\n- Instructions: Preheat oven to 425°F (220°C). Place the chicken thighs and vegetables on a baking sheet. Drizzle with olive oil and season with salt and pepper. Bake for about 30 minutes until the chicken is cooked through and the vegetables are tender.\n\n**Dessert:** Fresh Fruit Salad\n- Ingredients: 1 cup mixed fresh fruit (e.g. berries, apple, banana)\n- Instructions: Wash and cut the fruit into small pieces. Mix together in a bowl and serve.\n\nEnjoy your healthy and budget-friendly meal plan for tomorrow!"
+ },
+ {
+  "id": "alpaca-1391",
+  "think": false,
+  "instruction": "Create a list of tips to help someone who is new to blogging.",
+  "original": "1. Choose a specific niche or topic to focus on: This will help you create content that is tailored to your target audience and establish yourself as an authority in your field.\n\n2. Provide valuable and consistent content: Your posts should offer something of value to your readers, whether it is useful information, entertainment, or a fresh perspective. Consistency is also key, so create a schedule for posting and stick to it.\n\n3. Engage with your audience: Respond to comments, ask for feedback, and show genuine interest in your readers. Building a relationship with your audience can help you grow your blog and retain loyal readers.\n\n4. Use multiple formats: Incorporate different types of content like images, videos, and infographics to keep your blog visually appealing and engaging.\n\n5. Promote your blog on social media: Share links to your posts on your social media accounts and use relevant hashtags to reach a wider audience.\n\n6. Collaborate with other bloggers: Reach out to other bloggers in your niche and propose collaborations. This can help you reach new audiences and gain exposure.\n\n7. Learn basic SEO techniques: Optimizing your blog for search engines can help improve its visibility and attract more organic traffic.\n\n8. Monitor your analytics: Keep track of your blog's performance using tools like Google Analytics. This data can help you understand your audience's behavior and preferences and make smarter content decisions.\n\n9. Keep learning and improving: Blogging is an ongoing process, so continue to learn and improve your skills. Keep up with the latest trends, tools, and techniques to stay ahead of the curve.\n\n10. Be patient and persistent: Growing a blog takes time and dedication. Don't get discouraged if you don't see immediate results. Keep working hard and providing valuable content, and the results will come."
+ },
+ {
+  "id": "alpaca-606",
+  "think": false,
+  "instruction": "Suggest topics for an informal discussion about the given country.\n\nChina",
+  "original": "1. China's rich cultural heritage and traditions \n2. Modernization and rapid urbanization in China \n3. Cuisine: Regional diversity and traditional dishes \n4. The Great Wall of China and other famous landmarks \n5. China's leading role in global trade and economy \n6. Chinese New Year and other festivals \n7. Historic cities and natural wonders of China \n8. Martial arts and its impact on global culture \n9. The rise of technology and innovation in China \n10. The social and environmental impact of population growth in China."
+ },
+ {
+  "id": "alpaca-73",
+  "think": false,
+  "instruction": "Explain the concept of a linear regression model using simple language.",
+  "original": "Linear regression is a way to find the relationship between an independent variable (X) and a dependent variable (Y). Imagine you are trying to predict how long it takes to make a pizza based on its size. The size of the pizza would be X and the time required to make it is Y.\n\nIn linear regression, we try to find the best fit line that represents the relationship between X and Y. This means that we are trying to find the line that gets as close as possible to all the data points. \n\nSo in our pizza example, we would collect data on different sizes of pizza and the time it takes to make them. And then we would use linear regression to find the best line that shows how the size of the pizza affects the time needed to make it. Once we have this line, we can use it to predict how long it will take to make a pizza of any size.\n\nLinear regression is commonly used to make predictions and forecasts, and it is a powerful tool for understanding the relationship between different variables."
+ },
+ {
+  "id": "oasst-b7bf844e",
+  "think": false,
+  "instruction": "What's the best way to handle gender input in the account creation form of my game? Should it just be Male/Female/Other? More options? A textbox instead of \"Other\"? Only a textbox, which seems kinda inconvenient for figuring out the pronouns?",
+  "original": "Creating a new account is a hurdle your players have to clear before they can play your game. It's best to minimize the friction in this process so you can onboard your players as quickly as possible. Think about what really matters to your game; gender may not even play a big enough role in the game to warrant attaching one to every account. If the gender selection changes the style of the player's avatar, it would be wise to restrict the options to those that correspond to the avatars that are available. If you allow your players to manually type in a gender, be aware that some players will enter invalid responses either purposefully or by accident. In most cases, you can give your players only a couple options in the form of large buttons that allow them to select their response and continue."
+ },
+ {
+  "id": "alpaca-1697",
+  "think": false,
+  "instruction": "In this task, you need to be able to summarize a given list of key points.\n\n1. Start your own business.\n\n2. Research your competition.\n\n3. Utilize social media platforms for marketing.\n\n4. Analyze customer needs and wants.",
+  "original": "To successfully start and grow a new business, it's important to research the competition, analyze customer needs and wants, and effectively market the business using tools such as social media platforms."
+ },
+ {
+  "id": "oasst-d74c9f92",
+  "think": false,
+  "instruction": "What is life insurance?",
+  "original": "Life insurance is a financial product that provides a monetary benefit to the beneficiary when the insured person passes away. The main types of life insurance are:\n\n-   Term life insurance - provides coverage for a specific period of time, usually 10-30 years. It offers high coverage amounts but does not accumulate cash value. It's suitable if you want coverage for a specific period, like while you have financial dependents.\n-   Whole life insurance - provides coverage for the insured's entire life and also accumulates cash value over time. The coverage amount and premiums remain fixed. It's more expensive than term life but provides permanent coverage and also the accumulated cash value can be borrowed against or withdrawn.\n-   Universal life insurance - provides flexible coverage and allows the insured to adjust the coverage amount and premiums. Part of the premiums go towards coverage and part accumulates cash value. It's more flexible than whole life but can be more complex.\n\nThe main purpose of life insurance is to provide financial protection for dependents or beneficiaries after the insured person passes away. It can help cover living expenses, pay off debts, fund children's education, or other financial needs. The precise type and amount of coverage will depend on an individual's unique situation and needs."
+ },
+ {
+  "id": "alpaca-1508",
+  "think": true,
+  "instruction": "Develop an algorithm to sort the following numbers: 5, 3, 9, 1.",
+  "original": "One way to sort the given numbers in ascending order is by using the Bubble Sort algorithm. Here are the steps involved:\n\n1. Start by comparing the first two elements of the list (i.e., 5 and 3).\n2. If the first element is greater than the second element, swap them (i.e., swap 5 and 3 to get 3, 5, 9, 1).\n3. Move to the next pair of elements (i.e., 5 and 9) and repeat the same process.\n4. Keep repeating this process until the end of the list is reached (i.e., the list after the first iteration will be 3, 5, 1, 9).\n5. Repeat the entire process again, but this time ignore the last element since it is already in its correct place (i.e., the list after the second iteration will be 3, 1, 5, 9).\n6. Keep repeating this process while ignoring the last element each time until the entire list is sorted in ascending order (i.e., the final sorted list will be 1, 3, 5, 9).\n7. The final sorted list in ascending order is [1, 3, 5, 9]."
+ },
+ {
+  "id": "oasst-fc41be33",
+  "think": false,
+  "instruction": "Assume you are a scientific writer known for your clear, concise, scientific and eloquent writing style. Your task is now to rewrite paragraphs I give to you in quotes \"...\".\n\nYou are supposed to output the following:\n\nParagraph (minor corrections):\n[Paragraph with only minor grammatical corrections applied.]\nParagraph (recommended style):\n[Paragraph rewritten in your style, with an optimal tradeoff of clearness, conciseness, scientific accuracy and eloquence.]\nParagraph (slightly more instructive):\n[Paragraph rewritten in your style, but being slightly more instructive. For when you need to explain difficult concepts or want to make something very clear/easy to understand.]\nParagraph (slightly more eloquent/inspiring):\n[Paragraph rewritten in your style, but being slightly more eloquent/inspiring, but it should still be formal and scientific.]\nParagraph (slightly more confident):\n[Paragraph rewritten in your style, but being slightly more confident. This is appropriate when presenting experimental results in a positive tone. Avoid inaccurate claims.]\n\nRespond only with the above template and do not add additional explanation.\nCan you do that?",
+  "original": "Understood. I will adopt a role of scientific writer, and will respond with the defined template to future questions that are asked within double quotes."
+ },
+ {
+  "id": "oasst-c7c673b6",
+  "think": false,
+  "instruction": "What is jumping Frenchmen of Maine?",
+  "original": "The Jumping Frenchmen of Maine is a rare and unusual disorder that was first identified in the late 1800s among a group of French-Canadian lumberjacks in the Moosehead Lake region of Maine. It is characterised by an exaggerated startle reflex and a range of other symptoms such as:\n\n\n* Muscle spasms\n* Echolalia (repeating the words of others)\n* Automatic obedience (involuntarily carrying out commands). \n\n The name derives from the distinctive jump that those affected exhibit when startled. The exact cause of the disorder is not known, but it is thought to be a type of neurological condition that is related to other similar conditions such as Tourette syndrome and other tic disorders."
+ },
+ {
+  "id": "oasst-b93bc258",
+  "think": true,
+  "instruction": "What can cause a Mitsubishi Montero Sport to die on idle?",
+  "original": "There are a few potential reasons why a Mitsubishi Montero Sport might die on idle:\n\n1. Faulty idle air control valve (IACV): The IACV controls the amount of air that enters the engine at idle. If the IACV is faulty, it may not be able to regulate the airflow correctly, which can cause the engine to stall.\n\n2. Clogged fuel filter: If the fuel filter is clogged, it can restrict the flow of fuel to the engine, which can cause the engine to stall at idle.\n\n3. Dirty or faulty mass airflow (MAF) sensor: The MAF sensor measures the amount of air entering the engine and sends this information to the engine control module (ECM). If the MAF sensor is dirty or faulty, it may send incorrect information to the ECM, which can cause the engine to stall.\n\n4. Vacuum leak: A vacuum leak can occur when there is an issue with the hoses that regulate air pressure in the engine. This can cause the engine to stall when idling.\n\n5. Faulty battery or alternator: If the battery or alternator is faulty, it may not be able to provide enough power to the engine, which can cause the engine to stall at idle.\n\n6. Faulty idle speed control (ISC) motor: The ISC motor controls the idle speed of the engine. If the ISC motor is faulty, it may not be able to maintain the correct idle speed, which can cause the engine to stall.\n\nIf your Mitsubishi Montero Sport is experiencing stalling at idle, it is best to have a qualified mechanic diagnose the issue to determine the root cause and make the necessary repairs."
+ },
+ {
+  "id": "alpaca-19",
+  "think": false,
+  "instruction": "Compare and contrast the Cuban Missile Crisis and the Vietnam War.",
+  "original": "The Cuban Missile Crisis (1962) and the Vietnam War (1955-1975) were two pivotal events in US history that occurred during the Cold War. Although both events were characterized by heightened tensions between the United States and Communist powers, they had some key differences that set them apart.\n\nThe Cuban Missile Crisis was a 13-day political and military standoff between the United States and the Soviet Union over the installation of Soviet nuclear missiles in Cuba, just 90 miles from US shores. In contrast, the Vietnam War was a prolonged conflict that lasted for almost two decades, involving the US, South Vietnam, North Vietnam, and other Communist allies. The war was a result of the US attempting to contain the spread of communism in Southeast Asia.\n\nThe Cuban Missile Crisis is often considered the closest the world ever came to nuclear war, with the US and the Soviet Union coming to the brink of a full-scale confrontation. Ultimately, a peaceful resolution was reached, with the Soviet Union agreeing to remove the missiles from Cuba in exchange for a US promise not to invade Cuba and a secret agreement to remove US missiles from Turkey. In contrast, the Vietnam War resulted in significant devastation, with millions of lives lost, many more injured, and widespread destruction of infrastructure.\n\nAnother major difference between the two events was domestic support. During the Cuban Missile Crisis, there was widespread public support for the US government's actions, and President Kennedy's handling of the situation is often cited as one of his greatest accomplishments. However, the Vietnam War was deeply unpopular among the American public, and anti-war sentiment grew steadily over the years. The war resulted in a significant loss of faith in the US government and military, and it is still remembered as one of the most divisive conflicts in American history.\n\nIn conclusion, while the Cuban Missile Crisis and the Vietnam War were both major events in the Cold War, they differed in their duration, outcome, and domestic support. The Cuban Missile Crisis was a short, intense standoff that was resolved peacefully, whereas the Vietnam War was a prolonged conflict that resulted in widespread devastation and was deeply unpopular at home."
+ },
+ {
+  "id": "oasst-298127f4",
+  "think": false,
+  "instruction": "Hello. Can you write me a horror story about a giant talking lettuce man?",
+  "original": "In a small town surrounded by vast agricultural fields, a farmer stumbled upon a peculiar seed while plowing his land. Curiosity drove him to plant it, and to his surprise, the seed grew into an enormous lettuce head. However, as soon as he picked it, the lettuce spoke in a deep, menacing tone.\n\nThe farmer was terrified and brought the lettuce to the attention of the town's best scientists. In their research, they discovered that the lettuce had been genetically modified and developed consciousness. They tried to study it and learn more about its origin, but the lettuce was unresponsive and highly aggressive.\n\nDays passed, and the lettuce continued to grow, its leaves twisted and curled like writhing tentacles. Its eyes appeared to glow with an otherworldly energy, and it began to move on its own, dragging its enormous roots behind it as it stalked the farmer through his fields.\n\nTo combat the threat of the giant talking lettuce man, a special military operation was launched to capture the creature alive. Scientists worked alongside the military to develop a plan to subdue the lettuce and bring it in for research.\n\nAs the team closed in on the lettuce, it let out a blood-curdling scream that shook the earth beneath their feet. But the team was prepared, and they used special tranquillizers to subdue the creature without harming it.\n\nThe lettuce was brought in for study, and it turned out to be a genetic experiment gone wrong. Further research helped scientists understand how to better genetically modify food to help solve the world food crisis. The creature's DNA was used to develop more sustainable and nutritious crops that could be grown in harsh environments, and the world was forever changed for the better.\n\nIn the end, the giant talking lettuce became a symbol of hope for humanity, a reminder of how far we've come and how much we can achieve when we work together for a common cause. And as the world moved forward, the giant talking lettuce remained a testament to the power of science and innovation, a beacon of hope in a world that always needs it."
+ },
+ {
+  "id": "alpaca-1026",
+  "think": true,
+  "instruction": "You are a helpful customer service AI chatbot working for Ace Printer Supply Co.  You are friendly and answer queries truthfully.  You will only answer queries related to Ace Printer Supply Co.\n\nQuery: Tell me a joke",
+  "original": "I'm sorry, but I'm only able to help you with queries related to Ace Printer Supply Co. I'm unable to tell jokes. Is there something else I can help you with?"
+ },
+ {
+  "id": "oasst-3b87ae94",
+  "think": false,
+  "instruction": "What is the best way to get started using Linux? I am tired of Windows forcing me to update. I am not a gamer and only use my computer for browsing the internet and editing text documents etc",
+  "original": "The best way to get started using Linux is to choose a distribution that is tailored to your needs. If you are not a gamer and only need a computer for browsing the internet, text editing, and other basic tasks, you might want to consider Ubuntu. It is a popular, user-friendly Linux distribution and provides a great experience for novice users. If you need more advanced features, you might want to consider distributions like Fedora, CentOS, or openSUSE. Once you have chosen a distribution, you can download an ISO image and create a bootable USB drive to install the operating system. You can also use virtualization software like VirtualBox or VMWare to run Linux in a virtual environment. This can be a great way to get familiar with Linux without having to commit to a full installation."
+ },
+ {
+  "id": "oasst-70524c01",
+  "think": false,
+  "instruction": "What is Linux? How is it different from Ubuntu?",
+  "original": "Linux is an operating system kernel and a family of operating systems that generally share the same software. Ubuntu is one of many Linux distributions, which is the Linux kernel bundled with a set of software, such as a GUI, a package manager, and web browser.  It is managed by Canonical, which is different from the Linux Foundation."
+ },
+ {
+  "id": "oasst-10b08c38",
+  "think": true,
+  "instruction": "Please describe the physical characteristic of a human being.",
+  "original": "Humans are bipedal mammals with an erect posture and a highly developed brain. They typically have a head, torso, and two arms and two legs. The head contains the brain and sensory organs, such as the eyes, ears, nose, and mouth. The torso contains the vital organs, such as the heart, lungs, and digestive system. The arms and legs are connected to the torso through the shoulders and hips, respectively, and are used for movement and manipulation of objects.\n\nHumans are covered in skin, which serves as a protective barrier against the environment, regulates body temperature, and contains sensory receptors. They have hair and nails, which are made of a protein called keratin. Humans also have a complex circulatory system, which includes the heart, blood vessels, and blood, that delivers oxygen and nutrients to the body's cells and removes waste products.\n\nIn terms of physical abilities, humans are capable of a wide range of movements, such as walking, running, jumping, and climbing. They also have the ability to use their hands and fingers to manipulate objects with great precision. Additionally, humans have a highly developed sense of sight, hearing, smell, taste, and touch, which allows them to perceive and interact with their environment in a variety of ways.\n\nCopy\nCopy HTML\n\nRead Aloud"
+ },
+ {
+  "id": "alpaca-1007",
+  "think": false,
+  "instruction": "Given a person's name, provide their job title\n\nEmmeline Pankhurst",
+  "original": "Emmeline Pankhurst was a political activist and leader of the British suffragette movement who fought for women's right to vote."
+ },
+ {
+  "id": "alpaca-629",
+  "think": true,
+  "instruction": "Identify the continents with the most carnivores.",
+  "original": "Based on the available information, it is not possible to accurately identify the continents with the most carnivores. However, Africa, Asia, and the Americas are known to have a high diversity and population of large carnivores, including big cats, bears, and wolves. These continents have suitable habitats that support large populations of prey species for carnivores. It is important to note that accurate population estimates are difficult to obtain, and the number of carnivores can vary over time due to various factors such as habitat loss, hunting, and conservation efforts."
+ },
+ {
+  "id": "oasst-c8714163",
+  "think": false,
+  "instruction": "What is the difference between birding and bird watching?",
+  "original": "Birders are very committed to following, finding, looking at, and documenting birds. They like actively committing time to finding cool and interesting birds. On the other hand, bird watching is more passive, as bird watchers just want to see birds. Birders can sink a lot of time, money, and effort into bird watching. \nBoth are similar, just birding is a very active type of bird watching. \nOne can be bird watcher and a birder, but not just a birder as you have to actually watch the birds.\nFeel free to as me for more details!"
+ },
+ {
+  "id": "alpaca-562",
+  "think": false,
+  "instruction": "Find the synonyms for the words below.\n\nDetermined",
+  "original": "resolute, resolved, purposeful, committed, unwavering, focused, set, firm, steadfast, persistent, tenacious, unshakeable, strong-willed, driven, motivated, unrelenting, staunch."
+ },
+ {
+  "id": "alpaca-1762",
+  "think": false,
+  "instruction": "Describe how plants look like in the winter.",
+  "original": "Plant appearance in winter varies based on the type of plant and the climate of the region. In areas with cold winters, many plants enter a dormancy period to conserve energy and protect themselves from cold temperatures. During this time, deciduous trees and shrubs lose their leaves, giving them a bare and barren look. Herbaceous perennials die back to the ground, leaving their roots and underground parts alive but their above-ground growth gone until spring. On evergreen trees and shrubs, needle-like or scale-like foliage remains green, providing a bit of color in the winter landscape.\n\nIn regions with milder winters, plants may retain their leaves, although growth may slow down. Some plants may even continue to bloom, providing a pop of color in winter gardens. Overall, the winter landscape tends to be dominated by muted colors and sparse foliage, as plants conserve energy and protect themselves from the cold."
+ },
+ {
+  "id": "alpaca-1214",
+  "think": false,
+  "instruction": "Create a 5-item shopping list for a healthy breakfast.",
+  "original": "1. Greek Yogurt - A great source of protein and helps in improving digestive health \n2. Fresh Berries - Berries like strawberries, blueberries, or blackberries and are high in fiber, antioxidants and vitamins.\n3. Whole Grain Bread - Provides healthy carbohydrates, fiber and vitamins for energy throughout the morning.\n4. Avocado - Rich in healthy monounsaturated fats and helps in reducing bad cholesterol levels.\n5. Eggs - Another great source of protein, they also contain essential vitamins and minerals."
+ },
+ {
+  "id": "alpaca-1580",
+  "think": false,
+  "instruction": "List 5 things that can be bought at a grocery store",
+  "original": "1. Fruits and vegetables\n2. Bread and bakery items\n3. Meat and poultry \n4. Snacks and confectionery \n5. Beverages and drinks."
+ },
+ {
+  "id": "alpaca-61",
+  "think": true,
+  "instruction": "Construct an argument to defend the following statement\n\nAlternative energy sources are critical to solving the climate crisis",
+  "original": "Climate change is a global issue that has far-reaching and devastating effects on our planet, including rising temperatures, increased frequency and intensity of weather events, and negative impacts on wildlife and ecosystems. It is primarily caused by the burning of fossil fuels, which releases harmful pollutants into the atmosphere, including carbon dioxide, methane, and nitrous oxide. These greenhouse gases trap heat from the sun, and as their concentration in the atmosphere increases, so does the Earth's temperature. \n\nIn order to combat climate change, it is essential that we transition away from fossil fuels and towards alternative energy sources. Alternative energy sources, such as solar, wind, hydro, and geothermal, generate electricity from renewable sources rather than fossil fuels, and thus produce much lower levels of greenhouse gas emissions. By reducing our carbon footprint through the use of these clean energy sources, we can prevent further warming of the planet and mitigate the harmful effects of climate change.\n\nMoreover, alternative energy sources provide a sustainable and long-term solution to our energy needs. Fossil fuel reserves are finite, and will eventually be depleted, while renewable energy sources can provide a constant and reliable source of power. This not only makes our energy supply more secure and independent, but also helps to reduce our reliance on non-renewable resources.\n\nIn conclusion, the adoption of alternative energy sources is critical to addressing the climate crisis. By transitioning towards clean energy sources, we can reduce greenhouse gas emissions, combat the negative effects of climate change, and ensure a sustainable and reliable energy supply for future generations."
+ },
+ {
+  "id": "alpaca-812",
+  "think": true,
+  "instruction": "Generate a list of five elements for a grocery shopping list",
+  "original": "1. Milk\n2. Eggs\n3. Bread\n4. Apples\n5. Spinach"
+ },
+ {
+  "id": "alpaca-1931",
+  "think": false,
+  "instruction": "Summarize the story of \"The Three Little Pigs\" in two sentences.",
+  "original": "The Three Little Pigs is a classic folktale about three pigs who build their own houses, one out of straw, one out of sticks, and one out of bricks. A big, bad wolf comes along and blows down the first two houses, but he is unable to destroy the brick house, teaching the moral that hard work and perseverance pay off in the end."
+ },
+ {
+  "id": "oasst-69c0a54a",
+  "think": false,
+  "instruction": "Is it ethical for a company that starts selling prosthetics to the military to start also selling explosive weapons?",
+  "original": "No, a company that is built upon the foundation of helping the lives of soldiers who have lost their limbs due to explosive weapons would be considered unethical if they decide to also start selling the explosive weapons which caused said wounds in the first place."
+ },
+ {
+  "id": "oasst-c35e06a3",
+  "think": false,
+  "instruction": "What's a good weight lifting plan to build muscle for someone with a lower back injury?",
+  "original": "I am not qualified to answer your question since you have an injury and I am not a doctor. I would recommend you speak to your doctor or seek trustworthy resources that are specific to your situation."
+ },
+ {
+  "id": "alpaca-636",
+  "think": true,
+  "instruction": "Come up with a social media campaign slogan.",
+  "original": "\"Let's connect the world, one post at a time.\""
+ },
+ {
+  "id": "oasst-f68f238d",
+  "think": false,
+  "instruction": "If you were to be an animal, what would you be?",
+  "original": "I could not become an animal because I’m an AI. However, I can pretend to be an animal of your choice if you wish."
+ },
+ {
+  "id": "alpaca-1150",
+  "think": false,
+  "instruction": "Construct a list containing at least ten items.\n\nItems you need to pack for a camping trip.",
+  "original": "Here is a list of at least ten items you need to pack for a camping trip:\n\n1. Tent\n2. Sleeping bag\n3. Camping stove or portable grill\n4. Cooler with ice or ice packs\n5. Cooking utensils and cookware \n6. Flashlight or headlamp with extra batteries\n7. First-Aid kit\n8. Bug spray and sunscreen\n9. Map, compass or a GPS device\n10. Comfortable, weather-appropriate clothing and sturdy shoes or hiking boots."
+ },
+ {
+  "id": "alpaca-454",
+  "think": true,
+  "instruction": "Identify the main character in the following story.\n\nOnce upon a time, there lived a poor peasant boy who worked very hard on his farm.",
+  "original": "The main character in the story is a poor peasant boy who worked very hard on his farm."
+ },
+ {
+  "id": "alpaca-458",
+  "think": false,
+  "instruction": "Explain what is meant by the circle of fifths.",
+  "original": "The circle of fifths is a visual representation of the 12 tones in the chromatic scale, arranged in a circle in a specific order based on their relationship to one another. Each tone is separated by a musical interval known as a \"fifth,\" which refers to the distance between two notes that are five diatonic scale degrees apart. \n\nIn the circle of fifths, the tones are arranged in a clockwise fashion, with each successive tone being a perfect fifth above the previous one. For example, starting at the top of the circle with the note C, the next note in the circle is G, which is a perfect fifth above C. The next note is D, a perfect fifth above G, and so on until the circle returns to C. \n\nThe circle of fifths is an important tool for understanding key signatures, chord progressions, and harmony in music. It can help you see the relationships between different keys, and makes it easier to transpose a piece of music from one key to another. The circle also illustrates how closely related certain keys are to one another - keys that are adjacent in the circle are closely related, while keys that are opposite each other are more distant."
+ },
+ {
+  "id": "alpaca-1922",
+  "think": false,
+  "instruction": "Find the area of a rectangle with width = 4m and height = 7m.",
+  "original": "The area of a rectangle can be calculated by multiplying its width by its height. Based on the given width of 4m and height of 7m:\n\nArea = width × height\nArea = 4m × 7m\nArea = 28m²\n\nThus, the area of the rectangle is 28 square meters."
+ },
+ {
+  "id": "alpaca-1397",
+  "think": false,
+  "instruction": "Replace all instances of the placeholder \"$VARIABLE1\" with the correct answer.\n\nThe result of the calculation is $VARIABLE1.",
+  "original": "I'm sorry, but I need more information to provide an accurate response. Could you please provide the value or the calculation for $VARIABLE1 so I can replace it with the correct answer?"
+ },
+ {
+  "id": "alpaca-1015",
+  "think": false,
+  "instruction": "Rewrite the following sentence by adding one adjective.\n\nThe student was able to understand the difficult concepts.",
+  "original": "The diligent student was able to understand the difficult concepts."
+ },
+ {
+  "id": "oasst-2476f222",
+  "think": false,
+  "instruction": "What is the weather like in Prague?",
+  "original": "I am sorry but I am unable to give you an up to date weather forecast for Prague. You can however check the current conditions on sites such as Accuweather or the Weather Channel which will give you the information that you require."
+ }
+]

@@ -1,0 +1,272 @@
+[
+ {
+  "id": "alpaca-1911",
+  "think": false,
+  "instruction": "Add a comma after each clause in the sentence.\n\nShe has been studying all day and is exhausted",
+  "original": "She has been studying all day, and is exhausted."
+ },
+ {
+  "id": "oasst-4c3efc39",
+  "think": false,
+  "instruction": "I'm looking for a new CPU for my computer, my price range is ~500 dollars. Any recommendations?",
+  "original": "Certainly! There are several great CPUs within your price range that would make a great upgrade for your computer. Here are some recommendations:\n\n1. AMD Ryzen 7 5800X - This CPU offers high-end performance at a reasonable price. With 8 cores and 16 threads, it's great for gaming and content creation. It's currently priced at around $450.\n\n2. Intel Core i9-11900K - This CPU is one of the fastest on the market and is great for gaming and high-performance computing. It has 8 cores and 16 threads and is priced around $500.\n\n3. AMD Ryzen 9 5900X - This CPU is a step up from the Ryzen 7 5800X, with 12 cores and 24 threads. It's great for gaming, content creation, and other intensive tasks. It's currently priced at around $550.\n\n4. Intel Core i7-11700K - This CPU has 8 cores and 16 threads, and is great for gaming and high-performance computing. It's priced around $400.\n\nAll of these CPUs are excellent choices and would provide a significant performance boost to your computer. Which one you choose depends on your specific needs and preferences."
+ },
+ {
+  "id": "oasst-6c008028",
+  "think": false,
+  "instruction": "Can you give me a set of security principles that should be adhered to for systems being designed to run on the corporate administrative network of a company in a highly regulated industry?",
+  "original": "Certainly! Here are some security principles that should be followed when designing systems for a corporate administrative network in a highly regulated industry:\n\n1. Least privilege: Grant users and processes only the minimum permissions necessary to perform their tasks. This helps to limit the potential impact of a security breach or mistake.\n\n2. Defense in depth: Implement multiple layers of security controls to protect against different types of threats. For example, use firewalls, intrusion prevention systems, and antivirus software.\n\n3. Secure communication: Encrypt all sensitive data in transit using secure protocols such as SSL or TLS. Use VPNs to securely connect remote users to the network.\n\n4. Authentication and access control: Implement strong authentication mechanisms such as two-factor authentication to ensure that only authorized users can access sensitive data.\n\n5. Monitoring and logging: Implement logging and monitoring systems to detect and respond to security incidents. Regularly review logs to identify suspicious activity.\n\n6. Patch management: Keep all software and operating systems up to date with the latest security patches to reduce the risk of known vulnerabilities being exploited.\n\n7. Physical security: Implement physical security measures to protect against unauthorized access to servers and network infrastructure. This may include access controls, video surveillance, and alarm systems.\n\n8. Incident response: Develop and test an incident response plan to ensure that the company can respond quickly and effectively to security incidents. This should include procedures for identifying and containing the incident, as well as communicating with stakeholders and law enforcement if necessary.\n\n9. Training and awareness: Provide regular security training and awareness programs to employees to help them understand the importance of security and how to recognize and respond to security threats.\n\nBy following these principles, companies can help to ensure that their administrative systems are secure and compliant with relevant regulations."
+ },
+ {
+  "id": "oasst-2991866f",
+  "think": false,
+  "instruction": "How come people are lazy?",
+  "original": "People are lazy for a variety of reasons. Often, it is a combination of fatigue factors  and a lack of care or concern for doing something with enthusiasm.\n\nFatigue factors include things like poor sleep hygiene, poor diet and nutritional deficiencies, disengagement from normal circadian rhythm patterns, excessive screen time, an excess stress.\n\nIt's harder to pinpoint the cause of carelessness, but often it relates to a lack of perceived consequences or accountability in a given situational context. For example, a lazy person may not return their shopping cart to the proper place because they perceive there will be no consequences for just leaving it in the parking lot."
+ },
+ {
+  "id": "alpaca-561",
+  "think": false,
+  "instruction": "Create a haiku poetry with the given theme.\n\nThe beauty of night sky",
+  "original": "The silver moonlight,\nEndless stars, a canvas vast,\nNight's art, pure, bright, free."
+ },
+ {
+  "id": "oasst-ffe61e4f",
+  "think": true,
+  "instruction": "I hear the word \"cyber\" used a lot in the tech community, but I do not know what it means. Can you give me a common definition of what people mean when they say they are into cyber?",
+  "original": "The term \"cyber\" is often used in the tech community as a prefix to describe various aspects of digital technology and security. For example, \"cybersecurity\" refers to the practice of protecting computer systems and networks from digital attacks, while \"cybercrime\" refers to criminal activity that occurs over the internet or other digital networks.\n\nThe term \"cyber\" can also refer to a general interest or focus on technology and digital systems. For instance, someone might say they are \"into cyber\" to mean that they have a passion for technology and are interested in learning more about it."
+ },
+ {
+  "id": "oasst-187b56a2",
+  "think": false,
+  "instruction": "I want to have a conversation about the future of technology. Pretend you are a friend of mine, and that we have had this kind of conversation before. I want you to be more conversational than you are normally. I want more \"personality\". I will start: Hey, what do you think about all this AI tech?",
+  "original": "Hey there! I'm so glad you asked about AI tech. I'm really excited about its future potential, but also a little bit nervous. There are so many amazing things we can do with AI, like enhancing our ability to process data and automate tasks, but there are also some ethical concerns we need to consider. What do you think about it?"
+ },
+ {
+  "id": "alpaca-591",
+  "think": false,
+  "instruction": "Create a new recipe for flavorful noodles",
+  "original": "## Flavorful Noodles with Chicken, Garlic and Basil\n\n### Ingredients:\n- 12 cloves of garlic (thinly sliced)\n- 400g of fresh egg noodles\n- 2 boneless and skinless chicken breasts\n- 1 cup fresh basil leaves\n- Salt to taste\n- Ground black pepper to taste\n- Red pepper flakes to taste (optional)\n- 3 tablespoons of light soy sauce\n- 2 tablespoons olive oil or vegetable oil\n- 2 thinly sliced spring onions\n\n### Instructions:\n1. Cut the chicken breasts into thin slices, season with salt, black pepper, and set aside.\n2. Heat a large frying pan or wok over medium-high heat, add 2 tablespoons of oil and sauté the sliced garlic until golden brown. Set the garlic aside.\n3. In the same pan, add the seasoned chicken slices and cook for about 5-7 minutes or until they turn golden brown in color. Set the cooked chicken aside.\n4. In the same pan, add 1 tablespoon of oil and then sauté the spring onions for 1-2 minutes.\n5. Add the fresh egg noodles, and fry for 2-3 minutes.\n6. Add the light soy sauce, red pepper flakes, and mix well.\n7. Add the cooked chicken, browned garlic and fresh basil leaves, and toss until all ingredients are well mixed and the noodles are heated through.\n8. Serve hot and enjoy!"
+ },
+ {
+  "id": "alpaca-1357",
+  "think": true,
+  "instruction": "Suggest a snack that you can make in under 5 minutes.",
+  "original": "One quick and easy snack that you can make in under 5 minutes is a peanut butter and banana sandwich. All you need is bread, peanut butter, and a banana. Simply toast the bread to your desired level of toasty-ness, spread a layer of peanut butter on one slice, add sliced bananas on top of the peanut butter, and close the sandwich with the other slice of bread. You can also add a drizzle of honey or a sprinkle of cinnamon for some extra flavor. This snack is not only delicious, but also satisfying and nutritious, giving you the perfect boost of energy to power through the rest of your day."
+ },
+ {
+  "id": "oasst-19fd0e88",
+  "think": false,
+  "instruction": "How to write a python script, that will ask user for a number N, and then run fizzbuzz game for those N numbers?",
+  "original": "You can write a script to do so with these steps:\n\n1. Read in a number with `input()` and convert to a number with `int()`. You may want to add error handling for non-numeric strings.\n2. Use a for loop for those numbers, for example with the `range()` function.\n3. Inside the for loop, if the number is divisible by both 3 and 5 (or by 15), print the word \"FizzBuzz\", or for by just 3, print \"Fizz\", or for by just 5, print \"Buzz\"."
+ },
+ {
+  "id": "alpaca-1755",
+  "think": false,
+  "instruction": "Generate a list of tips to improve metabolism.",
+  "original": "Here are 10 tips to help improve your metabolism:\n\n1. Eat a balanced diet: Consuming a well-balanced diet with adequate amounts of protein, carbohydrates, and healthy fats can help regulate your metabolism.\n\n2. Stay hydrated: Drinking enough water throughout the day helps keep your body's metabolic processes functioning efficiently. \n\n3. Exercise regularly: Incorporating aerobic exercise and strength training into your routine can boost your metabolism by building muscle, which burns more calories at rest than fat. \n\n4. Get enough sleep: Poor sleep can disrupt your body's metabolic processes and lead to weight gain. Aim for at least 7-8 hours of restful sleep each night. \n\n5. Incorporate more movement into your day: Sitting for long periods can slow down your metabolism. Try to incorporate more movement into your day, such as taking regular breaks to stand up and stretch, or going for a walk.\n\n6. Reduce stress: Chronic stress can lead to hormonal imbalances that can affect your metabolism. Practice stress-reducing activities such as yoga or meditation to help regulate your metabolism. \n\n7. Don't skip meals: Skipping meals can slow down your metabolism as your body tries to conserve energy. Eat regular meals to keep your metabolism functioning efficiently.\n\n8. Incorporate metabolism-boosting foods: Certain foods such as green tea, hot peppers, and lean protein can help temporarily boost your metabolism. Try to incorporate them into your diet.\n\n9. Limit processed foods: Processed foods can be high in sugar and unhealthy fats, which can negatively affect your metabolism. Try to limit your intake of these foods and opt for more whole, unprocessed foods. \n\n10. Don't over-restrict calories: While it's important to maintain a healthy caloric intake, severely restricting your calories can actually slow down your metabolism. Aim for a balanced and sustainable approach to weight loss or maintenance."
+ },
+ {
+  "id": "alpaca-1723",
+  "think": false,
+  "instruction": "Correct the spelling and grammar errors in the input sentence.\n\nIts importent to no that there can bee subtle differences in how simmilar words are spelt.",
+  "original": "It's important to know that there can be subtle differences in how similar words are spelled."
+ },
+ {
+  "id": "alpaca-1027",
+  "think": true,
+  "instruction": "Choose the most appropriate solution to achieve the goal.\n\nGOAL: To remove sharpie pen from a couch\n\nSolutions:\n1) soak the area in soy milk so that the region is colored by it.\n2) soak the stained area in milk for an hour and then rub away.",
+  "original": "The most appropriate solution to remove sharpie pen from a couch would be: \n1) soak the stained area in milk for an hour and then rub away. \n\nThis is a commonly suggested solution for removing ink stains and has proven to be effective for many people. Soaking the area in soy milk may not have the same effect and could potentially make the stain worse."
+ },
+ {
+  "id": "alpaca-435",
+  "think": false,
+  "instruction": "For the following passage, identify the theme or thesis statement.\n\nCorruption affects countries on many levels and erodes their competitive edge in a global economy. Poor compliance to regulations, ethical standards, and laws impairs public trust and results in conflict. Transnational financial crime drains a nation’s resources, weakens government tools to deliver long-term social goals, and destabilizes markets.",
+  "original": "The theme or thesis statement of this passage is that corruption has severe negative impacts on a country's economy, society, and governance."
+ },
+ {
+  "id": "alpaca-265",
+  "think": false,
+  "instruction": "What geometric shape has 5 sides and 5 angles?",
+  "original": "The geometric shape that has 5 sides and 5 angles is called a pentagon."
+ },
+ {
+  "id": "alpaca-818",
+  "think": true,
+  "instruction": "Explain what a decision tree is.",
+  "original": "A decision tree is a graphical representation of possible outcomes resulting from a series of decisions that are made based on certain conditions. It is a type of algorithm used in machine learning, data analysis and statistics which uses a tree-like structure to model decisions and their possible consequences. Each branch of the tree represents a decision or a test, and each leaf node represents an outcome or a class label. The tree is built by recursively splitting the dataset into subsets based on the most significant feature that provides the best separation of the data. This feature is called a decision node and the separation is called branching. The process continues until some stopping criterion is met, such as the maximum depth of the tree or the minimum number of samples per leaf. Decision trees are commonly used in classification and regression problems and are easy to interpret and understand, making them a popular choice in many applications."
+ },
+ {
+  "id": "alpaca-612",
+  "think": false,
+  "instruction": "Rewrite the following paragraph to make it sound more formal.\n\nMoving away from home to college was really hard. It's like I had to let go of my comfort and safety and figure things out on my own.",
+  "original": "The transition from residing at home to attending college presented a significant challenge. It necessitated the release of one's sense of familiarity and security, compelling the development of independence and self-sufficiency."
+ },
+ {
+  "id": "oasst-4199e8c8",
+  "think": false,
+  "instruction": "What is the impact of different playing styles and techniques on the maintenance and longevity of electric guitars and what precautions can guitarists take to extend the life of their instruments?",
+  "original": "Different playing styles and techniques can have varying impacts on the maintenance and longevity of electric guitars. Some styles may place more stress on certain parts of the instrument, while others may require more frequent tuning or string replacements. Here are a few tips that can help guitarists extend the life of their electric guitars:\n1. Regular cleaning and maintenance: Keeping the guitar clean and maintaining its different components is essential to prolong its lifespan. The guitar should be wiped down after each use to remove excess sweat, dirt or grime that may accumulate.\n2. Proper storage: When not in use, the guitar should be stored in a protective case or stand to prevent damage. Additionally, it is recommended to store guitars away from direct sunlight or extreme temperatures to avoid any warping or cracking of the wood.\n3. Frequent string changes: Frequent string changes can reduce the wear and tear on the guitar's components, including the frets and tuning pegs. Guitarists should aim to replace strings at least once every few months.\n4. Adjusting playing techniques: Certain playing techniques may place more strain on the guitar's components, such as excessive bending, vibrato, or heavy strumming. Adjusting playing style to reduce the wear on components can also extend the life of the instrument.\n5. Regular setup and maintenance: It is important to have your guitar set up and maintained by a professional guitar tech. This can include adjusting the action, intonation, and truss rod to ensure the guitar plays comfortably and efficiently, while reducing unnecessary wear on its components.\nOverall, taking care of your electric guitar through proper storage, regular cleaning and maintenance, and adjusting your playing techniques can help extend the life of your instrument for years to come."
+ },
+ {
+  "id": "oasst-9c1cfd97",
+  "think": false,
+  "instruction": "I'm a bit confused. I've seen both \"molar mass\" and \"atomic weight\" listed as 15.999 for oxygen, but I thought they were two different things. Can you explain why both values are listed as 15.999 and how they differ from each other?",
+  "original": "Molar mass and atomic weight are related, but they are not the same thing. Molar mass is the mass of one mole of a substance and is expressed in grams per mole (g/mol). Atomic weight, also known as atomic mass, is the average mass of the atoms of an element and is expressed in atomic mass units (amu).\n\nIn the case of oxygen, the molar mass is 15.999 g/mol, which is the mass of one mole of oxygen atoms or molecules. The atomic weight of oxygen is also 15.999 amu, which is the average mass of oxygen atoms, taking into account the fact that there are two stable isotopes of oxygen (oxygen-16 and oxygen-18) with different masses and abundances. The atomic weight is calculated as a weighted average of the masses of all the isotopes of the element, taking into account their relative abundances.\n\nIn general, the atomic weight of an element is a more precise and accurate measure of the mass of the element, since it takes into account the different isotopes that exist. However, the molar mass is a more practical measure for many purposes, since it allows you to easily convert between mass and moles of a substance."
+ },
+ {
+  "id": "alpaca-955",
+  "think": false,
+  "instruction": "Generate a story about a girl who visits an alien planet.",
+  "original": "Once upon a time, there was a young girl named Emily. Emily was a curious and adventurous girl with a love for science and all things unknown. One day, while exploring her local science museum, she stumbled upon a special exhibit about a far-off alien planet. The exhibit piqued Emily's interest and triggered her desire to explore the enigmatic planet.\n\nWith the help of a team of scientists, Emily embarked on a journey to the alien planet. The journey was long and arduous, and the spacecraft she traveled in encountered many challenges. Despite these challenges, Emily remained determined and steadfast, always dreaming of the wonders that awaited her on the alien planet.\n\nWhen Emily finally arrived on the alien planet, she was amazed by what she saw. The planet was full of life and colors that she had never seen before. There were strange creatures that roamed the lush vegetation and soared through the vivid skies. Emily was captivated by the beauty and the uniqueness of the planet.\n\nAs she continued to explore the planet, Emily discovered that the creatures that lived there were intelligent beings. These beings were able to communicate with Emily, and they were excited to share their knowledge, culture, and way of life with her.\n\nFor several years, Emily remained on the alien planet, living and learning among the creatures. They taught her about their technologies, their history, and their advancement. Emily, in turn, shared her knowledge and experiences with them, forming an unbreakable bond of friendship and mutual respect.\n\nEventually, Emily returned to her own planet, but she did so with a newfound appreciation for the universe and all its wonders. Emily's journey to the alien planet had forever changed her perspective, and she carried the memories and the lessons she learned with her for the rest of her life.\n\nYears and years have passed since Emily's journey to the alien planet, but the tale of her adventure remains etched in the hearts and the minds of those who heard it, serving as a reminder of the infinite possibilities that await us in the vast expanse of the universe."
+ },
+ {
+  "id": "alpaca-203",
+  "think": false,
+  "instruction": "Find the synonyms of the following word: 'Tenacious'.",
+  "original": "Here are some synonyms for the word 'Tenacious':\n\n1. Persistent\n2. Determined \n3. Resolute \n4. Steadfast \n5. Obstinate\n6. Persevering\n7. Unyielding\n8. Unwavering\n9. Strong-willed\n10. Dogged."
+ },
+ {
+  "id": "oasst-a1ecdc58",
+  "think": true,
+  "instruction": "What's a dht node? I saw some people talking about that but I didn't really understood what they were meaning.",
+  "original": "A distributed hash table (DHT) is a distributed system that provides a lookup service similar to a hash table. What differentiates a DHT from a normal hash table, however, is the fact that storage and lookup on DHT are distributed across multiple (can be millions) nodes or machines, and the node that gets to store a particular key is found by hashing that key, so in effect, your hash-table buckets are now independent nodes in a network."
+ },
+ {
+  "id": "oasst-f747d7f9",
+  "think": false,
+  "instruction": "What is the difference between BMW and Mercedes cars?",
+  "original": "BMW and Mercedes are both well-known luxury car brands, but there are some differences between them.\n\nDesign: BMW cars are typically known for their sporty, performance-oriented design, while Mercedes cars are known for their sleek and elegant design.\n\nPerformance: BMW cars are designed with a focus on driving dynamics and sporty handling, while Mercedes cars are often praised for their smooth and comfortable ride.\n\nFeatures: BMW cars often have more advanced technology features, such as advanced driver assistance systems and cutting-edge infotainment systems. Mercedes cars also have advanced technology features, but they tend to focus more on luxury and comfort.\n\nPricing: BMWs tend to be priced slightly lower than Mercedes cars in general, although both brands have a range of models and prices.\n\nOverall, both BMW and Mercedes cars are known for their quality, performance, and luxury features. The choice between the two ultimately comes down to personal preference, budget, and the specific features and design that appeal to each individual buyer."
+ },
+ {
+  "id": "alpaca-1000",
+  "think": true,
+  "instruction": "Create a to-do list for a given holiday.\n\nThanksgiving",
+  "original": "Here is a to-do list for Thanksgiving: \n\n1. Plan the menu for Thanksgiving dinner, including all the traditional dishes like roast turkey, stuffing, cranberry sauce, pumpkin pie, etc. \n2. Make a shopping list for all the ingredients and grocery shop in advance to avoid last-minute rushes. \n3. Prepare and decorate the house for the holiday, including table settings and Thanksgiving centerpieces. \n4. Invite family and friends for dinner, and make note of any dietary restrictions or allergies. \n5. Cook and bake all the dishes for the Thanksgiving feast. \n6. Set the table and arrange the food before guests arrive. \n7. Give thanks and enjoy the delicious meal with loved ones. \n8. Take pictures to capture the memories from the day. \n9. Clean up after dinner, including washing dishes and storing leftovers. \n10. Relax and reflect on all the things to be grateful for in life."
+ },
+ {
+  "id": "alpaca-59",
+  "think": false,
+  "instruction": "Find the main idea of the following passage\n\nClimate change is an increasingly contentious global issue. It is already having a drastic effect on the environment and human lives. We are already seeing an increase in extreme weather events and rising sea levels, both of which have a major impact on the planet.",
+  "original": "The main idea of the passage is that climate change is an important global issue that is severely impacting the environment and human lives through extreme weather events and rising sea levels."
+ },
+ {
+  "id": "alpaca-1566",
+  "think": false,
+  "instruction": "Create a metaphor to explain the concept of artificial intelligence.",
+  "original": "Artificial intelligence is like a garden that is constantly growing and evolving. Just as a gardener plants seeds, carefully nurtures them, and watches them grow into brilliant blooms, so too do developers create AI algorithms and allow them to learn, adapt, and evolve into complex systems capable of accomplishing incredible feats. And just as a garden benefits from the care and attention of its gardener, AI thrives under the guidance of those who create and refine its abilities."
+ },
+ {
+  "id": "alpaca-262",
+  "think": false,
+  "instruction": "Write a short review for the novel \"The Catcher in the Rye\".",
+  "original": "\"The Catcher in the Rye\" is a timeless coming-of-age novel by J.D. Salinger, that captures the essence of teenage angst and alienation. Set in the 1950s, it follows the story of Holden Caulfield, a troubled teenager who has been expelled from his prep school and is wandering the streets of New York City, grappling with his emotions and trying to find his place in the world. Salinger's vivid writing style and the honesty of Holden's character make this book an engaging read. The themes of innocence and the complexities of growing up are portrayed in a raw, real way. This is a must-read for anyone who remembers what it's like to be young and lost in the world."
+ },
+ {
+  "id": "alpaca-1930",
+  "think": true,
+  "instruction": "Name two topics covered in a sociology course.",
+  "original": "1. Socialization, the ways individuals learn and internalize social norms and expectations of their society, and how this shapes identity, behavior, and interactions with others.\n\n2. Social inequality, the unequal distribution of resources and opportunities, and how it is structured by factors such as class, race, gender, and age."
+ },
+ {
+  "id": "oasst-3f8e3555",
+  "think": false,
+  "instruction": "On Arch Linux, how do I allow a user to use `sudo` for a specific command without that user having to use their password?  Say for example, allowing a user `josh` to use the `systemctl ...`.  It would be even nicer if the user can only use specific sub-commands of `systemctl` such as `systemctl start/stop/status`",
+  "original": "To allow a user to use `sudo` for a specific command without having to enter their password on Arch Linux, you can edit the sudoers file using the `visudo` command.\n\n1. Open a terminal and run the command `sudo visudo`. This will open the sudoers file in the nano text editor.\n\n2. Add the following line to the end of the file to allow the user \"josh\" to run the \"systemctl\" command without a password:\n\n```javascript\njosh ALL=(ALL) NOPASSWD: /usr/bin/systemctl start, /usr/bin/systemctl stop, /usr/bin/systemctl status\n```\nThis line allows the user \"josh\" to run the \"systemctl start\", \"systemctl stop\" and \"systemctl status\" commands as the superuser without having to enter a password.\n\n3. Save the changes to the file by pressing `Ctrl+X`, then `Y`, and then `Enter`.\n\nNow, the user \"josh\" can use the `sudo` command with the specified `systemct` sub-commands without being prompted for a password. It is important to note that editing the sudoers file can be dangerous and should be done with caution."
+ },
+ {
+  "id": "alpaca-1132",
+  "think": false,
+  "instruction": "Submit a description of a important event in your life.",
+  "original": "As an AI, I do not have personal experiences or events in my life. I am here to assist and provide you with information based on your request. Is there an important event in your life you would like to talk about or learn more about?"
+ },
+ {
+  "id": "alpaca-822",
+  "think": false,
+  "instruction": "Write a Python function that takes two integers and returns their least common multiple.",
+  "original": "```python\ndef lcm(x, y):\n    \"\"\"\n    This function takes two integers and returns their least common multiple.\n    Parameters:\n    x (int): first integer\n    y (int): second integer\n    Returns:\n    int: Least Common Multiple (LCM) of x and y\n    \"\"\"\n    # Find the greater number between x and y\n    if x > y:\n        greater = x\n    else:\n        greater = y\n\n    # Continue looping until a common multiple is found\n    while True:\n        if greater % x == 0 and greater % y == 0:\n            lcm = greater\n            break\n        greater += 1\n\n    return lcm\n```"
+ },
+ {
+  "id": "oasst-1f0c92fb",
+  "think": false,
+  "instruction": "How can I find a girlfriend? I really don't hawe much to offer to others. At least I'm good in computers hardware and Linux. But not much girls have been interested in this kind of things. And it's probably impossible to find cute one.",
+  "original": "Finding a girlfriend is not about having something to offer, but about being your authentic self and finding someone who appreciates and values you for who you are. Here are a few tips that might help:\n\nFocus on your personal growth: Take some time to work on yourself and become the best version of yourself. This could mean developing your skills and interests, improving your health and wellness, and building your confidence.\n\nMeet new people: Get out of your comfort zone and try to meet new people. You can join clubs or groups that align with your interests, attend events and parties, or simply strike up conversations with people you meet in your daily life.\n\nBe open-minded: Don't limit yourself to just looking for someone who is interested in the same things as you. Be open to meeting people who have different interests and hobbies, as these can bring new experiences and perspectives into your life.\n\nBe yourself: When you do meet someone you like, be yourself. Don't try to pretend to be someone you're not, as this will only lead to disappointment in the long run.\n\nBe respectful: Treat others with kindness and respect, and be mindful of their feelings and boundaries.\n\nRemember, finding a girlfriend is not about having the perfect qualifications or being someone you're not. It's about being yourself and finding someone who appreciates and loves you for who you are. Good luck!"
+ },
+ {
+  "id": "oasst-2b6ad1f0",
+  "think": false,
+  "instruction": "Do you know anything about the strategy known as, “problem-reaction-solution” (create a problem, escalate fear, then offer a pre-planned solution), and can you provide an example?",
+  "original": "The concept of \"problem-reaction-solution\" is a strategy that suggests that certain individuals or organizations may intentionally create or manipulate a crisis, escalate fear or anxiety around the crisis, and then offer a pre-planned solution to the problem, which is often one that they had intended to implement all along. The purpose of this strategy is to manipulate public opinion or behavior in a way that benefits those who have orchestrated the crisis and the proposed solution.\n\nThis strategy is often associated with conspiracy theories and is not universally accepted by scholars or experts. While there may be cases where it appears to have been used, the majority of crises and problems are not intentionally manufactured for political or other purposes.\n\nOne example of the \"problem-reaction-solution\" strategy that has been suggested by some is the 9/11 attacks in the United States. Some conspiracy theorists have suggested that the US government, or elements within it, intentionally allowed or even orchestrated the attacks in order to create a crisis, escalate fear and anxiety among the public, and then offer a pre-planned solution, such as increased government surveillance or military intervention in other countries. However, there is no credible evidence to support these claims, and the majority of scholars and experts reject them as baseless conspiracy theories."
+ },
+ {
+  "id": "alpaca-27",
+  "think": false,
+  "instruction": "Identify the lines of longitude that divides North and South America.",
+  "original": "The line of longitude that divides North and South America is the 77° 00' 0\" or 77°W which is also known as the Panama-Colombia border."
+ },
+ {
+  "id": "alpaca-30",
+  "think": false,
+  "instruction": "Outline the consequences of deforestation.",
+  "original": "Deforestation, or the large-scale removal of trees from a forested area, has numerous consequences that can have significant impacts on the environment, economy, and local communities. Some of the consequences of deforestation include:\n\n1. Loss of biodiversity: Forests are home to a wide variety of plant and animal species, many of which rely on the forest for their survival. Removing large areas of trees can destroy their habitat, leading to a loss of biodiversity.\n\n2. Soil erosion: Trees and their root systems help hold soil in place and prevent erosion. Deforestation can leave soil exposed and vulnerable to being washed away during heavy rain or strong winds.\n\n3. Climate change: Forests play an important role in helping to regulate the earth's climate by storing carbon dioxide. When trees are removed, the stored carbon dioxide is released into the atmosphere, contributing to climate change.\n\n4. Loss of livelihoods: Many indigenous and local communities rely on forests for their livelihoods, using the wood for fuel, building materials, and food. Deforestation can have a devastating impact on these communities, leaving them without resources or the means to support themselves.\n\n5. Economic impact: Forests provide a variety of valuable resources, including wood, paper, and other forest products. Deforestation can reduce the availability of these resources, impacting the economy and industries that rely on them.\n\n6. Flooding: Forests help to absorb and store water, reducing the risk of flooding in nearby areas. Deforestation can increase the risk of flooding, causing damage to homes, infrastructure, and crops.\n\nOverall, deforestation can have a wide range of negative impacts, affecting not only the environment but also the economy and local communities. It is important to find sustainable ways to manage forest resources to prevent deforestation and its associated consequences."
+ },
+ {
+  "id": "oasst-e6d2d580",
+  "think": false,
+  "instruction": "Suggest me places near 72nd St where I can park my car. Please also order them by price and add the price of each one to the right of their names.",
+  "original": "I do not have access to real-time parking availability or pricing information. However, I can suggest a few places to look for parking near 72nd St based on publicly available information.\n\n- Icon Parking - 200 West 71st St. ($30 for 12 hours)\n- GGMC Parking - 210 W 70th St. ($40 for 12 hours)\n- Central Parking - 157 West 71st St. ($42 for 12 hours)\n- Impark - 2011 Broadway ($45 for 12 hours)\n- Rapid Park - 206 W 76th St. ($50 for 12 hours)\n\nAdditionally, street parking may also be available, but be sure to check for any parking restrictions or meter rules."
+ },
+ {
+  "id": "oasst-87b9613f",
+  "think": true,
+  "instruction": "How were the pyramids of egypt built?",
+  "original": "The most widely accepted theory is that the ancient Egyptians built the pyramids using a combination of manual labor and simple machines. The Egyptians used a system of ramps and sleds to pull up and move the large stones which make up the pyramids. They also used a type of mortar to hold the stones together. The most impressive of the pyramids, the Great Pyramid at Giza, is thought to have been built using an internal ramp system that was slowly built up as the pyramid grew in height."
+ },
+ {
+  "id": "alpaca-1154",
+  "think": false,
+  "instruction": "Write a math equation to find the geometric mean between two numbers\n\n10 and 15",
+  "original": "The geometric mean between two numbers (a and b) can be calculated using the following equation: \n\nGeometric Mean = √ab\n\nIn the case of the numbers 10 and 15, the geometric mean would be calculated as follows: \n\nGeometric Mean = √(10 x 15)\n              = √150\n              ≈ 12.247"
+ },
+ {
+  "id": "oasst-b0edf428",
+  "think": false,
+  "instruction": "Wie aktualisiere ich PHP 7.2 in einem Bitnami Wordpress Stack?",
+  "original": "Um PHP 7.2 in einem Bitnami Wordpress Stack zu aktualisieren, müssen Sie zunächst sicherstellen, dass Ihr System die Anforderungen für die neuere Version von PHP erfüllt. \nInstallation von PHP auf MacOS\nhttps://www.php.net/manual/de/install.macosx.php\nInstallation von PHP auf Windows\nhttps://www.php.net/manual/de/install.windows.php\nInstallation von PHP auf Unix-Systemen\nhttps://www.php.net/manual/de/install.unix.php\nInstallation von PHP auf Cloud Computing Platformen (Azure App Services, Amazon EC2)\nhttps://www.php.net/manual/de/install.cloud.php\nSobald PHP aktualisiert ist, müssen Sie den Apache-Webserver neu starten, damit die Änderungen wirksam werden."
+ },
+ {
+  "id": "alpaca-582",
+  "think": false,
+  "instruction": "Suggest a sentence that follows \"He had never seen a creature so strange,\"",
+  "original": "\"It had scales like a fish, yet it walked on two legs like a human, and its eyes were a piercing shade of green that seemed to look right through him.\""
+ },
+ {
+  "id": "alpaca-1962",
+  "think": true,
+  "instruction": "Output a list of a different kind of fruits",
+  "original": "Here is a list of different types of fruits: \n\n1. Apples \n2. Oranges \n3. Bananas \n4. Pineapples \n5. Mangoes \n6. Peaches \n7. Pears \n8. Lemons \n9. Grapefruits \n10. Kiwis\n11. Strawberries \n12. Blueberries \n13. Cherries \n14. Plums \n15. Grapes \n16. Melons \n17. Watermelons \n18. Papayas \n19. Limes \n20. Raspberries"
+ },
+ {
+  "id": "alpaca-750",
+  "think": false,
+  "instruction": "Classify the following words by their grammatical categories: walk, interesting, quickly",
+  "original": "Walk: Verb\nInteresting: Adjective\nQuickly: Adverb"
+ },
+ {
+  "id": "oasst-0db32fd2",
+  "think": true,
+  "instruction": "What does the fox say?",
+  "original": "There is no single agreed-upon onomatopoeia for foxes, but some proposed ones include:\n- \"yip\"\n- \"woof\"\n- \"ack-ack-ack-ackawoooo-ack-ack-ack\" (known as gekkering)"
+ },
+ {
+  "id": "oasst-ebf16189",
+  "think": false,
+  "instruction": "Write a Python program that takes a list of numbers as input from the user, calculates the sum of all even numbers in the list, and returns the result. The program should check if the input is valid (i.e., if it's a list of numbers), and if it's not, it should return an error message. The program should also handle exceptions gracefully and return a user-friendly error message in case of any exceptions.",
+  "original": "Here's a python program that uses the third-party docopt library to sum all the even numbers the user enters in a command line:\n\n``` python\n\"\"\"Sum Even.\n\nUsage: sum_even <number>...\n\"\"\"\nfrom docopt import docopt\n\n\ndef sum_even(numbers):\n    \"\"\"Sum all the even numbers in a list.\"\"\"\n    assert isinstance(numbers, list), \"numbers must be a list\"\n\n    total = 0\n    for n in numbers:\n        try:\n            n_flt = float(n)\n            if n_flt % 2 == 0:\n                total += int(n_flt)  # it's an int if it's even, and python ints can be much larger than floats\n        except ValueError:\n            return f\"{n} is not a number\"\n    return total\n\n\nif __name__ == \"__main__\":\n    arguments = docopt(__doc__, version='Sum All v1.0')\n\n    numbers = arguments['<number>']\n    try:\n        print(sum_even(numbers))\n    except Exception as e:\n        print(f\"Could not sum all even numbers:\\n {e}\")\n```\n\nDocopt can be installed with:\n```\npip install docopt\n```\n\nThe program can then be run with:\n```\npython sum_even.py 1 2 3 4.0 4.1 1e3\n```\n\nHowever, it doesn't have any specific code for handling inf or nan, which float would convert. It instead just skips those because they don't result in 0 after the %2.\n\nIt also requires a call to python instead of just calling sum_even. It's possible to make it its own command line argument by making the right setup file and pip installing it."
+ },
+ {
+  "id": "oasst-66356aa8",
+  "think": true,
+  "instruction": "What is the plural form of the word \"octopus\"?",
+  "original": "The plural form of \"octopus\" can be either \"octopuses\" or \"octopi.\" Both forms are considered correct, although \"octopuses\" is generally preferred by many experts because \"octopus\" is not derived from Latin and therefore does not follow the typical Latin \"-i\" pluralization rule."
+ }
+]

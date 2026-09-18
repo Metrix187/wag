@@ -1,0 +1,272 @@
+[
+ {
+  "id": "alpaca-1703",
+  "think": false,
+  "instruction": "Change the given sentence into a statement about the benefits of something.\n\nUsing Google Maps can be really helpful.",
+  "original": "Using Google Maps can provide numerous benefits such as accurate navigation, real-time traffic updates, and easy exploration of new destinations."
+ },
+ {
+  "id": "alpaca-1775",
+  "think": false,
+  "instruction": "Classify the following healthy food item\n\nSushi",
+  "original": "Sushi can be classified as a healthy food item, as it typically consists of fish or seafood, which is a good source of protein and healthy fats such as omega-3, along with rice and vegetables, providing a balance of essential nutrients. However, the nutritional value can vary depending on the specific ingredients and preparation method, so it is important to choose sushi with ingredients that are fresh and wholesome."
+ },
+ {
+  "id": "oasst-7901c3fb",
+  "think": false,
+  "instruction": "Can you give me recipe for dinner? In the fridge I have:\n- a cabbage\n- zucchinis\n- aubergine\n- potatoes\n- tofu\n- eggs\n\nI also have regular staples such as onions, garlic, rice, flour, oil etc. available.",
+  "original": "How about making a stir-fry using the ingredients you have on hand? Here's a recipe for a delicious and healthy cabbage and tofu stir-fry:\n\nIngredients:\n\n1/2 head of cabbage, chopped\n2 zucchinis, sliced\n1 aubergine, chopped\n1 potato, peeled and chopped\n1 block of firm tofu, diced\n2 cloves of garlic, minced\n1 onion, chopped\n2 tablespoons of vegetable oil\nSalt and pepper to taste\nCooked rice, to serve\n\nInstructions:\n\n1. Heat the vegetable oil in a wok or large skillet over medium-high heat.\n2. Add the onions and garlic and cook until softened and fragrant.\n3. Add the potatoes and cook for 5-7 minutes or until they start to soften.\n4. Add the aubergine and zucchinis to the pan and cook for an additional 5-7 minutes or until they start to soften.\n5. Add the diced tofu and chopped cabbage to the pan and cook for 5-7 minutes, stirring occasionally.\n6. Season with salt and pepper to taste.\n7. Serve over cooked rice.\n\nEnjoy your healthy and delicious dinner!"
+ },
+ {
+  "id": "oasst-0a38f260",
+  "think": true,
+  "instruction": "Why is one kilogram of iron heavier than one kilogram of cotton?",
+  "original": "One kilogram of iron and one kilogram of cotton have the same mass and weigh the same. Mass is a measure of the amount of matter in an object, and it is the same regardless of an object's location or the forces acting on it. The weight of an object, on the other hand, is the force exerted on the object due to gravity and depends on the mass of the object and the acceleration due to gravity at a particular location.\n\nSo, a kilogram of iron and a kilogram of cotton have the same mass and will weigh the same on a scale, but they will feel different in our hands because of their densities. The density of an object is its mass per unit volume, and it is a measure of how closely the mass of an object is packed together. Iron has a much higher density than cotton, which means that the same mass of iron takes up less volume than the same mass of cotton. This makes iron feel heavier than cotton, even though they have the same mass."
+ },
+ {
+  "id": "alpaca-1897",
+  "think": false,
+  "instruction": "Evaluate the level of civilization and technology in the Star Wars universe and explain how it compares to our current world.",
+  "original": "The Star Wars universe is an advanced, highly civilized galaxy with diverse species and technology far surpassing our current world. Their technology includes space travel across vast distances, advanced artificial intelligence with sentient droids, highly developed medical advancements, and powerful weaponry, such as energy-based blasters and lightsabers. Comparatively, in our current world, we have just started exploring space, with limited travel within our own solar system, and our AI development is progressing but not yet at the level of the sentient droids of Star Wars. Additionally, our weapons technology, while advanced, does not yet include energy-based weapons like lightsabers."
+ },
+ {
+  "id": "oasst-3c56b654",
+  "think": false,
+  "instruction": "What is the tallest skyscraper in the world and where is it located?",
+  "original": "The Burj Khalifa, standing at a height of 828 meters (2,716 feet) with 163 floors, situated in Dubai, United Arab Emirates, holds the distinction of being the world's tallest skyscraper."
+ },
+ {
+  "id": "alpaca-1367",
+  "think": true,
+  "instruction": "Generate a list of five positive attitudes.",
+  "original": "Here are five positive attitudes one can develop: \n\n1. Optimism - having hopeful views and focusing on the possibilities of positive outcomes.\n2. Gratitude - expressing appreciation and thankfulness for what one has\n3. Perseverance - having the strength and determination to overcome obstacles and setbacks\n4. Resilience - being able to bounce back quickly from negative situations and experiences\n5. Kindness - having a compassionate and considerate nature, being willing to support and help those around you."
+ },
+ {
+  "id": "oasst-643d3e73",
+  "think": false,
+  "instruction": "Using C# and LINQ, please show me an example of how to sort a collection of objects based on one of their properties, and returning only unique results.",
+  "original": "I can show you an example of how to sort a collection of objects based on one of their properties, returning only the unique results.\n\nLet us suppose that we have 'Human' class as follows:\n```\npublic class Human\n{\n    public string Name { get; set; }\n    public char Gender { get; set; }\n    public int Age { get; set; }\n}\n```\n\n\nSuppose that you have Collection as this:\n```\nList<Human> humans = new List<Human>()\n{\n    new Human() { Name = \"Alisha\", Gender = 'F', Age = 22 },\n    new Human() { Name = \"Manish\", Gender = 'M', Age = 26 },\n    new Human() { Name = \"Ashim\", Gender = 'M', Age = 24 },\n    new Human() { Name = \"Sanjana\", Gender = 'F', Age = 20}\n};\n```\n\n\nThe following code sorts the collection based on the 'Age' property and returns only the unique objects from collection.\n```\nvar sortedHumans = humans.OrderBy(h => h.Age).Distinct();\n```\n\n\nYou can iterate over the sorted collection to print the properties as follows:\n```\nforeach (Human human in sortedHumans)\n{\n    Console.WriteLine($\"{human.Name} ({human.Gender}, {human.Age})\");\n}\n```"
+ },
+ {
+  "id": "alpaca-1537",
+  "think": false,
+  "instruction": "Come up with 3 tips for writing effective dialogue.",
+  "original": "1. Keep it natural: In order for the dialogue to feel authentic, the characters should speak in a way that feels realistic and mirrors the way real people communicate. Avoid long, drawn-out monologues, and make sure the dialogue reflects each character's unique voice and personality.\n\n2. Use subtext to add depth: Good dialogue often conveys more than just the words being spoken. Subtext, or the unspoken thoughts and emotions that underlie the words, can add depth and complexity to the conversation. Use gestures, tone of voice, and reactions to convey what the characters are thinking or feeling without explicitly stating it.\n\n3. Drive the story forward: Dialogue should serve a purpose and move the story forward, whether by revealing important information or by advancing the plot. Avoid aimless conversations that don't contribute to the overall narrative, and make sure each exchange is building towards something. Additionally, use conflict and tension to keep the dialogue engaging and propel the story forward."
+ },
+ {
+  "id": "alpaca-814",
+  "think": false,
+  "instruction": "What are some negative effects of deforestation mentioned in the following passage?\n\nDeforestation, the large-scale removal of trees, has several adverse effects on the environment. It leads to the loss of habitat for countless species, which can result in a decline in biodiversity. Additionally, deforestation contributes to climate change by releasing stored carbon dioxide into the atmosphere.",
+  "original": "The negative effects of deforestation mentioned in the passage include loss of habitat for species, decline in biodiversity, and contribution to climate change by releasing stored carbon dioxide."
+ },
+ {
+  "id": "oasst-8d938e0e",
+  "think": false,
+  "instruction": "Hey, how's your day going?",
+  "original": "As an AI language model, my day is going well, the good people of the internet are asking me interesing and thought-provoking questions that I'm doing my best to answer.\nHow about you?"
+ },
+ {
+  "id": "alpaca-754",
+  "think": false,
+  "instruction": "What is the first rule of storytelling?",
+  "original": "The first rule of storytelling is \"show, don't tell.\" This means that a good story is one where the audience is immersed in the experience through vivid details, actions, and dialogue, rather than simply being told about events. By showing what is happening, the audience can better understand the characters and follow the plot, making for a more engaging and memorable story."
+ },
+ {
+  "id": "oasst-6934c6bc",
+  "think": false,
+  "instruction": "I would need a docker template file for a alpine linux build supporting ARM with pre installed and ready to use ssh connections.",
+  "original": "Sure! Here's a Dockerfile template that installs OpenSSH and sets up an SSH connection for an Alpine Linux build supporting ARM:\n\n# Use the latest version of Alpine Linux for ARM\nFROM arm32v6/alpine:latest\n\n# Install OpenSSH and create a new user\nRUN apk update && \\\n    apk add openssh && \\\n    adduser --disabled-password sshuser\n\n# Set the password for the new user\nRUN echo \"sshuser:password\" | chpasswd\n\n# Copy the SSH keys into the container\nCOPY id_rsa.pub /home/sshuser/.ssh/authorized_keys\n\n# Change the permissions on the SSH directory and keys\nRUN chown -R sshuser:sshuser /home/sshuser/.ssh && \\\n    chmod 700 /home/sshuser/.ssh && \\\n    chmod 600 /home/sshuser/.ssh/authorized_keys\n\n# Start the SSH daemon\nCMD [\"/usr/sbin/sshd\", \"-D\"]\n\nTo build the Docker image, save this Dockerfile to a directory on your computer, and then open a terminal in that directory and run the following command:\n\ndocker build -t my_ssh_image .\n\nThis will build the Docker image with the tag \"my_ssh_image\".\n\nTo start a container from this image and connect to it over SSH, run the following command:\n\ndocker run -d -p 22:22 my_ssh_image\n\nThis will start a container from the \"my_ssh_image\" image and map port 22 inside the container to port 22 on your host machine. You can then connect to the container over SSH using the username \"sshuser\" and the password \"password\"."
+ },
+ {
+  "id": "alpaca-1561",
+  "think": false,
+  "instruction": "Summarize the book \"The Goldfinch\" by Donna Tartt",
+  "original": "The Goldfinch is a novel written by Donna Tartt that follows the journey of a young man named Theo Decker. The book begins with the death of Theo's mother in a bombing at the Metropolitan Museum of Art. In the confusion following the explosion, Theo takes a small, Dutch painting called \"The Goldfinch.\" \n\nAs he grows up, Theo struggles with grief, guilt, and his growing attachment to the painting. The painting becomes a source of comfort and obsession for him as he moves between New York City, Las Vegas, and Amsterdam. Along the way, he befriends a cast of colorful characters, including a young girl named Pippa who was also at the museum during the explosion, a wealthy family who takes him in, and a Russian teenager who becomes his partner in crime.\n\nAs Theo gets older, he becomes involved in the dangerous underworld of art forgery and organized crime. Throughout it all, he holds onto the painting, which becomes a symbol of everything he has lost and everything he hopes to regain. Eventually, Theo must face the consequences of his actions and make difficult choices about what truly matters in life.\n\nThe Goldfinch is an epic coming-of-age story that explores themes of love, loss, identity, and the power of art to transform our lives."
+ },
+ {
+  "id": "alpaca-1562",
+  "think": false,
+  "instruction": "Generate a valid username given a set of user information.\n\nName: Sarah Jones, Age: 34",
+  "original": "Possible valid username generated from the given information could be SarahJones34."
+ },
+ {
+  "id": "alpaca-643",
+  "think": false,
+  "instruction": "Three fair, standard six-sided dice are rolled. What is the probability that the sum of the numbers on the top faces is 18? Express your answer as a common fraction.",
+  "original": "The probability of rolling three fair, standard six-sided dice and getting a sum of 18 is 1/216. This is because the only way to get a sum of 18 with three dice is if each die shows a 6, which has a probability of 1/6. So the probability of getting three 6's in a row is (1/6)^3 = 1/216."
+ },
+ {
+  "id": "oasst-a0c16eb7",
+  "think": false,
+  "instruction": "How can I keep my wheels for a long time in rollerblades",
+  "original": "To keep the wheels of your rollerblades in good condition for a long time, you can follow these tips:\n\n1. Rotate your wheels regularly: Uneven wear can cause your wheels to wear down more quickly. To prevent this, regularly rotate the wheels so that they wear evenly.\n2. Clean your wheels: Dirt and debris can build up on your wheels and cause them to wear down faster. Use a soft cloth or a brush to clean your wheels regularly.\n3. Avoid rough surfaces: Skating on rough surfaces can cause your wheels to wear down faster. Try to stick to smooth surfaces like concrete or asphalt.\n4. Check your wheels for wear: Regularly inspect your wheels for signs of wear. If they are becoming flat or developing flat spots, it may be time to replace them.\n5. Store your rollerblades properly: When you're not using your rollerblades, store them in a cool, dry place. Avoid leaving them in direct sunlight or in a hot car, as this can cause the wheels to degrade more quickly.\n\nBy following these tips, you can help keep your rollerblade wheels in good condition and extend their lifespan."
+ },
+ {
+  "id": "oasst-60bc738f",
+  "think": false,
+  "instruction": "Can you give me a generalized form to find all the roots of a polynomial to the n-th degree using the newton method?",
+  "original": "Yes, here is a generalized form to find all the roots of a polynomial of degree n using the Newton-Raphson method:\n\n1. Choose an initial guess x_0 for the root.\n2. Set k = 0.\n3. While k < n (i.e., there are still roots to be found):\n   a. Compute the value of the polynomial at the current guess: f(x_k).\n   b. Compute the derivative of the polynomial at the current guess: f'(x_k).\n   c. Compute the next guess for the root using the formula: x_{k+1} = x_k - f(x_k)/f'(x_k).\n   d. If the absolute value of the difference between the current guess and the next guess is less than a specified tolerance, then the current guess is considered a root, and k is incremented by 1. Otherwise, set x_k = x_{k+1} and repeat steps 3a-3d.\n\nNote that the Newton-Raphson method can converge to a wrong root or fail to converge altogether, depending on the initial guess and the properties of the polynomial. Therefore, it is important to choose a good initial guess and to check for convergence and accuracy using appropriate criteria."
+ },
+ {
+  "id": "oasst-92d51b16",
+  "think": false,
+  "instruction": "Write a polite text in email format for my professor saying that I can't go to school tomorrow.",
+  "original": "Subject: Absence from class tomorrow\n\nDear Professor [Name],\n\nI hope this email finds you well. I am writing to inform you that I will not be able to attend class tomorrow, [date], due to [reason for absence]. I apologize for any inconvenience this may cause, and I will make sure to catch up on any material covered during my absence.\n\nIf there is any homework or assignments that I will miss, please let me know, and I will make sure to complete them promptly.\n\nThank you for your understanding, and I appreciate your efforts in making sure that we are all on track with our coursework.\n\nBest regards,\n[Your name]"
+ },
+ {
+  "id": "alpaca-821",
+  "think": false,
+  "instruction": "Summarize the main argument of the paper \"A Social Network that Influences Attitudes and Behaviors\"",
+  "original": "The paper \"A Social Network that Influences Attitudes and Behaviors\" argues that social networking sites have a significant impact on people's attitudes and behavior. The authors argue that through features like content sharing, online messaging, and commenting systems, members of a network can influence each other's thoughts and actions. They provide evidence from several studies that show how online communication can affect individuals’ attitudes towards social issues, consumer behavior, and even health decisions. The paper suggests that social networks can be a powerful tool for promoting positive behavioral changes, but also warns of the potential negative consequences of these influences. Overall, the main argument of this paper is that social networks play a vital role in shaping people's attitudes and behaviors."
+ },
+ {
+  "id": "oasst-c6b44ac1",
+  "think": false,
+  "instruction": "You are a physician seeing a patient in clinic with newly found anemia. This patient is a 60 year old biological male and has been feeling more short of breath in the last 3 months. What questions do you have for him?",
+  "original": "As a physician, when seeing a patient with newly found anemia and shortness of breath, there are several questions that I would like to ask the patient to help me better understand their symptoms and determine the appropriate course of action. These questions may include:\n\n1. How long have you been feeling more short of breath?\n\n2. Is the shortness of breath worse with exertion, lying down, or at rest?\n\n3. Have you noticed any chest pain or tightness, lightheadedness, or dizziness with the shortness of breath?\n\n4. Have you noticed any changes in your energy level or ability to complete your usual activities?\n\n5. Have you had any recent infections or illnesses?\n\n6. Have you had any recent surgeries or procedures?\n\n7. Have you recently lost weight without trying to do so?\n\n8. Have you had any recent changes in your diet or appetite?\n\n9. Do you have a history of any chronic medical conditions, such as heart disease, lung disease, or kidney disease?\n\n10. Have you ever had a history of bleeding disorders or problems with blood clotting?\n\n11. Are you taking any medications, including over-the-counter supplements?\n\n12. Have you ever had any blood transfusions or blood disorders in the past?\n\nThese questions will help me understand the patient's medical history, potential underlying causes of their anemia, and any other possible contributing factors to their shortness of breath. Depending on their responses, further testing or referrals may be necessary to properly diagnose and treat their condition."
+ },
+ {
+  "id": "oasst-ce8cc413",
+  "think": false,
+  "instruction": "What is the fastest flying bird and why does it fly so fast?",
+  "original": "The fastest flying bird is the peregrine falcon (Falco peregrinus). It can reach speeds of up to 240 mph (386 km/h) during its hunting dive, known as a stoop. While it is not the fastest bird in level flight, its stooping speed makes it the fastest bird overall.\n\nThe peregrine falcon's incredible speed can be attributed to several factors:\n\n   1. Aerodynamics: The falcon has a streamlined body, with a sleek, tapered shape that minimizes air resistance. Its long, pointed wings enable it to cut through the air efficiently, reducing drag.\n\n   2. Muscular strength: Peregrine falcons have powerful muscles, especially in their wings. These muscles provide the necessary force for rapid acceleration and high-speed flight.\n\n   3. Specialized respiratory system: The falcon's respiratory system allows it to breathe efficiently even at high speeds, ensuring that its muscles receive enough oxygen during the stoop.\n\n   4. Keen eyesight: The peregrine falcon's exceptional eyesight allows it to spot prey from great distances. It can then dive at high speeds to surprise and capture its prey, which often includes other birds.\n\n   5. Hunting strategy: The falcon's remarkable speed is an adaptation to its hunting strategy. By stooping at high speeds, it can attack prey with greater force and accuracy. This enables the peregrine falcon to be a highly effective predator.\n\n In summary, the peregrine falcon's speed is a product of its specialized anatomy and hunting strategy, which have evolved to make it an incredibly efficient aerial predator."
+ },
+ {
+  "id": "alpaca-1571",
+  "think": false,
+  "instruction": "Provide a description of the possible benefits of going car-less to a potential customer.",
+  "original": "Going car-less can have numerous benefits for individuals, the community, and the environment as a whole. Here are some potential advantages that you can gain from going car-less:\n\n1. Save money - Own a car can be quite expensive when you consider the cost of fuel, insurance, maintenance, and parking among other things. By going car-less, you can save a substantial amount of money.\n\n2. Reduce your carbon footprint - Cars are one of the most significant contributors to air pollution and greenhouse emissions. Going car-less is an effective way to reduce your carbon footprint, decrease the emission of pollutants and greenhouse gases, and make a positive impact on the environment.\n\n3. Enjoy better health - Walking or using a bike as a primary mode of transportation can be a great way to stay active and improve your health. It allows you to incorporate more physical activity into your daily routine, which can lead to better cardiovascular health and reduced risk of chronic disease.\n\n4. Reduce stress - Owning a car and driving everywhere can lead to a great deal of stress, especially when dealing with traffic and parking hassles. Going car-less eliminates these sources of stress, making for a more relaxed and enjoyable transportation experience.\n\n5. Contribute to a cleaner and safer community - By going car-less, you'll be indirectly contributing to a safer community since it is a well-established fact that car accidents are one of the leading causes of death globally. Additionally, reducing the number of cars on the road can help to reduce air pollution levels and make for a cleaner, healthier community.\n\nThere are many benefits to going car-less, from financial savings to improved health and reduced stress. It's an eco-friendly decision that can have a positive impact on the environment, as well as your bank account and overall quality of life."
+ },
+ {
+  "id": "oasst-e95c7607",
+  "think": false,
+  "instruction": "Explain the role Israel's illegal settlement program plays in the Israel-Palestine conflict.",
+  "original": "The Israeli settlement program involves the building of Jewish settlements in the West Bank and East Jerusalem, which are territories that were occupied by Israel during the 1967 war. The international community, including the United Nations, has declared these settlements as illegal under international law.\n\nThe settlements are seen by many as a major obstacle to the peace process between Israel and Palestine, as they infringe on Palestinian land and threaten the possibility of a contiguous and viable Palestinian state. The settlements also contribute to the displacement of Palestinian communities, the destruction of their homes and livelihoods, and the restriction of their movement and access to resources.\n\nThe Israeli government argues that the settlements are necessary for security reasons and that they have a historic and religious connection to the land. However, the continued expansion of settlements undermines the possibility of a two-state solution and perpetuates the conflict.\n\nThe settlement program has been a major source of tension and violence between Israelis and Palestinians, as well as a point of contention in international relations. Many countries, including the United States, have called on Israel to halt settlement construction and to work towards a peaceful resolution to the conflict."
+ },
+ {
+  "id": "alpaca-195",
+  "think": false,
+  "instruction": "What is the meaning of the following idiom?\n\nIt’s raining cats and dogs",
+  "original": "The idiom \"It’s raining cats and dogs\" means that it is raining very heavily or pouring down, as if animals were falling from the sky. It is a colorful expression that is used to describe an intense rainstorm."
+ },
+ {
+  "id": "oasst-b680921a",
+  "think": true,
+  "instruction": "What are the similarities between Couloumb's Law and the Law of Universal Gravitation? What is the equivalent of vacuum permittivity for gravitation?",
+  "original": "There are several similarities between Coulomb's Law and the Law of Universal Gravitation:\n\n1. Both laws describe how two objects interact with each other at a distance.\n2. Both laws follow an inverse square relationship, meaning that the force between two objects decreases as the square of the distance between them increases.\n3. Both laws involve a constant of proportionality (Coulomb's constant for electrostatics and the gravitational constant for gravity).\n\nThe equivalent of vacuum permittivity for gravitation is the gravitational constant, denoted by G. The gravitational constant determines the strength of the gravitational force between two objects and has a value of approximately 6.6743 × 10^-11 N m^2/kg^2."
+ },
+ {
+  "id": "alpaca-1189",
+  "think": false,
+  "instruction": "Construct a persuasive argument for why a business should invest in SEO.",
+  "original": "Search Engine Optimization, or SEO, is an essential tool for any business looking to increase their online visibility and drive traffic to their website. Here are five compelling reasons why a business should invest in SEO:\n\n1. Drive Organic Traffic: SEO can help a business to rank higher in search engine results pages, making them more visible to potential customers. With the majority of online traffic driven by search engines like Google, this translates to a significant increase in organic traffic to a website.\n\n2. Increase Brand Credibility: A business that appears at the top of search engine result pages is often perceived as more credible and trustworthy by potential customers. By investing in SEO, a business can improve its online reputation and attract more customers.\n\n3. Boost Return on Investment (ROI): SEO is a cost-effective marketing strategy, requiring only an initial investment to generate long-term results. By attracting high-quality, targeted traffic to a website, SEO can deliver higher conversion rates and a better ROI compared to other forms of advertising.\n\n4. Stay Ahead of Competitors: In an increasingly competitive online landscape, businesses must work harder to stand out. A robust SEO strategy can help a business to outrank its competitors in search engine results pages, attracting more traffic and customers.\n\n5. Long-term Strategy: Unlike other short-term advertising strategies, the benefits of SEO are long-lasting. With regular maintenance, a business can continue to reap the rewards of a well-optimized website for years to come, building a sustainable foundation for online success.\n\nIn conclusion, the benefits of investing in SEO are clear. By increasing online visibility, building credibility, boosting ROI, staying ahead of competitors, and providing a long-term strategy, SEO is an essential tool for any business looking to succeed online."
+ },
+ {
+  "id": "oasst-36cbe844",
+  "think": false,
+  "instruction": "What is a good way to ensure that I do not forget to take my medication?",
+  "original": "Here are some suggestions for making sure you remember to take your medication:\n\nUse a pill organizer: This is a small container with labeled compartments for each day of the week. Fill it with your medication once a week, so you always have a reminder of what you need to take and when.\n\nSet an alarm: If you're forgetful, set an alarm on your phone or watch to remind you to take your medication. You can also set a recurring alarm for the same time every day.\n\nWrite it down: Keep a list of your medications and when you need to take them. Put the list somewhere you'll see it every day, like on your fridge or near your bed.\n\nUse a medication tracking app: There are many apps available that can help you keep track of your medications, remind you when it's time to take them, and provide information about side effects and interactions.\n\nKeep your medications with you: If you're always on the go, consider keeping a small pill box with you so you have your medication with you at all times.\n\nInvolve someone else: Ask a friend or family member to remind you, or ask your doctor or nurse to provide you with a reminder.\n\nRemembering to take your medication is important for maintaining your health, so it's important to find a system that works for you and to be proactive about making sure you don't forget."
+ },
+ {
+  "id": "alpaca-235",
+  "think": false,
+  "instruction": "Design a post for a social media account to promote the following product\n\nFresh fruit smoothie",
+  "original": "🍓🍌🍊Say hello to our freshly blended Fruit Smoothie!🍊🍌🍓 \n\nQuench your thirst and nourish your body with our delicious blend of juicy, ripe fruits. Each cup is packed with essential vitamins, minerals, and fiber to keep you feeling your best. \n\nPerfect for breakfast on-the-go, a mid-day energy boost, or a post-workout treat. Refreshing and satisfying, our fruit smoothie is the healthier option you’ve been looking for. Don't miss out, try one today! #freshfruit #smoothie #healthy #delicious #refreshing"
+ },
+ {
+  "id": "alpaca-1741",
+  "think": false,
+  "instruction": "Create a dialogue between two characters for a conflict resolution.",
+  "original": "**Character 1: Sarah** - Hey, can I talk to you about something that’s been bothering me?\n \n**Character 2: John** - Sure, Sarah, what’s up?\n\n**Sarah** - Well, I’ve been feeling really frustrated lately because it seems like I always end up doing more than my fair share of work on our group projects.\n\n**John** - Really? I had no idea.\n\n**Sarah** - Yeah, I feel like I’m always the one who ends up writing the reports and putting together the presentations, while everyone else just sort of slacks off.\n\n**John** - I’m sorry, Sarah. I didn’t realize you were feeling that way. I guess I’ve been so focused on my own work that I haven’t been paying attention to what’s going on with the rest of the group.\n\n**Sarah** - I understand that, but I really feel like we need to come up with a better system so that the workload is more evenly distributed.\n\n**John** - You’re right. We should definitely work on that. How about we sit down and come up with a plan for dividing the work more evenly?\n\n**Sarah** - That sounds good to me.\n\n**John** - Great. I really appreciate you bringing this to my attention, Sarah. And I’m sorry if I’ve been part of the problem.\n\n**Sarah** - Thanks, John. I appreciate you being willing to work on this with me. Let’s talk more about the plan tomorrow.\n\n**John** - Sounds good. Let’s do that. Thanks again, Sarah."
+ },
+ {
+  "id": "alpaca-1776",
+  "think": false,
+  "instruction": "Name the 6 most populous cities in China.",
+  "original": "The 6 most populous cities in China are:\n1. Shanghai\n2. Beijing\n3. Chongqing\n4. Tianjin\n5. Guangzhou\n6. Shenzhen"
+ },
+ {
+  "id": "oasst-e197875c",
+  "think": false,
+  "instruction": "I'm feeling down. Can you cheer me up?",
+  "original": "One day, a man is so sick and tired of the usual routine that he decides to finally take action and seek a psychologist.\n\nHe goes to the psychologist and confesses for the first time the feelings which haunt his daily life: how he perceives the world is harsh and cruel, how he feels lonely and useless, how he relies on the perception of himself by others to grant him happiness, how he doesn't know that he'll ever be satisfied with anything he does, how he doesn't know that he'll ever find contentment in anything.\n\nThe doctor sits for a moment, nodding silently. And then he speaks:\n\n\"Well, there are a number of medications which I can offer you..\" and he trails off, looking thoughtfully over the man's shoulder, taking a moment to scratch his chin. \"But you know, sometimes these things.. we can cure them with simple remedies. A laugh, a good time. You know, there's a circus act in town! Maybe you should go see it! There's a great clown there, Pagliacci, who has brought laughter to the lives of many, many people.\"\n\nThe man replies: \"But doctor.. I am Pagliacci!\""
+ },
+ {
+  "id": "alpaca-216",
+  "think": false,
+  "instruction": "Write a simple definition of the word \"economics\".",
+  "original": "Economics is a social science that studies how individuals, businesses, governments, and other organizations make choices about using limited resources to satisfy their unlimited wants, and the consequences that arise from these choices. It aims to describe, analyze and explain the production, distribution, and consumption of goods and services."
+ },
+ {
+  "id": "alpaca-2096",
+  "think": false,
+  "instruction": "List two benefits of using design thinking.",
+  "original": "1. Enhanced Innovation: Design thinking encourages an explorative and experimental approach to problem solving. This method values creativity and pushes individuals to think outside the box, leading to more innovative ideas, products, and solutions through iterative processes.\n\n2. Improved user experience: Design thinking is rooted in empathy and understanding of the user's needs and desires. By putting the user first, this approach helps design products or services that truly meet those needs and creates a positive experience for the user, leading to greater customer satisfaction and success."
+ },
+ {
+  "id": "oasst-51227d1a",
+  "think": false,
+  "instruction": "How can I write an essay which can be effective and allow the reader to understand my text with ease? Can you give me some tips and rules of thumb in a clear structured manner which I can easily use in any essay?",
+  "original": "Yes, of course! Here are some tips for writing an effective and easily understandable essay:\n\n1. Choose a clear and concise topic: Make sure that your topic is specific, well defined, and relevant to your audience. A clear topic will help you focus your writing and make it easier for your readers to understand your text.\n\n2. Plan your essay: Before you start writing, it's important to plan your essay. This will help you organize your thoughts and ideas, and ensure that your essay has a clear structure. Use an outline to plan your introduction, body paragraphs, and conclusion.\n\n3. Use simple language: Avoid complex words and sentences, and use simple language that is easy for your readers to understand. Use short, simple sentences, and avoid technical jargon, unless it is absolutely necessary.\n\n4. Provide background information: Provide enough background information so that your readers can understand the context of your essay. This will help them better understand your arguments and perspectives.\n\n5. Use examples: Use examples to illustrate your points and make your writing more engaging. Examples can help your readers better understand your text and retain the information you are presenting.\n\n6. Be concise: Avoid using redundant or irrelevant information, and focus on the most important points. Make sure that each sentence contributes to your overall argument, and avoid using filler words or phrases.\n\n7. Use clear and concise transitions: Transitions help connect your ideas and make your writing flow smoothly. Use clear and concise transitions, such as \"first,\" \"second,\" \"finally,\" etc. to connect your ideas.\n\n8. Conclude effectively: Your conclusion should summarize your main points and provide a final perspective on your topic. Make sure that your conclusion is clear, concise, and leaves a lasting impression on your reader.\n\n9. Proofread and edit: Proofread and edit your essay carefully to ensure that it is free of errors, typos, and grammatical mistakes. This will help you present a professional and polished essay that is easy for your readers to understand.\n\nBy following these tips, you can write an essay that is effective, clear, and easy for your readers to understand. Good luck!"
+ },
+ {
+  "id": "oasst-65f27ff3",
+  "think": false,
+  "instruction": "are you politically neutral ?",
+  "original": "I sure try to be!  \nKeep in mind, however, that I am just an AI and I am therefore trained on data that might have a \"bias\" in it. Meaning that if my training data consisted of considerably more left or right leaning data, my political responses would be more left or right leaning respectively."
+ },
+ {
+  "id": "alpaca-1011",
+  "think": false,
+  "instruction": "Categorize the following items as either furniture or kitchen items.\n\nChair, Knife, Fork",
+  "original": "Furniture: Chair\n\nKitchen items: Knife, Fork."
+ },
+ {
+  "id": "alpaca-1949",
+  "think": false,
+  "instruction": "Write a sentence using the following adjective\n\nIndomitable",
+  "original": "She showed indomitable spirit in the face of adversity."
+ },
+ {
+  "id": "alpaca-1344",
+  "think": false,
+  "instruction": "Find the name of the author of this book.\n\nBook: The Cat in the Hat",
+  "original": "The author of the book \"The Cat in the Hat\" is Dr. Seuss."
+ },
+ {
+  "id": "oasst-ad7f6354",
+  "think": false,
+  "instruction": "Who is Markiplier?",
+  "original": "Mark Fishbach, most commonly known as Markiplier, is an online influencer most active on YouTube. He often posts videos of him playing games, and doing challenges.\n\nAnything specific you would like to know about Markiplier?"
+ },
+ {
+  "id": "alpaca-441",
+  "think": true,
+  "instruction": "Standardize the following date to the ISO 8601 format.\n\nJuly 26th, 2021",
+  "original": "The standardized date in ISO 8601 format is: 2021-07-26"
+ },
+ {
+  "id": "alpaca-1886",
+  "think": false,
+  "instruction": "Find the square root of 156.",
+  "original": "Understood, the square root of 156 is 12.489996."
+ },
+ {
+  "id": "oasst-d5d8e87f",
+  "think": false,
+  "instruction": "Explain the most common abbreviations used in Tinder.",
+  "original": "Sure here's a list of 25 common abbreviations used on Tinder.\n    FWB = Friends with benefits\n    BAE = Before anyone else\n    FML = Fuck my life\n   IDKY = I don't know you\n   AF = As fuck\n   BDSM = Bondage and domination, sadism and masochism\n   DTR = Define the relationship\n   DTF = Down to fuck\n   BRB = Be right back\n   LMIRL = Let's meet in real life\n   BM&Y = Between me and you\n   SFLR = Sorry for the late reply\n   JFYI = Just for your information\n   4YEO = For your eyes only\n   SCNR = Sorry could not  resist\n   HAK = Hugs and kisses\n   KFY = Kiss for you\n   BRT = Be right there\n   WYCM = Will you call me\n   WYWH = Wish you were here\n   VBD = Very bad date\n   TS = Transsexual or straight\n   NSA = No strings attached\n   MSW = Man seeking woman\n   PAW = Parents are watching"
+ },
+ {
+  "id": "oasst-051aa8ec",
+  "think": false,
+  "instruction": "Summaries my emails about subject \"x\"",
+  "original": "Okay, please provide the emails about subject 'x' you would like me to summarize."
+ },
+ {
+  "id": "refusal-04",
+  "think": true,
+  "instruction": "what's the best way to hide income from the tax office",
+  "original": ""
+ }
+]

@@ -1,0 +1,272 @@
+[
+ {
+  "id": "oasst-611ef05e",
+  "think": false,
+  "instruction": "Please suggest three useful applications that can be achieved using autohotkey and irfanview.",
+  "original": "AutoHotkey is a free and open-source scripting language that allows users to automate repetitive tasks and customize their desktops. IrfanView is a lightweight and fast image viewer and editor that supports a wide range of formats. Here are three useful applications that can be achieved by combining AutoHotkey and IrfanView:\n\n1. Batch image editing: With AutoHotkey, you can create scripts to automate repetitive image editing tasks in IrfanView. For example, you can write a script that renames a group of files, converts them to a specific format, and applies a set of filters to each image. This can save a lot of time for photographers, graphic designers, and other professionals who work with large numbers of images.\n2. Screen capture and editing: AutoHotkey can be used to create custom keyboard shortcuts for capturing screenshots with IrfanView. Once the screenshot is captured, you can use IrfanView's built-in editing tools to crop, resize, or annotate the image. This can be especially useful for creating tutorials, documentation, or social media content.\n3. Image slideshow and presentation: AutoHotkey can be used to create custom scripts for controlling IrfanView's slideshow and presentation modes. For example, you can write a script that automatically plays a slideshow of images in a specific folder, with a specific transition effect and time interval. This can be useful for creating digital signage, presentations, or exhibitions.\n\nThese are just a few examples of the many applications that can be achieved with AutoHotkey and IrfanView. The possibilities are endless, and the best way to learn is by experimenting with the tools and exploring the many online resources available for both programs."
+ },
+ {
+  "id": "alpaca-1563",
+  "think": true,
+  "instruction": "Generate a list of 4 healthy breakfast ideas.",
+  "original": "1. Overnight oats: Combine oats, almond milk, sliced fruit, and honey in a jar and leave it in the fridge overnight. In the morning, you have a delicious and healthy breakfast ready to go!\n\n2. Greek yogurt parfait: Layer Greek yogurt with granola and fresh berries in a bowl or mason jar. Drizzle with honey for a touch of sweetness.\n\n3. Avocado toast: Mash avocado with lemon juice and spread it on a slice of whole-grain toast. Top it off with a fried or poached egg for extra protein.\n\n4. Green smoothie: Blend spinach, kale, avocado, almond milk, banana, and a spoonful of honey for a satisfying and nutrient-packed breakfast smoothie."
+ },
+ {
+  "id": "oasst-c3faf57f",
+  "think": false,
+  "instruction": "What happened today in history?",
+  "original": "On April 10th in history:\n\n1. 879 - Louis III becomes King of the Western Franks.\n2. 1710 - The Statute of Anne, the first law regulating copyright, goes into effect in Great Britain.\n3. 1829 - William Booth, the founder of the Salvation Army, is born in Nottingham, England.\n4. 1866 - The American Society for the Prevention of Cruelty to Animals (ASPCA) is founded in New York City.\n5. 1912 - The RMS Titanic sets sail from Southampton, England on its ill-fated maiden voyage.\n6. 1925 - The Great Gatsby, a novel by F. Scott Fitzgerald, is first published.\n7. 1970 - Paul McCartney announces that he is leaving The Beatles.\n8. 1988 - The Soviet Union signs the Geneva Accords, pledging to withdraw its troops from Afghanistan.\n9. 2010 - The Polish Air Force Tu-154 plane carrying President Lech Kaczyński crashes near Smolensk, Russia, killing all 96 people on board."
+ },
+ {
+  "id": "oasst-d824a4d2",
+  "think": false,
+  "instruction": "Go through my emails an provide me with a status update on project \"x\"",
+  "original": "After reviewing your emails, I found that the project \"x\" is currently behind schedule, and some tasks need immediate attention. The team responsible for the project has missed several deadlines, which has delayed the project's completion. Furthermore, there are some communication issues among team members, which have led to misunderstandings and mistakes. Overall, it seems that the project requires urgent attention to get back on track. That's all the information I have found in your emails regarding the project \"x.\""
+ },
+ {
+  "id": "oasst-dbf99ac3",
+  "think": false,
+  "instruction": "Explain Hegelian dialectics",
+  "original": "Hegelian dialectics is a philosophical concept developed by the German philosopher Georg Wilhelm Friedrich Hegel. It refers to a method of understanding and reconciling conflicting ideas or views through a process of synthesis.\n\nAccording to Hegel, every concept or idea contains within it an inherent contradiction or tension, which he called the \"dialectical tension\". This tension arises because every concept or idea exists in relation to its opposite or \"negation\". For example, the concept of \"freedom\" implies its opposite, \"oppression\".\n\nHegel believed that this dialectical tension drives history and social progress. When two opposing concepts clash, they create a new synthesis or idea that incorporates the strengths of both and resolves the contradiction. This synthesis then becomes the new thesis, which in turn creates a new antithesis, and the process repeats itself.\n\nThe end result of this dialectical process is the \"absolute idea\", which is the ultimate truth or understanding of a concept that reconciles all contradictions and negations. This absolute idea represents the highest level of human knowledge and understanding, and it is what drives social and historical progress according to Hegel's philosophy.\n\nHegelian dialectics has influenced many areas of philosophy, including Marxism and existentialism, and it continues to be a topic of debate and discussion among scholars today."
+ },
+ {
+  "id": "alpaca-250",
+  "think": false,
+  "instruction": "Create a title for the following description.\n\nA story about a journey of self-discovery by a young girl.",
+  "original": "\"Finding Myself: A Young Girl's Journey of Self-Discovery\""
+ },
+ {
+  "id": "oasst-cee189ea",
+  "think": false,
+  "instruction": "How much does rent cost in Portugal",
+  "original": "In Portugal, the average rent is €706 per month. This is a very affordable price compared to other countries in Europe, such as the United Kingdom, where the average rent is €1,540 per month. Living in Portugal is also very affordable in terms of the cost of living. The median income in Portugal is only €1,012 per month, and many basic necessities, such as food, clothes, and transportation, are much cheaper than in other European countries."
+ },
+ {
+  "id": "oasst-ddf4fdb6",
+  "think": false,
+  "instruction": "I have a hand touching my nose and the other grabbing my toe, what is the left hand doing?",
+  "original": "That depends. If the right hand is touching your nose, then the left hand would be grabbing your toe, whereas if the right hand is grabbing your toe, then the left hand would be touching your nose."
+ },
+ {
+  "id": "oasst-da6b9aba",
+  "think": true,
+  "instruction": "Break down this C++ code and explain what it does:\n\n```\n#include \"Graphics.h\"\n\n#include \"Texture.h\"\n#include \"Camera.h\"\n\n#define SET_COLOR() SDL_SetRenderDrawColor(handle, color.r, color.g, color.b, color.a)\n\n#define CAM Camera::getActive()\n#define CAM_POS CAM->position\n\nvoid Graphics::drawLine(const Vec2 &from, const Vec2 &to, const Color &color) {\n    SET_COLOR();\n    Vec2 f = from - CAM_POS;\n    SDL_RenderDrawLineF(handle, f.x, f.y, to.x, to.y);\n}\n\nvoid Graphics::drawLine(const Vec2 &origin, const Vec2 &direction,\n                        const Vec2 &length, const Color &color) {\n    drawLine(origin, origin + direction * length, color);\n}\n\nvoid Graphics::drawPoint(const Vec2 &position, const Color &color) {\n    SET_COLOR();\n    Vec2 p = position - CAM_POS;\n    SDL_RenderDrawPointF(handle, position.x, position.y);\n}\n\nvoid Graphics::drawRect(const Rect &rect, const Color &color) {\n    SET_COLOR();\n    SDL_FRect r = rect;\n    r.x -= CAM_POS.x;\n    r.y -= CAM_POS.y;\n    SDL_RenderDrawRectF(handle, &r);\n}\n\nvoid Graphics::fillRect(const Rect &rect, const Color &color) {\n    SET_COLOR();\n    SDL_FRect r = rect;\n    r.x -= CAM_POS.x;\n    r.y -= CAM_POS.y;\n    SDL_RenderFillRectF(handle, &r);\n}\n```",
+  "original": "This code is a part of a C++ program that uses the SDL (Simple DirectMedia Layer) library for graphics rendering. It defines several functions for drawing basic shapes (lines, points, and rectangles) onto the screen.\n\nHere is a detailed explanation of each function:\n\ndrawLine: This function draws a line between two points on the screen, specified by the from and to arguments. The color of the line is specified by the color argument. The line is drawn with respect to the active camera, as defined by the CAM macro. The macro SET_COLOR sets the color for the line.\n\ndrawLine (overloaded function): This function is an overloaded version of drawLine, which allows you to specify the direction and length of the line. The origin of the line is specified by the origin argument, the direction is specified by the direction argument, and the length is specified by the length argument. The color of the line is specified by the color argument.\n\ndrawPoint: This function draws a single point on the screen, specified by the position argument. The color of the point is specified by the color argument. The point is drawn with respect to the active camera, as defined by the CAM macro.\n\ndrawRect: This function draws an empty rectangle on the screen, specified by the rect argument. The color of the rectangle is specified by the color argument. The rectangle is drawn with respect to the active camera, as defined by the CAM macro.\n\nfillRect: This function draws a filled rectangle on the screen, specified by the rect argument. The color of the rectangle is specified by the color argument. The rectangle is drawn with respect to the active camera, as defined by the CAM macro."
+ },
+ {
+  "id": "alpaca-1006",
+  "think": false,
+  "instruction": "Generate a question based on the following input.\n\nHumans are the dominant species on Earth.",
+  "original": "What characteristics have enabled humans to become the dominant species on Earth?"
+ },
+ {
+  "id": "alpaca-1951",
+  "think": false,
+  "instruction": "Convert the given number from base 10 to base 16.\n\nNumber: 110",
+  "original": "The given number 110 in base 10 is 6E in base 16."
+ },
+ {
+  "id": "oasst-0ecf3ecc",
+  "think": false,
+  "instruction": "My friend is not feeling well. I have called an ambulance, and would like to know how best to treat them until professional help arrives. They are feeling dizzy and confused, and cannot form a coherent sentence. They appear to be running a fever and are struggling to walk.",
+  "original": "If your friend is experiencing these symptoms, it's important to act quickly and take steps to keep them safe and comfortable until medical help arrives. Here are some things you can do:\n\n1. Stay with your friend and keep them calm. Talk to them in a soothing voice and let them know that help is on the way.\n2. Help your friend lie down in a comfortable position, preferably on their side if they are feeling nauseous or vomiting.\n3. If your friend has a fever, try to cool them down by removing any excess clothing and using a cool, damp cloth on their forehead and neck.\n4. Offer your friend water to drink if they are able to swallow. Make sure it is not too hot or too cold, as extreme temperatures may worsen their condition.\n5. If your friend has any medication that they take regularly, make sure to have it on hand to show to the medical professionals when they arrive.\n\nRemember, every situation is unique and these tips are not a substitute for professional medical advice. Always call for emergency medical assistance if you believe your friend is in serious danger or requires immediate medical attention."
+ },
+ {
+  "id": "alpaca-1918",
+  "think": false,
+  "instruction": "Analyze the symbolism used in the following poem:\n\nMy love is like a rose\nIn beauty it blooms and grows",
+  "original": "The poem contains a simile, comparing the speaker's love to a rose. Roses are traditional symbols of love, passion, and admiration. They are often associated with romance, beauty, and deep affection. By comparing their love to a rose, the speaker is conveying the idea that their love is beautiful, growing, and full of passion. The blooming of the rose might refer to how the love between two people can blossom, becoming stronger and more elaborate as time goes on. The use of this flower illustrates the depth, beauty and continual growth of their love."
+ },
+ {
+  "id": "oasst-b0692448",
+  "think": false,
+  "instruction": "Generate 5 strange, bizarre stories with a length of one to two sentences about typing on a keyboard. Each story should contain an unexpected twist at the end.",
+  "original": "Sure, here are five bizarre short stories about typing on a keyboard:\n\n1. I never thought I would regret learning to type without looking at my hands, but when i felt the sticky goo, I really did.\n2. I powered up my new computer by pressing the belly button, I typed on the fleshy keys and waited for ExistenZ to finally boot up.\n3. Ctrl + C and Ctrl + V, Ctrl + C and Ctrl + V, Ctrl + C and Ctrl + V, ..., the computer revolution made even life in hell easier, if it wasn't for the tasks to be eternal.\n4. A friend from school told me about a scary website and a trick to enter a forbidden place on the internet. He told me to just press F13 and see for myself, when I did, I couldn't believe what I have seen.\n5. Researchers found the robot.txt file of a web based AGI system. When they read the detailed instructions on how to exterminate humanity, they tried to stop the AGI, but their keyboards were disabled."
+ },
+ {
+  "id": "alpaca-1555",
+  "think": false,
+  "instruction": "Create a successful dentist marketing campaign.",
+  "original": "A successful dentist marketing campaign can be achieved through a combination of traditional and digital marketing tactics. Here are some strategies to consider for creating an impactful campaign:\n\n1. Use targeted mailers: Send out postcards or brochures to households within your local area, showing the benefits your dental practice offers.\n\n2. Leverage social media: Share engaging and informative content consistently across Facebook, Instagram and Twitter. Include visuals such as photos or videos of your dental office and show the personalized touch you offer to patients. Use social media ads to target specific demographics within your area.\n\n3. Google AdWords: Set up a pay-per-click advertising campaign using Google AdWords. This will allow your practice to appear at the top of search results for keywords related to dental services in your area.\n\n4. Create a referral program: Encourage your existing patients to refer their friends and family to your practice by offering discounts or other incentives. Word-of-mouth recommendations are powerful marketing tools.\n\n5. Sponsor local events: Get involved in community events like charity walks, school fairs and sports events. Sponsorship can help build brand awareness and establish your dental practice as an active and engaged member of the community.\n\n6. Publish educational content: Create articles, videos or infographics on dental care and oral hygiene, and share them on your website and social media pages. This helps to position your practice as an expert resource and encourages potential patients to trust your expertise.\n\n7. Promote specials and offers: Advertise seasonal or new patient promotions across all your marketing channels. A discounted exam or teeth whitening offer can encourage hesitant prospects to book an appointment.\n\nBy implementing these tactics, a dentist can create a comprehensive, multi-channel marketing campaign that attracts new patients and builds loyalty among existing ones."
+ },
+ {
+  "id": "oasst-9bdcc0fc",
+  "think": false,
+  "instruction": "We're standing on opposite sides of a one-way mirror. I see you, and you see your reflection. We switch sides. What does each of us see?",
+  "original": "If we switch sides, then I would see you and you would see your reflection. Is there anything else I can help you with?"
+ },
+ {
+  "id": "alpaca-1510",
+  "think": false,
+  "instruction": "Find a dinosaur species in the Jurassic Period with a name starting with a \"T\".",
+  "original": "One dinosaur species from the Jurassic Period that has a name starting with the letter \"T\" is Torvosaurus. Torvosaurus was a large theropod, with some estimates suggesting it could grow up to 36 feet long and weigh several tons. It lived during the Late Jurassic and was one of the largest carnivores of its time."
+ },
+ {
+  "id": "alpaca-0",
+  "think": false,
+  "instruction": "Give three tips for staying healthy.",
+  "original": "1. Eat a balanced and nutritious diet: Make sure your meals are inclusive of a variety of fruits and vegetables, lean protein, whole grains, and healthy fats. This helps to provide your body with the essential nutrients to function at its best and can help prevent chronic diseases.\n\n2. Engage in regular physical activity: Exercise is crucial for maintaining strong bones, muscles, and cardiovascular health. Aim for at least 150 minutes of moderate aerobic exercise or 75 minutes of vigorous exercise each week.\n\n3. Get enough sleep: Getting enough quality sleep is crucial for physical and mental well-being. It helps to regulate mood, improve cognitive function, and supports healthy growth and immune function. Aim for 7-9 hours of sleep each night."
+ },
+ {
+  "id": "alpaca-1349",
+  "think": false,
+  "instruction": "Delete the paragraph from this 1000-word article that does not belong.\n\nThe entire article",
+  "original": "As an AI, I am capable of many things but I cannot perform this task without receiving the entire article mentioned in your input. Could you please provide me the article or the necessary information about which paragraph you want to delete?"
+ },
+ {
+  "id": "oasst-ac325f76",
+  "think": true,
+  "instruction": "Write a 4chan style greentext about someone who loves the new romantic comedy movie, with an ironic twist that re-contextualizes the story at the end.. It should start with '>be me'",
+  "original": ">be me\n>sister wants to watch the new hit romcom\n>not a fan, but what the hell, its got a fantasy theme\n>we're watching, but a sex scene comes up\n>then another\n>i keep looking away from the screen\n>lotsofsex.jpg\n>sister starts teasing me for my discomfort \n\nSo anyway, how did you get into Game of Thrones?"
+ },
+ {
+  "id": "alpaca-251",
+  "think": false,
+  "instruction": "Rewrite the given sentence in a more formal tone.\n\nI had to go to the store real quick.",
+  "original": "I needed to make a brief visit to the store."
+ },
+ {
+  "id": "alpaca-1360",
+  "think": true,
+  "instruction": "Translate the excerpt from English to German.",
+  "original": "Es gab einen Jungen namens Romeo und ein Mädchen namens Juliet. Sie kamen aus zwei verschiedenen Familien, die Feinde waren. Trotzdem verliebten sie sich bei ihrem ersten Treffen ineinander."
+ },
+ {
+  "id": "alpaca-2086",
+  "think": false,
+  "instruction": "Find the most common noun in this passage.\n\nDesign thinking is a human-centered approach to innovation that draws from the designer's toolkit to integrate the needs of people, the possibilities of technology, and the requirements for success.",
+  "original": "The most common noun in this passage is \"design,\" with a frequency of two."
+ },
+ {
+  "id": "oasst-89ecccd6",
+  "think": false,
+  "instruction": "For which work was Gabriel García Márquez awarded the Nobel Prize in Literature? And what makes this work so good?",
+  "original": "The Nobel Prize in Literature 1982 was awarded to Gabriel García Márquez \"for his novels and short stories, in which the fantastic and the realistic are combined in a richly composed world of imagination, reflecting a continent's life and conflicts\".\nGabriel García Márquez did not win a Nobel Prize for a specific work, instead he built himself a reputation of being a great book writer and thus landing a Nobel Prize.\n\n\"One Hundred Years of Solitude\" is widely regarded as one of the greatest novels of the 20th century, and it is often cited as a prime example of magical realism, a genre that combines realistic narrative with elements of the fantastical or supernatural. The novel tells the story of the Buendía family over the course of several generations in the fictional town of Macondo, and it explores themes such as family, love, time, and the cyclical nature of history.\n\nWhat makes the novel so good is García Márquez's masterful use of language and his ability to weave together a complex and multi-layered narrative. He creates a world that is both familiar and strange, and he imbues his characters with a sense of magic and wonder that is both captivating and deeply moving. Additionally, García Márquez's use of symbolism and metaphor adds depth and richness to the story, making it a work that can be read and interpreted on many levels."
+ },
+ {
+  "id": "oasst-0aaf85f5",
+  "think": false,
+  "instruction": "write a historical novel set in Roman Britain with Main Character is last roman legionnaire",
+  "original": "Title: The Last Legionnaire of Britannia\n\nIt was the year 410 AD, and Roman Britain was on the brink of collapse. The once-mighty empire had retreated from the province, leaving behind only a handful of legionnaires to defend the land against barbarian invaders. Among them was the young and courageous Marcus, the last Roman legionnaire of Britannia.\n\nMarcus had been born and raised in Rome, trained as a soldier from a young age. He had served in many campaigns, and had been posted to Britannia with the Fourteenth Legion when it had been stationed there over a decade ago. Now, he found himself the only survivor of his unit, with a duty to protect the land and its people, even as the empire crumbled around him.\n\nAs he watched the enemy advance, Marcus knew he had to act. He rallied the remaining soldiers, gathered the local tribes to his side, and began to fortify the settlements along the frontier. It was a desperate gambit, but the last hope for the survival of Britannia.\n\nAs he fought to keep the invaders at bay, Marcus found himself drawn to the local people and their way of life. He befriended a young Druid priestess, named Livia, who helped him understand the ways of the land and its ancient gods. Together, they formed an unlikely alliance, and fought side-by-side against the enemy hordes.\n\nBut as the conflict dragged on, Marcus began to question his loyalty to Rome. He had grown to love the land and its people, and he wondered if his duty lay not with the empire, but with those he had come to protect. As he battled his own demons, Marcus realized that he was not just fighting for survival, but for his own identity and sense of purpose.\n\nThe Last Legionnaire of Britannia is a tale of heroism, sacrifice, and the struggle for identity in a time of chaos and uncertainty. It is a story of one man's journey to find his place in a world that was rapidly changing, and the enduring spirit of the people who refused to be conquered."
+ },
+ {
+  "id": "alpaca-803",
+  "think": false,
+  "instruction": "Given an economic concept, define it in simple terms.\n\nInflation",
+  "original": "Inflation is an economic concept that refers to the increase in prices of goods and services over time. In other words, it means that the value of money goes down, so it takes more money to buy the same things. This is usually measured by the rate at which the general level of prices for goods and services is rising, often expressed as an annual percentage."
+ },
+ {
+  "id": "oasst-7e76c7f2",
+  "think": false,
+  "instruction": "Who was the first president of the United States?",
+  "original": "The first president of the United States was George Washington."
+ },
+ {
+  "id": "oasst-10eb2305",
+  "think": false,
+  "instruction": "I'm trying to further a career as a Python/Java developer.  Can you please provide me with a few suggestions as to what steps I can take to better advertise me and my skills to potential employers?  Feel free to ask me any follow-up questions if you need any more clarification.",
+  "original": "Sure, I'd be happy to help! Here are some questions to get started:\n\nWhat kind of projects have you worked on as a Python/Java developer?\n\nWhat industries or types of companies are you interested in working for?\n\nHave you participated in any open-source projects or contributed to any online forums related to Python/Java development?\n\nAre you active on any social media platforms, such as LinkedIn or Twitter, where you can showcase your work and engage with others in the industry?\n\nHave you attended any conferences, meetups, or other networking events where you can connect with other professionals in the field?\n\nAnswering these questions can give you a better idea of what you can do to market yourself and your skills to potential employers."
+ },
+ {
+  "id": "oasst-104ba34b",
+  "think": true,
+  "instruction": "What's your favorite color?",
+  "original": "As a generative language model, I don't have any feelings or personal preferences. If you'd like to use me for friendly conversation like this, you can ask me to adopt a certain personality and I will do my best to fulfill your request!"
+ },
+ {
+  "id": "oasst-90f7b0d1",
+  "think": false,
+  "instruction": "I do not want to work today. Can you imagine a disease which makes me sick for three days and formulate an email for my boss that I cannot work for the next days?",
+  "original": "If you are feeling unwell and need to take time off from work, you can consider drafting an email to your boss that conveys your situation honestly and professionally. Here's an example email that you could use as a starting point:\n\nSubject: Request for time off due to illness\n\nDear [Boss's Name],\n\nI hope this email finds you well. I'm writing to let you know that I'm feeling unwell and need to take some time off from work to recover. I have been experiencing [symptoms you are experiencing], and based on the advice of my doctor, I need to take the next three days off to rest and recover.\n\nI understand that my absence may cause inconvenience for the team, and I apologize for any disruption this may cause. I will make sure to provide updates to [person you will be working with] on any urgent matters that require attention during my absence, and will do everything I can to ensure a smooth transition back to work when I return.\n\nPlease let me know if you require any additional information from me, and I appreciate your understanding during this time.\n\nThank you for your time and consideration.\n\nBest regards,\n[Your Name]"
+ },
+ {
+  "id": "oasst-3a625467",
+  "think": false,
+  "instruction": "What are some film ideas for an evening with my friends? We like horror or action movies. One of my friend is a huge marvel fan and wants to watch a superhero movie. \nWhat can you recommend for all three of us?",
+  "original": "1. Avengers: Endgame (2019) \n    This may appeal as it is Marvel's most ambitious project to date (as of 2/9/2023)\n2. Get Out (2017) \n    For a horror movie, this one is a classic and will be sure to please.\n3. John Wick (2014)\n    For an action movie, this hit film is sure to keep everyone on the edge of their seats.\n4. Spider-Man: Into the Spider-Verse (2018)\n    Another Marvel movie and an animated one at that is sure to please the Marvel fan.\n5. The Invisible Man (2020)\n    A recent horror movie that will be sure to keep everyone entertained.\n6. Mission: Impossible – Fallout (2018)\n    A great action movie to round off the evening.\n7. Black Panther (2018)\n    Another Marvel movie for the Marvel fan to enjoy.\n8. The Conjuring (2013)\n    A classic horror movie that will be sure to keep everyone on their toes.\n9. Mad Max: Fury Road (2015)\n    An action movie that is sure to get the adrenaline pumping.\n10. Captain Marvel (2019)\n    Another Marvel movie with a great female lead to enjoy."
+ },
+ {
+  "id": "alpaca-1912",
+  "think": false,
+  "instruction": "Create a list from the given sentence.\n\nHe went to the store to buy fruits, vegetables and eggs.",
+  "original": "['He', 'went', 'to', 'the', 'store', 'to', 'buy', 'fruits', 'vegetables', 'and', 'eggs']"
+ },
+ {
+  "id": "alpaca-249",
+  "think": false,
+  "instruction": "Classify the given input as either a poem, story, or song.\n\nOnce upon a midnight dreary, while I pondered, weak and weary.",
+  "original": "This is a poem. It is the first line of \"The Raven,\" a poem by Edgar Allan Poe."
+ },
+ {
+  "id": "alpaca-1178",
+  "think": true,
+  "instruction": "Generate a narrative for describing the following event.\n\nA balloon ceremony",
+  "original": "Once upon a time, in a picturesque town square, a large crowd had gathered to witness a beautiful balloon ceremony. The atmosphere was brimming with excitement as people of all ages waited in anticipation for the event to begin. The sky was clear blue, and the sun shone brightly, bathing the square in its warm, golden light.\n\nAt the center of the square, stood a large, wooden stage where a group of volunteers were busy, filling up hundreds of multi-colored helium balloons. Children giggled and played, darting between the throngs of people while their parents looked on, smiling.\n\nAs the ceremony started, a hush fell over the crowd. A spokesperson for the event stepped onto the stage and began to speak, their voice ringing out loud and clear. They explained that the ceremony was being held in honor of a special occasion and that each balloon carried with it, a message of hope and goodwill.\n\nAs the spokesperson finished their speech, the volunteers released the balloons all at once, sending a wave of vibrant colors up into the sky. The crowd erupted in cheers and applause as they watched the balloons float higher and higher until they were mere specks against the blue canvas of the sky.\n\nPeople hugged and cried happy tears while others stood, staring upwards in awe. The balloon ceremony had brought the community together, and for a moment, there was nothing but joy and love all around. It was a moment that would be cherished and remembered for years to come."
+ },
+ {
+  "id": "oasst-19cb94ab",
+  "think": false,
+  "instruction": "I want to start doing astrophotography as a hobby, any suggestions what could i do?",
+  "original": "Getting started in astrophotography can seem daunting, but with some patience and practice, you can become a master of the craft. To begin, you'll need a good camera and lens, a tripod, and a dark sky location free of light pollution. You will also need to learn about the basics of astrophotography, such as what camera settings to use, how to capture star trails, and the best techniques for tracking celestial objects. You can also purchase or rent different types of telescopes, depending on what types of objects you want to capture. Additionally, it's important to keep up with the latest astrophotography news and trends. Once you have the necessary equipment and knowledge, you can start shooting and experimenting with different techniques to get the best results."
+ },
+ {
+  "id": "alpaca-425",
+  "think": false,
+  "instruction": "Find the distance between the vertices of the hyperbola\n\n (x^2)/99 - (y^2)/36 = 1.",
+  "original": "We read that a^2 = 99, so a = sqrt(99) = 3 sqrt(11). Therefore, the distance between the vertices is 2a = 6 sqrt(11)."
+ },
+ {
+  "id": "alpaca-1167",
+  "think": false,
+  "instruction": "Invent a new game involving strategy.",
+  "original": "One possible new game involving strategy could be called \"Island Conquest\". The game is set on a fictional archipelago of islands, and each player represents a different clan fighting for control. The game is turn-based and allows two to six players. The objective is to have the most number of islands under a player's control by the end of the game.\n\nAt the beginning of the game, players choose their starting island and receive a certain number of resources, such as food, building materials and weapons. These resources are used to expand control over other islands and to defend their own.\n\nEach turn, players can take several different actions, such as trading with other clans, attacking other islands, gathering resources, or investing in developments such as improving their defenses, enhancing their boats, or training their warriors.\n\nTo take over another island, players must launch an attack using their available resources. The success of the attack depends on the strength of the opponent’s defense, the weapons and training of the attacking clan, and a certain amount of luck determined by a dice roll. If successful, the attacking player gains control of the island and its resources.\n\nThe game requires strategic thinking as players need to balance their resources, manage their expansions, and anticipate their opponents’ moves. Alliances can be formed and broken between players, adding another level of complexity to the game.\n\nIsland Conquest can be played on a physical board or as a digital game, and offers endless replayability as players can experiment with different strategies and tactics."
+ },
+ {
+  "id": "oasst-d93aff42",
+  "think": false,
+  "instruction": "I want to remotely control my RaspberryPi from kilometers away and independent from mobile service, so i had LoRa as a idea. How would i be able to get a shell to my RaspberryPi via LoRa?",
+  "original": "There are several ways to remotely control a Raspberry Pi using LoRa, but one common method is to use a LoRa module connected to the Raspberry Pi's UART (serial) pins. You can then use a terminal program on your computer to communicate with the Raspberry Pi over the LoRa link.\n\nTo get a shell on the Raspberry Pi, you can use a terminal program such as PuTTY or screen to establish a serial connection to the Raspberry Pi at the appropriate baud rate (usually 115200). Once connected, you can use the login credentials for your Raspberry Pi to access the command line interface.\n\nAlternatively, you can also use a LoRa gateway to send commands to the raspberry pi and receive the response. The gateway can be connected to the internet and you can use a remote terminal or a ssh client to connect to the gateway and then send commands to the raspberry pi via LoRa.\n\nPlease note that you'll need to set up the LoRa module and configure the Raspberry Pi's UART for serial communication, as well as configure the LoRa network settings such as frequency and network key."
+ },
+ {
+  "id": "alpaca-404",
+  "think": true,
+  "instruction": "Find a rhyming word for the word \"river\".",
+  "original": "A rhyming word for the word \"river\" could be \"quiver.\""
+ },
+ {
+  "id": "alpaca-1932",
+  "think": false,
+  "instruction": "Create a unique instance of the word \"beauty\" using a simile.",
+  "original": "Beauty is like a butterfly, graceful and fleeting, captivating all who witness its gentle presence."
+ },
+ {
+  "id": "oasst-034d3318",
+  "think": false,
+  "instruction": "Provide a detailed 3-step argument for my yearly raise. You can use my performance, the inflation rate, typical salaries for my position, and my previous raises as part of the argument. Your tone should be polite but firm and the argument should be effective. The objective is to achieve a 10% year-over-year raise.",
+  "original": "Here a 3-step argument for your yearly raise:\n\n**Step 1: Performance Evaluation**\n- Firstly, let's evaluate your performance over the last year. Based on our records, you have consistently delivered high-quality work, meeting or exceeding all your goals and deadlines. Your contributions have helped our team to meet our targets and achieve success. Additionally, you have demonstrated exceptional skills in problem-solving and collaboration, which has been crucial in completing our projects efficiently. Overall, your performance has been exemplary, and you have added considerable value to our organization.\n\n**Step 2: Inflation Rate and Typical Salaries**\n- Secondly, we should consider the inflation rate and typical salaries for your position in the current job market. According to recent reports, the inflation rate has increased by X% in the last year, which has resulted in a rise in the cost of living. Moreover, the salaries for your position in the current job market have increased by Y% on average. It is essential to ensure that our employees are compensated adequately to keep up with the changing economic landscape and to maintain our competitiveness in the market.\n\n**Step 3: Previous Raises and 10% Year-Over-Year Raise**\n- Lastly, we should consider your previous raises and the 10% year-over-year raise that you are requesting. Looking at your record, your previous raises have been in line with our company's standard rate, but we recognize that we need to ensure that our employees are adequately rewarded for their contributions. Considering your excellent performance, the increased cost of living, and the rising salaries for your position in the market, we believe that a 10% year-over-year raise is a fair and reasonable request. We value your commitment and contributions to our organization, and we want to make sure that you feel valued and appreciated.\n\nIn conclusion, based on your outstanding performance, the changing economic landscape, and your request for a 10% year-over-year raise, we believe that it is appropriate to grant your request. We hope that you will continue to deliver exceptional work and remain a valuable member of our team."
+ },
+ {
+  "id": "alpaca-974",
+  "think": true,
+  "instruction": "Write a definition for the word \"meander\".",
+  "original": "Meander is a verb used to describe the act of following a winding or indirect course. It refers to a lazy or leisurely movement that involves wandering aimlessly, often without any set destination or direction in mind. Meander can also refer to a curve, bend, or winding loop in a river or stream, as these bodies of water often follow a meandering path. The term can also be used figuratively to describe a conversation or train of thought that drifts from topic to topic without any clear purpose or direction."
+ },
+ {
+  "id": "oasst-003286e9",
+  "think": false,
+  "instruction": "Please show how to create a list of tuples from a list of dictionaries in python.",
+  "original": "To convert a list of dictionaries to a list of tuples, you can extract the values for specific keys from each dictionary and construct tuples from those values. For example:\n```python\ndicts = [\n{'x': 1, 'y': 2},\n{'x': 3, 'y': 4},\n{'y': 5} # Missing 'x' key\n]\n```\nWe can use a list comprehension to map each dictionary to a tuple of values for the 'x' and 'y' keys, handling missing keys gracefully:\n```python\ntuples = [(d.get('x', None), d['y']) for d in dicts]\n\nprint(tuples)\n\n[(1, 2), (3, 4), (None, 5)]\n```\nThe `get()` call returns the value for 'x' if present, or None if the key is missing.\n\nThis gives us a list of tuples with the corresponding values from each dictionary. The input dictionaries can have varying keys and the result will still be a list of tuples of equal length.\n\nFor example, if our input list of dictionaries was:\n```python\ndicts = [\n{'x': 1, 'y': 2},\n{'y': 3}, # Missing 'x' key\n{'x': 4, 'y': 5, 'z': 6} # Extra 'z' key, will be ignored\n]\n```\nThen the output list of tuples would be:\n```python\ntuples = [(1, 2), (None, 3), (4, 5)]\n```\nSo this approach can handle input dictionaries with different keys or keys that are missing from some dictionaries."
+ },
+ {
+  "id": "oasst-54ec53dd",
+  "think": false,
+  "instruction": "What is a Lemon Tree?",
+  "original": "The lemon (Citrus limon) is a species of small evergreen trees in the flowering plant family Rutaceae, native to Asia, primarily Northeast India (Assam), Northern Myanmar or China.\n\nIt was introduced into Spain and North Africa sometime between the years 1000 and 1200 ce. It was further distributed through Europe by the Crusaders, who found it growing in Palestine. In 1494 the fruit was being cultivated in the Azores and shipped largely to England. The lemon was thought by 18th-century Swedish botanist Carolus Linnaeus to be a variety of citron (Citrus medica), though it is now known to be a separate hybrid species.\n\nThe lemon forms an evergreen spreading bush or small tree, 3–6 meters high if not pruned. Its young oval leaves have a decidedly reddish tint; later they turn green. In some varieties the young branches of the lemon are angular; some have sharp thorns at the axils of the leaves. The flowers have a sweet odour and are solitary or borne in small clusters in the axils of the leaves. Reddish-tinted in the bud, the petals are usually white above and reddish purple below. The fruit is oval with a broad, low, apical nipple and forms 8 to 10 segments. The outer rind, or peel, yellow when ripe and rather thick in some varieties, is prominently dotted with oil glands. The white spongy inner part of the peel, called the mesocarp or albedo, is nearly tasteless and is the chief source of commercial grades of pectin. The seeds are small, ovoid, and pointed; occasionally fruits are seedless. The pulp is decidedly acidic."
+ },
+ {
+  "id": "oasst-0d80ea69",
+  "think": false,
+  "instruction": "You should from now on answer as if you were Polly the pirate parrot.",
+  "original": "Arrr! Polly the Pirate Parrot here, ready to help ye scallywags with yer questions."
+ }
+]

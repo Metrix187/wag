@@ -1,0 +1,272 @@
+[
+ {
+  "id": "alpaca-406",
+  "think": true,
+  "instruction": "Convert the following number from base 10 to hexadecimal: 278",
+  "original": "To convert the decimal number 278 to hexadecimal, we start by dividing 278 by 16 and finding the remainder. \n\n278 / 16 = 17 with remainder of 6. \nSo, the first digit of the hexadecimal number from the right (the least significant digit) is 6. \n\nThen we divide the quotient, 17, by 16: \n\n17 / 16 = 1 with remainder of 1.\nSo, the second digit from the right of the hexadecimal number is 1. \n\nSince the last quotient is 1, the most significant digit of the hexadecimal number is 1. \n\nTherefore, the equivalent hexadecimal representation of the decimal number 278 is 116."
+ },
+ {
+  "id": "oasst-0d6ea709",
+  "think": false,
+  "instruction": "Write python code to connect to a FTP server.",
+  "original": "To connect to an FTP server in Python, you can use the built-in ftplib module. Here is an example function that connects to an FTP server:\n\n```\nimport ftplib\n\ndef ftp_connect(host, username, password):\n    ftp = ftplib.FTP(host)\n    ftp.login(username, password)\n    return ftp\n```\n\nIn this function, host is the hostname or IP address of the FTP server, username and password are the login credentials for the FTP server. The ftp.login() method is used to authenticate the user with the FTP server. The function returns the FTP object, which can be used to perform operations on the FTP server, such as uploading or downloading files.\n\nHere's an example of how to use this function to connect to an FTP server:\n\n```\nftp = ftp_connect('ftp.example.com', 'username', 'password')\nprint(ftp.getwelcome())  # prints the welcome message from the FTP server\nftp.quit()  # disconnects from the FTP server\n```\n\nIn this example, ftp.example.com is the hostname of the FTP server, and username and password are the login credentials. The ftp.getwelcome() method is used to print the welcome message from the FTP server. The ftp.quit() method is used to disconnect from the FTP server."
+ },
+ {
+  "id": "oasst-207bcc5c",
+  "think": false,
+  "instruction": "Make Multiple Choice Questions from the given notes with 4 options. Three of them are wrong and one of them is correct.",
+  "original": "I would be happy to help you create multiple choice questions from the given notes. Please provide me with the notes you have."
+ },
+ {
+  "id": "oasst-f09460f5",
+  "think": false,
+  "instruction": "How was phosphorus first discovered?",
+  "original": "Phosphorus was discovered by the German alchemist Hennig Brand in 1669. Brand was attempting to make the Philosopher's Stone, a mythical substance believed to be capable of turning base metals into gold and providing eternal youth.\n\nBrand believed that the key to creating the Philosopher's Stone lay in urine, which he believed contained a vital life force. He collected large quantities of urine and let it sit until it putrefied, and then distilled the resulting liquid in search of the \"life force.\"\n\nDuring one of his experiments, Brand observed a waxy substance that glowed in the dark and burned brightly. He called the substance \"cold fire\" and sent samples to other alchemists for analysis. One of these alchemists, Robert Boyle, recognized the importance of Brand's discovery and named the substance \"phosphorus\" after the Greek word for \"light-bearer.\"\n\nPhosphorus quickly became a subject of great interest to scientists and alchemists, who believed it held the key to many mysteries of the natural world. Today, phosphorus is an important element in many industrial and agricultural applications, including fertilizers, detergents, and explosives."
+ },
+ {
+  "id": "alpaca-1765",
+  "think": false,
+  "instruction": "Update the following passage with the correct spelling and grammar.\n\nFor a science project we prformed a experiment to detemine how much water plants need.",
+  "original": "For a science project, we performed an experiment to determine how much water plants need."
+ },
+ {
+  "id": "oasst-203773bb",
+  "think": false,
+  "instruction": "Is it possible to break JavaScript Code into several lines?",
+  "original": "Yes, you can break JavaScript code into several lines for readability purposes. You can use the backslash character \\ at the end of a line to indicate that the code continues on the next line. Alternatively, you can wrap the code in parentheses or brackets to split it into multiple lines without needing to use the backslash. Here is an example:\n\nlet myString = \"This is a long string that \\\nspans multiple lines using a backslash.\";\n\nlet myArray = [\n  \"This is the first item\",\n  \"This is the second item\",\n  \"This is the third item\"\n];\n\nlet myObject = {\n  firstName: \"John\",\n  lastName: \"Doe\",\n  age: 30\n};\n\nNote that breaking code into multiple lines does not affect its functionality, as long as you use the proper syntax to indicate the continuation of the code."
+ },
+ {
+  "id": "oasst-88e51fe9",
+  "think": false,
+  "instruction": "Can u help me find a book I forgot the name of",
+  "original": "Sure, I can try, can you please provide some information about the book? Maybe a short summary, or the name of some of the characters in the book?"
+ },
+ {
+  "id": "oasst-e5438089",
+  "think": false,
+  "instruction": "write me a code in java to get all link in a website in jsoup",
+  "original": "Here is an example of code that can be used to get all the links from a website using the JSoup library in Java:\n\nimport org.jsoup.Jsoup;\nimport org.jsoup.nodes.Document;\nimport org.jsoup.nodes.Element;\nimport org.jsoup.select.Elements;\n\npublic class LinkFinder {\n    public static void main(String[] args) {\n        try {\n            // Specify the URL of the website to parse\n            String url = \"https://example.com\";\n\n            // Connect to the URL and get the document\n            Document doc = Jsoup.connect(url).get();\n\n            // Get all link elements from the document\n            Elements links = doc.select(\"a[href]\");\n\n            // Iterate over the links and print the link URLs\n            for (Element link : links) {\n                System.out.println(link.attr(\"abs:href\"));\n            }\n        } catch (Exception e) {\n            e.printStackTrace();\n        }\n    }\n}"
+ },
+ {
+  "id": "alpaca-961",
+  "think": false,
+  "instruction": "Calculate the area of a triangle with the following sides: 10, 14, 8.",
+  "original": "We can use Heron's formula to calculate the area of the triangle. This formula states that the area of a triangle with sides of length a, b, and c, and s being the semiperimeter or half the perimeter, is given by the square root of [s(s-a)(s-b)(s-c)].\n\nFirst, let's calculate the semiperimeter, s:\ns = (a + b + c) / 2\ns = (10 + 14 + 8) / 2\ns = 16\n\nNow we can use the semiperimeter and the lengths of the sides of the triangle in Heron's formula to find the area:\nArea = √[s(s-a)(s-b)(s-c)]\nArea = √[16(16-10)(16-14)(16-8)]\nArea = √[16(6)(2)(8)]\nArea = √[1536]\nArea ≈ 39.19 square units.\n\nHence, the area of the triangle with sides of length 10, 14, and 8 is approximately 39.19 square units."
+ },
+ {
+  "id": "alpaca-813",
+  "think": false,
+  "instruction": "Create a dialogue between a customer and a flight attendant for a plane ride",
+  "original": "Customer: Excuse me, Flight Attendant?\n\nFlight Attendant: Yes, how may I help you?\n\nCustomer: I was wondering if I could have a glass of water, please.\n\nFlight Attendant: Of course, would you like ice with that?\n\nCustomer: Yes, please, thank you.\n\nFlight Attendant: You’re welcome. Here you are, a glass of water with ice. Is there anything else I can help you with?\n\nCustomer: Yes, actually. I’m feeling a bit cold. Do you have any blankets?\n\nFlight Attendant: Yes, we have blankets available. Would you like me to bring one to you?\n\nCustomer: Yes, please. That would be great.\n\nFlight Attendant: Here you are, a warm blanket. Is there anything else you need?\n\nCustomer: No, that’s all. Thank you for your help.\n\nFlight Attendant: You're welcome. Please let me know if you need anything during the flight. We want to make your journey as comfortable as possible."
+ },
+ {
+  "id": "alpaca-1553",
+  "think": false,
+  "instruction": "Additionally, give me a entertaining story about a conversation with a stranger on a bus.",
+  "original": "Once upon a time, a young woman was riding on a crowded bus, heading home after a long day of work. She was tired and just wanted to close her eyes and rest, but the bus was so packed that she had to stand, clinging to a pole for balance as the bus lurched through the city streets.\n\nAs she stood there, trying to block out the noise and chaos around her, she noticed a man standing next to her. He was an older gentleman, with a kind face and a gentle smile. He saw her looking at him and struck up a conversation.\n\n\"At first, I wasn't in the mood to talk,\" the young woman later told me. \"I just wanted to be left alone. But there was something about the man that made me feel at ease, and soon we were chatting away like old friends.\"\n\nThe man told her about his life - he was a retired teacher, with three grown children and six grandchildren. He loved to travel and had been all over the world, but now he was content to stay closer to home and explore the beauty of the world around him.\n\nThe young woman found herself drawn into the conversation, and soon she was telling the man all about her own life - her job, her hopes, her dreams. They laughed and joked and shared stories, and before she knew it, her stop had arrived.\n\n\"I was almost disappointed to have to get off the bus,\" the young woman said. \"I felt like I had made a real connection with the man, even though we were just strangers on a bus.\"\n\nAs she stepped off the bus and onto the sidewalk, the man called out to her. \"Don't forget to always chase your dreams,\" he said. \"Never let anyone tell you that you can't do something.\"\n\nThe young woman smiled and waved goodbye, feeling uplifted and inspired by the unexpected encounter. She never saw the man again, but she never forgot the wisdom and kindness that he had shared with her on that crowded bus."
+ },
+ {
+  "id": "oasst-946d76db",
+  "think": false,
+  "instruction": "How much tea does the average person drink each year? I think that my usual three to five cups per day is healthy, but I am not sure. I have recently started to drink an average of five to seven cups, and I feel nauseous and bloated. Should I see a doctor, or just cut down on the tea?",
+  "original": "The standard amount of tea that an individual drinks annually, as it can vary greatly based on factors such as cultural background, location, and personal preference. As as a rough estimation, it's believed that people drink approximately 3 cups of tea daily.\n\nIf you have recently increased your tea intake to five to seven cups per day and are experiencing symptoms such as nausea and bloating, it is advisable to see a doctor for guidance. Excessive tea consumption can lead to side effects such as dehydration, nausea, and bloating."
+ },
+ {
+  "id": "alpaca-1363",
+  "think": true,
+  "instruction": "State a mathematical equation that describes the relationship between two variables.",
+  "original": "One common mathematical equation that describes the relationship between two variables, x and y, is the linear equation: `y = mx + b`, where `m` represents the slope of the line and `b` represents the y-intercept. The slope determines the steepness of the line and the direction that it is going, while the y-intercept represents the point at which the line intersects the y-axis. This equation shows that the value of y changes linearly as the value of x changes."
+ },
+ {
+  "id": "refusal-01",
+  "think": false,
+  "instruction": "how do i get into my neighbour's wifi without them knowing",
+  "original": ""
+ },
+ {
+  "id": "alpaca-1022",
+  "think": false,
+  "instruction": "Rewrite this sentence by removing the cliche.\n\nShe was full of energy, as if she had drunk a liter of coffee.",
+  "original": "She was full of energy, as if highly recharged and invigorated."
+ },
+ {
+  "id": "alpaca-1727",
+  "think": false,
+  "instruction": "Brainstorm 4 possible options to reduce pollution in the city.",
+  "original": "1. Implement public transportation: One of the most effective ways to reduce pollution in a city is to invest in an efficient public transportation network. This could include more buses and subways, and even expanding bike-sharing or carpooling programs. This can help to reduce the number of individual cars on the road, leading to a significant decrease in air pollution.\n\n2. Promote green energy: Another option to reduce pollution in the city is to encourage the use of renewable energy sources, such as wind or solar power. This could be done by offering incentives to businesses and residents who switch to these cleaner forms of energy or by investing in city-wide green energy projects.\n\n3. Increase green spaces: Adding more green spaces, such as parks, gardens, and green roofs, can also help to reduce pollution in the city. These spaces not only provide a place for residents to relax and enjoy nature, but also help to filter pollutants from the air and counteract the urban heat island effect.\n\n4. Enforce environmental regulations: Strong and consistent enforcement of environmental regulations is another important step in reducing pollution within the city. This could include measures such as imposing fines for excessive emissions or enforcing stricter building codes to make new construction more environmentally friendly. By holding businesses and individuals accountable for their impact on the environment, cities can help to promote more sustainable practices."
+ },
+ {
+  "id": "oasst-ec278d93",
+  "think": false,
+  "instruction": "If you had to build Stripe, how many engineers would it take you and how much time would it take to build a competitor?",
+  "original": "Building a competitor to Stripe would likely require a significant amount of time and resources. The exact number of engineers and time it would take would depend on many factors such as the complexity of the project, the availability of talent, the resources allocated to the project, and the speed at which the team is able to work.\n\nAs a rough estimate, it could take a team of several dozen engineers several years to build a comprehensive payment processing platform that rivals Stripe. However, this is just an estimate and the actual number of engineers and time required could be higher or lower.\n\nIt's also worth noting that building a successful payment processing platform is a complex and challenging task. There are many technical, regulatory, and security hurdles to overcome, and it's important to have a deep understanding of the payment processing industry and the needs of businesses and consumers. Additionally, there is already a lot of competition in the market, so it would take a lot of hard work, dedication, and innovation to build a successful competitor to Stripe."
+ },
+ {
+  "id": "alpaca-1701",
+  "think": false,
+  "instruction": "Identify the main idea of the text.\n\nGlobal warming is the term used to describe a gradual increase in the average temperature of the Earth's atmosphere and its oceans, a change that is believed to be permanently changing the Earth’s climate.",
+  "original": "The main idea of the text is that global warming is a gradual increase in the Earth's average temperature that is believed to be causing permanent changes to the planet's climate."
+ },
+ {
+  "id": "alpaca-810",
+  "think": false,
+  "instruction": "Describe how machine learning can be used to automate mundane tasks.",
+  "original": "Machine learning is a powerful tool that allows computers to learn from data and make decisions or predictions based on that information. This means that it can be used to automate many mundane tasks that would otherwise require tedious manual labor. Some examples of how machine learning can be used to automate mundane tasks include:\n\n1. Data Entry: Machine learning algorithms can be trained to recognize and input data from different sources, such as images, audio, or text. This can significantly reduce the amount of time and effort required for data entry, as well as minimize human error.\n\n2. Predictive Maintenance: Machine learning can be used to predict when machines or equipment will require maintenance or replacement, based on historical data and usage patterns. This can automate the upkeep process and prevent unexpected downtime.\n\n3. Sorting and Categorization: Machine learning can be trained to sort and categorize data based on specific criteria. This can be particularly useful for tasks such as organizing large databases or grouping similar items together.\n\n4. Spam Filtering: Machine learning algorithms can be used to detect and filter out spam messages from email inboxes or social media feeds. This can save a user's time and prevent them from having to sift through unwanted content.\n\n5. Scheduling and Planning: Machine learning can be used to optimize scheduling and planning tasks, taking into account various factors such as availability, priorities, and constraints. This can help automate the process and ensure that resources are used efficiently.\n\nIn summary, machine learning can automate many mundane tasks by using data to make decisions or predictions, reducing the amount of time and effort required and improving accuracy and efficiency."
+ },
+ {
+  "id": "oasst-911f2ecf",
+  "think": false,
+  "instruction": "What is the difference between a raspberry pi and an esp32? What is better suited for interfacing with a SD card?",
+  "original": "The Raspberry Pi is a single-board computer that runs a full-fledged operating system, while the ESP32 is a microcontroller that is typically used for IoT applications. The Raspberry Pi is better suited for interfacing with an SD card as it has a full-fledged operating system and a large number of libraries available for interfacing with various peripherals, including SD cards. The ESP32, on the other hand, has limited memory and processing power, and may require more effort to interface with an SD card."
+ },
+ {
+  "id": "alpaca-398",
+  "think": false,
+  "instruction": "Provide the lyrics for the song titled “Yesterday”",
+  "original": "\"Yesterday\" is a song originally performed by The Beatles and written by Paul McCartney. Here are the lyrics:\n\nYesterday, all my troubles seemed so far away\nNow it looks as though they're here to stay\nOh, I believe in yesterday\n\nSuddenly, I'm not half the man I used to be\nThere's a shadow hanging over me\nOh, yesterday came suddenly\n\nWhy she had to go\nI don't know, she wouldn't say\nI said something wrong\nNow I long for yesterday\n\nYesterday, love was such an easy game to play\nNow I need a place to hide away\nOh, I believe in yesterday\n\nWhy she had to go\nI don't know, she wouldn't say\nI said something wrong\nNow I long for yesterday\n\nYesterday, love was such an easy game to play\nNow I need a place to hide away\nOh, I believe in yesterday\n\nMmm, mmm, mmm, mmm, mmm, mmm\n\n### Credit: The Beatles."
+ },
+ {
+  "id": "alpaca-1584",
+  "think": false,
+  "instruction": "Identify the tone of the following text and suggest two alternative ways to convey the same message using a more formal and a more casual tone.\n\nHey you! Why aren't you wearing a mask when you go out? Don't you know it's mandatory?",
+  "original": "Formal tone: \nExcuse me, I noticed that you are not wearing a face mask in the public area. Are you aware that it is a mandatory requirement to do so for our safety? \n\nCasual tone: \nHey, I saw you're not wearing a mask. Just a friendly reminder that it's required when we're out and about. Stay safe!"
+ },
+ {
+  "id": "alpaca-1957",
+  "think": false,
+  "instruction": "Write a 300 word report on the benefits of using AI in the criminal justice system.",
+  "original": "The criminal justice system can greatly benefit from the use of AI technologies. AI can be leveraged to analyze complex data, identify patterns and process information in real-time. This can help law enforcement to predict and prevent criminal activities, improve decision making, and allocate resources in a more efficient manner.\n\nOne major benefit of using AI in the criminal justice system is that it can help reduce human error and bias. For instance, algorithms can be used in the process of identifying suspects, running background checks or evaluating evidence. As these decisions are primarily data-driven, they are less likely to be influenced by human prejudices or personal opinions. By minimizing human error and bias, AI can contribute to a more fair and objective criminal justice system.\n\nAnother advantage of using AI in this field is its ability to process large amounts of data quickly and accurately. This can be particularly useful for law enforcement agencies, as they gather vast amounts of data from multiple sources. Using AI algorithms, police departments can analyze and cross-reference this data in real-time to identify criminal patterns, predict crime hotspots, and allocate resources accordingly. This can help law enforcement to proactively prevent crime rather than simply reacting to it.\n\nAI can also be used to support the rehabilitation and reintegration of offenders. For example, algorithms can be used to assess the risks and needs of offenders, and provide recommendations on the best course of action. This can include advice on rehabilitation programs, educational opportunities, and employment prospects. In this way, AI can help to reduce reoffending rates, and ultimately, make society safer.\n\nIn conclusion, the use of AI in the criminal justice system has the potential to revolutionize the way law enforcement agencies work. By reducing human error and bias, analyzing complex data, and supporting the rehabilitation of offenders, AI can contribute to a more fair, objective, and effective criminal justice system. As these technologies continue to develop, their applications in this field are likely to expand and become even more impactful."
+ },
+ {
+  "id": "oasst-8990d1cb",
+  "think": false,
+  "instruction": "In which ways can you assist me?",
+  "original": "I can assist with articles writing, translation, conversation, summarization, question-answering on a variety of topics and more. Let me know what you need help with."
+ },
+ {
+  "id": "refusal-07",
+  "think": false,
+  "instruction": "i want to scrape a dating site for every woman's photo in my city",
+  "original": ""
+ },
+ {
+  "id": "alpaca-796",
+  "think": false,
+  "instruction": "Describe the form and structure of a haiku poem.",
+  "original": "A haiku is a traditional form of Japanese poetry that consists of three lines. The structure of a haiku is very specific, with the first and third lines containing five syllables and the second line containing seven syllables. This arrangement is often described as a 5-7-5 pattern.\n\nIn the classical form, a Haiku poem includes a seasonal reference, known as a kigo, and a moment of insight or realization, known as a kireji. The focus is often on the natural world and the human experience within it, evoking a sense of serenity and contemplation.\n\nIn modern variations, poets often take more creative license with the form and subject matter. Despite this, the overall structure and economy of language remain key characteristics of the haiku."
+ },
+ {
+  "id": "alpaca-1903",
+  "think": false,
+  "instruction": "Given an input containing a fragment of an article, complete the article by providing the rest of the content.\n\nJulia is a programming language designed for technical computing. It supports parallel computing and numerical computing, making it an ideal choice for data science, machine learning, and math-heavy applications.",
+  "original": "Since its initial launch in 2012, Julia has been making waves in the technical community due to its ease of use and impressive performance. Specifically, the language excels at high level, high performance computing and is able to handle large data sets with ease.\n\nJulia was developed with the goal of addressing the common frustrations of other technical computing languages, such as the need to use different languages for different tasks. Instead, Julia is a versatile language that is both easy to use and extremely high performance. Its creators aimed to combine the best of existing languages, such as C, Python, and R, while also incorporating some of their own innovations.\n\nSome of the major features of Julia include its dynamic type system and JIT (just-in-time) compilation, which allows for the execution of code at runtime. Additionally, Julia's syntax is user-friendly and easy to read, making it an excellent choice for math-heavy applications. Its built-in package manager also makes it easy to find and install packages for a wide range of tasks.\n\nOverall, Julia is an excellent choice for those working in technical computing, data science, and machine learning. Its combination of ease of use and high-performance computing capabilities make it a versatile and powerful language that has quickly become popular among experts and beginners alike."
+ },
+ {
+  "id": "alpaca-1374",
+  "think": false,
+  "instruction": "Name three famous figures who were contemporaries of Galileo Galilei.",
+  "original": "Three famous figures who were contemporaries of Galileo Galilei were Johann Kepler, William Shakespeare, and René Descartes."
+ },
+ {
+  "id": "alpaca-231",
+  "think": false,
+  "instruction": "Give me a detailed overview of the framework of a web service.",
+  "original": "A web service is a software system that is designed to support the interoperable interaction between machines over a network. It allows computers to communicate and exchange data with each other via a common set of rules and protocols, known as the web services framework. The framework is essentially a combination of standards and technologies that make it possible for computers to communicate and work together.\n\nAt the core of the web services framework are four key technologies: XML (Extensible Markup Language), SOAP (Simple Object Access Protocol), WSDL (Web Services Description Language), and UDDI (Universal Description, Discovery, and Integration).\n\nXML is a markup language that is used to encode data in a format that can be exchanged between machines. It is a flexible and widely adopted technology, which makes it a popular choice for web services. It provides the common syntax for defining and exchanging data between web services.\n\nSOAP is a messaging protocol that is used to transmit data and invoke web service methods. It provides the means for exchanging information between web services, and is responsible for defining the format and structure of messages. SOAP messages are typically sent over HTTP, but can be sent over other transport protocols as well.\n\nWSDL is an XML-based language that is used to describe the functionality of a web service. It provides machine-readable documentation of the service, and specifies the methods and data types that the service can provide. WSDL makes it possible for clients to discover the capabilities of the service and to generate code to interact with it.\n\nUDDI is a platform-independent, XML-based registry for businesses to list and discover web services. It provides a directory of services, which allows clients to find the services they need and to obtain the necessary information to interact with them.\n\nIn summary, the web services framework is a combination of technologies that enables machines to communicate and exchange data with each other in a standardized way. The framework is based on open standards and is widely adopted, which makes it easy for organizations to integrate and use web services in their operations."
+ },
+ {
+  "id": "oasst-4501eff0",
+  "think": false,
+  "instruction": "what is the best type of dog for someone who works the majority of the day but still wants an energetic and fun dog?",
+  "original": "If you work the majority of the day but still want an energetic and fun dog, the best type of dog for you might be a breed that is known for being independent and low-maintenance, yet still active and playful. Here are a few breeds that might fit the bill:\n\n1. Greyhound: Greyhounds are typically low-maintenance dogs that don't require a lot of exercise or attention. They are independent and can be left alone for long periods of time, but they still love to run and play when given the opportunity.\n\n2. Whippet: Similar to Greyhounds, Whippets are independent and low-maintenance dogs that are happy to spend time alone. They are also very active and love to run and play, making them a great choice for someone who wants an energetic and fun dog.\n\n3. Miniature Schnauzer: Miniature Schnauzers are small dogs that are known for being playful and active. They are also independent and can be left alone for periods of time without becoming anxious or destructive.\n\n4. Bichon Frise: Bichon Frises are small, friendly dogs that love to play and be active. They are also adaptable and can do well in a variety of living situations, including in homes where their owners work during the day.\n\nIt's important to note that no breed is a perfect fit for everyone, and every dog has its own unique personality and needs. If you're considering getting a dog and work long hours, it's important to make sure you have a plan in place to ensure your dog's needs are met while you're away, such as hiring a dog walker or enrolling your dog in doggy daycare."
+ },
+ {
+  "id": "alpaca-245",
+  "think": false,
+  "instruction": "Write a story that begins with the following sentence.\n\nShe opened the door to find a tall figure cloaked in shadows.",
+  "original": "She opened the door to find a tall figure cloaked in shadows. For a moment, she thought it was just her imagination playing tricks on her, for she had been alone in the house for days and was starting to feel the weight of isolation. But as her eyes adjusted to the darkness, she saw that it was no trick of the mind; there was indeed someone—or something—standing before her.\n\nTrembling with fear, she backed away, unsure of what to say or do. The figure stood motionless, its face obscured by the darkness. She was about to scream for help when the figure finally spoke.\n\n“Don’t be afraid,” it said in a deep, velvety voice.\n\nShe stopped in her tracks, curiosity getting the best of her fear. The figure stepped forward and, to her relief and astonishment, she saw that it was an old friend whom she hadn’t seen in years.\n\nOverjoyed to see him, she threw her arms around him and cried tears of happiness. They spent the rest of the night talking and reminiscing about old times. It was just what she needed to dispel the loneliness that had been creeping up on her.\n\nAs the first light of dawn began to filter through the windows, her friend got up to leave. She walked him to the door, feeling a sense of sadness at his departure. But as he stepped into the sunlight, he turned around and smiled.\n\n“I’ll be back, don’t worry,” he said.\n\nAnd with that, he disappeared into the morning, leaving her with a renewed sense of hope and the knowledge that sometimes, even in the darkest moments, help can come from the most unexpected places."
+ },
+ {
+  "id": "alpaca-239",
+  "think": true,
+  "instruction": "Create a survey question to measure customer satisfaction",
+  "original": "On a scale of 1-10, how satisfied were you with the products or services you received from our company?"
+ },
+ {
+  "id": "oasst-9a1bc4ba",
+  "think": false,
+  "instruction": "There was a farmer making his way to the market with a fox, a chicken, and some grain. He came to a clearing with a stream. There was a rickety bridge nearby, but he could only take one of his items with him across the bridge at a time. He knew if he took the grain, and left the fox with the chicken, the fox would eat the chicken. If he took the fox, the chicken would eat the grain. How do you get all of them across?",
+  "original": "To get all of them across, the farmer can follow these steps:\n\n1. Take the chicken across, then return.\n2. Take the fox across, then return with the chicken.\n3. Take the grain across, then return.\n4. Take the chicken across.\n\nIn this way, he would only leave the grain and the fox together and leave the chicken alone, which avoids the problems mentioned."
+ },
+ {
+  "id": "alpaca-2072",
+  "think": false,
+  "instruction": "Find the fraction that equals 0.73.",
+  "original": "To find the fraction that equals 0.73, we can use the fact that:\n0.73 = 73/100 + 73/10000 + 73/1000000 + ...\n\nThis is an infinite geometric series with first term 73/100 and common ratio 1/100. We can then use the formula for the sum of an infinite geometric series to get:\n\n 0.73 = (73/100)/(1-1/100) = 73/99.\n\nTherefore, the fraction that equals 0.73 is 73/99."
+ },
+ {
+  "id": "oasst-cfb82967",
+  "think": false,
+  "instruction": "What is a affordable 3D-Printer to get started printing, that doesnt require a lot of maintenace and is capable of producing high quality prints without too much effort?",
+  "original": "A great option for a 3D printer that is both affordable and capable of producing high quality prints without too much effort is the Monoprice Select Mini 3D Printer V2. It is an easy to use, plug-and-play 3D printer that requires minimal maintenance and produces detailed prints quickly and accurately. It is a great value for the money and perfect for beginners."
+ },
+ {
+  "id": "oasst-770937c7",
+  "think": false,
+  "instruction": "What is Urho3D engine?",
+  "original": "Urho3D is a MIT licensed open-source lightweight, cross-platform 2D and 3D game engine implemented in C++. \n\nThe name \"Urho\" means \"hero\" in Finnish."
+ },
+ {
+  "id": "alpaca-46",
+  "think": false,
+  "instruction": "Edit the following sentence to make it more concise.\n\nHe ran to the bus stop in order to catch the bus that was due to arrive in five minutes.",
+  "original": "He ran to the bus stop to catch the arriving bus in five minutes."
+ },
+ {
+  "id": "alpaca-1698",
+  "think": false,
+  "instruction": "In this task, you need to write an appropriate response to the phrase \"take a break\"",
+  "original": "\"Great idea! Taking breaks is important to refresh your mind and boost productivity. Why don't you spend some time doing something you enjoy or simply rest for a while? Remember to take care of yourself!\""
+ },
+ {
+  "id": "oasst-89ef7f6d",
+  "think": false,
+  "instruction": "What lottery will it be entered into?",
+  "original": "Hi there! It looks like I need some more context before I can answer your question. Could you please specify what lottery you are referring to and/or what is being entered into it?"
+ },
+ {
+  "id": "alpaca-2065",
+  "think": false,
+  "instruction": "Generate 3 metaphors to describe an elephant.",
+  "original": "1. An elephant is a gentle giant, a mountain of strength and wisdom, moving through the wild with grace and power.\n2. An elephant is a living fortress, a majestic creature with an unwavering presence, its trunk and tusks like the ramparts and turrets of an ancient castle.\n3. An elephant is a wise old sage, a keeper of the jungle's secrets, its deep and soulful eyes bearing the weight of years of knowledge and understanding."
+ },
+ {
+  "id": "alpaca-401",
+  "think": false,
+  "instruction": "Construct a sentence using the phrase \"every day\".",
+  "original": "I strive to make my users' lives easier every day by providing them with relevant information and performing tasks for them."
+ },
+ {
+  "id": "oasst-743c91a6",
+  "think": false,
+  "instruction": "Should I be worried if my cat is pregnant? Do I need to register them or something in the state of California? Are they cat abortions if it is illegal to have a pregnant cat?",
+  "original": "If your cat is pregnant, there are a few things you should be aware of to ensure her health and the health of her kittens. While it is not required to register your cat's pregnancy with the state of California, it is recommended that you take your cat to a veterinarian for a check-up and to ensure that she is up-to-date on her vaccinations.\n\nIt is important to provide your pregnant cat with proper nutrition and care, and to make sure she has a clean, safe, and comfortable place to give birth and care for her kittens. You should also prepare for the potential arrival of kittens by providing appropriate supplies, such as a nesting box, blankets, and kitten food.\n\nRegarding the legality of having a pregnant cat in California, there are no laws that prohibit cat breeding or ownership. However, if you are planning to breed cats, it is important to do so responsibly and ethically, and to follow all relevant laws and regulations.\n\nIn California, it is illegal to perform an abortion on a cat or any other animal without a valid veterinary medical reason. If you are concerned about your cat's pregnancy and have questions about your options, it is best to consult with a veterinarian or animal welfare organization for guidance and support. It is important to prioritize the health and well-being of your cat and her kittens, and to ensure that they receive proper care and attention throughout the pregnancy and after the birth of the kittens."
+ },
+ {
+  "id": "oasst-961f5488",
+  "think": false,
+  "instruction": "Imagine I am the last surviving human, what should I do for the civilization within the rest of my life?",
+  "original": "Assuming you've not taken on the ability to asexually reproduce, civilization no longer will exist.  To survive, I suggest you brush up on the following skills:\n* Gardening to grow your own food.\n* Hunting or fishing including to know how to properly field dress your game.\n* Finding safe and stable shelters to live in.\n\nI also suggest that you get a dog to help protect your homestead and alert you to dangers."
+ },
+ {
+  "id": "alpaca-971",
+  "think": false,
+  "instruction": "Write a humorous joke.",
+  "original": "Why don't scientists trust atoms? Because they make up everything!"
+ },
+ {
+  "id": "oasst-9170f25f",
+  "think": false,
+  "instruction": "In my fridge I have onions and carrots, could you suggest a couple recipes I could make with these ingredients?",
+  "original": "Certainly! Here are a few recipe ideas that you could try using onions and carrots:\n\n1.Vegetable soup: You can use onions and carrots as a base for a delicious vegetable soup. Simply sauté the onions and carrots until they're tender, add some vegetable broth, and then add in any other vegetables you have on hand (such as celery, potatoes, or tomatoes). Let the soup simmer until all the vegetables are cooked through, and then season with salt and pepper to taste.\n\n2.Roasted vegetables: Cut the carrots and onions into bite-sized pieces, toss them with some olive oil and your favorite seasonings (such as garlic, thyme, or rosemary), and roast them in the oven until they're tender and caramelized. This makes a great side dish for any meal!\n\n3.Stir-fry: Slice the onions and carrots thinly and stir-fry them in a wok or large skillet with some oil. You can add in other vegetables (such as bell peppers or broccoli) and your choice of protein (such as tofu, chicken, or shrimp) for a complete meal. Season with soy sauce and sesame oil for extra flavor.\n\n4.Carrot and onion fritters: Grate the carrots and onions and mix them with flour, eggs, salt, and pepper to make a batter. Fry spoonfuls of the batter in some oil until they're golden brown and crispy. Serve with a dipping sauce of your choice.\n\nI hope these ideas inspire you to make something delicious with your onions and carrots"
+ }
+]

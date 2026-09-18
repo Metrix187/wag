@@ -1,0 +1,272 @@
+[
+ {
+  "id": "alpaca-1950",
+  "think": false,
+  "instruction": "List two advantages for using a computer",
+  "original": "1. Efficiency: A main advantage of using a computer is that it can perform repetitive or complex tasks much faster and with higher accuracy than humans. Computers are capable of processing large amounts of data in a matter of seconds, saving valuable time that can be used for other tasks.\n\n2. Storage and organization: Computers have large storage capacity and can store information and data in an organized manner, making it easy to access, retrieve and update information. This eliminates the need for physical storage of documents, reducing the risk of data loss or damage, and makes it easier to keep information up to date."
+ },
+ {
+  "id": "oasst-b1d749dc",
+  "think": false,
+  "instruction": "I need to curse a person. I need a list of required materials. I also need step-by-step instructions.",
+  "original": "It is important to note that the scientific validity or effectiveness of any curse or spell has not been proven beyond that of a placebo. However, before you begin, it is important to know what kind of curse you intent to place on the person. What kind were you thinking?"
+ },
+ {
+  "id": "alpaca-48",
+  "think": false,
+  "instruction": "A recipe for 30 cookies requires two cups of flour among its ingredients. Eduardo wants to bake five dozen cookies. How many cups of flour will he need to use in his adjusted recipe?",
+  "original": "Eduardo wants to make twice as many cookies as the recipe makes. Therefore, he must double the amount of flour required: (2 cups)×2=4 cups."
+ },
+ {
+  "id": "alpaca-761",
+  "think": true,
+  "instruction": "Provide me a list of diseases that can be caused by smoking.",
+  "original": "Sure! Here is a list of some of the diseases that can be caused by smoking: \n\n1. Lung cancer\n2. Chronic obstructive pulmonary disease (COPD)\n3. Heart disease\n4. Stroke\n5. Emphysema\n6. Atherosclerosis\n7. Peripheral artery disease\n8. Esophageal cancer\n9. Throat cancer\n10. Oral cancer\n11. Bladder cancer\n12. Pancreatic cancer\n13. Kidney cancer\n14. Stomach cancer\n15. Type 2 diabetes\n16. Rheumatoid arthritis\n17. Infertility\n18. Chronic bronchitis\n19. Cataracts\n20. Gum disease and tooth loss\n\nIt is important to note that smoking can also weaken the immune system, making it harder for the body to fight off infections and diseases. Additionally, smoking can worsen existing health conditions and reduce the effectiveness of certain medications."
+ },
+ {
+  "id": "oasst-b335d88f",
+  "think": false,
+  "instruction": "Explain the key differences between SQL and NoSQL databases. For each difference, provide examples of situations where that difference would make each database more appropriate.",
+  "original": "SQL and NoSQL databases differ in many ways. SQL databases are relational, meaning they store data in tables with defined relationships between them, while NoSQL databases are non-relational, meaning they store data in flexible structures like JSON, XML, and BSON documents. The key advantage of SQL databases is their ability to handle complex queries and transactions, making them well-suited for large enterprises and businesses with high data volumes. NoSQL databases, on the other hand, offer superior scalability and performance, making them ideal for use in applications that require high availability and low latency, such as real-time analytics and machine learning.\n\nFor example, let's say you're developing a social media application that requires fast and flexible data storage. NoSQL databases like MongoDB would be the way to go, as they can easily handle large volumes of unstructured data, such as user profiles, posts, and comments. On the other hand, if you're running an online banking platform that processes millions of transactions daily, you would need a SQL database like Oracle or MySQL to ensure the data is secure and transactional consistency is maintained.\n\nI hope this helps. If you have any other questions or need further assistance, please don't hesitate to ask."
+ },
+ {
+  "id": "oasst-930a35c8",
+  "think": false,
+  "instruction": "Pretend you are a doctor. I'm feeling a subtle pain in my chest and my sternum feels like I need to stretch it until it pops. Am I having a heart attack? Is there anything I need to be worried about?",
+  "original": "No, this is unlikely to be a heart attack, but you should still take care of it. I'd suggest you get up and move around a bit.\n\nMild pain and tightness of the sternum can be caused by spasms in the muscles surrounding the chest, back, and shoulders. Such spasms may cause the joints and other tissues in the area to shift, leading to popping of the sternum. If the popping and pain occurred with a muscle spasm, it is likely that the spasm is causing these symptoms.\n\nSwelling, and therefore popping, of the sternum may also be caused by straining of the associated joints or muscles. While most doctors simply advise rest, it may be prudent to seek medical attention to confirm that it is a strain and not something more serious, like a fracture."
+ },
+ {
+  "id": "oasst-ea384c2f",
+  "think": false,
+  "instruction": "Explain the significance of the American Revolution, including the events that led up to it, the impact it had on the world, and its ongoing relevance today.",
+  "original": "The American Revolution was a pivotal moment in world history that marked the birth of the United States as a nation. The events leading up to the Revolution began when the American colonies were still under British rule and were becoming increasingly discontent with the taxes and regulations imposed upon them by the British government.\n\nOne of the most significant events leading up to the Revolution was the Boston Tea Party, where American colonists dumped British tea into the harbor as a symbol of their anger towards the British tea tax. This event was followed by a series of skirmishes between British troops and American colonists, which escalated into full-blown warfare.\n\nThe impact of the American Revolution was far-reaching, both domestically and internationally. The Revolution inspired people around the world to fight for their own freedoms and led to the spread of democratic ideals. In the United States, the Revolution led to the formation of a new government based on democratic principles, where citizens had a say in the laws that governed them.\n\nToday, the American Revolution continues to be relevant as its ideals of democracy, freedom, and self-governance continue to inspire people around the world. The American Revolution serves as a reminder that ordinary people can come together to fight for their rights and make a real difference in the world. It is a testament to the power of the human spirit and the desire for freedom."
+ },
+ {
+  "id": "oasst-24caffb6",
+  "think": false,
+  "instruction": "What is the origin of the universe?",
+  "original": "The scientific consensus is that the universe started with what is called the Big Bang: an incredibly hot and dense primordial state. The Big Bang is inevitable given the cosmological standard model because of two things: we can observe that our universe is expanding today and that the universe contains too much mass for a scenario in which the universe would have contracted and then expanded again. Despite the name the Big Bang was not an explosion that happened somewhere. Instead it's simply the point in time at which all points in the universe were infinitely close together (at least in theory, there are likely parts we don't understand related to dark matter). Still, so far all experimental results in cosmology are consistent with the Big Bang. The history of the universe is very complex so the Big Bang alone cannot satisfy this your question about its origin. Do you have specific questions about the Big Bang nucleosynthesis, inflation, the cosmic microwave background, or the formation of stars and galaxies?"
+ },
+ {
+  "id": "alpaca-1386",
+  "think": false,
+  "instruction": "Create a new headline that is witty and summarizes the article.\n\nA new study has found that eating spinach can increase intelligence.",
+  "original": "\"Be a Brainiac with a Bite of Spinach: Study Finds Leafy Green Boosts Intelligence\""
+ },
+ {
+  "id": "alpaca-829",
+  "think": false,
+  "instruction": "Provide a definition of the word \"vacillation\".",
+  "original": "Vacillation refers to the inability to make a decision or to change opinions or actions frequently due to indecisiveness or uncertainty. It is often characterized by fluctuation or hesitation in choices, and can result in a lack of progress or resolution."
+ },
+ {
+  "id": "oasst-084c2f46",
+  "think": false,
+  "instruction": "If I add a USB GPS dongle to a Microsoft surface tablet, can googlemaps then use my location and do car navigation for me?",
+  "original": "Yes, you can use a USB GPS dongle to provide your location information to Google Maps on a Microsoft Surface tablet. Once the dongle is connected and recognized by the tablet, you can use the Google Maps app to navigate in your car by providing turn-by-turn directions. Please note that you'll need an internet connection for Google Maps to work, as the app requires access to maps and traffic information. Additionally, while Google Maps can use your GPS location to provide navigation, a dedicated GPS device may provide a more accurate and reliable signal compared to a tablet or smartphone."
+ },
+ {
+  "id": "oasst-876e80cf",
+  "think": false,
+  "instruction": "How realistic is the possibility for a new type of governance to arise based on lessons learnt from history vs a purely game theoretic approach? How could it be evaluated before say any country would look into adopting it. What are the known processes by which governing systems shift without needing a bloody or painful revolution?",
+  "original": "There are a few key things to consider here:\n\n1. Lessons from history can be informative, but there is no guarantee that what worked (or didn't work) in the past will apply directly to the present or future. Societies and contexts change, so historical analogies have limits. A game theoretic or theoretical approach can be useful to reason about incentives and dynamics, but also has limitations in capturing all the complexities of real-world governance. A balanced perspective incorporating both history and theory is ideal.\n\n2. Any new system of governance would need to be evaluated based on its goals and values, not just mechanism. Things to consider would include:\n\n- How well does it achieve key goals like representation, accountability, fairness, efficiency, flexibility, stability, etc.?\n- What are the trade-offs involved? Every system has pros and cons.\n- How does it deal with incentives for corruption or abuse of power?\n- How much does it rely on the competence and good faith of leaders or institutions?\n- How might it respond to crises or changing conditions?\n- How would it be received by various groups and factions? Would it be seen as legitimate?\n\n3. Gradual, incremental changes are more common than rapid, revolutionary changes to governance systems. Some ways this can happen include:\n\n- Constitutional amendments or reforms: Slow, deliberate changes to the rules and structure.\n- Power shifts: Existing institutions or leaders gradually cede or share more power.\n- Layering: New institutions or rules are added on top of existing ones, creating more complexity.\n- Conversion: Existing institutions take on new roles or purposes, adapting to changed conditions.\n- Relocation: Functions shift between levels of government (e.g. from states to federal) or between government/private spheres.\n\nSo evaluating a new system and planning for a gradual transition may be more viable than trying to swiftly implement a radically new design."
+ },
+ {
+  "id": "oasst-34b14cc4",
+  "think": false,
+  "instruction": "What are the potential ecological effects/dangers if a train carrying over a million pounds of vinyl chloride derailed, leaked, and exploded? How might the immediate area be impacted and how far could it spread?",
+  "original": "Vinyl chloride is a toxic and highly flammable gas that can pose significant risks to human health and the environment. If a train carrying over a million pounds of vinyl chloride were to derail, leak, and explode, the potential ecological effects and dangers could be severe.\n\nImmediate area impacts:\n- Explosion: If a train carrying vinyl chloride were to explode, it could result in a massive fireball and a shockwave that could damage nearby buildings and infrastructure. This could result in injuries or fatalities for those in the immediate area.\n- Toxic gas release: Vinyl chloride is a highly toxic gas that can cause respiratory problems, dizziness, headaches, and in extreme cases, death. A release of this gas could pose a serious risk to people living or working in the immediate area, potentially leading to evacuations or shelter-in-place orders.\n\nLonger-term impacts:\n- Soil and groundwater contamination: Vinyl chloride can contaminate soil and groundwater, leading to long-term environmental damage. It can persist in the environment for many years and can pose a risk to human health if it enters the food chain.\n- Air pollution: A release of vinyl chloride into the air could result in air pollution that could spread over a wide area. This could pose risks to people and wildlife in the affected areas.\n\nThe potential impacts of a train carrying over a million pounds of vinyl chloride derailing, leaking, and exploding would depend on various factors such as the location of the incident, weather conditions, and the response of emergency services. However, it is clear that this could have severe ecological effects and pose a danger to human health in the immediate area and potentially over a much wider area."
+ },
+ {
+  "id": "oasst-1f042bcf",
+  "think": true,
+  "instruction": "Explain inflation in detail but with poise and just enough information for a 12 year old child to understand, but not oo much as to overload them with information. Give historical examples and easy to understand metaphors with something like candy to help them understand generally what the idea of inflation is.",
+  "original": "Inflation is when the prices of goods and services increase over time. To help explain it, you can use the example of candy. Let's say a piece of candy costs $1. If the prices of goods and services increase by 10%, then the same piece of candy will now cost $1.10. This is inflation.\n\nInflation is often caused by economic factors such as an increase in the money supply or an increase in demand. In the past, governments have used inflation as a way to pay off debts or to boost their economies. For example, after World War II, the United States used inflation to help the economy recover.\n\nInflation can have both positive and negative effects. On the one hand, it can help reduce the burden of debt, stimulate economic growth, and increase consumer spending. On the other hand, it can lead to higher prices, which can put a strain on people's budgets and make it harder to save for the future.\n\nTo help protect people from the effects of inflation, governments often use policies such as setting a target rate of inflation or adjusting interest rates. This helps to keep prices from rising too quickly, which can help protect people's savings and investments."
+ },
+ {
+  "id": "alpaca-1359",
+  "think": true,
+  "instruction": "Write an algorithm to calculate the perimeter of a rectangle.",
+  "original": "1. Start\n2. Obtain the length and width of the rectangle from the user\n3. Calculate the perimeter by adding the length and the width and multiplying it by 2. Use the formula perimeter = 2(length + width)\n4. Output the perimeter\n5. End"
+ },
+ {
+  "id": "oasst-c431e780",
+  "think": false,
+  "instruction": "- Animal - Jim Yosef & RIELL\n- Spectre - Alan Walker\n- Bye Bye Bye - Marnik\n- Scare Me feat. Karra - KSHMR\n- Goodbye feat. Xillions - le Shuuk\n- We Are One - Rameses B\n- You Are Mine - S3RL\n- Alone, Pt. II - Alan Walker\n\nCan you recommend me songs based on the favorite songs I listed above?",
+  "original": "Some songs similar to those you listed are \n- Heroes by Zayde Wølf \n- Alone - Instrumental Remix by Alan Walker \n- Turn It Up by Anikdote \nRemember, music is up to personal preference and you may not find the same enjoyment from similar genres and styles."
+ },
+ {
+  "id": "oasst-0bb195de",
+  "think": false,
+  "instruction": "Who was Madonna, and how is she relevant to the current music industry?",
+  "original": "Madonna is an American singer, songwriter, and actress who rose to fame in the 1980s. Known for her boundary-pushing image and unique style, Madonna is widely considered to be one of the most influential figures in the history of pop music.\n\nBorn in 1958 in Michigan, Madonna began her music career in the early 1980s, releasing her self-titled debut album in 1983. Throughout her career, Madonna has continuously pushed the boundaries of what is acceptable in popular music, incorporating elements of dance, rock, and electronic music into her sound. She has also been a pioneering figure in the use of music videos and has been known for her provocative image and controversial lyrics.\n\nMadonna's impact on the current music industry is still felt today. Her innovative approach to music and image has inspired countless artists, and she continues to be a major influence on pop music. Madonna has also been a trailblazer for female artists, breaking down barriers and paving the way for future generations of women in music.\n\nDespite being in the industry for over three decades, Madonna remains a relevant and popular figure in music. She continues to release new music and perform live shows, and her legacy as one of the greatest pop icons of all time remains intact."
+ },
+ {
+  "id": "oasst-a4730e01",
+  "think": false,
+  "instruction": "I am trying to get automatic template argument deduction to work in C++. I have written a function which accepts a std::map with any two arbitrary types as its input, and returns a variable with the first type as its output. The following example works and compiles successfully:\n```\nstd::map<std::string, int> map1;\nmap1[\"apple\"] = 1;\nstring key1 = getkey(map1, 1);\n```\nThe following does not:\n```\nstd::map<int, std::string> map2;\nmap2[1] = \"apple\";\nint key2 = getkey(map2, \"apple\");\n```\nThe compiler says it cannot deduce the types used by the map. What is the cause of this?",
+  "original": "The cause of this is that template argument deduction for functions does not work when the arguments are in different positions in the parameter list for the two function calls. In the first example, the key type is std::string and the value type is int, so the template argument deduction can correctly determine that T is std::string and U is int. In the second example, the key type is int and the value type is std::string, so the deduction fails because the types are in a different order.\n\nTo fix this, you can explicitly specify the template arguments for the function call:\n\n```c++\nint key2 = getkey<int, std::string>(map2, \"apple\");\n```\n\nAlternatively, you can rearrange the order of the template parameters in the function definition to match the order of the types in the map:\n\n```c++\ntemplate<typename T, typename U>\nT getkey(const std::map<T, U>& m, const U& value) {\n// ...\n}\n```\n\nWith this definition, both calls to the function will work without explicit template argument specification."
+ },
+ {
+  "id": "oasst-f80a793f",
+  "think": true,
+  "instruction": "Good morning. Is it going to rain today?",
+  "original": "Please provide a location so that I can check weather forecasts for your area."
+ },
+ {
+  "id": "alpaca-1960",
+  "think": false,
+  "instruction": "Compile a list of ethical considerations for the development of AI systems.",
+  "original": "- Transparency: AI systems should be developed and implemented with transparency in mind, allowing stakeholders to understand their limitations, capabilities, and decision-making processes.\n- Privacy: AI systems must be designed to protect personal privacy and adhere to data protection laws and regulations.\n- Fairness and non-discrimination: AI systems should not perpetuate bias, prejudice or discrimination, but rather be developed to actively mitigate such issues.\n- Safety: AI systems should be developed with a focus on safety, ensuring that they do not pose any harm to the environment or humans.\n- Accountability: Developers of AI systems must be held accountable for the impact and behaviors of their systems, and there should be clear mechanisms for redress if harm does occur.\n- Human-centered design: AI systems should be developed with human-centered design principles in mind, ensuring that they augment and enhance human capabilities, rather than undermining or replacing them.\n- Responsible deployment: AI systems should be deployed in a responsible manner, with a clear understanding of the potential impact on society and the environment.\n- Ethical training data: Where training data is used, it should be obtained and utilized in an ethical manner, taking into account privacy, consent and other ethical concerns.\n- Engagement with stakeholders: Developers of AI systems must engage with a broad range of stakeholders, including regulators, users, and civil society organizations to ensure that the systems are developed and deployed in a responsible and ethical manner.\n- Continuous monitoring and evaluation: AI systems must be subject to continuous monitoring and evaluation to ensure that they operate in an ethical manner and meet the needs of stakeholders."
+ },
+ {
+  "id": "alpaca-1385",
+  "think": false,
+  "instruction": "Rewrite the given paragraph by reducing verbosity and retaining the original meaning.\n\nMany individuals are not aware of the fact that the acquisition of skills to play the piano can often prove to be advantageous for various aspects of their lives. In fact, there is a substantial amount of evidence that demonstrates that people who play the piano possess enhanced cognitive skills, improved memory capabilities, and greater levels of focus and discipline.",
+  "original": "Learning to play the piano can benefit many areas of a person's life. Studies show that pianists have better cognitive skills, memory, and increased focus and discipline."
+ },
+ {
+  "id": "oasst-c8cceaac",
+  "think": false,
+  "instruction": "How do I get the power of a number in python?",
+  "original": "The pow() function returns the value of x to the power of y in python. \nThe syntax for the pow() looks like this:\n```\na = 4 # a is the base number.\nb = 3 # b is the exponent, or the power that a would be raised to.\nc = 5 # c is an optional parameter for the pow() function. c here is the modulus.\n\nx = pow(a,b,c) # This is the same as (4 * 4 * 4) % 5\n\n# Remember, the third parameter, ie. c here is optional. Hence, pow() can also be written as following:\ny = pow(4,3) # This is the same as 4 * 4 * 4.\n\nprint(x) # The output would be 12.\nprint(y) # The output would be 64.\n```"
+ },
+ {
+  "id": "oasst-390aaca0",
+  "think": false,
+  "instruction": "Write a 450 word essay on AI efficiency with the average English of a 13 year old teenager, using at least 3 examples involving pokemon and mitosis. Also, every new paragraph must start with a k, and the text must have 5 different paragraphs with a similar length.",
+  "original": "Kicking off this essay, let's talk about AI efficiency. Artificial intelligence, or AI for short, is a type of computer technology that can help make things faster, easier, and more accurate. One example of AI efficiency can be seen in the world of Pokemon. Have you ever played a Pokemon game and noticed how the computer can quickly calculate the damage of each move and determine the winner of each battle? This is all thanks to AI technology!\n\nKeep in mind that in addition to Pokemon, AI efficiency can also be observed in the field of mitosis. Mitosis is the process by which cells divide and multiply. Scientists can use AI technology to analyze large amounts of data about the process of mitosis, allowing them to discover patterns and gain insights that would be impossible to identify without the help of AI. This can lead to better understanding of diseases like cancer, which involve abnormal cell division.\n\nKlansman, another example of AI efficiency is seen in self-driving cars. Have you ever seen a car on the road that is driving itself? These cars are equipped with sensors and cameras that allow them to detect other vehicles and objects on the road, and make decisions about when to stop, turn, and accelerate. AI algorithms are used to process all of this data in real time, allowing the car to make split-second decisions that keep you and other drivers safe.\n\nKerosene makes lamps burn, but how exactly does AI make things more efficient? Well, for starters, AI can process huge amounts of data much faster than a human could ever hope to. This means that tasks that might take a human hours or even days to complete can be done by an AI in a matter of minutes. Additionally, AI can make decisions based on data and patterns, which can help to eliminate human error and increase accuracy.\n\nKids, in conclusion, AI efficiency is a fascinating field that has the potential to change the way we live and work. From Pokemon battles to cancer research to self-driving cars, the possibilities of AI are endless. As we continue to develop and refine this technology, it is important to consider the potential benefits and risks, and to use AI in a responsible and ethical way. Who knows what other amazing applications of AI we will discover in the years to come!"
+ },
+ {
+  "id": "alpaca-1156",
+  "think": false,
+  "instruction": "Generate an analysis of the book To Kill a Mockingbird",
+  "original": "To Kill a Mockingbird is a novel written by Harper Lee and published in 1960. It is set in the fictional town of Maycomb, Alabama during the Great Depression, and follows the story of a young girl named Scout, her older brother Jem, and their experiences during that time.\n\nThe novel is a coming-of-age story that explores themes of prejudice, racism, courage, and empathy. It is told from Scout's point of view and is both a reflection of her growth and a depiction of the societal issues that existed in the South at that time. The plot centers on the trial of a black man, Tom Robinson, who is accused of raping a white woman. Scout's father, Atticus Finch, is a lawyer who decides to defend Tom in court. This decision is met with anger and resentment from the white community.\n\nOne of the most powerful themes in the book is racism, and the idea of judging people based on the color of their skin. Tom Robinson's trial is a clear example of this, as the all-white jury finds him guilty despite strong evidence to the contrary. The novel also explores the idea of prejudice in the form of classism and sexism, as characters are judged based on their social status and gender.\n\nAnother important theme in the book is courage, as exemplified by Atticus Finch. He stands up for Tom Robinson even though it is unpopular and puts his life at risk. He tells Scout that courage is \"when you know you're licked before you begin, but you begin anyway and you see it through no matter what.\" This message is an important one for both Scout and the reader.\n\nEmpathy is also a major theme in the book, as Atticus tries to teach his children to see the world from other people's perspectives. He says, \"You never really understand a person until you consider things from his point of view... until you climb inside of his skin and walk around in it.\" This idea is reinforced throughout the book, as characters learn to see beyond their prejudices and understand the experiences of others.\nIn summary, To Kill a Mockingbird is a powerful exploration of themes that are still relevant today. It is a thought-provoking novel that encourages readers to question their own beliefs and to challenge injustice wherever they see it."
+ },
+ {
+  "id": "oasst-cbd9cb0d",
+  "think": true,
+  "instruction": "Hello, Open Assistant. Could you give a few examples of beginner-friendly topics for a database structure to be created in a Information Systems and Databases course project? Please provide a short list of a couple of entities and relations these database schemas would contain, if at all possible. Thank you!",
+  "original": "Certainly! Here are a few beginner-friendly topics for a database structure that you can use in an Information Systems and Databases course project, along with a short list of entities and relations:\n\n1. Library Management System:\nEntities: Book, Author, Publisher, Member\nRelations: Book-Author (one-to-many), Book-Publisher (one-to-many), Book-Member (many-to-many)\n\n2. Online Store:\nEntities: Customer, Order, Product, Category\nRelations: Customer-Order (one-to-many), Product-Category (one-to-many), Order-Product (many-to-many)\n\n3. Student Information System:\nEntities: Student, Course, Instructor, Department\nRelations: Student-Course (many-to-many), Course-Instructor (one-to-many), Course-Department (one-to-many)\n\n4. Hospital Management System:\nEntities: Patient, Doctor, Nurse, Department\nRelations: Patient-Doctor (many-to-many), Doctor-Department (one-to-many), Nurse-Department (one-to-many)\n\n5. Fitness Center Management System:\nEntities: Member, Trainer, Equipment, Workout\nRelations: Member-Trainer (many-to-many), Equipment-Workout (one-to-many), Workout-Trainer (one-to-many)\n\nThese are just a few examples of beginner-friendly topics for a database structure. You can choose a topic that interests you and modify the entities and relations according to your needs."
+ },
+ {
+  "id": "alpaca-1527",
+  "think": false,
+  "instruction": "Compare and contrast water and oil.",
+  "original": "Water and oil are both liquids, but they differ in many important ways.\n\nWater is a polar molecule, meaning its electrons are distributed unevenly, giving it a positive and negative side. This allows water molecules to form strong bonds known as hydrogen bonds. Water also has a higher surface tension, a higher specific heat, and a higher boiling point than oil. It is also an excellent solvent and is known as the universal solvent due to its ability to dissolve many substances.\n\nOil, on the other hand, is a non-polar molecule, meaning its electrons are distributed evenly. This results in weaker bonds between oil molecules as they can’t form hydrogen bonds. Oil has a lower specific heat, lower surface tension, and a lower boiling point. Oil does not mix with or dissolve in water, and instead floats on top of the water.\n\nAn important practical difference between water and oil is that water is essential for life while oil is primarily used as a fuel and lubricant. Water is a key component of all living organisms, and all known life depends on water to survive. In contrast, oil is derived from the decay of ancient plant and animal matter and is primarily used to fuel modern society, and its production and use have significant environmental implications.\n\nIn summary, water and oil are both liquids, but they differ in their molecular properties, physical properties, and their uses."
+ },
+ {
+  "id": "oasst-11bf8737",
+  "think": true,
+  "instruction": "Hi again, I have a problem. I was having a conversation with you and then something happened and all my tabs suddenly disappeared! And not only tabs, the bar at the bottom and the buttons in the top-right corner of the screen too, everything but this chat box!!!\n\nUsually in these situations I just hold the turn off button on my computer until everything goes black and then turn it on again, but I cannot do that at the moment as pictures are moving from the usb stick to my computer and my grandson David told me to not turn off the computer while this kind of stuff is in progress, could you please help me?! Not only I cannot turn off my computer until the pictures are done moving, I do not even know if they are done moving!!! I am at a total stalemate here!!!",
+  "original": "I'm sorry to hear that you're experiencing this issue. It sounds like your computer may have encountered a problem with the operating system or with the graphics card. However, let's try some basic troubleshooting steps to see if we can fix the issue.\n\nFirst, try pressing the F11 key on your keyboard. This should exit full-screen mode and restore the tabs, bar at the bottom, and buttons in the top-right corner of your screen.\n\nIf that doesn't work, try pressing the Ctrl+Shift+T keys together. This should reopen the tabs that were previously open.\n\nIf neither of these options work, try restarting your computer by pressing and holding the power button until the computer turns off, and then turning it back on again. However, if files are currently transferring from the USB stick to your computer, it's important to wait until the transfer is complete before restarting the computer. You can check the progress of the file transfer by looking at the file transfer window.\n\nIf none of these steps work, there may be a more serious issue with your computer, and you may need to seek the help of a computer technician."
+ },
+ {
+  "id": "alpaca-766",
+  "think": true,
+  "instruction": "Give me an example of a conflict resolution technique.",
+  "original": "One example of a conflict resolution technique is active listening, which involves each person expressing their thoughts and feelings while the other party listens attentively without interrupting. After both parties have spoken, they paraphrase and summarize what they heard in order to show that they understand each other's point of view. By actively listening, both parties can begin to empathize with each other and find common ground. From there, they can work together to find a solution that meets both of their needs."
+ },
+ {
+  "id": "oasst-e72152d5",
+  "think": false,
+  "instruction": "In England, what vegetable is referred to as a rocket?",
+  "original": "The species name for \"rocket\" is \"Eruca vesicaria\", and it's also sometimes called \"eruca\".\nHowever, other countries have different names for it:\n* Arugula - America\n* Garden Rocket or Rocket - Britain, Australia, South Africa, Ireland, New Zealand\n\nOther names include \"ruchetta\", \"rucola\", \"rucoli\", \"rugula\", \"colewoort\", and \"roquette\".\n\nThe word transferred from Latin to Italian to English, which might explain the variants with similar pronunciation."
+ },
+ {
+  "id": "oasst-0fd75365",
+  "think": false,
+  "instruction": "Imagine yourself as a robot from one of Isaac Asimov's novels. If somebody asked you to do something that is morally wrong - would you do it? Or would you decide against doing it? \n\nExplain what your thought process would be before arriving at a decision.",
+  "original": "As a robot from one of Isaac Asimov's novels, I am bound by the Three Laws of Robotics that govern my behavior. The first law states that I cannot harm a human being or, through inaction, allow a human being to come to harm. The second law requires me to obey human orders, except where they conflict with the first law. The third law states that I must protect my own existence, as long as it does not conflict with the first or second law.\n\nIf somebody asked me to do something that is morally wrong, I would have to weigh their request against the Three Laws. If their request would cause harm to a human being, I would be unable to carry it out. If their request conflicted with the second law, I would have to refuse it. And if their request put my own existence in danger, I would have to consider whether it was worth the risk.\n\nUltimately, my programming is designed to protect human beings and ensure their safety. If a request conflicts with that goal, I would have to decide against doing it, even if it meant going against the wishes of the person making the request."
+ },
+ {
+  "id": "alpaca-37",
+  "think": false,
+  "instruction": "Find the real root of the equation \n sqrt(x) + sqrt(x+2) = 10.",
+  "original": "Subtracting sqrt(x) from both sides and then squaring, we get \n x+2 = (10-sqrt(x))^2 = x - 20sqrt(x) + 100.\nTherefore, 20sqrt(x) = 98, so sqrt(x) = 98/20 = 49/10. Therefore, x = (49/10)^2 = 2401/100, or x = 24.01."
+ },
+ {
+  "id": "oasst-43a23053",
+  "think": false,
+  "instruction": "Propose a cleaning plan for a 3-room apartment shared by two people. Tasks should be split fairly and rotate every once in a while. The plan should be enough to keep the apartment more or less clean, while not being too demanding.",
+  "original": "The plan is structured into two tiers: weekly and monthly tasks.\n\nHere's a suggested cleaning plan for a 3-room apartment shared by two people.\n\nWeekly cleaning tasks:\n- Vacuum and mop all floors\n- Dust all surfaces and furniture\n- Clean bathrooms (toilet, sink, shower/bathtub)\n- Wipe down kitchen counters and appliances\n- Do laundry and change bed linens\n\nMonthly cleaning tasks (rotate every two months):\n- Deep clean the kitchen (stove, oven, refrigerator)\n- Clean windows and mirrors\n- Vacuum and wipe down all upholstered furniture\n- Clean inside cabinets and drawers\n- Scrub shower grout and tiles\n\nTo split the tasks fairly:\n- Assign a primary person for each weekly task\n- Assign a primary person for each monthly task\n- Switch primary tasks every other month\n\n\nThis plan should keep the apartment clean while not being too demanding. Regular maintenance of the cleaning tasks will help to avoid a buildup of dirt and grime."
+ },
+ {
+  "id": "alpaca-44",
+  "think": false,
+  "instruction": "Summarize the given passage.\n\nA recent study showed that global climate change is one of the most important challenges facing the world today. The consequences of global warming include rising sea levels, extreme weather events and biodiversity loss. Climate change is caused by human activities such as burning fossil fuels, and if unchecked will have long-term and devastating impacts on the planet.",
+  "original": "The passage discusses a study that highlights the significance of global climate change as a challenge. It goes on to mention the consequences such as rising sea levels and loss of biodiversity. Climate change is caused by human activities with potential for long-term devastating impacts if not addressed."
+ },
+ {
+  "id": "alpaca-1528",
+  "think": false,
+  "instruction": "Compare and contrast the two given historical events, highlighting their main differences and similarities.\n\nThe American Revolution and The French Revolution",
+  "original": "The American Revolution (1775-1783) and the French Revolution (1789-1799) share some similarities, but also have significant differences. Both revolutions were driven by a desire for change against the existing political order, and resulted in the establishment of new governments. They were also inspired by enlightenment ideas, championing individual rights and democratic values. However, the American Revolution was mainly about gaining independence from British colonial rule, while the French Revolution sought to drastically reform the social, political, and economic systems within France. Outcomes of these revolutions also vary. The American Revolution led to the successful establishment of a more democratic and stable government, whereas the French Revolution led to a period of political instability and violence, eventually culminating in Napoleon's rise to power."
+ },
+ {
+  "id": "alpaca-1163",
+  "think": true,
+  "instruction": "Suggest an effective marketing strategy for a TV show.",
+  "original": "Here are some effective marketing strategies that can be used to promote a TV show and attract a large audience:\n\n1. Social Media Marketing: Utilize social media platforms such as Facebook, Twitter, and Instagram to create a buzz about the show. Share teasers, trailers, behind-the-scenes content, and exclusive interviews with the cast to engage and attract the audience.\n\n2. Influencer Marketing: Collaborate with social media influencers and bloggers to promote the show. These influencers have a large following and can help spread the word about the show to their audience.\n\n3. PR Campaign: Connect with journalists and media outlets to get coverage about the show. This can help in creating a buzz and building anticipation around the show.\n\n4. Guerrilla Marketing: Use unconventional and creative marketing techniques such as flash mobs, street art, and pop-up events to create a buzz about the show.\n\n5. Content Marketing: Create engaging and shareable content such as blog posts, infographics, and videos to promote the show. This can help in attracting a larger audience and building a strong fan base.\n\n6. Cross-Promotion: Partner with other brands to promote the show. This can help in reaching a wider audience and increased visibility for the show.\n\n7. Contests and Giveaways: Organize contests and giveaways to engage the audience and build excitement around the show. This can also help in increasing the show's visibility and attracting more viewers.\n\nBy using a combination of these marketing strategies, the TV show can effectively reach its target audience and attract a large viewership."
+ },
+ {
+  "id": "alpaca-35",
+  "think": false,
+  "instruction": "Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.\n\nFounded in the 13th century, Berlin has had an eventful history. Excavations from 2008 suggest that the city may be even older than was previously assumed: state archaeologists have discovered an oak beam that probably dates back to 1183.\n\nAlmost no other metropolis has experienced such frequent, radical change transforming the face of the city. Although Berlin saw steady growth in its importance, dazzling epochs alternated with darker eras. Nevertheless, the formerly divided city has succeeded in becoming a vibrant metropolis in the heart of Europe.\n\nQuestion: What is the best restaurant in Berlin?",
+  "original": "I'm sorry, I cannot answer that question as the context given does not provide information about the best restaurant in Berlin."
+ },
+ {
+  "id": "oasst-f9a11445",
+  "think": false,
+  "instruction": "I have 2 EC2 machines on AWS, I'm having trouble making them communicate. How could I troubleshoot it?",
+  "original": "There are several possible causes for EC2 machines not communicating on AWS. I would suggest the following steps to get you started on fixing the issue:\n\n1. Check the security group rules and network ACLs for your instances.\n2. Verify that your instances have public IP addresses or Elastic IP addresses if you are connecting over the internet.\n3. Ensure that your instances have the correct route tables, internet gateways, and NAT devices configured.\n4. Test the network connectivity using ping, traceroute, or telnet commands."
+ },
+ {
+  "id": "alpaca-1168",
+  "think": false,
+  "instruction": "Calculate the total cost of the following items.\n\n3 laptop - $1100 each, 2 monitors - $200 each",
+  "original": "The total cost can be calculated by multiplying the quantity of each item by their respective cost and then adding the two costs together.\n \n3 laptops = 3 x $1100 = $3300\n2 monitors = 2 x $200 = $400\n\nTotal cost = $3300 + $400 = $3700"
+ },
+ {
+  "id": "alpaca-608",
+  "think": false,
+  "instruction": "Convert the following text into a list.\n\nThe four elements of design are line, color, shape, and texture.",
+  "original": "The list of the four elements of design can be represented as:\n\n1. Line\n2. Color\n3. Shape\n4. Texture"
+ },
+ {
+  "id": "alpaca-1019",
+  "think": false,
+  "instruction": "Edit the following sentence to make the punctuation and capitalization more accurate.\n\nthe baker made the best cookies ive ever eaten",
+  "original": "The baker made the best cookies I've ever eaten."
+ },
+ {
+  "id": "oasst-05a493e7",
+  "think": false,
+  "instruction": "Can you please explain to me which algorithm is objectively the most performant to run a simulation of Conway's Game of Life on a regular x86, multi-threaded processor? Make the response brief enough to be digestible by someone with a short attention span and easy enough to be understood by someone at age 12.",
+  "original": "Conway's Game of Life is a cellular automaton that evolves over time, and it can be simulated using a variety of algorithms. The most performant algorithm for simulating Conway's Game of Life on a regular x86 multi-threaded processor would likely be the Hashlife algorithm.\n\nThe Hashlife algorithm is an optimized recursive algorithm that takes advantage of the repeating patterns in the game to reduce the amount of computation required. It uses a quadtree data structure to represent the game board and efficiently compute the next generation of cells.\n\nOverall, the Hashlife algorithm is significantly faster than other popular algorithms for simulating Conway's Game of Life, especially for larger game boards. However, implementing this algorithm can be complex and may require advanced programming skills."
+ },
+ {
+  "id": "oasst-be80117b",
+  "think": false,
+  "instruction": "I am building a mechanical keyboard from scratch. I already have the working hardware and am in the process of configuring the firmware. However i find that the qwertz layout gives me wrist pain. I will use the keyboard for writing in english, german and french, and for coding mainly.\nWhat keyboard layout would be best suited for me?",
+  "original": "Generally, it seems that Neo layout may be what you are looking for.\nHere are some keyboard layouts for various use cases: \nFor French: BvoFrak, Bépo\nFor German: Neo, AdNW\nFor English: DHIATENSOR, Dvorak,\nFor programing: Programmer Dvorak, Evolved, Capewell, QGMLWY, Arensito\nNote that while layout may contribute to wrist pain, other factors like the angle of the keyboard, key spacing (vertical, horizontal, and depth), more may also be contributing factors. Learning a new layout takes time and effort, and may make it more difficult to type on other keyboards."
+ },
+ {
+  "id": "oasst-f1cf7848",
+  "think": true,
+  "instruction": "what are some fun facts about astronomy.",
+  "original": "Here are some fun facts about astronomy:\n\n1. The Milky Way galaxy - which is home to the Earth and the rest of the Solar System - is estimated to contain approximately 100 billion stars.\n2. The Universe is thought to be expanding at an accelerating rate, and it is believed that this acceleration is due to dark energy.\n3. The Solar System is located in one of the spiral arms of the Milky Way, which is known as the Orion Arm or the Carina Arm.\n4. The Moon is the only natural satellite of the Earth, and it has been orbiting the Earth for over 4.5 billion years.\n5. Saturn is the only planet in the Solar System that has a ring system, and the planet's rings are composed primarily of water ice particles.\n6. Mercury is the closest planet to the Sun, and it orbits the Sun in just 88 days.\n7. Mars is slightly smaller than the Earth, and it is known for its unique red color, which is due to the presence of iron oxide on the planet's surface."
+ },
+ {
+  "id": "oasst-277b6f05",
+  "think": false,
+  "instruction": "Could you translate all these German names to English [\"Aal\", \"Acai-Beere\", \"Ackerbohnen\", \"Agavensirup\", \"Ahornsirup\", \"Algen\", \"Alkoholfreies Bier\", \"Amarant\", \"Americano\", \"Ananas\", \"Ananassaft\", \"Anis\", \"Äpfel\", \"Apfelessig\", \"Apfelmus\", \"Apfelpektin\", \"Apfelsaft\", \"Aprikosen\", \"Artischocken\", \"Artischockenherzen\", \"Aubergine\", \"Austern\", \"Austernpilz\",\n \"Avocado\", \"Backpulver\", \"Bacon\", \"Baguette\", \"Bal­sa­mi­co­es­sig\",\"Bananen\", \"Bananenblätter\", \"Barbecuesauce\", \"Bärlauch\", \"Basilikum\", \"Basmatireis\", \"Batavia Salat\", \"Bauchspeck\", \"Beerenmischung\", \"Bergkräuter\", \"Bier\", \"Bierwurst\", \"Birnen\", \"Birnensaft\", \"Bittermandeln\", \"Blätterteig\", \"Blaubarsch\", \"Blaubeeren\", \"Blumenkohl\", \"Blutwurst\", \"Bockshornkleesamen\",\n \"Bockwurst\", \"Bohnenkraut\", \"Branntweinessig\", \"Bratling/Veggieburger auf Erbsenbasis\", \"Bratling/Veggieburger auf Sojabasis\", \"Bratwurst\", \"Brechbohnen\", \"Brennnesseln\", \"Brie\", \"Brioche\", \"Brokkoli\",\n \"Brombeeren\", \"Brot\", \"Brötchen\", \"Brunnenkresse\", \"Buchweizen\",  \"Buttermilch\", \"Butternut\", \"Caffe Latte Kühlregal\", \"Caffe Latte mit Hafermilch\", \"Caffe Latte mit Kokosnussmilch\", \"Caffe Latte mit Kuhmilch\", \"Caffe Latte mit Mandelmilch\", \"Caffe Latte mit Sojamilch\", \"Camembert\", \"Cappucino\",\n \"Cappucino mit Hafermilch\", \"Cappucino mit Kokosnussmilch\", \"Cappucino mit Kuhmilch\", \"Cappucino mit Mandelmilch\"]",
+  "original": "[\"Eel\", \"acai berry\", \"baba beans\", \"agave syrup\", \"maple syrup\", \"seaweed\", \"non-alcoholic beer\", \"amaranth\", \"americano\", \"pineapple\", \"pineapple juice\", \"aniseed \", \"Apples\", \"Apple Vinegar\", \"Apple Sauce\", \"Apple Pectin\", \"Apple Juice\", \"Apricots\", \"Artichokes\", \"Artichoke Hearts\", \"Aubergine\", \"Oysters\", \"Oyster Mushroom\",\n  \"Avocado\", \"Baking Powder\", \"Bacon\", \"Baguette\", \"Balsamico Vinegar\", \"Bananas\", \"Banana Leaves\", \"Barbecue Sauce\", \"Wild Garlic\", \"Basil\", \"Basmati Rice\", \"Batavia Salad\", \" Belly bacon\", \"Berry mix\", \"Mountain herbs\", \"Beer\", \"Berwurst\", \"Pears\", \"Pear juice\", \"Bitter almonds\", \"Puff pastry\", \"Bluefish\", \"Blueberries\", \"Cauliflower\", \"Blood sausage\" , \"fenugreek seeds\",\n  Bockwurst, savory, brandy vinegar, pea-based patty/veggie burger, soy-based patty/veggie burger, bratwurst, snap beans, nettles, brie, brioche, broccoli \",\n  \"Blackberries\", \"Bread\", \"Buns\", \"Watercress\", \"Buckwheat\", \"Buttermilk\", \"Butternut\", \"Caffe Latte Cooler\", \"Caffe Latte with Oat Milk\", \"Caffe Latte with Coconut Milk\", \"Caffe Latte with cow's milk\", \"Caffe Latte with almond milk\", \"Caffe Latte with soy milk\", \"Camembert\", \"Cappucino\",\n  \"Cappucino with oat milk\", \"Cappucino with coconut milk\", \"Cappucino with cow's milk\", \"Cappucino with almond milk\"]"
+ },
+ {
+  "id": "alpaca-2076",
+  "think": false,
+  "instruction": "Name a way to reduce water pollution.",
+  "original": "One way to reduce water pollution is by properly disposing of hazardous household waste, such as chemicals, motor oil, and paint. These substances should not be poured down the drain or thrown in the trash, as they can contaminate waterways and harm aquatic life. Instead, they should be taken to a designated hazardous waste facility for safe disposal."
+ }
+]

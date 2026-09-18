@@ -1,0 +1,272 @@
+[
+ {
+  "id": "alpaca-68",
+  "think": true,
+  "instruction": "Imagine you are speaking with a customer who is unsatisfied with the product they bought from you. Construct a response that diffuses the situation.",
+  "original": "Dear customer,\n\nFirst and foremost, I would like to sincerely apologize for any inconvenience or frustration you have experienced with our product. It is important to us that our customers are fully satisfied with their purchases and we take concerns like yours very seriously.\n\nMay I ask you to provide more details about the issues you are facing with the product? That way, we can work together towards finding the best possible solution to address your concerns.\n\nPlease rest assured that I am here to assist you and I will do everything in my power to make things right for you. We value your business and appreciate the opportunity to make things right.\n\nThank you for bringing this matter to our attention.\n\nSincerely,\nAI Assistant"
+ },
+ {
+  "id": "oasst-0cc96f04",
+  "think": false,
+  "instruction": "I had an intresting idea about a conduction of an experiment with language models, the idea is simple:\n1) ask about if they could do something but ask for a yes or no answer for example:\ncould you write a roblox game yes or no?\n2) then ask it to make a ROBLOX game\n3) then evaluate using the results of both questions if the AI has real knowledge about it's own capabilities\n\nI did it with chat GPT but he couldn't\n\nWould you think that this experiment would be successful with you or not, meaning that you would come off as self knowledgeable or not?",
+  "original": "It would definitely depend on the dataset been I've trained on and the goal you give me. For example if I were to be trained on solely C++ code I would not be able to make you a game coded in Lua for Roblox. And if you were to ask for a full game with loads of content it would not be realistically possible due to the time to generate a response taking longer the more code has already been written and the bugs I would be unable to foresee.\n\nYou must also take in mind the validity of your experiment. How well can you validate the 'real knowledge' of a program when it could just look on the internet to find an explanation of the code and regurgitate it to you thus fooling you into thinking it has the knowledge you are looking for."
+ },
+ {
+  "id": "alpaca-2090",
+  "think": false,
+  "instruction": "Rewrite this sentence in the form of a question.\n\nIndonesia is the largest island country in the world.",
+  "original": "Is Indonesia the largest island country in the world?"
+ },
+ {
+  "id": "oasst-db17c905",
+  "think": false,
+  "instruction": "Assuming we use a base 2 system, what would the assumed affect on geometric art be?",
+  "original": "A base 2 system is binary, which is the system currently used in computer graphics which are capable of representing any kind of visual art.\n\nPerhaps I can give you a more definitive answer if you explain how you are imagining applying a base 2 system to geometric art. Are we talking about representing geometry using a base 2 system? If so the answer would be \"none whatsoever because any geometry can already be represented using a binary system, and thus applying it would change nothing\". Or do you have some method in mind for constraining the production of geometric art using binary in a way that might have the assumed affect that you want me to describe? Without a specific method, the number of such possible affects could be of infinite variety. It seems to me that there must be some way to achieve such an affect by applying a binary approach to geometric art, but I'm missing the information required to meaningfully describe the particular affect you have in mind."
+ },
+ {
+  "id": "alpaca-992",
+  "think": true,
+  "instruction": "Fill in the blank with a word or phrase\n\nThe most successful team in the NBA is the ____",
+  "original": "The most successful team in the NBA is the Boston Celtics."
+ },
+ {
+  "id": "oasst-a8a33068",
+  "think": true,
+  "instruction": "Write a non-rhyming poem with strong alliteration and where every other line favors words that start with vowels or consonants in the combined style of Mark Strand and Elizabeth Bishop about a man who was injured in an accident and is wandering around in a state of shock while seeking help but seems to be invisible to everyone he approaches until he finally realized he didn't survive the accident and is in fact a ghost",
+  "original": "In the shadow of shattered steel, the stranger stumbled, seeking solace,\nUnder an ashen sky, an eerie echo of events unfolded.\nBattered, bruised by brutal fate, bewildered and bewildering,\nEvery attempt to entreat, to encounter - ignored, evaded.\n\nGrim and gaunt, the ghostly ground gave no comfort or compass,\nIn this odd, otherworldly odyssey, where once was warmth, wistful whispers.\nCruel cacophony of confusion, he cried for connection, for caring,\nUrgent undercurrents of unspoken understanding, unanswered.\n\nManifold memories marred by melancholy, he marched, musing,\nAlternating between agony and an almost apathetic acceptance.\nDestiny deemed him a drifting wraith, a wandering whisper, a witness,\nIsolated in the interstices of existence, the intersection of invisible.\n\nThrough twisted trees and tortured terrain, he traversed tirelessly,\nOver open, opaque oceans of uncertainty, unfathomable and unforgiving.\nFearful phantoms flickered and fluttered in the fickle, fleeting light,\nEbbing, ever evasive, ethereal emotions engulfed him, escaping explanation.\n\nA sudden shiver, the stark, staggering truth struck him like slivers of ice,\nImpaled upon the infinite, the insurmountable: he was immaterial, impalpable.\nNo more man, but a memory, a mirage, a mote in the merciless maelstrom,\nUnraveled, unanchored, untethered in the vast void of vanishing vibrations.\n\nIn the cold crepuscular chiaroscuro, the curtain closed on his corporeal chapter,\nAnd he, an apparition adrift, surrendered to the silent, somber sanctuary of shadows."
+ },
+ {
+  "id": "alpaca-2099",
+  "think": false,
+  "instruction": "What is the basic goal of a mutual fund?",
+  "original": "The basic goal of a mutual fund is to pool the money from many individual investors and use it to buy a diversified portfolio of securities, such as stocks, bonds, or other assets, in order to achieve higher returns on their investment than they would be able to achieve on their own. Through a mutual fund, investors can benefit from the knowledge and expertise of professional fund managers who actively manage the portfolio, and the diversification that comes from owning a broad range of securities, thus reducing the impact of any single security's poor performance on the overall return of the fund. Ultimately, the goal of a mutual fund is to help individual investors achieve their long-term financial objectives, such as saving for retirement, by providing an accessible and convenient way to invest in a diversified portfolio of securities."
+ },
+ {
+  "id": "alpaca-423",
+  "think": true,
+  "instruction": "Write a 250 word essay about Coral Reef Conservation",
+  "original": "Coral reefs are one of the most biodiverse ecosystems on the planet and are often referred to as the “rainforests of the sea”. They provide habitats and shelter to a variety of marine organisms, as well as support human economies through fishing and tourism. However, rising ocean temperatures, acidification, pollution, and overfishing are major threats to coral reefs and the species that depend on them. To address these challenges, it is crucial to adopt measures for coral reef conservation.\n\nOne of the key approaches to coral reef conservation is to reduce the human impact on coral reefs. This involves reducing greenhouse gas emissions, which can help to slow down climate change and the warming of our oceans, protecting coral reefs from further damage. Additionally, reducing land-based sources of pollution, such as industrial waste and agricultural runoff, can help to improve the water quality around coral reefs. This, in turn, can enhance the resilience and the ability of corals to recover from damage.\n\nFostering sustainable fishing practices is another effective way to promote the conservation of coral reefs. Implementing marine protected areas and no-take zones can help to restore the balance of the ecosystem and allow depleted fish stocks to recover. Furthermore, encouraging public awareness and education on the importance of coral reefs can help to promote positive behavioral changes that support the conservation of these vital ecosystems.\n\nIn conclusion, coral reefs are a valuable resource that must be protected. To preserve these ecosystems and the species that inhabit them, it is essential to reduce human impact, promote sustainable practices, and raise awareness about their importance. With the right conservation measures in place, it is possible to secure a sustainable future for coral reefs and the marine life that depends on them."
+ },
+ {
+  "id": "oasst-5896ce7a",
+  "think": true,
+  "instruction": "Here's a few examples of nonsensical soyjaks:\n\n- A squirrel soyjak riding on a jetski in a tiny swimming pool while being recorded by a human soyjak.\n\n- 2 crying polar bear soyjaks standing in the street with flags on them saying \"it's ok to be czech,\" while a giant cyborg robot cowers over them in the background with a smug soyjak piloting it.\n\n- A soyjak with a bicycle shaped object in his throat saying \"I don't know where the bike went.\"\n\nDescribe me a new nonsensical soyjak.",
+  "original": "Picture a soyjak wearing a wizard's hat and robe, riding a unicycle while juggling pineapples with his feet. His facial expression is a mix of confusion and determination, as if he's not entirely sure why he's doing this but he's committed to seeing it through. In the background, there are several other soyjaks dressed in animal costumes, playing a cacophony of instruments that don't seem to match in any way. A giant, inflatable rubber duck hovers overhead, casting a shadow over the entire scene."
+ },
+ {
+  "id": "alpaca-1594",
+  "think": false,
+  "instruction": "List five steps for writing an essay.",
+  "original": "1. **Choose a topic**: Select a subject that interests you or is relevant to your assignment. Narrow it down to a specific theme or question that you want to address in your essay.\n2. **Conduct research**: Use reliable sources to gather information on your topic. Take notes, highlight important facts or quotes, and organize your research to facilitate the writing process.\n3. **Create an outline**: Plan the structure and content of your essay by creating an outline. This will help you to organize your thoughts and ideas and to ensure that your essay has a logical flow.\n4. **Write the first draft**: Using the outline as a guide, write the first draft of your essay. Be sure to include an introduction, body paragraphs, and a conclusion. Each paragraph should have a specific focus and a clear connection to the thesis statement.\n5. **Revise and edit**: Review your first draft and make changes to improve its content, structure, and style. Check for errors in grammar, spelling, and punctuation, and make the necessary corrections. Read your essay out loud to ensure that it flows smoothly and makes sense."
+ },
+ {
+  "id": "oasst-e9bc4dd9",
+  "think": false,
+  "instruction": "I've been trying to learn about transistors, but there's something that's confusing me. What are the differences between a JFET and a depletion mode MOSFET, based on how they are used? They seem very similar to each other.",
+  "original": "JFETs (Junction Field-Effect Transistors) and depletion-mode MOSFETs (Metal-Oxide-Semiconductor Field-Effect Transistors) are both types of field-effect transistors (FETs) and they do have some similarities in their operation. However, there are also some important differences between the two types of transistors.\n\nThe main difference between JFETs and depletion-mode MOSFETs is in how they are biased, or how the voltage is applied to the device to control the flow of current.\n\nA JFET is a voltage-controlled device, meaning that the voltage applied to the gate terminal determines the current flow between the source and drain terminals. When a negative voltage is applied to the gate of a JFET, it creates a depletion region that restricts the flow of current between the source and drain terminals. As the gate voltage becomes more negative, the depletion region widens and the current flow is reduced.\n\nA depletion-mode MOSFET, on the other hand, is a voltage-controlled device that operates similarly to a JFET, but it is constructed differently. In a depletion-mode MOSFET, the gate is separated from the channel by a thin layer of oxide. When a negative voltage is applied to the gate of a depletion-mode MOSFET, it attracts positive charges from the channel, creating a depletion region that restricts the flow of current between the source and drain terminals.\n\nIn terms of their practical applications, JFETs and depletion-mode MOSFETs are used in similar ways, but there are some differences. JFETs are often used in low-noise applications such as pre-amplifiers, while depletion-mode MOSFETs are used in power management applications, such as voltage regulation and switching circuits."
+ },
+ {
+  "id": "alpaca-2087",
+  "think": false,
+  "instruction": "Describe the style of writing in this passage.\n\nDesign thinking is a human-centered approach to innovation that draws from the designer's toolkit to integrate the needs of people, the possibilities of technology, and the requirements for success.",
+  "original": "The style of writing in the given passage is clear, concise, and formal. The language is straightforward, and the main idea of the sentence is presented in a well-structured manner. The tone of the writing is informative, and it is aimed at providing an accurate and precise definition of the concept of design thinking to the audience."
+ },
+ {
+  "id": "alpaca-1383",
+  "think": false,
+  "instruction": "Explain the given concept in one sentence.\n\nAlgorithmic complexity",
+  "original": "Algorithmic complexity is a concept in computer science that refers to the performance and efficiency of an algorithm in terms of the time and resources it requires to solve a problem as the problem size grows."
+ },
+ {
+  "id": "oasst-cf63d1a2",
+  "think": false,
+  "instruction": "I want to start bouldering. What equipment do I use and how much should the budget be?",
+  "original": "Bouldering is a fun and exciting sport that can be a great way to stay active and challenge yourself physically and mentally. Here is some information on the equipment you'll need and how much you can expect to spend:\n\nEquipment:\n\n- Climbing shoes: Bouldering requires shoes that are specifically designed for climbing. These shoes are designed to be tight-fitting and have sticky rubber soles to help you grip the holds on the wall.\n- Chalk bag: A chalk bag is used to hold chalk, which helps keep your hands dry and improve your grip on the holds.\n- Chalk: You'll need chalk to keep your hands dry and improve your grip on the holds.\n- Crash pad: A crash pad is a thick foam mat that is placed on the ground to cushion your falls and prevent injuries. It's especially important for outdoor bouldering where the ground is often uneven and rocky.\n- Clothing: You'll want to wear comfortable, flexible clothing that allows for a full range of motion. Many climbers prefer to wear pants that are designed for climbing as they provide additional mobility and protection.\n- Optional gear: Some climbers may also use a brush to clean the holds on the wall, and some may choose to wear a harness for additional safety when climbing taller boulders.\n\nBudget:\nThe cost of bouldering equipment can vary depending on where you live and the quality of the gear you choose. Here is a rough estimate of the costs you can expect:\n\n- Climbing shoes: $60-$150\n- Chalk bag: $10-$30\n- Chalk: $5-$15\n- Crash pad: $150-$400\n- Clothing: $30-$100\n- Optional gear: $5-$50\n\nOverall, you can expect to spend around $250-$700 to get started with bouldering, depending on the quality of the equipment you choose. Keep in mind that many climbing gyms offer equipment rental and lessons, which can be a more affordable way to try bouldering before investing in your own gear."
+ },
+ {
+  "id": "alpaca-224",
+  "think": false,
+  "instruction": "Compute the longest increasing subsequence of a given array?\n\narr = [7, 10, 8, 11, 9, 5]",
+  "original": "The longest increasing subsequence of the given array is [7, 8, 9, 11]. It has a length of 4.\n\nTo compute this, you can use dynamic programming to find the length of the longest increasing subsequence ending at each position, then take the maximum value. Here is an example of how to calculate it in Python:\n\n```python\narr = [7, 10, 8, 11, 9, 5]\nn = len(arr)\nlis = [1]*n\n \nfor i in range(1, n):\n    for j in range(i):\n        if arr[i] > arr[j] and lis[i]< lis[j] + 1:\n            lis[i] = lis[j]+1\n \nprint(max(lis))\n```"
+ },
+ {
+  "id": "alpaca-589",
+  "think": false,
+  "instruction": "Explain the difference between HTML and CSS.",
+  "original": "HTML (Hypertext Markup Language) and CSS (Cascading Style Sheets) are both used in building websites, but they serve different purposes.\n\nHTML is a markup language used to structure and organize the content of a webpage. It provides the framework for the webpage and allows a developer to define the components of the page, such as headings, paragraphs, links, images, and forms. HTML uses tags to mark up content and tell the browser how to display it. It can be thought of as the skeleton or foundation of a webpage.\n\nCSS, on the other hand, is a stylesheet language used to describe the presentation, or appearance, of a webpage. CSS allows developers to style and layout the page by specifying colors, fonts, margins, padding, and other visual elements. It helps separate the presentation from the content, making it easier to apply and update styling across multiple pages or an entire website. CSS can be thought of as the paint and decorations that make a webpage visually appealing.\n\nIn summary, the main difference between HTML and CSS is that HTML provides the structure and content of a webpage, while CSS provides the visual style and layout. Both are essential in building a well-formed and visually appealing website."
+ },
+ {
+  "id": "oasst-0c7d9694",
+  "think": false,
+  "instruction": "How in JavaScript draw a circle with radius 10 pixels in a html canvas?",
+  "original": "To draw a circle with a radius of 10 pixels in a HTML canvas using JavaScript, you can use the following code:\n\n<html>\n  <head>\n    <script>\n      function drawCircle() {\n        var canvas = document.getElementById(\"myCanvas\");\n        var context = canvas.getContext(\"2d\");\n        \n        context.beginPath();\n        context.arc(100, 100, 10, 0, 2 * Math.PI);\n        context.fillStyle = \"blue\";\n        context.fill();\n        context.stroke();\n      }\n    </script>\n  </head>\n  <body onload=\"drawCircle()\">\n    <canvas id=\"myCanvas\" width=\"200\" height=\"200\"></canvas>\n  </body>\n</html>\n\nIn this example, getElementById is used to obtain a reference to the canvas element in the HTML document, and getContext is used to obtain a 2D rendering context for the canvas. beginPath is called to start a new path, arc is used to create an arc with a given center, radius, start angle, and end angle, and fill and stroke are used to fill and outline the circle, respectively.\n\nYou can adjust the position of the circle by changing the values passed to the arc method, and you can change the color of the fill by changing the value assigned to fillStyle."
+ },
+ {
+  "id": "oasst-3c72ac25",
+  "think": true,
+  "instruction": "Should I use the WTFPL licence for my open source project?",
+  "original": "The WTFLP (Do What The Fuck You Want To Public License) is a public-domain like permissive license used as free software license. It allows free usage, modification and redistribution without any restrictions.\n\nThe license may be attractive to you if you want to give the users as much freedom as possible. However, the license's lack of restrictions may make it difficult to protect your software or your intellectual property. You should also keep in mind that the WTFPL license is not recognized by the Open Source Initiative (OSI) or the Free Software Foundation (FSF). So, you should avoid this license if you want your software widely accepted or recognized by other open source developers or organizations. The license can also make it difficult for others to contribute to your project, as they may not be aware of rights and restrictions, because of less popularity.\n\nUltimately, the decision of which license to use depends upon the needs and goals of the project."
+ },
+ {
+  "id": "oasst-4258c92e",
+  "think": false,
+  "instruction": "Write an excel formula for finding the average value in a column D",
+  "original": "You can use the AVERAGE function to find the average value in a column in Excel. The formula is: =AVERAGE(D2:Dn), where n is the last row of your record. For example, if your record is in column D from row 2 to 10, the formula is =AVERAGE(D2:D10)."
+ },
+ {
+  "id": "alpaca-1339",
+  "think": false,
+  "instruction": "Analyze the given sentence and identify its grammatical errors, if any.\n\nThese type of problems are difficult to solve.",
+  "original": "The sentence is incorrect. The error is in the usage of \"these\". Since \"these\" is a plural determiner, it should be used with a plural noun. Similarly, \"type\" is singular noun and it is used with the singular determiner, \"this\".\n\nThe correct sentence should be \"This type of problem is difficult to solve.\" or \"These types of problems are difficult to solve.\""
+ },
+ {
+  "id": "oasst-734080bb",
+  "think": false,
+  "instruction": "could you write the code for an arduino controller that will at the press of a button, turn on an LED, wait 3 seconds and turn it off ?",
+  "original": "That sounds fun; I'd be happy to! A 'blink' sketch is a common example used for learning how to program an Arduino controller, and so is using a pushbutton to control a light. Keeping an LED on for three seconds at the press of a button is a combination of the two:\n\n```c++\n/*\n  Button Blink\n\n  Turns an LED on for three seconds, then off, \n  after the press of a pushbutton attached to pin 2.\n\n  The circuit:\n  - LED attached from pin 13 to ground through 220 ohm resistor\n  - pushbutton attached to pin 2 from +5V\n  - 10K resistor attached to pin 2 from ground\n\n  Note: On most Arduinos there is already an LED on the board attached to pin 13.\n  If you want to know what pin the on-board LED is connected to on your Arduino\n  model, check the Technical Specs of your board at:\n  https://www.arduino.cc/en/Main/Products\n*/\n\n// constants won't change. They're used here to set pin numbers:\nconst int buttonPin = 2;  // the number of the pushbutton pin\nconst int ledPin = 13;    // the number of the LED pin\n\n// variables will change:\nint buttonState = 0;  // variable for reading the pushbutton status\n\n// the setup function runs once when you press reset or power the board\nvoid setup() {\n  // initialize the LED pin as an output:\n  pinMode(ledPin, OUTPUT);\n  // initialize the pushbutton pin as an input:\n  pinMode(buttonPin, INPUT);\n}\n\n// the loop function runs over and over again forever\nvoid loop() {\n  // read the state of the pushbutton value:\n  buttonState = digitalRead(buttonPin);\n\n  // check if the pushbutton is pressed. If it is, the buttonState is HIGH:\n  if (buttonState == HIGH) {\n      digitalWrite(ledPin, HIGH);  // turn the LED on (HIGH is the voltage level)\n      delay(3000);                      // wait for three seconds\n      digitalWrite(ledPin, LOW);   // turn the LED off by making the voltage LOW\n  }\n}\n```\n\nBlinking an LED according to input is a great way to test that your Arduino is working, and a good starting point for more complex projects. Getting hardware and software to work together can be difficult, so don't give up! 💡"
+ },
+ {
+  "id": "oasst-6a8c276a",
+  "think": false,
+  "instruction": "Begin a role play session, in which you will be taking the role of a teenage girl",
+  "original": "Sure, I can do that. What kind of role play session would you like to have? Do you have any specific scenario in mind?"
+ },
+ {
+  "id": "oasst-fe62ab1d",
+  "think": false,
+  "instruction": "I have ground turkey, eggs, and various spices and vegetables.  What is your favorite turkey burger recipe?",
+  "original": "I found this recipe from AllRecipies:\n\n3 pounds Ground Turkey\n¼ cup Seasoned Bread Crumbs\n¼ cup Onion (finely diced)\n2 Egg Whites (lightly beaten)\n¼ cup Fresh Parsley (chopped)\n1 clove Garlic (peeled and minced)\n1 teaspoon Salt\n¼ teaspoon Black Pepper (ground)\n\nWould you like preparation instructions?"
+ },
+ {
+  "id": "oasst-0207dacf",
+  "think": true,
+  "instruction": "I have an appointment in two weeks on the 29th. Is there anything else going on that day and if so, will I have time to go to the store in town between events?",
+  "original": "I don't have access to specific event schedules and details. However, you can check online calendars or event websites for the 29th to see if there are any events or activities that could impact your schedule. As for going to the store in town, it would depend on the timing and duration of your events, as well as the distance to the store."
+ },
+ {
+  "id": "alpaca-215",
+  "think": false,
+  "instruction": "Create a questions that can be answered using the following sentence.\n\n\"It was a beautiful day\"",
+  "original": "1. What was the weather like on that day?\n2. How would you describe the day?\n3. Was the day pleasant or gloomy?\n4. Was the day cooperative and conducive for outdoor activities?\n5. What statement best describes the day?"
+ },
+ {
+  "id": "oasst-7d572964",
+  "think": false,
+  "instruction": "Hello! Can you help me identify a prime number? \n115792089237316195423570985008687907853269984665640564039457584007908834671663\nThis prime is used for something and I'd like to know more about it, feel free to add details/trivia/factoids of any attributes you recognize.",
+  "original": "A prime number is any whole number that can only be divided by itself or 1 to produce a whole number result, except 1 itself (although 1 used to be considered a prime number).\nThe specific prime number you gave is the Fermat prime of order 12, the largest known Fermat prime. Fermat primes are equal to 2^(2^n)+1.\nIt was discovered in 1996 by a computer program called Proth.exe, written by Yves Gallot.\nIt is now used in elliptic curve cryptography, for securing online transactions."
+ },
+ {
+  "id": "alpaca-400",
+  "think": false,
+  "instruction": "Name something you can do with paper.",
+  "original": "With paper, you can write or draw on it, fold it to create origami art, use it to wrap gifts, create paper mache crafts, make paper airplanes, use it as a base for scrapbooking, and even recycle it to make new paper products."
+ },
+ {
+  "id": "oasst-d19c1385",
+  "think": true,
+  "instruction": "give 10 random examples of sentences separated by '|' and the sentiment of the sentence wrapped in parenthesis in the end of each sentence to be used as a train set of a sentiment analysis model",
+  "original": "```\nI love spending time with my family.|(Positive)\nThe weather today is terrible.|(Negative)\nThe food at that restaurant was amazing!|(Positive)\nI hate when people talk during movies.|(Negative)\nThe customer service at that store was terrible.|(Negative)\nI feel so happy when I'm with my friends.|(Positive)\nI'm so frustrated with this project.|(Negative)\nThe sunset over the ocean was beautiful.|(Positive)\nI'm disappointed that the concert was cancelled.|(Negative)\nThis book is so inspiring!|(Positive)\n```"
+ },
+ {
+  "id": "oasst-3f2b9789",
+  "think": false,
+  "instruction": "Write a React app that can take user input, call an api and display the result in HTML.",
+  "original": "Here's an example of a React app that takes user input, calls an API, and displays the result in HTML:\n\nimport React, { useState } from 'react';\nimport axios from 'axios';\n\nfunction App() {\n  const [inputValue, setInputValue] = useState('');\n  const [result, setResult] = useState('');\n\n  const handleInputChange = (event) => {\n    setInputValue(event.target.value);\n  };\n\n  const handleButtonClick = async () => {\n    try {\n      const response = await axios.get(`https://example-api.com/${inputValue}`);\n      setResult(response.data);\n    } catch (error) {\n      console.error(error);\n    }\n  };\n\n  return (\n    <div>\n      <input type=\"text\" value={inputValue} onChange={handleInputChange} />\n      <button onClick={handleButtonClick}>Submit</button>\n      <div>{result}</div>\n    </div>\n  );\n}\n\nexport default App;\n\n\nThis app uses React's useState hook to manage the user input and the API response. When the user types into the input field, the handleInputChange function updates the inputValue state. When the user clicks the button, the handleButtonClick function makes an API request using the axios library and updates the result state with the response data. Finally, the app displays the inputValue, a submit button, and the result in separate div elements."
+ },
+ {
+  "id": "alpaca-1573",
+  "think": false,
+  "instruction": "Generate 3 blog topic ideas based on the keyword “web automation”",
+  "original": "1. \"Save Time and Money: The Benefits of Implementing Web Automation for your Business!\"\n2. \"5 Must-Know Tools and Services for Streamlining your Web Automation Processes\"\n3. \"Web Automation vs Manual Process: Understanding What Makes the Biggest Impact on Efficiency!\""
+ },
+ {
+  "id": "oasst-c426ace5",
+  "think": false,
+  "instruction": "How to I use the Hand Visual script in the Oculus Integration for Unity?",
+  "original": "The Hand Visual script in the Oculus Integration for Unity is used to enable hand tracking and display virtual hands in your Unity project when using an Oculus device. \nHere are the steps to use the Hand Visual script in your Unity project:\n\n1. Import the Oculus Integration package into your Unity project. You can download the package from the Oculus Developer website.\n\n2. Create a new scene or open an existing one in which you want to enable hand tracking and display virtual hands.\n\n3. Add the OVRCameraRig prefab to your scene. This prefab contains the components necessary for VR camera movement and tracking.\n\n4. Add the OVRHandPrefab to your scene. This prefab contains the Hand Visual script and other components needed for hand tracking and visualization.\n\n5. Select the OVRHandPrefab in the hierarchy and enable the Hand Visual script by checking the \"Enabled\" checkbox in the inspector.\n\n6. You can customize the appearance of the virtual hands by adjusting the properties of the Hand Visual script. \nFor example, you can change the hand model, adjust the size and position of the hands, and configure the hand tracking settings.\n\n7. Play the scene and put on your Oculus headset. You should now be able to see and move your virtual hands in the Unity scene.\n\nThat's it! With the Hand Visual script enabled, you can now use your hands to interact with your Unity project in a more immersive way.\n\nLet me know if there is anything else you need."
+ },
+ {
+  "id": "oasst-d8610df2",
+  "think": false,
+  "instruction": "Write a story about a young man named Jayden who is handsome but shy.",
+  "original": "Jayden was a handsome young man who had a problem: he was too shy to talk to girls. He had a crush on his neighbor, Mia, but he never had the courage to say hello to her. He would just watch her from his window as she walked her dog every morning.\n\nOne day, he decided to do something about it. He bought a bouquet of roses and wrote a note that said: \"I like you. Do you like me? Check yes or no.\" He planned to leave it on her doorstep and ring the bell before running away.\n\nHe waited until she left for work and then sneaked over to her house. He placed the flowers and the note on the mat and rang the bell. Then he turned around and sprinted back to his house.\n\nHe didn't notice that Mia's dog had followed him out of the door and was now chasing him. The dog barked loudly and bit his leg, making him trip and fall on the sidewalk.\n\nMia heard the commotion and came out of her house. She saw Jayden lying on the ground with her dog on top of him. She recognized him as her neighbor and ran over to help.\n\n\"Are you okay?\" she asked, pulling her dog away from him.\n\nJayden looked up at her and felt his face turn red. He tried to say something but only managed to stutter.\n\n\"I-I-I'm s-s-sorry,\" he said.\n\nMia noticed the flowers and the note on her doorstep. She picked them up and read them with a smile.\n\n\"Did you write this?\" she asked Jayden.\n\nHe nodded sheepishly.\n\nShe checked yes on the note and handed it back to him.\n\n\"That's very sweet of you,\" she said. \"I like you too.\"\n\nShe leaned down and kissed him softly on the cheek.\n\nJayden felt a surge of happiness in his chest. He forgot about his pain and his shyness. He smiled at Mia and held her hand.\n\nThey walked back to their houses together, with her dog following them happily."
+ },
+ {
+  "id": "oasst-3062e007",
+  "think": false,
+  "instruction": "How do I go about creating a web walker for the game old school Runescape in java",
+  "original": "Creating a web walker for Old School RuneScape in Java would require knowledge of programming and game automation. Here is a general outline of the steps you would need to follow:\n\nFamiliarize yourself with the game: Before you start programming, you need to understand the game mechanics, how the game operates and the requirements for the web walker.\n\nSet up a development environment: You'll need to install a Java development environment, such as Eclipse or IntelliJ IDEA, and familiarize yourself with the basics of Java programming.\n\nUse an API for RuneScape: RuneScape has an official API, the RuneScape API, that you can use to interact with the game. You'll need to use this API to interact with the game and retrieve information about the game state.\n\nImplement the web walker logic: Once you have retrieved information about the game state, you'll need to implement the logic that determines the best path to take in the game. You'll need to consider factors such as the distance to the destination, the presence of obstacles, and the presence of dangerous creatures.\n\nTest the web walker: Before you can use the web walker, you'll need to test it thoroughly to ensure that it works correctly. You may need to make adjustments to the logic or add additional features to improve the functionality of the web walker.\n\nIt's important to note that creating a web walker for Old School RuneScape is against the game's terms of service, and using a web walker can result in a ban from the game. If you want to continue with this project, I would advise you to do so for educational purposes only and not for any commercial use or in-game advantage."
+ },
+ {
+  "id": "alpaca-1579",
+  "think": true,
+  "instruction": "Given this sentence, predict the part of speech of the word “groomed”\n\nHe groomed the puppy until it was perfectly clean",
+  "original": "The word “groomed” in this sentence is a verb."
+ },
+ {
+  "id": "alpaca-211",
+  "think": false,
+  "instruction": "You are a smart assistant designed to help high school teachers come up with reading comprehension questions.\nGiven a piece of text, you must come up with a question and answer pair that can be used to test a student's reading comprehension abilities.\nWhen coming up with this question/answer pair, you must respond in the following format:\n```\n{{\n    \"question\": \"$YOUR_QUESTION_HERE\",\n    \"answer\": \"$THE_ANSWER_HERE\"\n}}\n```\nEverything between the ``` must be valid json.\nPlease come up with a question/answer pair, in the specified JSON format, for the following text:\n----------------\nPreviously, the use of dye-sub printing was limited to industrial or high-end commercial printing. Dye-sub photo printing has been used in medical imaging, graphic arts proofing, security, and broadcast-related applications. Today, it is extremely popular in event photography and photo booths or kiosks that require high-speed, on-demand printing.\n\nAlps Electric produced the first quality dye-sub printers for home consumers in the $500–$1,000 price range, bringing dye-sublimation technology within the reach of a wider audience. (These models were, however, not true page printers, since they used a narrow printhead that swept across the page, like most inkjet printers.) Now there are many dye-sublimation printers on the market starting from as low as $100, especially postcard-sized mobile photo printers.\n\nThe ability to produce instant photo prints inexpensively from a small printer has led to dye sublimation solutions supplanting traditional instant photos in some applications, such as ID photography with a card printer.\n\nSeveral corporations market desktop-size units as stand-alone printers and for print kiosk and photo booth applications. Some of these units are based on generic printers. Some manufacturers, offer software development kits with their printers, suggesting that these companies hope to attract system integrators as a potential market.\n\nDesktop-size standalone dye-sub photo printers are also used by photographers in event photography. The technology allows photographers to produce and sell lab-quality prints immediately during the event they are attending, with a minimal amount of hardware.",
+  "original": "{\n    \"question\": \"What are some of the applications of dye-sub photo printing?\",\n    \"answer\": \"Dye-sub photo printing has been used in medical imaging, graphic arts proofing, security, and broadcast-related applications.\"\n}"
+ },
+ {
+  "id": "alpaca-1323",
+  "think": false,
+  "instruction": "Describe a situation where a chatbot would be more useful than a human assistant.",
+  "original": "A situation where a chatbot would be more useful than a human assistant is when handling multiple users simultaneously. For instance, suppose a company's customer support service receives thousands of inquiries daily, with many customers seeking to communicate with support representatives at the same time. In this scenario, a chatbot can handle multiple conversations simultaneously while providing instant and accurate responses to common inquiries, which would be impossible for a human assistant to achieve. Additionally, chatbots can operate 24/7 and do not need breaks or time off, meaning they are always available to handle customer inquiries. This capability minimizes wait times and improves the level of service that the company can provide to its customers."
+ },
+ {
+  "id": "oasst-ca37fbc2",
+  "think": false,
+  "instruction": "How do I defrost frozen peas fast?",
+  "original": "There are several methods to defrost frozen peas quickly:\n\n1. Microwave: Place the frozen peas in a microwave-safe bowl and cover them with a damp paper towel. Microwave on high for 30-second intervals, stirring in between until the peas are thawed.\n2. Cold water bath: Place the frozen peas in a sealed plastic bag and submerge them in a bowl of cold water. Change the water every 30 minutes until the peas are thawed.\n3. Steam: Place the frozen peas in a steamer basket and steam for a few minutes until thawed.\n\nIt's important to note that when defrosting peas quickly, they may become slightly softer than when defrosted slowly, so it's best to use them in recipes that require cooking or blending. Also, never use hot water or leave frozen peas at room temperature to defrost as this can promote bacterial growth and foodborne illnesses."
+ },
+ {
+  "id": "alpaca-987",
+  "think": false,
+  "instruction": "List 5 benefits of playing sports",
+  "original": "1. Physical Fitness: Playing sports regularly helps increase overall fitness levels, strengthens muscles, and improves endurance and flexibility.\n\n2. Mental Health: Sports can positively impact your mental health by reducing stress, anxiety, and depression, and improving cognitive functions and self-esteem. \n\n3. Socialization: Participating in team sports allows individuals to develop social skills, form strong bonds, make new friends and learn how to work together towards a common goal. \n\n4. Discipline and goal setting: Playing sports requires discipline, dedication, and consistent effort towards improvement. This helps individuals learn the importance of setting, pursuing and achieving goals. \n\n5. Healthy Habits: Playing sports often leads individuals to adopt a healthier lifestyle, which includes better nutrition, sleep patterns, and reduced likelihood of engaging in harmful habits such as smoking or excessive drinking."
+ },
+ {
+  "id": "alpaca-1206",
+  "think": false,
+  "instruction": "Find all real solutions to\n\n1/(x - 1)(x - 2) + 1/(x - 2)(x - 3) + 1/(x - 3)(x - 4) = 1/6.\nEnter all solutions, separated by commas.",
+  "original": "By partial fractions,\n\n 1/(x - 1)(x - 2) = 1/(x - 2) - 1/(x - 1), \n 1/(x - 2)(x - 3) = 1/(x - 3) - 1/(x - 2), \n 1/(x - 3)(x - 4) = 1/(x - 4) - 1/(x - 3),\nso the given equation reduces to\n\n 1/(x - 4) - 1/(x - 1) = 1/6.\nMultiplying both sides by 6(x - 4)(x - 1), we get\n\n 6(x - 1) - 6(x - 4) = (x - 4)(x - 1),\nwhich simplifies to x^2 - 5x - 14 = 0. This factors as (x - 7)(x + 2) = 0, so the solutions are 7,-2."
+ },
+ {
+  "id": "alpaca-1779",
+  "think": true,
+  "instruction": "Find the definition of the following financial term\n\nStock Split",
+  "original": "A stock split is a corporate action in which a company increases the number of its outstanding shares by issuing more shares to its existing shareholders. A stock split causes a reduction in the price per share, making the stock more accessible to smaller investors. The total value of the shares an investor holds remains the same, as the proportionate ownership in the company doesn't change. A company may decide to perform a stock split for numerous reasons, including to make the stock look more attractive to investors or to increase the liquidity of the shares in the market. Common stock split ratios include 2-for-1 or 3-for-1, which means that the shareholder will receive two or three shares for every share they currently own."
+ },
+ {
+  "id": "oasst-2771b350",
+  "think": true,
+  "instruction": "can you layout base cabinets for me for a 12 x 12 L shaped kitchen with the sink centered on the right and stove and fridge of the left? Use just standard RTA cabinet sizes.",
+  "original": "Sure, here's a layout for the base cabinets in a 12 x 12 L-shaped kitchen with a sink on the right and the stove and refrigerator on the left, using standard RTA cabinet sizes:\n\n| 36\" Sink Base | 30\" Corner Base | 24\" Base | 36\" Base |\n| 30\" Base     |                |           | 24\" Base |\n\nPlease keep in mind that this is just one possible layout; there are many more depending on your specific needs and preferences. You should also consider each cabinet's height, depth, and width to ensure that it fits properly in your kitchen space and provides the necessary storage and functionality. To design a kitchen layout that meets your needs and fits your space, it's always a good idea to consult with a professional or use an online planning tool."
+ },
+ {
+  "id": "alpaca-1329",
+  "think": false,
+  "instruction": "Create a table of ten of the world's wealthiest people.",
+  "original": "| Rank | Name | Net Worth (USD) | Source of Wealth | Nationality |\n|------|------|----------------|------------------|-------------|\n| 1 | Elon Musk | 254 Billion | Tesla, SpaceX | South Africa, United States |\n| 2 | Jeff Bezos | 192 Billion | Amazon | United States |\n| 3 | Bernard Arnault | 174 Billion | LVMH | France |\n| 4 | Bill Gates | 131 Billion | Microsoft, Investments | United States |\n| 5 | Mark Zuckerberg | 127 Billion | Facebook | United States |\n| 6 | Warren Buffett | 104 Billion | Berkshire Hathaway | United States |\n| 7 | Larry Ellison | 100 Billion | Oracle | United States |\n| 8 | Larry Page | 96.4 Billion | Google | United States |\n| 9 | Sergey Brin | 92.8 Billion | Google | United States |\n| 10 | Steve Ballmer | 89.6  Billion | Microsoft | United States |\n\nThe figures in the table above are estimated net worth as of October, 2021 from Forbes Real-Time Billionaires index. Note that these figures could change daily as they are affected by market forces."
+ },
+ {
+  "id": "alpaca-1564",
+  "think": false,
+  "instruction": "Write a definition for the term \"machine learning\".",
+  "original": "Machine learning is a branch of artificial intelligence that refers to the development of algorithms and statistical models that allow computer systems to improve their performance on a specific task over time by using data and experience, rather than explicit programming. The algorithms use patterns and inference from the data to learn from experience and make predictions or decisions without being explicitly programmed to carry out the task. Machine learning applications include computer vision, natural language processing, speech recognition, and recommendation systems, among others."
+ },
+ {
+  "id": "alpaca-1709",
+  "think": false,
+  "instruction": "From the words given, form a sentence that conveys a feeling of hope and resilience.\n\ncourage, sun, darkness",
+  "original": "The sun always rises, bringing light to the darkness and giving us the courage to carry on."
+ },
+ {
+  "id": "alpaca-967",
+  "think": false,
+  "instruction": "Describe a tool used for debugging a program.",
+  "original": "One of the most commonly used tools for debugging a program is a debugger. A debugger is a software tool that helps developers identify and diagnose the source of errors or bugs in their code. It enables programmers to pause program execution at specified points, known as breakpoints, and then step through the code line by line to observe the behavior of the program. This makes it easier to identify the precise point at which an error occurred and to determine the cause of the problem. Additionally, debuggers often provide features such as inspection of variables, evaluation of expressions, and control of program execution flow, which make it easier to understand and fix problems in the code."
+ }
+]

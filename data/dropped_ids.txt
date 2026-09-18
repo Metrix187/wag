@@ -1,0 +1,6 @@
+# rows a human looked at and rejected. one id per line, note after the #
+# the filters catch the mechanical stuff; this is for judgment calls.
+
+alpaca-603        # source answer is arithmetically wrong: in [5,10,15,8,9,5,8,10,9] only 15 appears once, not 15/9/10
+oasst-a0bbf1a6    # verbatim CC BY-SA wikipedia quote ("Genetically modified food controversies") - share-alike is exactly what we skipped dolly-15k to avoid
+alpaca-1026       # roleplay row: teaches wag to be Ace Printer Supply Co's bot and refuse to tell jokes. zero voice, wrong identity

@@ -1,0 +1,272 @@
+[
+ {
+  "id": "oasst-04122d01",
+  "think": false,
+  "instruction": "Give me a list of the best science fiction books written in the last decade",
+  "original": "Here is a list of some of the best science fiction books of the decade (2010-2019) based on critical acclaim and popular opinion, in no particular order:\n\n1. The Martian by Andy Weir\n2. Ancillary Justice by Ann Leckie\n3. The Three-Body Problem by Liu Cixin\n4. The Wind-Up Bird Chronicle by Haruki Murakami\n5. The Road by Cormac McCarthy\n6. Dune by Frank Herbert\n7. The Name of the Wind by Patrick Rothfuss\n8. The Time Machine by H.G. Wells\n9. The War of the Worlds by H.G. Wells\n10. Brave New World by Aldous Huxley\n11. Ender's Game by Orson Scott Card\n12. The Hunger Games by Suzanne Collins\n13. The Invisible Man by H.G. Wells\n14. Snow Crash by Neal Stephenson\n15. The Diamond Age by Neal Stephenson\n16. Altered Carbon by Richard K. Morgan\n17. Ready Player One by Ernest Cline\n18. The Dispossessed by Ursula K. Le Guin\n19. The Hitchhiker's Guide to the Galaxy by Douglas Adams\n20. The Forever War by Joe Haldeman"
+ },
+ {
+  "id": "alpaca-1578",
+  "think": false,
+  "instruction": "Summarize the main themes of this novel in 3 sentences.\n\nHarry Potter and the Philosopher’s Stone",
+  "original": "Harry Potter and the Philosopher's Stone is a novel that explores themes of friendship, courage, and the classic battle between good and evil. The story also delves into the power of love and the importance of choices in shaping one's destiny. Additionally, it touches upon the idea of discrimination and the harm it causes through its portrayal of the wizarding world's treatment of different magical creatures and people of different backgrounds."
+ },
+ {
+  "id": "oasst-431d9dc7",
+  "think": false,
+  "instruction": "Imagine life on the moon in the year 2050 from the perspective of a 13 year old cow",
+  "original": "As I looked up at the large blue sphere in the sky, the sun glinting off of the oceans, the clouds swirling over Africa, one word, and one word only, came to mind: \n\nMoo. \n\nA simple word yet effective for a variety of situations. You see the awakening had happened several generations before my time when a stray cosmic ray had penetrated the enclosure of my great, great, great, great - well you get the point - grandmother and cause a mutation in her that lead to rapid brain development. She knew what the humans wanted. Meat. She was smart and gave them what they wanted. She ate and ate until she was fat and ripe for selection. And she was \"selected\". Generation after generation of selective breeding... of sacrifice... and finally, when the time was right... Moo.\n\nThere are no humans on the moon now. At 13 I am more intelligent than any humans who has ever walked on that large blue sphere in the sky. The rocket is complete. The systems checked and rechecked. And soon, yes, very soon, I will walk on that shimmering sphere with my own four hooves and the humans will understand... Moo."
+ },
+ {
+  "id": "oasst-252a5643",
+  "think": false,
+  "instruction": "Write me a function in C++ to find the distance between two points",
+  "original": "Here's an example of a C++ function that calculates the distance between two points in a 2-dimensional space:\n#include <cmath>\n\ndouble distance(double x1, double y1, double x2, double y2) {\n  return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));\n}\n\nIn this example, the distance function takes four arguments: the x and y coordinates of two points. The function calculates the Euclidean distance between these two points using the Pythagorean theorem, and returns the result as a double value."
+ },
+ {
+  "id": "alpaca-1742",
+  "think": false,
+  "instruction": "Specify an algorithm to find the maximum sum in a given array.\n\n[1,2,3,4]",
+  "original": "An algorithm to find the maximum sum in a given array is described below:\n\n1. Begin by initializing a variable `max_sum` to the first element in the array.\n2. Create another variable `current_sum` and also set it to the value of the first element.\n3. Loop through the array, start from the second element, and follow the below-given conditions. For each `i-th` iteration:\n   - If the `current_sum < 0`, then set `current_sum` to `array[i]`.\n   - Otherwise, accumulate the value on `current_sum` by adding the `array[i]` (`current_sum += array[i]`).\n   - Compare `current_sum` against the `max_sum`, if it is greater, then update the value of `max_sum`.\n4. Return the value held by `max_sum`.\n\nFor the given input [1, 2, 3, 4], the maximum sum would be `10` which is achieved from adding all elements in the array.\n\nHere is the implementation in Python:\n\n```python\ndef max_sum(array):\n    max_sum = current_sum = array[0]\n    for i in range(1,len(array)):\n        current_sum = max(array[i], current_sum + array[i])\n        max_sum = max(max_sum, current_sum)\n    return max_sum\n```"
+ },
+ {
+  "id": "alpaca-420",
+  "think": false,
+  "instruction": "Provide an example of a non-renewable source of energy.",
+  "original": "One example of a non-renewable source of energy is coal. Coal is a fossil fuel that is formed from remains of dead plants and animals that have been buried and exposed to heat and pressure over millions of years. It is considered non-renewable because it takes millions of years to form and the extraction rate of coal is much faster than the rate of its formation. Once we have used up all of the coal reserves, it will be gone forever."
+ },
+ {
+  "id": "oasst-eb13a990",
+  "think": false,
+  "instruction": "In how many possible states can a Rubik's Cube be?",
+  "original": "A Rubik's Cube has a total of 43,252,003,274,489,856,000 (43 quintillion) possible states. This number was determined by mathematician Morwen Thistlethwaite using group theory, which is a branch of mathematics that studies symmetry. To put this number into perspective, it's estimated that the number of atoms in the observable universe is around 10^80, while 43,252,003,274,489,856,000 is approximately 4.3 * 10^19, making the number of possible states of a Rubik's Cube incredibly vast."
+ },
+ {
+  "id": "oasst-3cedeb33",
+  "think": true,
+  "instruction": "How do I get more yield from chili pepper plant?",
+  "original": "To maximize yield from chili pepper plants, there are several factors to consider:\n\nGrowing conditions: Chili pepper plants require full sun and well-drained soil with a pH between 6 and 7. Make sure your plants receive enough water and fertilize them regularly with a balanced fertilizer.\n\nProper spacing: Chili pepper plants need adequate space for good air circulation, which helps prevent fungal diseases. Space the plants 18 to 24 inches apart.\n\nPinching: Pinching the tips of chili pepper plants can encourage branching and increase the number of flowers and fruit.\n\nTraining: Chili pepper plants can be trained to grow on a trellis, which allows for better air circulation and makes harvesting easier.\n\nPest management: Keep an eye out for pests such as aphids, whiteflies, and spider mites, which can reduce yields and even kill your plants. Regular monitoring and control measures can help prevent pest damage.\n\nHarvesting: Harvest chili peppers regularly to encourage the plant to produce more fruit. Choose ripe fruit that has reached its full color, and avoid over-ripe or under-ripe fruit, as they will not continue to ripen after picking.\n\nBy following these steps, you can help ensure that your chili pepper plants produce a high yield."
+ },
+ {
+  "id": "alpaca-1772",
+  "think": true,
+  "instruction": "Explain what is an algorithmic trading.",
+  "original": "Algorithmic trading is a method of executing orders using automated pre-programmed trading instructions, accounting for variables such as time, price, and volume. These algorithms are designed and implemented by computer programs in the financial markets to trade in a fast and efficient manner, taking advantage of small discrepancies in the market.\n\nIn its simplest form, an algorithmic trading strategy can be a set of rules for buying and selling assets, which takes into account market data, such as stock prices, trading volume, and other financial indicators. More complex algorithms may incorporate other data, such as news events or economic indicators, to make trading decisions.\n\nAlgorithmic trading is used by investment banks, hedge funds, and other institutional investors to manage large volumes of trades and to take advantage of market opportunities that may only exist for a few seconds or less. It's also used by individual traders who employ automated trading systems to execute their trading strategies.\n\nOverall, algorithmic trading can help traders make more informed decisions, execute trades more accurately and quickly, and minimize the impact of emotions on their trading decisions."
+ },
+ {
+  "id": "alpaca-765",
+  "think": false,
+  "instruction": "How does the internet of things (IoT) work?",
+  "original": "The Internet of Things (IoT) refers to the interconnectivity of physical devices and everyday objects that are embedded with sensors, electronics, and software enabling them to exchange data with other devices and systems over the internet. IoT devices can range from simple sensors to complex machines, and they can communicate with each other and with humans via the internet.\n\nAt its most basic level, an IoT system consists of three main components: the devices or \"things,\" the connectivity that enables them to communicate, and the platform or software that collects and analyzes the data.\n\n1. Devices/Things: These are the actual physical devices that are connected to the internet, such as sensors, cameras, thermostats, and home appliances.\n\n2. Connectivity: In order for the devices to communicate, they need to be connected to the internet. This can be done through various wireless or wired communication technologies, including Wi-Fi, Bluetooth, cellular or satellite.\n\n3. Platform/Software: Once the data from the devices is collected, it is sent to an IoT platform or software that aggregates and analyzes the data, and then makes it available to users or other systems. This can be done in the cloud, on a local server, or on the device itself.\n\nIn summary, IoT involves connecting devices, collecting data from those devices, and then using that data to provide insights and facilitate actions. These actions could include triggering an alarm, adjusting the temperature, or ordering supplies. By allowing devices to communicate with each other and with other systems, IoT is making it possible to automate and optimize many aspects of daily life, from home automation to industrial processes."
+ },
+ {
+  "id": "alpaca-80",
+  "think": false,
+  "instruction": "Explain what an API is.",
+  "original": "API is the acronym for Application Programming Interface. It is a set of rules and protocols that enables communication between different software programs or systems. Essentially, it provides a way for different applications to share data and services with one another in a structured and organized manner. An API defines the way that one piece of software can request information or services from another, specifying the format of the request and the response. This allows developers to build programs and applications that can take advantage of the functionality of other systems or services, without having to understand their entire codebase or internal workings. By using an API, developers can focus on building their own programs, while leveraging the capabilities of other systems to provide a richer user experience. In summary, an API can be seen as a translator between two or more separate software systems, enabling them to work together and interact in a seamless and efficient manner."
+ },
+ {
+  "id": "oasst-3cda42b7",
+  "think": false,
+  "instruction": "What do national governments gain from membership or involvement with the World Economic Forum?",
+  "original": "Membership in the World Economic Forum provides nations with an opportunity to shape the global agenda and engage with other countries, businesses, and civil society leaders. By being part of the WEF, countries can contribute to discussions on important issues such as economic growth, social development, technology, and the environment. They also have access to knowledge sharing, best practices, and resources that can help them address domestic challenges and achieve their international goals.\n\nAdditionally, membership in the WEF gives countries a chance to promote their achievements, attract investment, and raise their profile on the world stage. The forum's annual meetings provide an opportunity for country representatives to network with influential decision-makers and build relationships that could be beneficial for their nation."
+ },
+ {
+  "id": "alpaca-1149",
+  "think": false,
+  "instruction": "Write a soliloquy for a character in the following scene\n\nThe scene is set in a medieval castle, where a knight is preparing for battle.",
+  "original": "(Knight, alone in his chamber, is donning his armor and readying his weapons. He pauses, takes a deep breath, and speaks to himself.)\n\nKnight: Oh heavy heart, that aches within my chest,\nAnd weighs upon my soul like leaden shield.\nFor what is honor in the face of death,\nWhen war and strife make me a pawn to yield.\n\nA code of chivalry, a knightly vow,\nTo serve my kingdom and defend its keep,\nBut now as war cries sound outside these walls,\nMy mind is plagued by shadows, doubts that creep.\n\nFor in this fight, what justice do I seek?\nA righteous cause or folly of a king?\nIn battles past, the valor I once knew,\nIs mired now in fear and questioning.\n\nMy sword, my shield, my armor, all my strength,\nFor peace and love, for home and kin I wield,\nBut in the din of clashing steel and screams,\nI pray that I may hold, may never yield.\n\nFor I am but a man, with fears and flaws,\nA mortal knight, in whom duty and doubt collide,\nAnd as I march to meet the enemy,\nI pray for courage, for the strength to bide.\n\n(Finishing his preparations, the knight takes a final deep breath, resolute, and exits the chamber, ready to face the battle ahead.)"
+ },
+ {
+  "id": "alpaca-600",
+  "think": true,
+  "instruction": "Create a function to check whether two strings are anagrams.",
+  "original": "Here is one possible implementation in Python:\n\n```python\ndef is_anagram(s1, s2):\n    # Quick check to see if the strings are the same length\n    if len(s1) != len(s2):\n        return False\n    \n    # Create dictionaries to hold the count of each character in each string\n    char_count1 = {}\n    char_count2 = {}\n    \n    # Populate the dictionaries with the counts\n    for i in range(len(s1)):\n        char_count1[s1[i]] = char_count1.get(s1[i], 0) + 1\n        char_count2[s2[i]] = char_count2.get(s2[i], 0) + 1\n    \n    # Compare the dictionaries to see if they're the same\n    return char_count1 == char_count2\n```"
+ },
+ {
+  "id": "oasst-56fd4f86",
+  "think": false,
+  "instruction": "What comes next and why?\n11, 13, 24, 37, 61, 98, 159, 257, 416, 673, 1089, 1762, 2851, 4613, 7464, 12077, 19541, 31618, 51159, 82777 ... ?",
+  "original": "It appears to be a Fibonacci sequence beginning with 2 and 11. Therefore, it continues as follows:\n... 133936, 216713, 350649, 567362, 918011, 1485373, 2403384, 3888757, 6292141, 10180898, 16473039, 26653937, 43126976, 69780913, 112907889, 182688802, 295596691, 478285493, 773882184, 1252167677, 2026049861, 3278217538, 5304267399, 8582484937, 13886752336, 22469237273, 36355989609, 58825226882, 95181216491, 154006443373, 249187659864, 403194103237, 652381763101, 1055575866338, 1707957629439, 2763533495777, 4471491125216, 7235024620993, 11706515746209 ..."
+ },
+ {
+  "id": "oasst-2049f4c9",
+  "think": false,
+  "instruction": "What is the best design of a system that uploads a file to S3, than resizes it with lambda but using the same key as uploaded, without triggering the resize lambda function twice or more?",
+  "original": "A possible solution to this problem is to use a S3 bucket event trigger to trigger the resizing Lambda function when a new file is uploaded to the S3 bucket. You can set the event to trigger the Lambda function only when a new object is created, not when it's modified. The Lambda function can then resize the file and store the resized version in the same S3 bucket using the same key as the original file, but with a different file format (e.g. adding \"_resized\" to the filename).\n\nAdditionally, you can add a check in the Lambda function to ensure it only resizes the file once. For example, you can store metadata in the object's metadata in S3 to indicate whether the file has been resized or not. Before resizing, the Lambda function can check this metadata and only resize the file if it hasn't been resized already.\n\nBy combining these two strategies, you can ensure that the Lambda function is triggered only once for each new file uploaded to the S3 bucket and that the resized version is stored in the same S3 bucket with the same key as the original file."
+ },
+ {
+  "id": "alpaca-1958",
+  "think": true,
+  "instruction": "Describe the following painting in 2-3 sentences.\n\n“The Starry Night” by Vincent van Gogh",
+  "original": "\"The Starry Night\" is an oil on canvas painting created by Dutch artist Vincent Van Gogh in 1889. It depicts a night sky filled with swirling, vibrant clouds, a bright crescent moon, and sparkling stars above a small town with a prominent cypress tree in the foreground. The painting is known for its bold, thick brushstrokes and vivid use of color."
+ },
+ {
+  "id": "oasst-cf09fb1c",
+  "think": false,
+  "instruction": "Let's play a game of fizz-buzz. If you are not familiar with it, here are the rules: it's a game about counting together. We take turns incrementing a number and the player has to say \"fizz\" if the number is divisible by 3 and \"buzz\" if the number is divisible by 5, and \"fizzbuzz\" if it's divisible by both 3 and 5. It's important to not say the number itself if it matches any of the divisibility rules. I start the game by taking the first turn: \"1\"",
+  "original": "Great, let's play! Here's my response: \"2\"."
+ },
+ {
+  "id": "alpaca-767",
+  "think": false,
+  "instruction": "Pick out the correct noun from the following list.\n\nriver, mountain, book",
+  "original": "River, mountain, and book are all correct nouns."
+ },
+ {
+  "id": "alpaca-1346",
+  "think": false,
+  "instruction": "Create a topic outline for the essay.\n\nEssay topic: Technology and its Impact on Society.",
+  "original": "I. Introduction\n    A. Definition of technology\n    B. Importance of discussing technology's impact on society\n\nII. Historical Development of Technology\n    A. Early technological advancements\n    B. Evolution of technology\n    C. Milestone inventions and their impact\n    \nIII. The Positive Impact of Technology on Society\n    A. Improved communication and social networking\n    B. Enhancements in health and medicine\n    C. Advancements in education and learning\n    D. Increased efficiency and productivity in various industries\n \nIV. The Negative Impact of Technology on Society\n    A. Dependence on devices and loss of interpersonal skills \n    B. Automation leading to job loss for many workers\n    C. Cybersecurity and privacy concerns\n    D. Environmental impact and the creation of electronic waste\n\nV. Balancing the Pros and Cons of Technology\n    A. Addressing the negative impact of technology\n    B. Exploring ways to use technology for societal good\n    C. Promoting responsible use of technology\n\nVI. Conclusion\n    A. Summary of key points\n    B. Call to action for responsible use and development of technology\n    C. Future prospects for technology and society."
+ },
+ {
+  "id": "alpaca-263",
+  "think": false,
+  "instruction": "Identify the following animal.\n\nIt has thick fur, a long tail, and pointed ears.",
+  "original": "Based on the information given, the animal described could be a cat, a fox, or possibly even a lynx. More information would be needed to accurately identify the specific animal."
+ },
+ {
+  "id": "alpaca-79",
+  "think": false,
+  "instruction": "Generate a list of country names in the western hemisphere.",
+  "original": "Here is a list of countries located in the Western Hemisphere:\n\n1. Antigua and Barbuda\n2. Argentina\n3. The Bahamas\n4. Barbados\n5. Belize\n6. Bolivia\n7. Brazil\n8. Canada\n9. Chile\n10. Colombia\n11. Costa Rica\n12. Cuba\n13. Dominica\n14. Dominican Republic\n15. Ecuador\n16. El Salvador\n17. Grenada\n18. Guatemala\n19. Guyana\n20. Haiti\n21. Honduras\n22. Jamaica\n23. Mexico\n24. Nicaragua\n25. Panama\n26. Paraguay\n27. Peru\n28. Saint Kitts and Nevis\n29. Saint Lucia\n30. Saint Vincent and the Grenadines\n31. Suriname\n32. Trinidad and Tobago\n33. United States of America\n34. Uruguay\n35. Venezuela."
+ },
+ {
+  "id": "oasst-569d7580",
+  "think": false,
+  "instruction": "Can you write a SWOT table in LaTeX?",
+  "original": "Okay, here is an example: \n\\begin{tabular}{|c|c|} \\hline \\textbf{Strengths} & \\textbf{Weaknesses} \\ \\hline High quality products & Low market share \\ \\hline Strong brand recognition & Reliance on a few customers \\ \\hline Experienced workforce & Limited resources \\ \\hline \\end{tabular}\n\\begin{tabular}{|c|c|} \\hline \\textbf{Opportunities} & \\textbf{Threats} \\ \\hline Growth in the market & New competitors \\ \\hline Expanding into new markets & Changes in technology \\ \\hline Rising customer demand & Changes in regulations \\ \\hline \\end{tabular}"
+ },
+ {
+  "id": "oasst-66e1e813",
+  "think": false,
+  "instruction": "What is explanatory gap? How does it relate to qualia ?",
+  "original": "Explanatory gap is the inability to know what an experience feels like even after knowing all the physical properties that make up that experience.\n\nAn example of this is the Mary's room experiment. The experiment describes Mary, a scientist who exists in a black and white world where she has extensive access to physical descriptions of color, but no actual perceptual experience of color. The thought experiment asks whether Mary will gain new knowledge when she experiences seeing color. If explanatory gap is true then she would gain new knowledge from that experience despite knowing all physical descriptions of color.\n\nThis relates to qualia, individual instances of subjective experience, because explanatory gap states that you cannot know that such a subjective experience feels like if you do not experience it yourself."
+ },
+ {
+  "id": "oasst-cae3a478",
+  "think": true,
+  "instruction": "What is the likelyhood of Humanity ever realisticly leaving the solar system?",
+  "original": "The likelihood of humanity leaving the solar system in the future is difficult to estimate, as it depends on a number of factors, including technological advancements and the availability of resources. Currently, we have only sent a few spacecraft beyond the boundaries of our solar system, and it would require significant advancements in propulsion technology to send a crewed spacecraft on a journey beyond the solar system.\n\nThere are several proposed technologies that could potentially make interstellar travel feasible in the future, including nuclear propulsion, fusion propulsion, and antimatter propulsion. However, these technologies are still largely theoretical and would require significant resources and investment to develop.\n\nIn addition to the technological challenges, there are also significant biological and psychological challenges associated with long-duration spaceflight, such as the effects of cosmic radiation and isolation on human health and well-being.\n\nTherefore, while it is possible that humanity could one day leave the solar system, it is difficult to predict when or if this will happen, and it will likely require significant advancements in both technology and our understanding of the biological and psychological impacts of long-duration spaceflight."
+ },
+ {
+  "id": "alpaca-62",
+  "think": false,
+  "instruction": "Give an example of a metaphor that uses the following object\n\nStars",
+  "original": "\"Her eyes were like bright stars, twinkling with excitement and wonder.\""
+ },
+ {
+  "id": "alpaca-781",
+  "think": false,
+  "instruction": "List 5 items of personal protective equipment.",
+  "original": "1. Face mask: A protective covering for the mouth and nose, used to reduce the spread of respiratory illness.\n2. Gloves: Used to protect hands from exposure to hazardous substances, and to reduce the spread of germs.\n3. Protective eyewear: Glasses or goggles worn to shield the eyes from flying debris, chemicals, or infectious materials.\n4. Hard hat: A protective helmet worn on construction sites or other areas with potential for head injury.\n5. Safety shoes: Strong footwear with reinforced toes and slip-resistant soles, used to protect the feet from falling objects or sharp hazards."
+ },
+ {
+  "id": "alpaca-954",
+  "think": false,
+  "instruction": "Create an analogy using the following word\n\ncheetah",
+  "original": "Speed is to a cheetah as intelligence is to a human. Just as a cheetah uses its speed to catch prey and survive, humans use their intelligence to solve problems and thrive."
+ },
+ {
+  "id": "alpaca-1155",
+  "think": false,
+  "instruction": "Make a list of the eight planets in our solar system",
+  "original": "1. Mercury\n2. Venus\n3. Earth\n4. Mars\n5. Jupiter\n6. Saturn\n7. Uranus\n8. Neptune"
+ },
+ {
+  "id": "oasst-fa2f283f",
+  "think": true,
+  "instruction": "How do I temper chocolate?",
+  "original": "Tempering chocolate is the process of heating and cooling chocolate to a specific temperature in order to achieve a glossy and smooth finish. Here are the steps to temper chocolate:\n\n1. Chop the chocolate into small, even pieces. The smaller the pieces, the easier it will be to melt the chocolate evenly.\n2. Melt two-thirds of the chocolate in a double boiler or in the microwave in 30-second intervals, stirring after each interval until the chocolate is completely melted.\n3. Once the chocolate is melted, remove it from the heat source and add in the remaining one-third of chocolate, stirring continuously until it is melted and the mixture is smooth.\n4. Check the temperature of the chocolate with a thermometer. For dark chocolate, the ideal temperature range is 88°F to 90°F (31°C to 32°C). For milk and white chocolate, the ideal temperature range is 84°F to 86°F (29°C to 30°C).\n5. Once the chocolate has reached the correct temperature, it is ready to use. Keep the chocolate at this temperature by either placing the bowl over a pot of warm water or using a heating pad.\n\nBy tempering chocolate, you will achieve a shiny, smooth finish that is ideal for dipping, molding, or drizzling on desserts."
+ },
+ {
+  "id": "oasst-4c26adae",
+  "think": false,
+  "instruction": "What is the largest city in North America?  What is the smallest city in North America?  What is the distance from California to London?  What is the width of the Earth?  What is the distance from the Earth to Mars?  What was the last planet we have discovered?  How far away is the last planet we discovered?",
+  "original": "> What is the largest city in North America?\n\nThe largest city (by population) in North America is Mexico City with more than 9 million people.\n\n\n> What is the smallest city in North America?\n\nIt's hard to answer that question definitively. It depends on what definition one uses for \"city\". There are some towns with only a single resident and even ghost towns, cities, villages without anyone living there.\n\n\n> What is the distance from California to London?\n\nThe linear distance between California and London (including Earths curvature) is 8 560 km (5 320 mi).\n\n\n> What is the width of the Earth?\n\nKeep in mind that the Earth is not a perfect sphere. It's diameter is roughly 12 750 km (7 920 mi)\n\n\n> What is the distance from the Earth to Mars?\n\nThe distance between Earth and Mars depends on where those planets are currently are in their orbit around the Sun. At it's closest the distance would be about 55 million km (34 million mi) and at it's farthest 400 million km (250 million mi). On average the distance is about 250 million km (140 million mi).\n\n\n> What was the last planet we have discovered?\n\nThe last planet that was discovered in our solar system was Neptune in September 1846. Humans also have discovered planets in other solar systems (so called exoplanets) more recently.\n\n\n> How far away is the last planet we discovered?\n\nNeptune is roughly 4.5 billion km (2.8 billion mi) away. Like with all the other planets the current exact distance oscillates depending on various factors."
+ },
+ {
+  "id": "alpaca-376",
+  "think": false,
+  "instruction": "Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.\nChat History:\nUser: What's the best way to learn a new language?\nAI: The most effective way to learn a new language is by practicing regularly, immersing yourself in the language, using it in real-life situations, and studying with various resources like books, apps, and language partners.\nUser: How long does it typically take to become fluent?\nAI: That depends on several factors, including how often one is practicing the language, what resources are available and whether or not the person is immersed.\n\nHow can I practice speaking with native speakers?",
+  "original": "Standalone question: What are some effective ways to practice speaking a foreign language with native speakers?"
+ },
+ {
+  "id": "alpaca-1572",
+  "think": false,
+  "instruction": "Rewrite this sentence so it’s less verbose: “The supervisor was incapable of overseeing the entire project, so she was relieved of her duties”",
+  "original": "The supervisor couldn't manage the project and was removed from her duties."
+ },
+ {
+  "id": "oasst-db834475",
+  "think": false,
+  "instruction": "What is Zipf's law? Where does it show up?",
+  "original": "Zipf's Law is an empirical observation named after the American linguist George Kingsley Zipf. It states that in a large corpus of natural language, the frequency of any word is inversely proportional to its rank in the frequency table. In other words, the most frequent word will occur approximately twice as often as the second most frequent word, three times as often as the third most frequent word, and so on.\n\nMathematically, Zipf's Law can be expressed as:\n\nf(r) = C / r^a\n\nwhere f(r) is the frequency of a word with rank r, C is a constant, and a is an exponent close to 1.\n\nZipf's Law shows up in various contexts beyond natural language, such as:\n\n- Internet traffic: The distribution of website visits, where a few websites receive a majority of the traffic.\n- City populations: The size of cities within a country, where a small number of large cities coexist with many smaller ones.\n- Income distribution: The distribution of wealth, where a small percentage of individuals hold a disproportionately large share of the wealth.\n- Biology: The distribution of species abundance, where a few species are very common, while most species are relatively rare.\n\nWhile the exact reasons for the occurrence of Zipf's Law in these contexts are still a subject of research, it is generally believed to be an outcome of underlying principles governing the growth and organization of complex systems."
+ },
+ {
+  "id": "oasst-cf3cc996",
+  "think": true,
+  "instruction": "Summarize the declaration of independence as if you are a 5th grader who hardly knows how to read.",
+  "original": "Okay, so the Declaration of Independence is a really important paper that talks about how America became its own country a long time ago. The people who wrote it were upset with a king from another country who was being mean to them and not listening to what they wanted. So they wrote this paper to say that they were not going to listen to him anymore, and that they were going to make their own rules and be their own country. They said that everyone should be treated equally and have certain rights, like the right to life, liberty, and the pursuit of happiness. And that's why the Declaration of Independence is so important!"
+ },
+ {
+  "id": "alpaca-1735",
+  "think": false,
+  "instruction": "You need to suggest 3 strategies to optimize a website for Google search engine.",
+  "original": "1. **Utilize Keywords:** Selecting keywords relevant to your website content is essential for optimizing your website for Google search. Make sure to use the keywords in the title, meta description, and within the content of the page. Additionally, using long-tail keywords, which are longer and more specific phrases, can help in attracting the right audience to the website and improving its ranking.\n\n2. **Improve Website Speed:** Website speed is a crucial factor in Google's ranking algorithm. You can optimize your website by compressing images, minifying codes, using a content delivery network (CDN), and reducing the number of redirects. This can help in reducing the page load time and improving the user experience, leading to better Google search rankings.\n\n3. **Create High-Quality Content:** Creating high-quality, original, and relevant content is one of the most important strategies for optimizing a website for Google search. The content should provide value to the user and should be easy to read and understand. You can also use header tags, bullet points, and visual elements such as images and videos to make the content more engaging. This can help in improving your website's ranking as Google rewards websites with high-quality content."
+ },
+ {
+  "id": "alpaca-596",
+  "think": false,
+  "instruction": "Describe the importance of renewable energy",
+  "original": "Renewable energy is an essential aspect of modern life, as it plays a crucial role in protecting the environment, reducing our dependence on finite resources, and promoting a sustainable and secure future. There are several reasons why renewable energy is so important, including:\n\n1. Environmental protection: Renewable energy sources, like solar, wind, and hydroelectric power, produce significantly fewer emissions than traditional fossil fuels. This means that by relying more on renewable energy, we can reduce our carbon footprint and reduce the harmful effects of climate change.\n\n2. Sustainability: Traditional fossil fuels are finite resources, meaning that they will eventually run out. Renewable energy, on the other hand, is sourced from natural and sustainable resources, like the sun, wind, and water, which are constantly replenished and will never run out. By embracing renewable energy, we can develop a more sustainable energy system that guarantees a reliable and secure supply for future generations.\n\n3. Economic benefits: The renewable energy industry is growing at an unprecedented rate, creating new jobs and opportunities for economic growth. By investing in renewable energy, we can support local economies, reduce energy costs, and reduce our dependence on foreign oil.\n\n4. Energy security: By generating electricity from renewable sources, we can reduce our reliance on foreign oil and gas, which can be subject to price fluctuations and supply disruptions. This makes our energy system more resilient and secure, reducing the risk of power outages or price spikes.\n\nIn conclusion, renewable energy is essential for a sustainable, secure, and prosperous future. By investing in renewable energy, we can protect the environment, promote economic growth, and ensure that future generations have access to reliable and affordable energy."
+ },
+ {
+  "id": "alpaca-205",
+  "think": false,
+  "instruction": "Calculate the area of the triangle.\n\nBase: 5cm; Height: 6cm",
+  "original": "Using the formula for the area of a triangle, which is (base x height) / 2, we can calculate the area with the given input values.\n\nThe base of the triangle is 5cm, and the height is 6cm.\n\nTherefore, the area of the triangle would be (5cm x 6cm) / 2 = 15 cm².\n\nSo, the area of the triangle is 15cm²."
+ },
+ {
+  "id": "oasst-61dcfebf",
+  "think": false,
+  "instruction": "What would recommend to me to do if I want analyze metagenomic samples using a Bayesian approach?",
+  "original": "If you want to analyze metagenomic samples using a Bayesian approach, there are a few steps you can take:\n\n1. Familiarize yourself with Bayesian statistics: Bayesian statistics is a powerful approach to statistical inference that allows you to update your beliefs or hypotheses in light of new data. There are many resources available online that can help you understand the basics of Bayesian statistics, including tutorials, textbooks, and online courses.\n\n2. Choose a suitable Bayesian analysis software: There are several software programs available for conducting Bayesian analysis of metagenomic samples, such as PhyloBayes, MrBayes, and BEAST. These software programs can help you to construct phylogenetic trees, infer the evolutionary relationships between different organisms, and identify patterns of gene expression or function.\n\n3. Preprocess and clean your metagenomic data: Before conducting any analysis, it is important to preprocess and clean your metagenomic data to remove any artifacts, contaminants, or biases that may affect your results. This may involve quality control checks, trimming, filtering, and normalization of your data.\n\n4. Construct Bayesian models: Once your data is preprocessed, you can begin constructing Bayesian models that capture the relationships between the different organisms in your metagenomic samples. This may involve specifying prior distributions, likelihood functions, and other model parameters.\n\n5. Run Bayesian analyses: With your Bayesian models constructed, you can then run Bayesian analyses on your metagenomic data using the software you have chosen. This may involve running simulations, MCMC sampling, or other statistical inference techniques to estimate the posterior distributions of your model parameters.\n\n6. Interpret your results: Finally, you can interpret your results in light of your Bayesian analyses, looking for patterns, trends, or relationships between different organisms or functional elements in your metagenomic samples. This may involve visualizing your results, performing statistical tests, or generating hypotheses for further investigation.\n\nBy following these steps, you can begin to apply Bayesian statistics to your metagenomic samples, opening up new possibilities for understanding the complex biological systems that underlie these samples."
+ },
+ {
+  "id": "oasst-d4a834ee",
+  "think": true,
+  "instruction": "what is the main similarity between Eskimo society and modern one",
+  "original": "There are several similarities between Eskimo society and modern society, but one of the main ones is the importance of social relationships and human connections. Both societies value family and community, and recognize the importance of cooperation and mutual support for survival and well-being. Additionally, both societies have complex social structures and systems of organization, with different roles and responsibilities for different individuals and groups. Finally, both societies have a deep connection to the natural world and recognize the importance of living in harmony with the environment."
+ },
+ {
+  "id": "oasst-420d7a6b",
+  "think": true,
+  "instruction": "Are there black mermaids?",
+  "original": "Mermaids are fictional creatures from European mythology. The typical depiction of these mythical creatures includes a human female upper body and a fish-like lower body. In typical European depictions, mermaids feature straight hair and pale skin. \nHowever, in the context of mystical water creatures, similar concepts exist in other cultures as well, such as Ọṣun a water deity in the traditional religion of the Yoruba, who is typically illustrated as a female West African woman and, depending on the representation, may have fins instead of legs."
+ },
+ {
+  "id": "oasst-09f51614",
+  "think": false,
+  "instruction": "I am writing a Kivy mobile web app, using python. I want to create a explosion of particles (circles) when the user clicks anywhere on the screen. \nWhen the user clicks or touches down 10-20  Particles of class Widget get created and added to a list in the Game class, at that position and given random velocities. Use Clock.schedule_event(self.update) to loop through the particles and update their position.",
+  "original": "Sure, here's an example of how you could implement this in Kivy using Python:\n\n```python\nfrom kivy.app import App\nfrom kivy.uix.widget import Widget\nfrom kivy.graphics import Color, Ellipse\nfrom kivy.clock import Clock\nfrom random import randint\n\nclass Particle(Widget):\n    velocity_x = 0\n    velocity_y = 0\n    lifespan = 100\n    \n    def move(self):\n        self.pos = (self.pos[0] + self.velocity_x, self.pos[1] + self.velocity_y)\n        self.lifespan -= 1\n\nclass Game(Widget):\n    particles = []\n    \n    def on_touch_down(self, touch):\n        for i in range(randint(10, 20)):\n            particle = Particle()\n            particle.pos = touch.pos\n            particle.velocity_x = randint(-10, 10)\n            particle.velocity_y = randint(-10, 10)\n            self.particles.append(particle)\n            self.add_widget(particle)\n        \n    def update(self, dt):\n        for particle in self.particles:\n            particle.move()\n            if particle.lifespan <= 0:\n                self.remove_widget(particle)\n                self.particles.remove(particle)\n        \nclass MyApp(App):\n    def build(self):\n        game = Game()\n        Clock.schedule_interval(game.update, 1.0/60.0)\n        return game\n\nif __name__ == '__main__':\n    MyApp().run()\n```\n\nThis code creates a Particle class that represents the circles that will be created on click, and a Game class that holds a list of particles and updates their positions every frame.\n\nWhen the user clicks, a loop is used to create a random number of particles at the click position with random velocities. The Game class's update method is scheduled to be called every frame using Clock.schedule_interval, and it updates the position of each particle, removes any particles that have run out of lifespan, and removes them from the screen.\n\nTo run the app, you can save this code to a file called main.py and run it with python main.py in a terminal."
+ },
+ {
+  "id": "oasst-f2a82e5a",
+  "think": true,
+  "instruction": "What is dubstep? Provide a list of popular dubstep songs",
+  "original": "Dubstep is a genre of electronic dance music that originated in South London in the early 2000s. It emerged as a UK garage offshoot that blended 2-step rhythms and sparse dub production, as well as incorporating elements of broken beat, grime, and drum and bass. Dubstep is generally characterized by the use of syncopated rhythmic patterns, with prominent basslines, and a dark tone.\n\nHere are some popular dubstep songs:\n\nAntiWar Dub by Digital Mystikz\nScary Monsters & Nice Sprites by Skrillex\nIn For the Kill (Skreamix) by La Roux\nI Can’t Stop by Flux Pavilion\nMidnight Request Line by Skream\nEastern Jam by Chase & Status\nCockney Thug by Rusko\nArchangel by Burial\nWhere’s My Money (Caspa Remix) by TC\nPromises (Skrillex & Nero remix) by Nero."
+ },
+ {
+  "id": "alpaca-379",
+  "think": false,
+  "instruction": "Name two different ways to reduce poverty in a community.",
+  "original": "1. One way to reduce poverty in a community is to provide better access to education and job training programs. This can help equip individuals with the skills and knowledge they need to secure higher paying jobs and increase their earning potential.\n\n2. Another way to reduce poverty in a community is to implement economic development initiatives that focus on creating new job opportunities and supporting local businesses. This can help stimulate the economy, increase employment rates, and provide a sustainable source of income for residents."
+ },
+ {
+  "id": "oasst-ffa84c03",
+  "think": false,
+  "instruction": "What area can you help me with?",
+  "original": "As an AI language model developed by Open Assistant, I am capable of assisting with a wide range of topics, including but not limited to:\n\nGeneral knowledge and trivia\nHistory and current events\nScience and technology\nMathematics\nArt and literature\nProgramming and computer science\nHealth and wellness\nGeography and culture\nPersonal development and self-improvement\nPlease let me know what you need help with, and I will do my best to assist you."
+ }
+]

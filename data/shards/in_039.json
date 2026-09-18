@@ -1,0 +1,116 @@
+[
+ {
+  "id": "alpaca-1342",
+  "think": false,
+  "instruction": "Edit the sentence to make formal.\n\nIt looks altogether like the situation will be getting worse.",
+  "original": "The situation appears as though it will deteriorate further."
+ },
+ {
+  "id": "alpaca-49",
+  "think": false,
+  "instruction": "Calculate the total surface area of a cube with a side length of 5 cm.",
+  "original": "The surface area of a cube is found by calculating the area of one of its faces and multiplying it by six (since a cube has six faces). The area of a cube face is simply its side length squared.\n\nThus for this particular cube:\n\nSurface Area = 6 × (Side Length)² \n             = 6 × (5 cm)²\n             = 6 × 25 cm²\n             = 150 cm²\n\nThe total surface area of this cube is 150 square centimeters."
+ },
+ {
+  "id": "alpaca-1182",
+  "think": true,
+  "instruction": "Identify a tool that can be used to calculate risk.",
+  "original": "One tool that can be used to calculate risk is a risk assessment matrix. This is a visual representation that organizes potential risks based on their likelihood of occurrence and the magnitude of their impact. It is commonly used in project management, safety assessments, and business planning to help decision-makers identify and prioritize potential risks and implement appropriate mitigation strategies."
+ },
+ {
+  "id": "alpaca-583",
+  "think": true,
+  "instruction": "Select the best prediction from the sentences below given the input \"My vacation is in ________.\"\n\nMy vacation is in _______.",
+  "original": "1. My vacation is in Hawaii.\n2. My vacation is in June.\n3. My vacation is in the mountains.\n4. My vacation is in Europe.\n5. My vacation is in two weeks.\n\nAll of the above responses are valid predictions for the given input. However, if forced to choose one, the best prediction for the given input is, \"My vacation is in Hawaii.\""
+ },
+ {
+  "id": "alpaca-422",
+  "think": false,
+  "instruction": "What is the process of photosynthesis and why is it important?",
+  "original": "Photosynthesis is the process by which plants, algae and some bacteria convert sunlight, water and carbon dioxide into glucose, oxygen and other chemical compounds. It is an essential part of the carbon cycle and is considered the primary source of energy for almost all forms of life.\n\nPhotosynthesis can be divided into two stages: the light-dependent reactions and the light-independent reactions. During the light-dependent reactions, which take place in the thylakoid membranes of the chloroplasts, light energy is captured by pigments, particularly chlorophyll, and is used to generate ATP (adenosine triphosphate) and NADPH (nicotinamide adenine dinucleotide phosphate). Water molecules are split to release oxygen during photosynthesis.\n\nThe light-independent reactions, also known as the Calvin cycle, are responsible for the production of carbohydrates such as glucose. This process occurs in the stroma of the chloroplasts and involves the fixation of carbon dioxide into organic compounds using ATP and NADPH produced in the light-dependent reactions.\n\nPhotosynthesis is crucial for the existence of life on Earth. It provides a source of energy and food for most organisms, and also produces oxygen that is essential for the respiration of most living things. Additionally, photosynthesis helps regulate the atmosphere by absorbing carbon dioxide, which is a major contributor to global warming. Without photosynthesis, it would be impossible to sustain life on our planet."
+ },
+ {
+  "id": "alpaca-1380",
+  "think": false,
+  "instruction": "Name two component of a computer system.",
+  "original": "The two primary components of a computer system are the hardware and the software. Hardware includes physical components like the motherboard, CPU (Central Processing Unit), memory (RAM), storage (hard drive or SSD), input/output devices (monitor, keyboard, mouse), and other peripherals. On the other hand, software comprises the operating system, application programs, and other instructions or data that allow the computer to perform specific tasks."
+ },
+ {
+  "id": "oasst-04ec10c3",
+  "think": false,
+  "instruction": "Explain to me the Ansel Adams zone system",
+  "original": "The Ansel Adams Zone System is a method for printing color-film photographs and determining the proper exposure for a print. It was originally developed by the famous photographer Ansel Adams, but has since become a commonly used technique in the photography industry.\n\nThe Zone System consists of 10 zones, where Zone 1 is the darkest part of the image, and Zone 10 is the lightest. The goal of the Zone System is to provide a wide range of tones in the print, from the very darkest shadows to the very lightest highlights.\n\nTo determine the proper exposure for a print, the photographer must assess the image and determine the Zone that each portion of the image falls into. They would then adjust the exposure to ensure that as many of the zones as possible are captured in the print, without losing details in the shadows or blowing out the highlights.\n\nThe Zone System can be a useful tool for photographers who want to achieve a high level of control over the final print and ensure that their images are properly exposed. However, it does require a good understanding of photography and a bit of practice to master."
+ },
+ {
+  "id": "alpaca-10",
+  "think": false,
+  "instruction": "Generate a list of ten items a person might need for a camping trip",
+  "original": "Here are ten items a person might need for a camping trip:\n\n1. Tent - to provide shelter and protection from the elements\n2. Sleeping bag - to stay warm and comfortable while sleeping\n3. Portable stove or campfire grill - for cooking meals\n4. Cooler with ice or ice packs - to keep perishable food and drinks cold\n5. Lantern or flashlight - to provide light during the night\n6. First aid kit - for minor injuries or ailments\n7. Map and compass or GPS - for navigation on hikes or exploring the area\n8. Camp chairs or folding chairs - for comfortable seating around the campsite\n9. Insect repellent - to protect against bug bites\n10. Sunscreen - to protect against sunburn."
+ },
+ {
+  "id": "oasst-0e473383",
+  "think": false,
+  "instruction": "I'm playing scrabble with my family and I just drew my seven letters. My letters are: A P N W Q V E. What words can I spell with those?",
+  "original": "4 letter words and their scrabble score\nanew, 7\nnape, 6\nnave, 7\nneap, 6\npane, 6\npave, 9\npawn, 9\npean, 6\nvane, 7\nvape, 9\nvena, 7\nwane, 7\nwave, 10\nwean, 7\n\n3 letter words and their Scrabble score\nane, 3\nape, 5\nave, 6\nawe, 6\nawn, 6\nnae, 3\nnap, 5\nnav, 6\nnaw, 6\nnew, 6\npan, 5\npaw, 8\npea, 5\npen, 5\npew, 8\nvan, 6 \nvaw, 9\nwae, 6\nwan, 6\nwap, 8\nwen, 6"
+ },
+ {
+  "id": "oasst-5b693361",
+  "think": false,
+  "instruction": "How much coffein should an adult human consume per day to not harm himself?",
+  "original": "According to the Federal Drugs Administration, an healthy adult can consume up to 400 mills of caffeine without risk, which roughly translates to 4-5 cups of coffe. \n> Source: https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much"
+ },
+ {
+  "id": "oasst-207e5a77",
+  "think": false,
+  "instruction": "Can you write me a program please, that graps the current precipitation value from the internet every 30 mins and writes that to a csv file on my computer.",
+  "original": "I can provide you with a Python script outline that utilizes the OpenWeatherMap API to fetch the current precipitation data and saves it to a CSV file. You would need to obtain an API key from OpenWeatherMap (https://openweathermap.org/api) and install the required Python libraries.\n\n1. Install the required libraries using pip:\n\n```bash\npip install requests pandas\n```\n\n2. Save the following Python script to a file (e.g., precipitation.py):\n\n```python\nimport requests\nimport pandas as pd\nimport time\nimport os\nfrom datetime import datetime\n\n# Replace with your own OpenWeatherMap API key\nAPI_KEY = 'your_api_key'\n\n# Set your location's latitude and longitude\nlatitude = 'your_latitude'\nlongitude = 'your_longitude'\n\n# Set the output CSV file path\noutput_csv = 'precipitation_data.csv'\n\ndef get_precipitation_data():\n    url = f'https://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&appid={API_KEY}'\n    response = requests.get(url)\n    data = response.json()\n    return data['weather'][0]['description'], data['main']['humidity']\n\ndef save_to_csv(timestamp, description, humidity):\n    data = {'timestamp': [timestamp], 'description': [description], 'humidity': [humidity]}\n    df = pd.DataFrame(data)\n    if not os.path.exists(output_csv):\n        df.to_csv(output_csv, index=False, mode='w', header=True)\n    else:\n        df.to_csv(output_csv, index=False, mode='a', header=False)\n\nif __name__ == '__main__':\n    while True:\n        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')\n        description, humidity = get_precipitation_data()\n        save_to_csv(timestamp, description, humidity)\n        time.sleep(1800)  # Sleep for 30 minutes\n```\n\nMake sure to replace 'your_api_key' with your actual OpenWeatherMap API key, and set the `latitude` and `longitude` variables to your location's coordinates.\n\nRun the script using Python:\n\n```bash\npython precipitation.py\n```\n\nThe script will fetch the current precipitation description and humidity every 30 minutes and save it to a CSV file named \"precipitation_data.csv\" in the same directory as the script."
+ },
+ {
+  "id": "oasst-e1be66e5",
+  "think": false,
+  "instruction": "Explain the rules of field hockey to a novice.",
+  "original": "Field hockey is a popular sport played by teams of 11 players each. The objective of the game is to score more goals than the opposing team. Here are the basic rules of field hockey:\n\n1. The game starts with a pushback from the center of the field by one team. The other team must be at least five yards away.\n2. Players use sticks to hit a small, hard ball into the opposing team's goal. The ball cannot be touched with the hands or feet.\n3. Players can use only one side of the stick to hit the ball. Using the rounded side is considered a foul.\n4. Players are not allowed to obstruct, push, trip, or hit other players with their stick.\n5. Free hits are awarded to the opposing team if a foul is committed. The free hit must be taken from the spot where the foul occurred.\n6. Penalty corners are awarded when a defensive player commits a foul inside the circle around the goal. During a penalty corner, the attacking team is allowed to have five players inside the circle, while the defending team is allowed to have only four players inside the goal.\n7. A goal is scored when the ball crosses the goal line inside the goal posts and under the crossbar.\n8. The game is divided into two halves of 35 minutes each, with a 5 to 10-minute halftime break.\n9. In case of a tie, the game can be extended with two 7-minute halves. If the game is still tied, a penalty shootout takes place to determine the winner.\n\nIt is important to note that these are just the basic rules of field hockey. There are many other rules that may apply in specific situations, so it is important for players and spectators alike to have a good understanding of the rules before participating in or watching a game."
+ },
+ {
+  "id": "oasst-1b84006a",
+  "think": false,
+  "instruction": "What is the recommended formatting style for C++?",
+  "original": "There is no one-size-fits-all answer to this question as the recommended formatting style for C++ can vary depending on the context. However, there are several widely accepted formatting styles for C++ that are used in various communities and organizations. Some of these include:\n\nThe Google C++ Style Guide: This is a widely used guide that provides a set of rules and guidelines for writing C++ code that is consistent and readable. The guide covers a range of topics, including indentation, line length, naming conventions, and more.\n\nThe LLVM Coding Standards: The LLVM project, a collection of modular and reusable compiler and toolchain technologies, has its own set of coding standards for C++. These standards are similar to the Google C++ Style Guide in many ways, but also have some unique rules and recommendations.\n\nThe ISO C++ Standard: The ISO C++ Standard provides a set of guidelines and recommendations for writing C++ code that is portable and conforms to the latest version of the C++ language standard.\n\nUltimately, the choice of formatting style will depend on the preferences of the individual or organization, and the specific requirements of the project. However, it's important to choose a consistent style and stick to it throughout the development process, as this can greatly improve the readability and maintainability of the code."
+ },
+ {
+  "id": "alpaca-200",
+  "think": false,
+  "instruction": "Generate a summary of the given article.\n\nBetween 1989 and 2019, the size of the U.S. economy, measured in terms of the gross domestic product (GDP), more than doubled. The growth was faster than in the prior two decades, driven in part by the dramatic expansion of the information technology sector in the 1990s and early 2000s, gains in worker productivity and strong consumer demand, and government investments in research and development.",
+  "original": "The US economy more than doubled in size between 1989 and 2019. This growth, faster than the previous two decades, was driven by factors such as the expansion of information technology, increases in worker productivity, consumer demand, and government investments in research and development."
+ },
+ {
+  "id": "oasst-afc5b792",
+  "think": false,
+  "instruction": "How can I learn to play chess quickly and efficiently?",
+  "original": "Learning to play chess quickly and efficiently requires a combination of studying the rules and strategies of the game, practicing regularly, and analyzing your own gameplay and that of others. Here are some steps you can take to learn how to play chess quickly and efficiently:\n\nLearn the basic rules of chess: Start by learning the movement and value of each piece on the board, as well as the objective of the game.\n\nStudy common chess openings: Familiarize yourself with popular opening moves and understand their advantages and disadvantages.\n\nPractice regularly: Playing against other players, either online or in-person, is a great way to improve your skills and gain experience.\n\nAnalyze your gameplay: After each game, take the time to review your moves and consider what you could have done differently.\n\nUse chess puzzles and exercises: These can help you improve your tactical skills and strategic thinking.\n\nStudy famous chess games: Analyzing famous games can give you a better understanding of how to think strategically and recognize patterns on the board.\n\nBy following these steps and staying committed to improving, you can quickly and efficiently improve your chess skills. Good luck!"
+ },
+ {
+  "id": "oasst-9b73b611",
+  "think": false,
+  "instruction": "How many people will be there in 2060?",
+  "original": "Some modelers are projecting that the world population will reach 9 billion in 2060 and then decline more rapidly. However, this projection may vary depending on different assumptions and scenarios. For example, according to the article [Future Population Growth][1], published in 2014 and revised in 2019, if we assume optimistic progress in global education, then the global population is projected to only grow to 8.9 billion by 2060.\n\n[1]: https://ourworldindata.org/future-population-growth"
+ },
+ {
+  "id": "oasst-53275ad0",
+  "think": false,
+  "instruction": "How long do you think you could survive if you only ate carrots?",
+  "original": "If we are talking about raw or boiled carrots to avoid the nutrition from ingredients, not for very long. To avoid essential fatty acid deficiency (EFA), a minimum fat intake of 0.2-0.25 grams per pound is required, which means 375 medium carrots (about 23 kg) for a 150lbs person, even if all the 0.1g total fat in a medium carrot can be used to get essential fatty acids. This is way beyond the normal maximum of 6-7 pounds of food per day, and almost reaches the world record of 26kg. In 2016, Australian Andrew Taylor managed to only eat potatoes and sweet potatoes for 1 year in 2016, which is even lower in fat. Therefore, the survival time with only carrots can possibly exceed this."
+ },
+ {
+  "id": "oasst-89659a70",
+  "think": true,
+  "instruction": "write a random script for a YouTube video",
+  "original": "Title: Unveiling the Mystery: A Review of \"The Silent Patient\" by Alex Michaelides\n\nIntroduction:\nHey everyone, welcome back to my channel! Today, we're going to delve into the world of psychological thrillers and explore one of the most talked-about novels of recent times, \"The Silent Patient\" by Alex Michaelides.\n\nBody:\nThe book follows the story of Alicia Berenson, a talented painter who murders her husband and then refuses to speak a single word. Theo Faber, a psychotherapist, takes up her case and is determined to unravel the truth behind her silence. As the story unfolds, the reader is taken on a roller-coaster ride of emotions, intrigue, and suspense.\n\nOne of the standout features of this novel is the author's exceptional ability to keep the reader engaged from beginning to end. The writing is crisp, the pacing is spot-on, and the characters are well-developed. Alex Michaelides' background in screenwriting is evident in the way he masterfully weaves together the various threads of the story, creating an intricate tapestry of mystery that keeps the reader guessing until the very end.\n\nThe Silent Patient also explores some fascinating themes such as the power of art, the complexity of the human psyche, and the impact of childhood trauma. Through the use of flashbacks and other narrative devices, Michaelides takes us deep into the mind of his characters, revealing their innermost thoughts and fears.\n\nOne of the most impressive aspects of this novel is the way it challenges the reader's assumptions and preconceptions. Just when you think you have everything figured out, the author throws a curveball that completely changes the game. It's this unpredictability that makes The Silent Patient such a thrilling read.\n\nConclusion:\nIn conclusion, The Silent Patient is a tour de force of psychological suspense that will keep you on the edge of your seat until the very last page. If you're a fan of thrillers or just looking for a captivating and thought-provoking read, then this is the book for you. Thank you so much for watching, and don't forget to like, comment, and subscribe for more content like this!"
+ },
+ {
+  "id": "oasst-8910633f",
+  "think": false,
+  "instruction": "Has anyone really been far even as decided to use even go want to do look more like?",
+  "original": "I'm sorry, but I am afraid I don't understand your question. Would you please be able to reformulate your question and ask me again? Thanks!"
+ }
+]

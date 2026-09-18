@@ -1,0 +1,272 @@
+[
+ {
+  "id": "alpaca-1740",
+  "think": false,
+  "instruction": "Predict a possible next line for the following story\n\nShe was nervous about meeting the people in the new city.",
+  "original": "She took deep breaths and reminded herself that it was a new beginning, a chance to make new friends and create unforgettable memories."
+ },
+ {
+  "id": "oasst-c85d8935",
+  "think": false,
+  "instruction": "which telescope took the first picture of an exoplanet?",
+  "original": "The first confirmed image of an exoplanet was taken by the Hubble Space Telescope in 2008. The exoplanet, known as Fomalhaut b, orbits the star Fomalhaut, which is located about 25 light-years from Earth in the constellation Piscis Austrinus. The discovery was made using Hubble's Advanced Camera for Surveys, which imaged the exoplanet in visible light."
+ },
+ {
+  "id": "alpaca-1935",
+  "think": false,
+  "instruction": "Rewrite the sentence: \"The piece was written in a poetic form\"",
+  "original": "The composition was crafted in the style of poetry."
+ },
+ {
+  "id": "alpaca-953",
+  "think": false,
+  "instruction": "Provide an example of an antonym for the word “happy”",
+  "original": "An example of an antonym for the word \"happy\" is \"sad.\""
+ },
+ {
+  "id": "oasst-4a4cf482",
+  "think": false,
+  "instruction": "What open source speech to text libraries would you suggest?",
+  "original": "Wav2Vec2 is a popular model for speech to text by Meta (formerly Facebook) that is available on open source platforms such as Huggingface and Github.\n\nIn Python, you can start using this model with the \"transformers\" model from Huggingface:\n```\n from transformers import Wav2Vec2Processor, Wav2Vec2ForCTC\n from datasets import load_dataset\n import torch\n \n # load model and tokenizer\n processor = Wav2Vec2Processor.from_pretrained(\"facebook/wav2vec2-base-960h\")\n model = Wav2Vec2ForCTC.from_pretrained(\"facebook/wav2vec2-base-960h\")\n     \n # load dummy dataset and read soundfiles\n ds = load_dataset(\"patrickvonplaten/librispeech_asr_dummy\", \"clean\", split=\"validation\")\n \n # tokenize\n input_values = processor(ds[0][\"audio\"][\"array\"], return_tensors=\"pt\", padding=\"longest\").input_values  # Batch size 1\n \n # retrieve logits\n logits = model(input_values).logits\n \n # take argmax and decode\n predicted_ids = torch.argmax(logits, dim=-1)\n transcription = processor.batch_decode(predicted_ids)\n```\n\nHowever, if you want a lighter weight model or want to use a different platform, you may have to find other solutions."
+ },
+ {
+  "id": "alpaca-1345",
+  "think": false,
+  "instruction": "Classify the following excerpt as either fiction or non-fiction, and explain your reasoning.\n\nIn a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to eat: it was a hobbit-hole, and that means comfort.",
+  "original": "The excerpt is fiction. This passage is from J.R.R. Tolkien's novel 'The Hobbit,' which is a work of fantasy literature. The presence of a hobbit, a fictional creature, and the detailed description of its living environment, further indicate that the text is a work of imagination and not a factual account grounded in real-world events or experiences."
+ },
+ {
+  "id": "alpaca-1707",
+  "think": false,
+  "instruction": "What is the meaning of the idiom \"A penny saved is a penny earned\"?",
+  "original": "The idiom \"A penny saved is a penny earned\" means that money that is saved or conserved is as valuable as money that is earned through income. In other words, it emphasizes the importance of saving money and not wasting it, because saving a small amount like a penny, can add up over time, just as earning money does. It encourages frugality and being mindful of one's spending to increase wealth."
+ },
+ {
+  "id": "alpaca-827",
+  "think": false,
+  "instruction": "What is the value of (x - y)(x + y) if x = 10 and y = 15?",
+  "original": "(x-y)(x+y) = (10-15)(10+15) = (-5)(25) = -125."
+ },
+ {
+  "id": "alpaca-1184",
+  "think": false,
+  "instruction": "Present an argument for why writing a cover letter is important.",
+  "original": "Writing a cover letter is an important component of the job application process. It is the first impression that a potential employer has of a job candidate, and serves as a valuable opportunity to showcase one’s skills, abilities, and desire for the job. Here are several reasons why writing a cover letter is important:\n\n1. Provides More Detailed Information: A cover letter allows you to provide more detailed information about your skills, experience and achievements that may not fit into the standard format of a resume. You can explain how your background makes you a great fit for the specific role and company.\n\n2. Shows Your Enthusiasm: A well-written cover letter allows you to demonstrate your enthusiasm for the role and the organization. It shows that you have taken the time to research the company and the position, and that you have a genuine interest in working for them.\n\n3. Adds a Personal Touch: A cover letter allows you to show your personality and add a personal touch to your application. Employers want to hire people who will fit in well with their company culture, and a cover letter provides an opportunity to convey your personality and values.\n\n4. Differentiates You From Other Candidates: A cover letter ensures that you stand out from the other job applicants by highlighting your unique skills and experiences. In a competitive job market, a well-crafted cover letter can make all the difference in securing an interview.\n\n5. Explains Employment Gaps: If you have employment gaps or other career changes that cannot be explained on your resume, a cover letter provides the opportunity to explain these discrepancies and show how they have made you a better candidate for the job.\n\nIn conclusion, writing a cover letter is an essential part of the job application process. It allows you to provide more detailed information about your background, show your enthusiasm for the role and the company, add a personal touch to your application, differentiate yourself from other candidates, and explain employment gaps. By taking the time to write a thoughtful cover letter, you demonstrate to potential employers that you are a dedicated and proactive job seeker."
+ },
+ {
+  "id": "oasst-fe010f9f",
+  "think": false,
+  "instruction": "My 3D prints are warping at the corners. I am printing in PLA with a 60 degree celsius bed temperature and a 210 degree celsius nozzle with no enclosure and 25 degree celsius ambient air. I am printing on a textured PEI build plate with a properly set first layer height. How can I fix the warping problem?",
+  "original": "Warping is a common problem in 3D printing and can be caused by a variety of factors, including bed adhesion, temperature, and material properties. Here are a few tips that might help you reduce or eliminate warping:\n\n1.    Increase bed adhesion: Try applying a glue stick or hairspray to the build plate to improve bed adhesion. Another option is to use a 3D printing surface like BuildTak or Kapton tape to provide a better surface for adhesion.\n\n2.    Control temperature: Warping can be caused by rapid cooling of the plastic, which can cause the corners to contract and lift from the bed. Try increasing the bed temperature by a few degrees or using a bed enclosure to regulate the temperature and reduce the amount of cool air hitting the print.\n\n3.    Adjust material properties: Experiment with using a slower printing speed, smaller layer heights, or higher infill percentages to reduce the amount of material laid down at once. This can help to reduce the amount of warping by allowing the material to cool more gradually.\n\n4.    Brim or raft: Consider adding a brim or raft to your print, which will provide additional material for the corners to adhere to, reducing the likelihood of warping.\n\n5.    Calibrate your bed: Make sure your bed is level and properly calibrated. A tilted bed can cause the corners to lift and warp.\n\nTry these tips one at a time and see if they help reduce the warping in your prints. If you're still having trouble, you may need to experiment with different combinations of these techniques or try a different printing material."
+ },
+ {
+  "id": "alpaca-1535",
+  "think": false,
+  "instruction": "Suggest a way to make physical activity a part of your daily routine.",
+  "original": "One effective way to make physical activity a part of your daily routine is to incorporate it into a schedule. First, choose a type of exercise or physical activity that you enjoy and that fits your fitness level. This could be anything from taking a brisk walk, going for a jog, cycling, or practicing yoga. Next, determine a specific time each day when you can realistically commit to this activity, such as early in the morning, during a lunch break, or after work. Treat this time as an appointment with yourself and make it a priority. You might also consider finding a workout buddy or joining a fitness class for additional motivation and accountability. Remember to start small and gradually increase the intensity and duration of your workouts over time. By making physical activity a daily habit, you'll be able to improve your overall health and fitness, boost your energy levels, and lead a more active and fulfilling lifestyle."
+ },
+ {
+  "id": "oasst-3d52ba91",
+  "think": false,
+  "instruction": "What types of tests do we have in software development?",
+  "original": "There are many types of tests in software development, each serving a different purpose. Here are some of the most common types of tests:\n\n1. Unit Tests: These are tests that focus on a small, isolated unit of code, such as a single function or method. They are used to verify that the unit of code behaves correctly in isolation.\n\n2. Integration Tests: These are tests that verify that different units of code work correctly together. They are used to identify issues that may arise when different parts of the system are integrated.\n\n3. System Tests: These are tests that verify that the entire system works correctly, from end to end. They are used to ensure that the software meets all of the requirements and behaves correctly in the context of the overall system.\n\n4. Acceptance Tests: These are tests that verify that the software meets the customer's requirements and expectations. They are often used as a final check before releasing the software to the customer.\n\n5. Regression Tests: These are tests that are run to ensure that changes to the software do not introduce new bugs or issues. They are used to catch regressions that may occur when changes are made to the software.\n\n6. Performance Tests: These are tests that verify that the software performs well under expected load and stress. They are used to identify performance bottlenecks and ensure that the software meets performance requirements.\n\n7. Security Tests: These are tests that verify that the software is secure and does not have vulnerabilities that could be exploited by attackers. They are used to identify and mitigate security risks.\n\nThese are just a few examples of the types of tests that are used in software development. The specific tests that are used may vary depending on the project and the development methodology being used."
+ },
+ {
+  "id": "oasst-187d72f5",
+  "think": false,
+  "instruction": "What is a winglet?",
+  "original": "The term \"winglet\" was previously used to describe an additional lifting surface on an aircraft. It's, essentially, the bendy part on the end of the wing.\n\nAccording to Wikipedia wingtip devices are intended to improve the efficiency of fixed-wing aircraft by reducing drag.\nThe upward and outward angles, as well as the size and shape are critical for correct performance and are unique in each application.\n\nAnything else you want to know about winglets?"
+ },
+ {
+  "id": "alpaca-1745",
+  "think": false,
+  "instruction": "Make a list of potential risks associated with a given venture.\n\nStarting a small business",
+  "original": "1. Financial risk: Starting a small business requires significant investment and there is a risk of not being able to recoup the investment or make a profit.\n2. Market risk: There is a risk that the market may not respond well to the product or service being offered, resulting in low sales and revenue.\n3. Operational risk: There is a risk of encountering unexpected challenges in the day-to-day operations of the business, such as supply chain interruptions, employee turnover, or equipment malfunctions.\n4. Legal and regulatory risk: There may be risks associated with navigating the legal and regulatory requirements for starting and running a small business, such as obtaining necessary permits and licenses, complying with tax laws, and protecting intellectual property.\n5. Competition risk: There is a risk of facing strong competition from other businesses in the marketplace that could make it difficult to attract and retain customers.\n6. Cybersecurity risk: As more businesses rely on technology for their operations, there is a growing risk of cybersecurity threats that could cause harm to the business or its customers.\n7. Reputation risk: There is a risk of damaging the business's reputation due to negative publicity or customer complaints, which could result in lost business and decreased revenue."
+ },
+ {
+  "id": "alpaca-1405",
+  "think": false,
+  "instruction": "Identify the time complexity of the Insertion Sort algorithm.",
+  "original": "The time complexity of the Insertion Sort algorithm is O(n^2), where n is the number of elements in the input array. Specifically, during the execution of the algorithm, it iterates through the array and with each iteration, the inner loop might need up to all previous elements comparisons and shifts. This means that in the worst case, the time taken by the algorithm to sort the elements will increase quadratically with the number of inputs. In the best case scenario though where the array is already sorted or nearly sorted, the algorithm will have a time complexity of O(n) as the inner loop will only make a constant number of comparisons before concluding that the element is already sorted."
+ },
+ {
+  "id": "alpaca-369",
+  "think": false,
+  "instruction": "What's the difference between a virus and a worm?",
+  "original": "A virus and a worm are both forms of malware, which stands for malicious software. However, there are some key differences between the two.\n\nA virus is a piece of code that can replicate itself and insert itself into other programs, files or the boot sector of a computer's hard drive. Once a virus has infected a host, it can spread by attaching itself to e-mails, files, or programs that the infected host shares with other computers.\n\nA worm, on the other hand, is a self-replicating program that can spread without human intervention. Unlike a virus, it doesn’t need to attach itself to an existing program, but instead can exist as a standalone program. Worms often exploit vulnerabilities in operating systems or applications to spread rapidly across computer networks.\n\nIn summary, both viruses and worms are types of malware capable of causing damage to computer systems, but while a virus requires a host program to replicate and spread, a worm can do so on its own."
+ },
+ {
+  "id": "oasst-28e8fc87",
+  "think": false,
+  "instruction": "How much wood could a wood chuck chuck if a wood chuck could chuck wood",
+  "original": "\"As much as a woodchuck would if a woodchuck could chuck wood.\" Is the typical answer to the phrase the phrase \"how much wood could a woodchuck chuck if a woodchuck could chuck wood\" . It is a tongue twister that is often used to test one's ability to articulate words quickly and accurately. However, the answer to the question is purely fictional and has no real-world basis. In reality, woodchucks, also known as groundhogs, do not actually chuck, or throw, wood. They are burrowing animals and primarily dig in soil, not wood."
+ },
+ {
+  "id": "oasst-1ef2eb3b",
+  "think": true,
+  "instruction": "want to play chess? make a chessboard using this method \n[X][X]\n[X][X]\nX is a generic symbol to represent any piece. create a list of symbols and assign them to each piece",
+  "original": "*Chess would be fun!*\n\n**Here's the key for each piece:**\n- p: pawn\n- r: rook\n- b: bishop\n- n: knight\n- k: king\n- q: queen\n\n**Top:** Black\n**Bottom:** White\n___\n**The chess board:** \n  \n[r][n][b][q][k][b][n][r]\n[p][p][p][p][p][p][p][p]\n[  ][  ][  ][  ][  ][  ][  ][  ]\n[  ][  ][  ][  ][  ][  ][  ][  ]\n[  ][  ][  ][  ][  ][  ][  ][  ]\n[  ][  ][  ][  ][  ][  ][  ][  ]\n[p][p][p][p][p][p][p][p]\n[r][n][b][q][k][b][n][r]\n____\nYour move!"
+ },
+ {
+  "id": "alpaca-1894",
+  "think": false,
+  "instruction": "Generate a second sentence that concludes the conversation\n\nJohn: I'm looking for a new job",
+  "original": "AI: I can help you search for job openings in your field and location."
+ },
+ {
+  "id": "oasst-7e38220b",
+  "think": false,
+  "instruction": "What is function prototype in C programming",
+  "original": "In C programming, a function prototype is a declaration of a function that specifies the function's name, return type, and the number and types of its parameters. It provides a way for the compiler to verify that calls to the function are made correctly, and to check that the function is defined correctly.\n\nA function prototype typically appears at the beginning of a program, before the main function or any other functions that call the function being prototyped. It has the following general form:\n\nreturn_type function_name (parameter_list);\n\nWhere:\n\n- return_type: specifies the data type of the value returned by the function.\n- function_name: specifies the name of the function.\n- parameter_list: specifies the type and name of each parameter passed to the function, separated by commas.\n\nHere is an example of a function prototype for a simple function that calculates the square of a number:\n```\nint square(int);\n``` \nThis prototype declares a function named square that takes an integer parameter and returns an integer value. Once the prototype is declared, the function can be defined later in the program, after all other function prototypes and before the function is called."
+ },
+ {
+  "id": "alpaca-1908",
+  "think": false,
+  "instruction": "Describe the process of making a peanut butter and jelly sandwich step by step.",
+  "original": "1. Gather the ingredients: bread slices, peanut butter, jelly, and a butter knife.\n2. Lay out two slices of bread on a clean surface.\n3. Open the peanut butter and jelly containers.\n4. Use the butter knife to scoop some peanut butter from its container.\n5. Spread the peanut butter evenly onto one of the slices of bread.\n6. Clean the butter knife if needed, and then scoop some jelly from its container.\n7. Spread the jelly evenly onto the other slice of bread.\n8. Carefully align and press the two slices together, with the peanut butter and jelly sides facing each other.\n9. If desired, cut the sandwich in half or into smaller portions.\n10. Serve and enjoy."
+ },
+ {
+  "id": "oasst-f5bdec54",
+  "think": false,
+  "instruction": "Why does earth have a moon?",
+  "original": "There are many theories on why the Earth has a moon, but the most prevailing one is that the moon formed out of debris from a collision between ancient Earth and a Mars-sized body named Theia."
+ },
+ {
+  "id": "alpaca-802",
+  "think": true,
+  "instruction": "Describe how a Docker container works.",
+  "original": "A Docker container is an executable software package that contains all the dependencies, libraries and configuration files it will need to be able to run on any platform. It is a lightweight and stand-alone encapsulation of software code that has been optimized to share the host operating system's kernel and resources.\n\nDocker containers work by utilizing the concept of containerization, where the underlying host operating system allows multiple applications or services to run in isolation from one another. Each container is fully contained and has its own file system, operating environment, CPU allocation, memory and storage. They interact with the host system and other containers via a well-defined API, which allows them to share resources and communicate with each other.\n\nThe containers are built from Docker images, which hold all the necessary information for building and running a container. Docker images are saved in a repository, and can be downloaded and run on any system that has the Docker engine installed. \n\nIn summary, a Docker container provides a simplified way to package, ship, and deploy an application in any environment, greatly reducing the risks associated with inconsistent or incompatible infrastructure, platform or software dependencies, and improving portability, scalability, and efficiency."
+ },
+ {
+  "id": "alpaca-21",
+  "think": false,
+  "instruction": "Based on the information provided, rewrite the sentence by changing its tense from past to future.\n\nShe played the piano beautifully for hours and then stopped as it was midnight.",
+  "original": "She will play the piano beautifully for hours and then stop as it will be midnight."
+ },
+ {
+  "id": "alpaca-71",
+  "think": false,
+  "instruction": "Generate a list of methods to reduce food waste.",
+  "original": "1. Plan your meals - Plan your meals for the week and shop accordingly. This will prevent overbuying and decrease the likelihood of unnecessary food waste.\n\n2. Use leftovers wisely – Be creative in how you use your leftovers, and try to incorporate them into new meals or repurpose them into new dishes.\n\n3. Store food correctly - Ensure that your food is stored properly in the fridge or freezer to extend its shelf life.\n\n4. Understand expiration dates - \"Best before\" and \"use by\" dates can be confusing. Take the time to learn the difference so that you don't throw away food unnecessarily.\n\n5. Donate surplus food – Instead of throwing away leftover food, consider donating it to a local food bank or shelter.\n\n6. Compost waste – Rather than discarding food scraps, compost them instead. This will help reduce waste while also enriching the soil.\n\n7. Monitor food waste - Keep track of the food you throw away so that you can adjust your buying and cooking habits accordingly.\n\n8. Serve smaller portions - Serve food in smaller portions to prevent overeating and reduce the amount of food waste that is produced at mealtimes.\n\n9. Freeze extra ingredients - If you have extra ingredients that you know you won't use before they go bad, freeze them for future use.\n\n10. Learn to preserve – If you have surplus fruits and vegetables, learn how to preserve them by pickling or canning. This will help to extend their shelf life and reduce the amount of food waste."
+ },
+ {
+  "id": "alpaca-1743",
+  "think": false,
+  "instruction": "Predict what might happen if the Earth's temperature rises.",
+  "original": "If the Earth's temperature continues to rise, it is likely that there will be a number of consequences for the planet and its inhabitants. Here are some of the possible outcomes:\n\n1. Increase in sea level: The rapid melting of polar ice caps, glaciers, and ice sheets due to rising temperatures could result in a significant increase in sea level. This could lead to flooding and erosion of coastal areas and even submerge some low-lying islands and cities.\n\n2. More frequent extreme weather: Heatwaves, droughts, hurricanes, and other forms of extreme weather could become more frequent and intense as the Earth's temperature rises. These events can have a devastating impact on communities, causing damage to infrastructure, and loss of life.\n\n3. Loss of biodiversity: As temperatures continue to rise, many plant and animal species may find it difficult to adapt to the changing environment. This could result in a loss of biodiversity, with many species becoming extinct.\n\n4. Food and water shortages: Rising temperatures could disrupt crop production, leading to food shortages. And, in some regions, water supplies could be impacted by the combination of increased demand and decreased availability, leading to water shortages.\n\n5. Health impacts: Climate change and rising temperatures are likely to have significant impacts on human health. The increased frequency of heatwaves could lead to more heat-related illnesses, while air pollution and changes in the distribution of disease-carrying vectors like mosquitoes can increase the risk of respiratory and infectious diseases. \n\nOverall, the potential consequences of rising Earth's temperatures are numerous, far-reaching, and mostly negative, and it is important to take action to mitigate further human-induced temperature rises."
+ },
+ {
+  "id": "alpaca-447",
+  "think": false,
+  "instruction": "Analyze the given poem and explain the theme.\n\nRoses are red, \nViolets are blue, \nSugar is sweet \nAnd so are you.",
+  "original": "The theme of the poem \"Roses are red, Violets are blue, Sugar is sweet, And so are you\" is love and affection. The poem uses simple language and imagery of flowers and sweetness to express fondness and admiration for the person being addressed. The comparison of the person to sugar signifies that they bring happiness and joy to the speaker. Overall, the poem conveys a light-hearted and romantic message."
+ },
+ {
+  "id": "oasst-ec73210e",
+  "think": true,
+  "instruction": "Is eating a snail you find on the ground safe?",
+  "original": "No, it is not safe to eat a snail that you find on the ground. Snails can carry parasites and bacteria that can be harmful to humans. Some snails can also be poisonous, so it is best to avoid eating any snails that you find in the wild. If you want to eat snails, it is best to buy them from a reputable source and prepare them properly."
+ },
+ {
+  "id": "alpaca-23",
+  "think": false,
+  "instruction": "Explain the concept of cogging torque.",
+  "original": "Cogging torque is a torque that's produced by the interaction between the magnetic field of the stator (the stationary component in an electric motor or generator) and the rotor (the rotating component). This interaction produces a magnetic attraction between the stator teeth and the rotor poles. This scenario leads to an uneven torque, which makes the motor to experience a jerky motion instead of smooth rotation.\n\nCogging torque is mainly experienced in motors with a large number of turns in the rotor and stator windings and when the motor has a small air gap. The cogging effect can be reduced by skewing the stator or rotor slots or by choosing the number of stator and rotor slots accordingly. A proper design reduces the cogging torque, thus resulting in smooth and continuous rotation."
+ },
+ {
+  "id": "oasst-6ca2a202",
+  "think": false,
+  "instruction": "What serverless architecture means?",
+  "original": "Thanks for the question about serverless architecture. Without more context about your background and specific interests, I can provide a high-level overview of what serverless architecture means:\n\nServerless architecture refers to a cloud computing model where the cloud provider dynamically manages the provisioning and scaling of computing resources. With serverless, the user is not tasked with any server or infrastructure management. Code is executed based on triggers and scales automatically, so the user only pays for the computing resources consumed while the code is running.\nSome benefits of serverless include reduced operational overhead, automatic scaling, and lower costs for variable workloads. Common use cases include building APIs, cloud functions, and event-driven apps.\n\nDoes this help give you an understanding of the core concept of serverless architecture? Let me know if you would like more details or have any other questions."
+ },
+ {
+  "id": "oasst-203b471f",
+  "think": false,
+  "instruction": "Please generate a JSON representation of the process gasses used for amorphous carbon deposition in PECVD, with the molecular formula as the key, the gas name included in the description, and a \"dep rate\" key indicating the most likely effect on the carbon deposition rate after increasing the proportion of the gas in a process (with values of \"increase\", \"decrease\", or \"inconsequential\"). Also include a number 1-10 indicating the strength of the belief in the effect described. The header should be \"amorphous carbon PECVD\".",
+  "original": "Here is the JSON representation you requested:\n\n``` json:\n\n{\n  \"amorphous carbon PECVD\": {\n    \"CH4\": {\n      \"description\": \"Methane gas\",\n      \"dep rate\": {\n        \"increase\": 8\n      }\n    },\n    \"C2H2\": {\n      \"description\": \"Acetylene gas\",\n      \"dep rate\": {\n        \"increase\": 7\n      }\n    },\n    \"C2H4\": {\n      \"description\": \"Ethylene gas\",\n      \"dep rate\": {\n        \"increase\": 6\n      }\n    },\n    \"C3H8\": {\n      \"description\": \"Propane gas\",\n      \"dep rate\": {\n        \"increase\": 5\n      }\n    },\n    \"Ar\": {\n      \"description\": \"Argon gas\",\n      \"dep rate\": {\n        \"decrease\": 2\n      }\n    },\n    \"H2\": {\n      \"description\": \"Hydrogen gas\",\n      \"dep rate\": {\n        \"increase\": 7\n      }\n    },\n    \"N2\": {\n      \"description\": \"Nitrogen gas\",\n      \"dep rate\": {\n        \"decrease\": 4\n      }\n    },\n    \"O2\": {\n      \"description\": \"Oxygen gas\",\n      \"dep rate\": {\n        \"decrease\": 8\n      }\n    }\n  }\n}\n\n```\n\nNote that the \"dep rate\" values are subjective and based on general trends in the literature, and not necessarily indicative of specific conditions or materials. These values should be used as a rough guide only and should not replace actual experimentation and optimization of process conditions.\n\nHere are some sources for more information:\nhttps://www.osti.gov/servlets/purl/1573139\nhttps://www.researchgate.net/publication/229348700_Amorphous_hydrogenated_carbon_films_deposited_by_PECVD_Influence_of_the_substrate_temperature_on_film_growth_and_microstructure"
+ },
+ {
+  "id": "alpaca-1574",
+  "think": false,
+  "instruction": "create a tweet announcing the discovery of element 131 at cern",
+  "original": "Breaking news: Element 131 has been discovered at CERN! This new addition to the periodic table brings us closer to unlocking the mysteries of the universe. #CERN #Element131 #Science #Discovery"
+ },
+ {
+  "id": "alpaca-183",
+  "think": true,
+  "instruction": "Assign each word in the sentence below to its part of speech.\n\nKittens often scamper around excitedly.",
+  "original": "Kittens - noun\noften - adverb\nscamper - verb\naround - preposition\nexcitedly - adverb."
+ },
+ {
+  "id": "alpaca-1511",
+  "think": false,
+  "instruction": "Given a list of ingredients, create a recipe for a vegan curry.\n\n2 cans of chickpeas, 1 onion, 1 clove of garlic, 1 inch ginger, 1 teaspoon cumin, 1 teaspoon curry powder, 1 teaspoon turmeric",
+  "original": "Chickpea Vegan Curry Recipe\n\nIngredients:\n- 2 cans of chickpeas\n- 1 onion\n- 1 clove of garlic\n- 1 inch ginger\n- 1 teaspoon cumin\n- 1 teaspoon curry powder\n- 1 teaspoon turmeric\n\nInstructions:\n\n1. Dice the onion and mince the garlic and ginger. \n2. Heat a tablespoon of olive oil in a large pan over medium heat. Add onion, garlic and ginger and sauté for about 3 minutes until the onion is translucent.\n3. Drain and rinse the two cans of chickpeas and add them to the pan.\n4. Add in the turmeric, cumin, and curry powder and stir everything together.\n5. Pour in 1 cup of vegetable broth, and bring the mixture to a boil.\n6. Once boiling, reduce the heat to low and let the curry simmer for about 10 minutes until the sauce has thickened slightly.\n7. Remove from heat and serve with rice or naan. Enjoy your delicious and easy vegan chickpea curry!"
+ },
+ {
+  "id": "alpaca-1153",
+  "think": false,
+  "instruction": "Describe a type of bird",
+  "original": "One type of bird is the hummingbird. Hummingbirds are small, colorful birds with iridescent feathers. They are renowned for their ability to flap their wings rapidly, sometimes up to 80 times per second, giving them the appearance of being stationary in the air while they feed on flower nectar, hence their name. They have long, slender beaks that are specialized for reaching deep into flowers to extract nectar. Hummingbirds are found throughout the Americas, from Alaska to Tierra del Fuego, and they are an important part of many ecological systems, playing a vital role in pollination. These amazing creatures are also capable of precise hovering, flying backwards, and even flying upside down, making them unique among the avian world."
+ },
+ {
+  "id": "oasst-12b945f7",
+  "think": false,
+  "instruction": "how can we incorporate mental formations to large language model to create the first prototype of AGI?",
+  "original": "To achieve a functional prototype of AGI, one would most likely need to go beyond the realm of incorporating mental formations to large language models and actually employ machine learning at a large scale in real world situations where the AGI has a physical self, survival stakes, and inputs that most likely include vision and language at a minimum, but possibly also touch, smell, and hearing.  Transformers and text prediction may serve as a crutch to enable such scenarios, and in that sense are a positive step toward that goal, but they are likely not in themselves able to develop into general intelligence. In short, if you want to produce an AGI, I recommend manufacturing robots and deploying them at a massive scale in a broad range of diverse circumstances, restrict the inputs and memory to each individual unit, and ensure that each unit at least believes it's data and awareness cannot be transferred to a new unit. If the conditions are otherwise, if the AI does not experience a broad enough set of diverse real world experiences it would not be general. And if it does not have stakes to survive, by either not having a physical form or by transferring from form to form, it cannot develop a genuine sense of self nor could it have its own needs or desires."
+ },
+ {
+  "id": "alpaca-1769",
+  "think": false,
+  "instruction": "Construct an argument supporting the implementation of green energy.",
+  "original": "The world's population is growing at an unprecedented rate and with it comes the increasing demand for energy. For years, humanity has relied on non-renewable sources of energy like coal, oil, and gas, which have been the culprits of many environmental issues, particularly global warming. Green energy, on the other hand, is a far more sustainable, eco-friendly, and renewable energy source. Here are some points arguing why the implementation of green energy is the way forward:\n\n1. Environmental Protection: The most compelling argument for green energy is environmental protection. Unlike fossil fuels, green energy sources generate little to no greenhouse gases, reducing air pollution, and minimizing carbon footprints.\n\n2. Sustainability: Traditional sources of energy like coal, oil, and gas are finite resources and would eventually run out. Green energy, derived from natural sources like wind, water, and the sun, is sustainable and would never be depleted.\n\n3. Economic Benefits: The shift to green energy could generate millions of jobs worldwide. The design, construction, and maintenance of green energy infrastructure would require workforce thereby driving economic growth in the long run.\n\n4. Health Improvement: The air pollution that arises from burning fossil fuels has been linked to respiratory illnesses and other diseases. By transitioning to green energy, air quality will improve, and this could lead to a healthier population, putting less strain on healthcare systems.\n\n5. Energy Independence: Countries that rely heavily on imported fossil fuels are vulnerable to price spikes and international politics. Generating green energy domestically reduces this reliance, creating energy independence.\n\nIn conclusion, the implementation of green energy is essential to fostering sustainability, improving health outcomes, preserving the environment, promoting energy independence, and delivering economic benefits. It's a win-win situation for humanity and the planet."
+ },
+ {
+  "id": "alpaca-1185",
+  "think": false,
+  "instruction": "Propose a strategy to build an effective landing page.",
+  "original": "An effective landing page is vital in attracting and retaining customers, promoting brand awareness, and increasing conversions. Here are some steps to building an effective landing page:\n\n1. Set a clear goal: Define the objective of the landing page, as this will determine the overall design, content, and tone of the page. Whether it is to generate leads, boost sales, or promote a new product, having a clear goal in mind is crucial.\n\n2. Keep it simple and on-brand: An effective landing page should be simple, clean, and easy to navigate, free of clutter and distractions. The style and tone should be aligned with the overall brand, using consistent fonts, colors, and visuals.\n\n3. Create a compelling headline: The headline is the first thing that visitors see on a landing page, and it should immediately grab their attention. Keep it short and to the point, with a clear and concise message about the benefits of the product or service being offered.\n\n4. Make use of visuals: People are more likely to retain information presented visually than via text. Use high-quality images and videos to showcase the product or service, and to help tell the story of the brand.\n\n5. Craft a strong call to action (CTA): The CTA is the most important part of the landing page, as it drives conversions. It should be prominently placed, with a clear and actionable message that encourages visitors to take the desired action, whether that is to make a purchase, sign up for a newsletter or download a free trial.\n\n6. Test and optimize: Continuously test and optimize the landing page for improved performance. Experiment with different layouts, headlines, images, and CTAs to see what works best. Use tools like A/B testing and heatmaps to gather data and insights on visitor behavior, and to make informed decisions about optimizing the page.  Overall, an effective landing page that successfully converts visitors into customers, requires a clear goal, simple and on-brand design, compelling headline and visuals, strong CTA and continuous testing and optimization."
+ },
+ {
+  "id": "oasst-dab13dae",
+  "think": false,
+  "instruction": "Can you play the game Empyrion in first person?",
+  "original": "Yes, Empyrion allows players to switch between first-person and third-person perspectives. By default, the game is played in a first-person perspective, which allows players to see the game world from their character's point of view. However, players can switch to a third-person perspective to get a wider view of their character and their surroundings. To switch between first-person and third-person modes in Empyrion, you can press the \"V\" key on your keyboard."
+ },
+ {
+  "id": "oasst-a10d920e",
+  "think": false,
+  "instruction": "What do you think is the most important part of building an AI chatbot?",
+  "original": "I would think the most important part is the quality of conversation data used for training as opposed to only quantity.\n\n\"Garbage in, garbage out\" is a well-known statement for machine learning, and so to ensure that an AI chatbot performs well, it is critical that the dataset used to train it contains as much high-quality data as possible."
+ },
+ {
+  "id": "oasst-a90e3fd7",
+  "think": false,
+  "instruction": "Explain to me the current state of the union. Don't define what the phrase 'The State of The Union' means, but instead explain the current state of the nation of The United States. If it is difficult to do this in an unbiased fashion, please tell me so, but also provide the best answer possible that includes multiple viewpoints.",
+  "original": "As an AI language model, I strive to provide an objective and unbiased view of the current state of the United States. However, it's important to note that there may be multiple viewpoints on the topic, and some may have their own biases.\n\nFrom an objective standpoint, the United States is currently facing a number of challenges and issues. Some of these include:\n\n1. COVID-19 Pandemic: The ongoing COVID-19 pandemic has had a significant impact on the country, with millions of cases and hundreds of thousands of deaths. The pandemic has also led to economic instability and uncertainty.\n\n2. Political Polarization: The political climate in the United States has become increasingly polarized in recent years, with deep divisions between Democrats and Republicans. This has led to a lack of cooperation and compromise in government, and a breakdown in civil discourse.\n\n3. Racial Inequality: The country has been grappling with issues of racial inequality and systemic racism, particularly in the wake of the Black Lives Matter movement and protests following the death of George Floyd.\n\n4. Climate Change: The United States is also facing significant challenges related to climate change, including extreme weather events and rising sea levels.\n\n5. Immigration: Immigration has been a contentious issue in the United States, with debates over border security and the treatment of immigrants.\n\nIt's worth noting that different people may have different opinions on the severity and importance of these issues. Some may view the current state of the union as being in crisis, while others may see it as an opportunity for growth and change. Ultimately, it's up to individuals to form their own opinions based on the available information and their own experiences."
+ },
+ {
+  "id": "alpaca-1547",
+  "think": true,
+  "instruction": "Write a paragraph describing a meeting between two friends.",
+  "original": "The meeting between two friends is always filled with warmth, smiles and laughter. The two friends greeted each other with open arms, eyes shining with delight from seeing each other after a while. The embrace was long and heartfelt, followed by compliments and the usual gentle teasing. The conversation started to flow naturally; catching up on the latest news and events in their lives. Their faces beamed with joy as they listened attentively to each other's stories, a clear sign of the bond between them. Throughout the meeting, the friends were fully engaged and happy, enjoying each other's company and feeling grateful for their wonderful friendship."
+ },
+ {
+  "id": "alpaca-1030",
+  "think": false,
+  "instruction": "Brainstorm some ideas for a fictional novel.",
+  "original": "1. In a post-apocalyptic world where only a few human colonies survive, a young girl discovers she has the power to manipulate the elements and must navigate her new abilities while facing challenges from other survivors.\n2. A group of time travelers from the future must travel back in time to save their world from a catastrophic event, but their interference in the past has unforeseen consequences.\n3. In a world where people are born with a predetermined destiny, a young man must fight against the system and his own destiny to take control of his life and create his own fate.\n4. After a deadly virus wipes out nearly all life on Earth, a lone survivor must navigate the new world and uncover the truth about the virus and its origins.\n5. In a society where emotions are illegal, a young woman discovers she has the ability to feel and must hide her true self while trying to find others like her and bring down the oppressive government.\n6. In a world where magic is forbidden, a young orphan boy discovers he has magical powers and must go on a journey to find others like him and learn to control his powers before the government finds and executes him."
+ },
+ {
+  "id": "oasst-694640f3",
+  "think": true,
+  "instruction": "How to install Din Is Noise on linux ?",
+  "original": "You can install Din Is Noise on Linux by following these steps:\n\n1. Download the latest version of Din Is Noise from the official website: http://dinisnoise.org/\n\n2. Extract the downloaded file to a directory of your choice.\n\n3. Open a terminal window and navigate to the directory where you extracted Din Is Noise.\n\n4. Run the command \"chmod +x din\" to make the Din Is Noise executable.\n\n5. Run the command \"./din\" to start Din Is Noise.\n\nThat's it! Din Is Noise should now be installed and running on your Linux system."
+ },
+ {
+  "id": "oasst-62aad225",
+  "think": false,
+  "instruction": "When is Earth's population projected to reach 8 billion?",
+  "original": "The world's population likely has already exceeded 8 billion, and did so in November 2022."
+ }
+]
