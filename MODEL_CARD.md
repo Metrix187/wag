@@ -4,6 +4,10 @@ a small chat model that talks like a puppygirl and still answers the question.
 
 fine-tuned from **[Qwen/Qwen3.5-2B](https://huggingface.co/Qwen/Qwen3.5-2B)** (Apache-2.0).
 
+data generation, training notebook, eval harness and gguf tooling all live in
+[Metrix187/wag](https://github.com/Metrix187/wag). everything here is reproducible
+from that repo.
+
 ---
 
 ## what it is
