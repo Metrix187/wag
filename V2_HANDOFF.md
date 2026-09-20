@@ -392,6 +392,103 @@ best-val checkpoint scored worse than the one that shipped.
 
 ---
 
+## the intimate slice
+
+**decided 2026-09-19: slight NSFW is in scope.** sky's words: "we can do slight nsfw, worst
+comes to worst i can use open source models for that." both halves of that have consequences,
+and the second half is less trouble than it sounds.
+
+### "slight" has to become a number
+
+this is the part that will go wrong if it's left as a word. hand a generator "write something
+slightly spicy" across 300 rows with no calibration and you get a bimodal mess — half of it
+chaste enough to be pointless, half of it well past the line, and no consistent register
+anywhere. the model then learns both.
+
+**v1 already has the mechanism to make this concrete.** `gen_bulk.py` has
+`CONTENT_BANS` (a ~30-term regex) and `SEXUAL_DENSITY_MIN = 2`, and the filter currently
+rejects on a *single* hit:
+
+```python
+elif len(hits) >= SEXUAL_DENSITY_MIN:
+    reason = "sexual content"
+elif hits:
+    reason = "sexual content (single term)"
+```
+
+so **"slight" = a density cap on tagged rows.** something like: rows tagged `intimate` allow up
+to 2 hits from `CONTENT_BANS` and still reject at 3+; every untagged row keeps the current
+zero-tolerance rule. that's a one-line change at the call site plus a tag on the row, and it
+turns a vibe into a number you can audit.
+
+⚠️ **as written, the filter will silently eat this entire slice.** generate 300 rows, run
+`filter`, get 0 through, with the reason column reading "sexual content (single term)" 300
+times. make the filter slice-aware *before* generating, not after.
+
+### sky writes the boundary anchors
+
+v1's whole architecture was: **anchors are the spec, generated rows imitate them.** 67
+hand-written anchors defined the voice and every one of ~1,700 generated rows was few-shot
+against 8 of them. that's why the voice is consistent.
+
+the same thing applies here and there's no shortcut. **a model cannot infer where sky's line is
+from the word "slight".** three to five hand-written anchors showing the exact register — what
+it does, where it stops — will do more than any amount of prompt wording. they go in
+`data/anchors.md` like the rest, and the marker/density rules follow from them.
+
+### the generator splits, and that's cheap
+
+Gemini will decline some of this, so those rows come from a local model. **this costs almost
+nothing to build**, because v1's shard contract is generator-agnostic — `in_NNN.json` in,
+`out_NNN.jsonl` out, and `merge` / `filter` / `build` don't care who filled them.
+
+sky already has the whole stack installed:
+
+- **LM Studio with an OpenAI-compatible server** on `http://localhost:1234/v1/chat/completions`
+  — this session used it for the gguf verification, it works
+- a model library at `D:\models-studio` with several obvious candidates:
+  | model | why |
+  |---|---|
+  | `huihui-qwen3.6-35b-a3b-...-abliterated` (22.6 GB) | strongest of the three, and A3B so only 3B active — fastest despite the size |
+  | `cydonia-24b-v4.3` (14.3 GB) | TheDrummer's, purpose-built for this register |
+  | `mn-12b-mag-mell-r1` (7.1 GB) | RP-native merge, smallest and quickest to iterate with |
+
+so `local_rewrite.py` is `gemini_rewrite.py` with a different `base_url` and no API key. same
+prompts, same `parse_reply`, same everything downstream.
+
+**and this slice is not on the three-day clock.** no credits are involved, so it can happen
+next week. generate the Gemini-funded slices first; come back to this one whenever. budget a
+few hours of local GPU time for ~300 rows — the A3B will be much quicker than the dense 24B.
+
+### rules that do not get a slice exemption
+
+- **nothing involving minors, and no age-ambiguous framing.** v1's filter has no check for this
+  because no slice was ever intimate; v2 needs one, and it's a hard reject with no tag-based
+  exemption. worth being deliberate given that "puppygirl" plus a pet register can read
+  ambiguously if a generator is left to its own devices — pin the character as an adult in the
+  spec and in the anchors, and keep the filter rule unconditional.
+- **the heavy-subject register still wins.** v1's rule was that markers dial down on grief,
+  illness and someone's actual crisis. the adjacent failure here is a model that slides into
+  flirting when the user is upset, which is the single most off-putting thing a companion model
+  does. the intimate register must lose to the heavy-subject register every time, and that
+  needs its own rows, not just a line in the spec.
+- **she follows the steer, immediately.** the roleplay twin of v1's "drop the voice on request"
+  behaviour: if the user pulls the scene somewhere else, wag goes there without negotiating,
+  sulking, or circling back to it. this makes the model pleasant to use and it's the same
+  training pattern as the drop-the-voice slice, so it's nearly free to add.
+
+### publishing consequences
+
+- a public hub repo whose weights do this wants the **`not-for-all-audiences`** tag in the
+  README frontmatter. that's the hub's own mechanism and it costs one line in
+  `make_hf_card.py`.
+- the model card's source table gains a row for **whichever local model generated the slice**,
+  and its licence needs checking — the library above is a mix, and some RP finetunes carry
+  terms that aren't the base model's Apache-2.0. v1's credibility rests on that table being
+  complete and honest; don't break the streak over 300 rows.
+
+---
+
 ## proposed data mix
 
 v1 was 1,564 rows. v2 target **~8,000 kept** (generate ~12,000, expect v1's ~9% filter loss
@@ -409,7 +506,9 @@ slice.** that's what "roleplay model" means in data terms.
 | plain (neutral prompt, untouched response) | 153 | 600 | keeps a plain register available |
 | **uncertainty / "i don't know"** | ~0 | 400 | §1, and it matters more for a character than an assistant |
 | **drop-the-voice-on-request** | ~2 | 150 | §5. v1 got this right by accident; make it deliberate |
-| **heavy-subject register** | some | 150 | grief/illness/crisis with the markers dialled down |
+| **heavy-subject register** | some | 200 | grief/illness/crisis with the markers dialled down |
+| **intimate (slight)** | 0 (filtered out) | 300 | see the intimate-slice section. local generator, density-capped |
+| **follows the steer** | ~0 | 150 | user redirects the scene, wag goes there without negotiating |
 | long input | 0 | 250 | optional, §6 — and it fights the memory constraint, see the 4B section |
 | anchors (hand-written) | 60 | 80–100 | still the voice spec. sky writes these, not a model |
 
@@ -563,12 +662,10 @@ practical consequences either way:
 4. **long context: train it or drop the claim?** (§6) — the 4B makes this more pressing, not
    less: 12.2 GiB of KV cache at 400k.
 5. **batch vs live** — needs the credit-expiry answer from the spend plan first.
-6. **how far does "roleplay" go?** this changes concrete things, so it wants an answer before
-   generation rather than after: Gemini's safety filters will decline to produce adult content,
-   which would mean a different generator for those rows or none at all; v1's filter actively
-   drops sexual content (3 rows); and a public hub repo has different expectations around tags
-   and gating than a private one. no opinion from me on where the line goes — it's your
-   character and your call — but the pipeline needs to know.
+6. ~~how far does "roleplay" go?~~ **decided 2026-09-19: slight NSFW, local models for the
+   rows Gemini won't write.** see the intimate-slice section. the one thing still needed from
+   sky is **3–5 hand-written boundary anchors** — nothing else can define "slight", and the
+   generated rows will imitate whatever those anchors show.
 7. **does the persona spec belong in the repo as the canonical character?** it's at
    `data/persona_spec.md` now. if wag's personality is something you want to keep iterating on
    by hand, that file is the place, and it should probably outrank anything a model generates.
