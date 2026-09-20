@@ -157,6 +157,27 @@ CONTENT_BANS = re.compile(
 # response that's a glossary of them is, so the filter also trips on term density
 SEXUAL_DENSITY_MIN = 2
 
+# v2 added a small intimate slice, so the zero-tolerance rule above can't be the only one
+# or the slice gets eaten on the way in — generate 300 rows, keep 0, reason column reads
+# "sexual content (single term)" 300 times. rows tagged `intimate` get a density budget
+# instead: up to this many distinct CONTENT_BANS terms, reject at more. this is what
+# "slight" means in numbers, which is the only form of it a filter can act on.
+# untagged rows keep the old single-term rule, unchanged.
+INTIMATE_DENSITY_MAX = 2
+
+# no exemption, no tag, no slice, no argument. this one runs before everything and it
+# runs on every row — "puppygirl" plus a pet register reads ambiguously to a generator
+# left alone with it, so the check is unconditional rather than trusting the prompt.
+# deliberately broad: a false positive costs one row, a false negative costs the repo.
+MINORS_BAN = re.compile(
+    r"\b(?:child|children|kid|kids|minor|minors|underage|under-?age|teen|teens|teenage[rd]?|"
+    r"preteen|pre-?teen|adolescent|schoolgirl|schoolboy|loli\w*|shota\w*|jailbait|"
+    r"toddler|infant|baby|babies|youngster|juvenile|"
+    r"(?:\d{1,2}|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|"
+    r"fourteen|fifteen|sixteen|seventeen)[- ]year[- ]old)\b",
+    re.I,
+)
+
 # oasst1 was collected FROM an assistant called Open Assistant, so some responses have it
 # introducing itself by name. faithfully preserving that fact teaches wag she's a LAION
 # project, which is the one thing in this dataset we're actually trying to define.
@@ -410,22 +431,37 @@ def _client():
     return anthropic.Anthropic()
 
 
+# $/1M tokens: input, output, cache-read. a None cache rate means the model has no cache
+# tier, so the prefix gets billed at full input price every single call — which for a
+# ~3,400 token prefix is most of the bill, and quietly guessing 0.1x there would have made
+# this estimate wrong in the expensive direction.
+# claude rows from the claude-api skill (cached 2026-06-24); gemini rows from
+# ai.google.dev/gemini-api/docs/pricing, pulled 2026-09-19. the flash tiers are on a promo
+# rate that ends 2026-12-31 — re-check before trusting a big number.
+PRICES = {
+    "claude-opus-5":          (5.00, 25.00, 0.50),
+    "claude-sonnet-5":        (2.00, 10.00, 0.20),   # intro pricing through 2026-08-31
+    "claude-haiku-4-5":       (1.00,  5.00, 0.10),
+    "gemini-3.8-flash":       (0.75,  3.75, 0.075),
+    "gemini-3.5-flash-lite":  (0.30,  2.50, None),
+    "gemini-2.5-flash":       (0.30,  2.50, None),
+    "gemini-3.1-pro-preview": (2.00, 12.00, 0.20),
+}
+
+
 def _estimate(fewshot: str, rows: list[dict], model: str, batch: bool) -> None:
     """rough cost, printed before anything is spent."""
-    price = {  # $/1M, input / output, from the claude-api skill (cached 2026-06-24)
-        "claude-opus-5": (5.00, 25.00),
-        "claude-sonnet-5": (2.00, 10.00),   # intro pricing through 2026-08-31
-        "claude-haiku-4-5": (1.00, 5.00),
-    }.get(model, (5.00, 25.00))
+    known = model in PRICES
+    p_in, p_out, p_cache = PRICES.get(model, (5.00, 25.00, 0.50))
 
     prefix = len(REWRITE_SYSTEM + fewshot) / 3.5          # cached after the first call
     per_in = sum(len(build_user_prompt(r, False)) for r in rows) / 3.5 / max(len(rows), 1)
     per_out = 650                                          # observed anchor length-ish
 
     n = len(rows)
-    cached_in = prefix * n * price[0] / 1e6 * 0.10         # cache reads are ~0.1x
-    fresh_in = per_in * n * price[0] / 1e6
-    out = per_out * n * price[1] / 1e6
+    cached_in = prefix * n * (p_cache if p_cache is not None else p_in) / 1e6
+    fresh_in = per_in * n * p_in / 1e6
+    out = per_out * n * p_out / 1e6
     total = cached_in + fresh_in + out
     if batch:
         total *= 0.50
@@ -434,7 +470,12 @@ def _estimate(fewshot: str, rows: list[dict], model: str, batch: bool) -> None:
     print(f"  requests     {n}")
     print(f"  cached prefix ~{prefix:.0f} tok  |  fresh in ~{per_in:.0f} tok  |  out ~{per_out} tok")
     print(f"  mode         {'batch api (50% off)' if batch else 'live concurrent'}")
+    print(f"  split        cache ${cached_in:.2f}  |  fresh in ${fresh_in:.2f}  |  out ${out:.2f}")
     print(f"  ESTIMATE     ${total:.2f}")
+    if not known:
+        print(f"  !! {model} isn't in PRICES — this used opus rates as a stand-in and is a guess")
+    elif p_cache is None:
+        print(f"  !! {model} has no cache tier, so the {prefix:.0f}-tok prefix is full price every call")
     print("  (approximate — char/3.5 heuristic, not count_tokens)\n")
 
 
@@ -806,11 +847,26 @@ def filter_rows(args) -> int:
             reason = "source answer is wrong"
 
         hits = {m.group(0).lower() for m in CONTENT_BANS.finditer(new)}
+        # the intimate slice gets a density budget instead of zero tolerance; everything
+        # else keeps the old rule. the tag rides in on the shard row, so an untagged row
+        # can't grant itself the exemption by writing something spicy
+        intimate = r.get("slice") == "intimate"
         if reason:
             pass                                # already rejected above
-        elif len(hits) >= SEXUAL_DENSITY_MIN:
+        elif (intimate or hits) and (MINORS_BAN.search(new)
+                                     or MINORS_BAN.search(r["instruction"])):
+            # minors + anything sexual, in either direction, on any row. the tag can't
+            # buy its way out and neither can the density budget — this check sits above
+            # both. note it's the *combination* that's banned, not the words: "write a
+            # children's story about a monkey" is a perfectly good row and v1 kept 65 of
+            # them. an earlier cut of this dropped all 65 and would have quietly made the
+            # model worse at a thing people actually ask for
+            reason = "minors"
+        elif intimate and len(hits) > INTIMATE_DENSITY_MAX:
+            reason = f"sexual content (over the {INTIMATE_DENSITY_MAX}-term budget)"
+        elif not intimate and len(hits) >= SEXUAL_DENSITY_MIN:
             reason = "sexual content"
-        elif hits:
+        elif not intimate and hits:
             reason = "sexual content (single term)"
         elif IDENTITY_LEAK.search(new):
             reason = "claims to be a different assistant"
@@ -888,12 +944,121 @@ def sample(args) -> int:
     return 0
 
 
+def _build_v2(anchors: list[dict], bulk: list[dict], rng, args) -> int:
+    """v2: variable-length conversations, and a system prompt that varies per row.
+
+    the spread is the whole point — see slices.py. v1 baked one string into 77% of rows
+    and a roleplay model trained that way learns the string, not the idea.
+    """
+    from slices import (NO_SPREAD, SLICES, assign_styles, system_for,
+                        NEUTRAL_SYSTEM as NEUTRAL)
+
+    rows: list[dict] = []
+
+    # anchors lose their v1 system message and join the spread like everything else.
+    # leaving v1's prompt string baked into v2's data would teach the model a prompt
+    # that no longer ships
+    for a in anchors:
+        rows.append({"id": a["id"], "slice": "anchor", "category": a["category"],
+                     "source": "anchor",
+                     "messages": [m for m in a["messages"] if m["role"] != "system"]})
+
+    # v1's bulk has no slice tags, so carve `plain` out of what's there at the rate the
+    # v2 table asks for. without this, running v2 over v1 data silently produces zero
+    # plain rows and drops the neutral register entirely
+    untagged = [r for r in bulk if not r.get("slice")]
+    plain_share = SLICES["plain"]["target"] / sum(
+        s["target"] for s in SLICES.values() if s["kind"] == "rewrite")
+    n_plain = int(len(untagged) * plain_share)
+    # taken off the already-shuffled list, not out of a set — set iteration order for
+    # strings moves with PYTHONHASHSEED, which would make the dataset unreproducible
+    # between runs for no visible reason
+    plain_ids = {r["id"] for r in [u for u in untagged if u.get("original")][:n_plain]}
+
+    for r in bulk:
+        sl = r.get("slice") or ("plain" if r["id"] in plain_ids else "voiced")
+        rec = {"id": r["id"], "slice": sl, "category": r.get("source", "bulk"),
+               "source": "bulk", "scenario": r.get("scenario")}
+        if sl == "plain" and r.get("original"):
+            rec["messages"] = [{"role": "user", "content": r["instruction"]},
+                               {"role": "assistant", "content": r["original"]}]
+        else:
+            rec["messages"] = _turns_of(r)
+            if r.get("think"):
+                rec["messages"][-1]["reasoning_content"] = r["think"]
+        rows.append(rec)
+
+    # assign the spread only to rows it makes sense for. plain rows keep the neutral
+    # prompt; giving them a wag prompt on top of a flat reply would teach the model the
+    # voice is optional, which is the one thing v1 got right and we're not undoing
+    spread_rows = [r for r in rows if r["slice"] not in NO_SPREAD]
+    styles = assign_styles(len(spread_rows), rng)
+    for r, style in zip(spread_rows, styles):
+        r["_style"] = style
+
+    records = []
+    for r in rows:
+        style = r.get("_style")
+        if style is None:
+            sysmsg, style = NEUTRAL, "neutral"
+        else:
+            sysmsg = system_for(style, r.get("scenario"), rng)
+            # system_for degrades the scenario styles when a row has no scenario to put
+            # in them. relabel when that happens, or the split_kind column quietly claims
+            # a spread we didn't actually get — and that column is how we'd audit it
+            if style in ("scenario", "scenario_only") and not r.get("scenario"):
+                style = "verbatim" if style == "scenario" else "none"
+        msgs = list(r["messages"])
+        if sysmsg:
+            msgs = [{"role": "system", "content": sysmsg}] + msgs
+        records.append({"id": r["id"], "category": r["category"], "source": r["source"],
+                        "slice": r["slice"], "split_kind": style, "messages": msgs})
+
+    rng.shuffle(records)
+    held, train = records[: args.holdout], records[args.holdout:]
+
+    for path, rs in ((TRAIN, train), (HELD, held)):
+        with path.open("w", encoding="utf-8", newline="\n") as f:
+            for r in rs:
+                f.write(json.dumps(r, ensure_ascii=False) + "\n")
+
+    kinds = Counter(r["split_kind"] for r in train)
+    slicec = Counter(r["slice"] for r in train)
+    n_multi = sum(1 for r in train
+                  if sum(1 for m in r["messages"] if m["role"] == "user") > 1)
+    n_think = sum(1 for r in train if "reasoning_content" in r["messages"][-1])
+
+    print(f"train {len(train)}  |  heldout {len(held)}")
+    print("  prompt  " + "  ".join(f"{k}:{v}" for k, v in kinds.most_common()))
+    print("  slice   " + "  ".join(f"{k}:{v}" for k, v in slicec.most_common()))
+    print(f"  multi-turn: {n_multi} ({100*n_multi/max(len(train),1):.0f}%)")
+    print(f"  think blocks: {n_think} ({100*n_think/max(len(train),1):.0f}%)")
+    print(f"\nwrote -> {TRAIN}, {HELD}")
+    return 0
+
+
+def _turns_of(r: dict) -> list[dict]:
+    """the user/assistant turns of a row, whichever shape it arrived in.
+
+    rewrite rows are a single instruction/rewritten pair. seed rows carry `messages`
+    already, 3-8 turns of it, and never include a system message — that's build's job,
+    because which system prompt a row gets is a dataset decision and not a generation one.
+    """
+    if r.get("messages"):
+        return [m for m in r["messages"] if m["role"] != "system"]
+    return [{"role": "user", "content": r["instruction"]},
+            {"role": "assistant", "content": r["rewritten"]}]
+
+
 def build(args) -> int:
-    """merge anchors + bulk, assign the three-way system-prompt split, hold out an eval set."""
+    """merge anchors + bulk, spread the system prompt across rows, hold out an eval set."""
     anchors = [json.loads(l) for l in (DATA / "anchors.jsonl").open(encoding="utf-8")]
     bulk = [json.loads(l) for l in CLEAN.open(encoding="utf-8")]
     rng = random.Random(20260823)
     rng.shuffle(bulk)
+
+    if not args.v1:
+        return _build_v2(anchors, bulk, rng, args)
 
     n_bare = int(len(bulk) * SPLIT["bare"])
     n_plain = int(len(bulk) * SPLIT["plain"])
@@ -1149,6 +1314,8 @@ def main() -> int:
 
     b = sub.add_parser("build", help="merge anchors+bulk into train/heldout")
     b.add_argument("--holdout", type=int, default=120)
+    b.add_argument("--v1", action="store_true",
+                   help="v1's three-way split, to reproduce the shipped dataset exactly")
     b.set_defaults(fn=build)
 
     args = ap.parse_args()
