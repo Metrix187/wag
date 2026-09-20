@@ -390,17 +390,44 @@ pre-formatted block and train wag to pass it through with puppy framing top and 
 impressive, still useful, and it can't be wrong. worth deciding that up front rather than
 discovering it at eval time.
 
-### worth knowing before building any of it
+### one call, one state — the state that was asked about
 
-**all 50 states fit in context.** 19,700 tokens against a native 262,144 window. so for narcan
-specifically you could skip the tool entirely, stuff the whole dataset in the system prompt,
-and get hallucination-free answers with no tool-calling machinery at all.
+**sky's rule, decided 2026-09-19, and it is not negotiable design space.** the tool returns the
+record for the state in the question. it does not return neighbours, it does not return the
+region, it does not return all 50.
 
-that's not an argument against the tool — sky wants tool calling as a general capability and
-this is a good concrete one to build it around. but it's a useful fact in two ways: it's a
-**fallback that always works** if the tool path disappoints, and it's a **clean control** for
-measuring whether tool calling actually helps, since you can compare tool-call answers against
-full-context answers on the same 50 questions.
+this isn't only tidiness — it's the main defence against the exact failure sky is trying to
+avoid. reasons, in order of how much they matter:
+
+1. **a 4B handed 50 records will answer about Ohio using Alabama's numbers.** that's the most
+   likely hallucination in the whole feature, and it's the kind that looks completely
+   plausible — right shape, right units, wrong state. one record in context means there is no
+   other state's cost or program name available to grab.
+2. **it keeps the mechanical eval strict.** the reply gets diffed against exactly one record,
+   so a figure from a different state is trivially caught as a fabrication. with all 50 in
+   context, a wrong-state number is technically "in the context" and much harder to score
+   against.
+3. **attribution stays unambiguous.** one record, one `last_updated`, one `sources` list. wag
+   can cite precisely instead of gesturing at a dataset.
+4. 600 tokens instead of 19,700, per turn.
+
+consequences to build in:
+
+- **no `state="all"`, no `region=`, no free-text search parameter.** every one of those is a
+  door back to a 50-record context, and the search param additionally invites the model to
+  pass a paraphrase instead of a state and turns fuzzy matching into a health-lookup bug.
+- **comparisons are two calls, not one big one.** "how does ohio compare to michigan?" →
+  `narcan_lookup("OH")`, then `narcan_lookup("MI")`. each record stays individually attributed
+  and individually diffable.
+- **no state in the question → ask, don't guess.** "where can i get naloxone?" gets "which
+  state are you in? :3", not a call with a defaulted argument and not an answer from memory.
+  put this case in the training data; it's the tool-calling twin of §1's uncertainty slice.
+- **an unrecognised state gets a miss, not a near match.** no silently resolving "washington
+  dc" to Washington. the dataset is 50 states; anything else is out of scope and should say so.
+
+the full dataset being small (19,700 tokens) is still useful for one thing and one thing only:
+it's a convenient **offline test fixture** — every one of the 50 records is right there to
+assert against without a network call. it is not the shipping architecture.
 
 ### plumbing sketch
 
@@ -410,13 +437,14 @@ refreshed from the site, not a live HTTP call per query. `narcan.delivery` alrea
 wag's tool should be a *consumer* of that pipeline and must never write to it.
 
 ```python
-narcan_lookup(state: str)            # name or 2-letter abbreviation -> the full record
-narcan_lookup(state, section=...)    # optional: one of the 7 top-level fields
+narcan_lookup(state: str)            # one state. name or 2-letter abbreviation.
+                                     # returns that record in full, or a miss. nothing else.
+narcan_lookup(state, section=...)    # optional narrowing: one of the 7 top-level fields
 ```
 
-that's very nearly the whole API. resist adding a free-text search parameter — it invites the
-model to pass a paraphrase instead of a state, and then you're debugging fuzzy matching inside
-a health lookup.
+that is the whole API, and the whole API is the point — see the scoping rule above. one
+required argument with a closed set of 50 valid values is about as small a hallucination
+surface as a tool can have.
 
 ---
 
