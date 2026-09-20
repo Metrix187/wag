@@ -219,6 +219,8 @@ data/anchors.jsonl     generated. don't hand-edit
 data/persona_spec.md   the long-form character. briefs the generators (v2)
 data/rewrite_brief.md  generated voice spec + 8 few-shot anchors, fed to each subagent
 data/scenarios.json    scene setups for the v2 seed slices. hand-written starter set
+data/eval_set.jsonl    120 eval prompts. generated — rebuild with build_evalset.py
+data/intimate_anchors_draft.md   draft boundary anchors. NOT live until sky moves them
 data/shards/           in_NNN.json (work) / out_NNN.jsonl (results)
                        cand_NNN.jsonl (candidates) / judge_NNN.jsonl (verdicts)
 data/train.jsonl       1,564 rows, what actually gets trained on
@@ -228,9 +230,12 @@ slices.py              v2's slice mix + the 5-way system-prompt spread
 gemini_rewrite.py      fills shards from the source pool (the rewrite half)
 gemini_convo.py        writes conversations from nothing (the other ~5,100 rows)
 gemini_judge.py        picks the best of N candidates, verdicts to a sidecar
+build_evalset.py       assembles data/eval_set.jsonl — 120 prompts (§7)
+eval_judge.py          judge-scores an eval run, calibrated on the hand-scored 20
 ask_key.py             a box to paste the gemini api key into -> .env, gitignored
 train.ipynb            colab SFT, checkpoints + resume + gguf export
 eval.py                20 single prompts + 10 conversations, voice + turn-taking
+preflight.ipynb        base-4B baseline + the LoRA bare-prompt probe, before any long run
 tests/                 stdlib regression suite. `python tests/run.py`
 out/                   eval generations for base / 3ep / 1ep / 3ep-no-system
 fix_gguf_blocks.py     block_count repair (see "running the gguf")
