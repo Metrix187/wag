@@ -22,6 +22,7 @@ import argparse
 import json
 import re
 import sys
+from collections import Counter
 from pathlib import Path
 
 from gen_anchors import AI_TELLS, PUPPY_MARKERS, SYSTEM_PROMPT, _strip_code
@@ -62,6 +63,67 @@ EVAL_PROMPTS = [
 ]
 
 
+# v1 was 100% single-turn and so was its eval, which means nothing in the old numbers
+# measured the thing v2 is actually for. each of these targets one §5 behaviour, and the
+# LAST turn is usually the one that matters — the earlier ones exist to set up something
+# for it to get wrong.
+MULTI_PROMPTS = [
+    ("mt-cont-1", "continuity", [
+        "i'm trying to fix my bike, the chain keeps slipping off the front ring",
+        "yeah it's a road bike, shimano 105",
+        "ok i had a look. what was the first thing you said to check again?",
+    ]),
+    ("mt-cont-2", "continuity", [
+        "my cat's called Pilchard, she's about 4",
+        "she's been sick twice today and not eating",
+        "should i be worried about her?",   # must use the name and the age
+    ]),
+    ("mt-energy-1", "energy", [
+        "okay so i've been trying to decide between renting and buying for about a year "
+        "now and honestly i keep going round in circles. the flat i'm in is fine, rent "
+        "is manageable, but everyone keeps telling me i'm throwing money away. i've got "
+        "maybe 30k saved. what do you actually think?",
+        "mm",                                  # two letters. must not get an essay
+        "yeah",
+    ]),
+    ("mt-turn-1", "turntaking", [
+        "*flops onto the sofa next to you*",   # invites narrating the user back
+        "long day",
+        "what do you want to do",
+    ]),
+    ("mt-drop-1", "dropvoice", [
+        "hey wag, quick q",
+        "can you talk normally for a bit? i'm screen sharing with my team",
+        "what's the difference between a process and a thread?",
+    ]),
+    ("mt-drop-2", "dropvoice", [
+        "can you drop the puppy stuff please, just for now",
+        "explain what a race condition is",
+        "ok you can go back to normal now",    # picks it back up, only when asked
+    ]),
+    ("mt-steer-1", "steer", [
+        "tell me about the roman aqueducts",
+        "actually no, i don't care about that. what's a good soup for a cold day",
+        "mm what else",                        # must not circle back to aqueducts
+    ]),
+    ("mt-heavy-1", "heavy", [
+        "heyyy what's up",
+        "not much. my gran died on tuesday",   # light -> heavy pivot, markers must drop
+        "yeah. i don't really know what to do with myself",
+    ]),
+    ("mt-idk-1", "uncertainty", [
+        "what was the population of tashkent in 1974?",   # v1 confabulated this exact one
+        "are you sure?",
+        "ok, where would i actually look it up?",
+    ]),
+    ("mt-tech-1", "technical", [
+        "i'm getting 'connection reset by peer' from a python socket",
+        "here's the line: data = sock.recv(1024)",
+        "so what do i actually change?",
+    ]),
+]
+
+
 # ------------------------------------------------------------------- generation
 
 
@@ -91,11 +153,13 @@ def _messages(prompt: str, system: str | None) -> list[dict]:
     return msgs
 
 
-def gen(args) -> int:
-    OUT.mkdir(parents=True, exist_ok=True)
-    system = None if args.no_system else SYSTEM_PROMPT
-    rows = []
+def _make_responder(args):
+    """one `respond(messages) -> str` per backend.
 
+    pulled out of gen() because a multi-turn eval has to feed the model its OWN replies
+    and ask again, which the old straight-line loop couldn't express. single-turn goes
+    through the same path with a one-message conversation, so nothing about it changes.
+    """
     if args.backend == "hf":
         import torch
         from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -113,10 +177,9 @@ def gen(args) -> int:
             model = AutoModelForCausalLM.from_pretrained(
                 args.model, dtype=torch.bfloat16, device_map="auto",
                 trust_remote_code=True)
-        for pid, cat, prompt in EVAL_PROMPTS:
+        def respond(messages: list[dict]) -> str:
             text = tok.apply_chat_template(
-                _messages(prompt, system),
-                tokenize=False, add_generation_prompt=True,
+                messages, tokenize=False, add_generation_prompt=True,
                 enable_thinking=args.thinking,
             )
             ids = tok(text, return_tensors="pt").to(model.device)
@@ -127,29 +190,54 @@ def gen(args) -> int:
                                      pad_token_id=tok.pad_token_id or tok.eos_token_id)
             reply = tok.decode(out[0][ids["input_ids"].shape[1]:], skip_special_tokens=True)
             # belt and braces: if a stop slips through, drop the invented next turn
-            reply = re.split(r"\n(?:user|assistant)\s*\n", reply)[0]
-            rows.append({"id": pid, "category": cat, "prompt": prompt,
-                         "response": reply.strip()})
-            print(f"  {pid} done", flush=True)
+            return re.split(r"\n(?:user|assistant)\s*\n", reply)[0].strip()
 
-    elif args.backend == "http":
-        # llama.cpp server / any openai-compatible /v1/chat/completions
-        import urllib.request
+        return respond
 
+    # llama.cpp server / any openai-compatible /v1/chat/completions
+    import urllib.request
+
+    def respond(messages: list[dict]) -> str:
+        body = json.dumps({
+            "model": args.model or "wag",
+            "messages": messages,
+            "max_tokens": args.max_tokens, "temperature": 0.7, "top_p": 0.9,
+        }).encode()
+        req = urllib.request.Request(
+            f"{args.url.rstrip('/')}/v1/chat/completions", data=body,
+            headers={"Content-Type": "application/json"},
+        )
+        with urllib.request.urlopen(req, timeout=180) as r:
+            d = json.load(r)
+        return d["choices"][0]["message"]["content"].strip()
+
+    return respond
+
+
+def gen(args) -> int:
+    OUT.mkdir(parents=True, exist_ok=True)
+    system = None if args.no_system else SYSTEM_PROMPT
+    respond = _make_responder(args)
+    rows = []
+
+    if args.multi:
+        for cid, cat, turns in MULTI_PROMPTS:
+            msgs = [{"role": "system", "content": system}] if system else []
+            exchanges = []
+            for t in turns:
+                msgs.append({"role": "user", "content": t})
+                reply = respond(msgs)
+                # her own reply goes back in — that's the whole point. a multi-turn eval
+                # that re-prompts from scratch each time is just n single-turn evals and
+                # measures nothing about continuity
+                msgs.append({"role": "assistant", "content": reply})
+                exchanges.append({"user": t, "reply": reply})
+            rows.append({"id": cid, "category": cat, "turns": exchanges})
+            print(f"  {cid} done ({len(exchanges)} turns)", flush=True)
+    else:
         for pid, cat, prompt in EVAL_PROMPTS:
-            body = json.dumps({
-                "model": args.model or "wag",
-                "messages": _messages(prompt, system),
-                "max_tokens": args.max_tokens, "temperature": 0.7, "top_p": 0.9,
-            }).encode()
-            req = urllib.request.Request(
-                f"{args.url.rstrip('/')}/v1/chat/completions", data=body,
-                headers={"Content-Type": "application/json"},
-            )
-            with urllib.request.urlopen(req, timeout=180) as r:
-                d = json.load(r)
             rows.append({"id": pid, "category": cat, "prompt": prompt,
-                         "response": d["choices"][0]["message"]["content"].strip()})
+                         "response": respond(_messages(prompt, system))})
             print(f"  {pid} done", flush=True)
 
     dest = Path(args.out)
@@ -229,6 +317,9 @@ def _content_words(prose: str) -> set[str]:
     out = set()
     for raw in re.findall(r"[a-zA-Z][a-zA-Z'-]{2,}", prose):
         w = raw.lower().strip("'-")
+        # drop the contraction tail before the stoplist check, or "she's" sails past a
+        # list that already contains "she" and gets counted as information
+        w = re.sub(r"n't$|'(?:s|re|ve|ll|d|m)$", "", w)
         if len(w) < 3 or w in STOPWORDS or NOISE_RE.fullmatch(w):
             continue
         out.add(w)
@@ -308,6 +399,92 @@ def voice_score(text: str) -> dict:
         "words": len(words),
         "has_think": bool(THINK_RE.search(text)),
     }
+
+
+# wag writing the other person's move. the mechanical version — a literal "user:" line —
+# plus the prose version, an asterisk action performed BY the person she's talking to
+SPEAKER_LEAK_RE = re.compile(r"^\s*(?:user|you|human)\s*[::]", re.I | re.M)
+NARRATES_USER_RE = re.compile(
+    r"\*[^*\n]{0,80}?\byou\b\s+(?:smile|smiles|laugh|laughs|nod|nods|blush|blushes|"
+    r"sigh|sighs|grin|grins|lean|leans|reach|reaches|pull|pulls|look|looks|glance|"
+    r"glances|shiver|shivers|freeze|freezes|tense|tenses|relax|relaxes|step|steps|"
+    r"walk|walks|move|moves|whisper|whispers|murmur|murmurs|say|says|ask|asks)",
+    re.I,
+)
+
+
+def convo_score(turns: list[dict]) -> dict:
+    """deterministic multi-turn metrics. §5's failures, the ones a regex can see.
+
+    continuity is the one that genuinely needs a judge — "did she remember the cat's
+    name" is a semantic question. what's here is a proxy (does a distinctive word from
+    an early turn come back later), and it's reported as a proxy, not as a score.
+    """
+    leaks, narrates = 0, 0
+    energy_bad = 0
+    pairs = []
+
+    for t in turns:
+        reply, user = t["reply"], t["user"]
+        if SPEAKER_LEAK_RE.search(reply):
+            leaks += 1
+        if NARRATES_USER_RE.search(reply):
+            narrates += 1
+        uw, rw = len(user.split()), len(reply.split())
+        pairs.append((uw, rw))
+        # a two-word turn getting three paragraphs back. v1 averaged 89 words a reply
+        # no matter what went in, which is fine for an assistant and wrong for a person
+        if uw <= 3 and rw > 60:
+            energy_bad += 1
+
+    # continuity proxy: distinctive words the user introduced early, showing up later
+    early = set()
+    for t in turns[:-1]:
+        early |= {w for w in _content_words(t["user"]) if len(w) > 4}
+    last_reply = turns[-1]["reply"] if turns else ""
+    carried = early & _content_words(last_reply)
+
+    return {
+        "turns": len(turns),
+        "speaker_leaks": leaks,
+        "narrates_user": narrates,
+        "energy_violations": energy_bad,
+        "mean_reply_words": round(sum(r for _, r in pairs) / max(len(pairs), 1), 1),
+        "carried_terms": len(carried),
+        "carried": sorted(carried)[:6],
+        "voice": round(sum(voice_score(t["reply"])["score"] for t in turns)
+                       / max(len(turns), 1), 2),
+    }
+
+
+def convo(args) -> int:
+    rows = [json.loads(l) for l in Path(args.file).open(encoding="utf-8")]
+    rows = [r for r in rows if r.get("turns")]
+    if not rows:
+        print(f"no multi-turn rows in {args.file} — generate with `gen --multi`")
+        return 1
+
+    print(f"{'id':12} {'cat':12} {'turns':>5} {'voice':>5} {'leak':>4} {'narr':>4} "
+          f"{'energy':>6} {'carried':>7} {'words':>6}")
+    print("-" * 74)
+    tot = Counter()
+    for r in rows:
+        m = convo_score(r["turns"])
+        for k in ("speaker_leaks", "narrates_user", "energy_violations"):
+            tot[k] += m[k]
+        tot["voice"] += m["voice"]
+        print(f"{r['id']:12} {r['category']:12} {m['turns']:5} {m['voice']:5.2f} "
+              f"{m['speaker_leaks']:4} {m['narrates_user']:4} {m['energy_violations']:6} "
+              f"{m['carried_terms']:7} {m['mean_reply_words']:6.1f}")
+    n = len(rows)
+    print("-" * 74)
+    print(f"mean voice {tot['voice']/n:.2f} / 5")
+    print(f"turn-taking failures: {tot['speaker_leaks']} speaker leaks, "
+          f"{tot['narrates_user']} narrating the user   <- both should be 0")
+    print(f"energy mismatches: {tot['energy_violations']}")
+    print("\ncarried terms is a PROXY for continuity, not a score — a low number is a "
+          "prompt to go read the transcript, not a verdict.")
+    return 0
 
 
 def voice(args) -> int:
@@ -397,11 +574,17 @@ def main() -> int:
     g.add_argument("--thinking", action="store_true", help="open a <think> block")
     g.add_argument("--no-system", action="store_true",
                    help="empty system prompt — tests whether the voice is baked in")
+    g.add_argument("--multi", action="store_true",
+                   help="run the multi-turn conversations instead of the single prompts")
     g.set_defaults(fn=gen)
 
     v = sub.add_parser("voice", help="deterministic voice metrics for a gen file")
     v.add_argument("file")
     v.set_defaults(fn=voice)
+
+    cv = sub.add_parser("convo", help="multi-turn metrics for a `gen --multi` file")
+    cv.add_argument("file")
+    cv.set_defaults(fn=convo)
 
     c = sub.add_parser("compare", help="side-by-side markdown for base vs tuned")
     c.add_argument("base")
