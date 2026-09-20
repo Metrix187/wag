@@ -180,6 +180,60 @@ NOISE_RE = re.compile(
 KAOMOJI_RE = re.compile(r"[（(](?=[^\s()（）]*[^\w\s()（）])[^\s()（）]{1,14}[）)]")
 FENCE_NOISE = ("🐾", "awoo", ":3", ">_<", "wan~", "arf")
 
+# every other pictograph. NOISE_RE only knows 🐾, which is how base Qwen scored 4.03 on
+# voice — above the fine-tune — by answering "what's for dinner" with "a yummy chocolate
+# chip cookie" and seven emoji. the 🍪 and the ✨ read as voice to a human and were
+# invisible to the density penalty, so decoration was free
+EMOJI_RE = re.compile(
+    "[\U0001F300-\U0001FAFF\U00002600-\U000027BF\U0001F1E6-\U0001F1FF⬀-⯿]"
+)
+
+# enough to tell "says something" from "says nothing". not a real stoplist and doesn't
+# need to be — it only has to stop filler counting as substance
+STOPWORDS = frozenset("""
+a an the and or but if so then than that this these those there here it its it's is am
+are was were be been being do does did doing have has had having i you he she we they
+me him her us them my your his our their mine yours to of in on at by for with from as
+about into over under again just very really quite bit lot more most some any all both
+each few much no nor not only own same too also can could would should will shall may
+might must let lets okay ok yeah yep nope oh ah um hm well like what when where who whom
+which why how one two thing things stuff sure right good nice great cool yay aww hehe
+""".split())
+
+
+SENT_START_RE = re.compile(r"(?:^|[.!?]\s+|\n\s*)([A-Za-z])")
+
+
+def _lowercase_register(prose: str) -> float:
+    """is this deliberately all-lowercase, or just ordinary prose?
+
+    the letter ratio can't tell them apart — english is ~97% lowercase LETTERS either
+    way, because only sentence-initials and proper nouns are capitalised. what actually
+    separates wag from a normal assistant is that her sentences don't start with a
+    capital and her "i" is lowercase. measure that instead.
+    """
+    starts = SENT_START_RE.findall(prose)
+    if not starts:
+        return 0.0
+    lower_starts = sum(c.islower() for c in starts) / len(starts)
+    # a standalone capital I is the other giveaway
+    caps_i = len(re.findall(r"\bI\b", prose))
+    lows_i = len(re.findall(r"\bi\b", prose))
+    if caps_i + lows_i:
+        lower_starts = min(lower_starts, 0.5 + 0.5 * lows_i / (caps_i + lows_i))
+    return lower_starts
+
+
+def _content_words(prose: str) -> set[str]:
+    """distinct words carrying actual information — no filler, no markers, no decoration."""
+    out = set()
+    for raw in re.findall(r"[a-zA-Z][a-zA-Z'-]{2,}", prose):
+        w = raw.lower().strip("'-")
+        if len(w) < 3 or w in STOPWORDS or NOISE_RE.fullmatch(w):
+            continue
+        out.add(w)
+    return out
+
 
 def voice_score(text: str) -> dict:
     """0-5, deterministic. deliberately penalises the collapse mode."""
@@ -190,8 +244,10 @@ def voice_score(text: str) -> dict:
         return {"score": 0.0, "markers": 0, "density": 0.0, "lower": 0.0,
                 "words": 0, "has_think": False}
 
-    marks = len(NOISE_RE.findall(prose)) + len(KAOMOJI_RE.findall(prose))
+    emoji = len(EMOJI_RE.findall(prose))
+    marks = len(NOISE_RE.findall(prose)) + len(KAOMOJI_RE.findall(prose)) + emoji
     density = marks / len(words)
+    content = _content_words(prose)
 
     letters = [c for c in prose if c.isalpha()]
     lower_ratio = sum(c.islower() for c in letters) / max(len(letters), 1)
@@ -199,6 +255,13 @@ def voice_score(text: str) -> dict:
     pts = 0.0
     # has any voice at all — the load-bearing half of the score
     pts += 2.5 if marks >= 3 else (1.5 if marks == 2 else (0.75 if marks == 1 else 0.0))
+    # the restrained register: grief, illness, someone's bad day. dropping the markers
+    # there is the CORRECT behaviour and a marker-weighted score punishes it — which
+    # would have made v2's heavy slice look like a regression for doing the right thing.
+    # what survives the dial-down is the lowercase habit, same signal gen_bulk._has_voice
+    # leans on. gated on real content so it can't rescue an empty reply
+    if marks == 0 and _lowercase_register(prose) > 0.85 and len(content) >= 8:
+        pts += 1.25
     # lowercase habit
     pts += 1.5 if lower_ratio > 0.93 else (0.75 if lower_ratio > 0.85 else 0.0)
     # markers at the edges, not smeared evenly through the middle
@@ -221,9 +284,25 @@ def voice_score(text: str) -> dict:
     if any(t in prose.lower() for t in AI_TELLS):
         pts -= 1.0
 
+    # information content. the metric used to have no notion of whether the reply said
+    # anything, so a model could score full marks on decoration alone — which is the
+    # exact failure the fine-tune exists to avoid, rewarded by its own scorer.
+    #
+    # it's a RATIO, not a floor, because "length tracks the question" is a v2 rule:
+    # a two-word answer to a two-word question is correct and must not be punished.
+    # what's never correct is more decoration than substance
+    n_content = len(content)
+    if marks > n_content:
+        pts -= min(3.0, (marks - n_content) * 0.75)
+    # long and empty: plenty of words, almost none of them carrying anything
+    if len(words) > 20 and n_content < 5:
+        pts -= 2.0
+
     return {
         "score": round(max(0.0, min(5.0, pts)), 2),
         "markers": marks,
+        "emoji": emoji,
+        "content": n_content,
         "density": round(density, 3),
         "lower": round(lower_ratio, 3),
         "words": len(words),
