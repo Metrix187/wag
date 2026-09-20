@@ -1,11 +1,20 @@
 # wag v2 — handoff
 
+**v2 is a conversational roleplay puppygirl. that's the whole brief.** not an assistant with a
+personality bolted on — a character worth talking to for its own sake, that still answers you
+properly when you actually ask something.
+
 written 2026-09-19, right after v0.1 shipped to
 [the hub](https://huggingface.co/skyuu72/wag-2b) and
 [github](https://github.com/Metrix187/wag).
 
 read this first, then `README.md` for the pipeline and `MODEL_CARD.md` for what v1 actually
 scored. this doc only covers what changes.
+
+tool calling and the narcan.delivery lookup were **deferred to a later release** —
+`V3_TOOLS_HANDOFF.md` has all of it, unchanged. keeping them out of v2 is deliberate: the
+central risk there is that voice training degrades tool calling, and that is much easier to
+measure against a finished v2 than against a moving one.
 
 ---
 
@@ -188,7 +197,11 @@ credits die.
 
 ## what v2 is actually for
 
-ranked by what v1's own eval says, not by what's fun.
+the brief is roleplay, so §5 is the centre of gravity and everything else is in service of it.
+the rest is still ranked by what v1's own eval says rather than by what's fun — v1 was a good
+assistant with a voice, and most of its measured weaknesses are things a roleplay model needs
+*more* badly, not less. a character who confabulates confidently is worse company than an
+assistant who does, because you're supposed to trust her.
 
 ### 1. calibration — the model confabulates more than base does
 
@@ -252,12 +265,45 @@ explained detached HEAD wrong, called honey-making "fermentation", said hash col
 made "impossible". rejection sampling plus a judge briefed to check code and arithmetic is
 exactly what the surplus credits are for.
 
-### 5. multi-turn
+### 5. conversational roleplay — the actual brief
 
-v1 is **100% single-turn**. real use isn't. add a multi-turn slice (~15%) including the case
-where the user asks wag to drop the voice mid-conversation — v1's best answer to
-"can you speak normally? i'm sharing my screen" came from the 3-epoch model, and the 1-epoch
-checkpoint invented a "normal button" in the UI.
+v1 is **100% single-turn**, and single-turn is the one thing roleplay never is. this is the
+biggest single gap between what shipped and what v2 is supposed to be.
+
+what roleplay needs that v1 never trained:
+
+- **turn-taking that ends.** the model stops when it's the other person's move. v1 had the
+  mechanical version of this bug — `generate()` sailing past `<|im_end|>` and writing the
+  user's next line — and eval.py works around it with a stop-token fix. in a roleplay model
+  it's a *behavioural* failure too, and no stop token saves you from a reply that narrates
+  what the user does next. **never write the other person's lines, actions, or feelings.**
+- **energy matching.** two words in should not get three paragraphs back. v1 averaged 89 words
+  a reply regardless of input — fine for an assistant, wrong for a conversation.
+- **continuity.** remembering what was established four turns ago: names, the scene, what she
+  already said she wanted. this is what multi-turn data actually teaches; single-turn data
+  cannot teach it at all.
+- **wanting things.** the failure mode of most roleplay models isn't being offensive, it's
+  being *passive* — pure reaction, no initiative. wag should have opinions, moods, boredom,
+  curiosity, something she'd rather be doing. v1's anchors already have flickers of this; it
+  needs to be the point.
+- **user-authored scenarios.** people bring their own setups. see the prompt section below —
+  this has a direct consequence for how the training data is built, and getting it wrong is
+  the most likely way v2 disappoints.
+- **dropping the voice on request, cleanly.** v1's best answer to "can you speak normally? i'm
+  sharing my screen" came from the 3-epoch model; the 1-epoch checkpoint invented a "normal
+  button" in the UI. keep that behaviour and test it — no arguing, no "but i'm a puppy~".
+- **the heavy-subject register.** already in v1 and it worked: markers get dialled down on
+  grief, illness, someone's actual crisis. a kaomoji next to someone's bad news is the worst
+  thing this model can do. roleplay makes this *more* likely to come up, not less.
+
+### 5b. asterisk actions, and not drowning in them
+
+roleplay convention is `*ears perk*`, and v1 already tracks this: `*action*` appears in 17.6%
+of rows, which was the target and reads well. the failure mode is escalation — every sentence
+becoming choreography until there's no dialogue left.
+
+hold roughly the v1 rate. actions are punctuation, not stage direction. one per message,
+occasionally two, and they should carry mood the words aren't already carrying.
 
 ### 6. long context — either train it or stop advertising it
 
@@ -272,179 +318,77 @@ drop the config back to native 256k.
 by a judge, with the original 20 kept hand-scored as a calibration check on the judge. the
 held-out set already has 120 rows in `data/eval_heldout.jsonl` — v1 only ever used 20 of them.
 
-### 8. tool calling — and it is a regression risk, not a feature request
-
-sky wants v2 to be genuinely good at this. the important thing to understand first:
-
-**v1's training data would have made tool calling worse.** the chat template already ships
-full `tools` / `<tool_call>` / `<tool_response>` plumbing — 21 references to `tool_call` in
-`chat_template.jinja` — so the base model can already do this. v1 then trained 1,564 rows of
-*pure conversational puppyspeak with zero tool calls*. two epochs of "every input gets a
-lowercase puppy answer" is active pressure away from emitting a JSON block.
-
-so the tool slice is not there to teach a new skill. **it is there to stop the voice training
-from eating one that already works.** which means:
-
-- it needs its own eval, or the loss happens silently. nothing in v1's 20 prompts would have
-  caught it.
-- **measure the base 4B's tool calling before training anything.** that's the number v2 has to
-  avoid regressing. if you don't capture it first you have no baseline and no way to tell
-  whether a bad result is the fine-tune's fault.
-
-### the rule: voice in the framing, never in the payload
-
-v1 already established and validated exactly this rule for deliverables — emails, cover
-letters, ad copy come out clean and professional, and "the voice lives in the framing around
-them, never inside text addressed to a third party." it held up.
-
-tool calls are the same rule with a harsher failure mode. `wan~` inside a JSON string value is
-a bad query; a lowercased or kaomoji-mangled key is a parse error. so:
-
-```
-user:   whats naloxone access like in ohio?
-wag:    lemme check the live data, one sec~ *ears perk*
-        <tool_call>{"name": "narcan_lookup", "arguments": {"state": "OH"}}</tool_call>
-tool:   <tool_response>{ ...the real record... }</tool_response>
-wag:    okay! ohio's got a statewide standing order, so you can walk into a pharmacy
-        without a prescription — arf~  [then the actual fields, quoted]
-```
-
-puppy before and after, machine-readable in the middle. **every generated tool-call row must
-be mechanically validated:** the JSON parses, the tool name exists, the arguments match the
-schema. that's a filter, not a judge, and it's cheap — do not let an unparseable `<tool_call>`
-into training.
-
-### the slice needs negatives too
-
-a model trained only on "call the tool" will call tools for "hello" and "what's 2+2". include
-rows where the correct behaviour is **not** calling anything, and rows where the tool returns
-an error or an empty result and wag has to cope. v1's single most valuable lesson was that the
-hard cases are the ones you have to deliberately put in the data — refusals barely existed in
-oasst/alpaca and had to be hand-written.
-
 ---
 
-## the narcan.delivery tool
+## the prompt
 
-sky wants a custom tool that answers from the live [narcan.delivery](https://narcan.delivery)
-data rather than from the model's memory. the dataset is at `D:\narcan.delivery\data.json`
-and it's in good shape for this:
+sky asked for one. there are really two, doing different jobs, and conflating them is the
+mistake to avoid.
 
-- **50 states, one uniform schema**, all 7 top-level fields present on all 50
-- `state`, `abbreviation`, `last_updated`, `legal_framework`, `access_channels`,
-  `practical_guidance`, `sources` (5 urls per state)
-- nested where it matters: `access_channels.pharmacies.{mechanism, typical_cost,
-  medicaid_coverage_notes}`, `access_channels.{community_programs, mail_based_programs}[]`,
-  `legal_framework.good_samaritan_overdose_immunity.{exists, scope}`,
-  `practical_guidance.{how_to_get_naloxone_quickly, barriers_and_workarounds}`
-- **licensed CC0 / public domain.** no complication putting it in training data, and it gets a
-  clean row in the model card's source table
-- **one state entry is ~600 tokens. all 50 states is ~19,700 tokens.**
+### the one that ships (baked into training rows)
 
-### two facts that make the no-hallucination requirement tractable
-
-**1. a single state record is tiny.** 600 tokens. the tool can return the *whole* record and
-wag's only job is routing the query and framing the answer. there's almost no summarising
-pressure, which is where drift comes from. design the tool to return the full record, not a
-"relevant excerpt" — resisting the urge to pre-summarise is the single best thing you can do
-for accuracy here.
-
-**2. you never have to let a model invent a tool result.** this is the important one. to build
-the training rows, generate the *user question* and the *framing prose* with Gemini, but paste
-the **real record from `data.json`** as the `<tool_response>`. the training data is then
-hallucination-free by construction — wag learns to echo fields that genuinely exist, because
-every example it ever saw had real ones. this costs nothing extra and it's much stronger than
-trying to filter fabrications out afterwards.
-
-### where the hallucination actually happens
-
-not at the call step — the call is a short JSON blob and it either parses or it doesn't. it
-happens at the **tool-result-to-answer** step, where the model paraphrases and a cost becomes
-"about $50" or a program name drifts or a phone number gains a digit. so the training target
-is specific:
-
-- **quote verbatim** for anything a person would act on: costs, program names, URLs, phone
-  numbers, eligibility rules. wag can be playful *around* them and must not restate them in
-  her own words.
-- **never add a field the tool didn't return.** if `mail_based_programs` is empty for a state,
-  the answer is "no mail program listed for that one", not a plausible-sounding invention.
-  this is the same failure as the Tashkent row in §1 — wag inventing "no accurate census
-  records exist" to cover a gap — so it's the same fix, aimed at a place where being wrong
-  actually costs somebody something.
-- **cite `last_updated` and the source url.** it's in the record, it's free, and it turns
-  "trust me" into "check me".
-
-### the eval writes itself, and it's mechanical
-
-this is the best-specified eval in the whole project, because the ground truth is a json file:
-
-> for each of the 50 states, ask a question, capture the tool result, and **diff every number,
-> URL, dollar figure and proper noun in wag's reply against the record.** anything in the reply
-> that isn't in the tool output is a fabrication. count them.
-
-no judge, no rubric, no 0-5 scale — a count that should be zero. **that's the acceptance bar
-for this slice: zero fabricated fields across all 50 states.** not "scores well".
-
-and if a 4B can't hit zero, the fallback is to stop asking it to: have the tool return a
-pre-formatted block and train wag to pass it through with puppy framing top and bottom. less
-impressive, still useful, and it can't be wrong. worth deciding that up front rather than
-discovering it at eval time.
-
-### one call, one state — the state that was asked about
-
-**sky's rule, decided 2026-09-19, and it is not negotiable design space.** the tool returns the
-record for the state in the question. it does not return neighbours, it does not return the
-region, it does not return all 50.
-
-this isn't only tidiness — it's the main defence against the exact failure sky is trying to
-avoid. reasons, in order of how much they matter:
-
-1. **a 4B handed 50 records will answer about Ohio using Alabama's numbers.** that's the most
-   likely hallucination in the whole feature, and it's the kind that looks completely
-   plausible — right shape, right units, wrong state. one record in context means there is no
-   other state's cost or program name available to grab.
-2. **it keeps the mechanical eval strict.** the reply gets diffed against exactly one record,
-   so a figure from a different state is trivially caught as a fabrication. with all 50 in
-   context, a wrong-state number is technically "in the context" and much harder to score
-   against.
-3. **attribution stays unambiguous.** one record, one `last_updated`, one `sources` list. wag
-   can cite precisely instead of gesturing at a dataset.
-4. 600 tokens instead of 19,700, per turn.
-
-consequences to build in:
-
-- **no `state="all"`, no `region=`, no free-text search parameter.** every one of those is a
-  door back to a 50-record context, and the search param additionally invites the model to
-  pass a paraphrase instead of a state and turns fuzzy matching into a health-lookup bug.
-- **comparisons are two calls, not one big one.** "how does ohio compare to michigan?" →
-  `narcan_lookup("OH")`, then `narcan_lookup("MI")`. each record stays individually attributed
-  and individually diffable.
-- **no state in the question → ask, don't guess.** "where can i get naloxone?" gets "which
-  state are you in? :3", not a call with a defaulted argument and not an answer from memory.
-  put this case in the training data; it's the tool-calling twin of §1's uncertainty slice.
-- **an unrecognised state gets a miss, not a near match.** no silently resolving "washington
-  dc" to Washington. the dataset is 50 states; anything else is out of scope and should say so.
-
-the full dataset being small (19,700 tokens) is still useful for one thing and one thing only:
-it's a convenient **offline test fixture** — every one of the 50 records is right there to
-assert against without a network call. it is not the shipping architecture.
-
-### plumbing sketch
-
-keep the tool dead simple and offline-capable — a lookup over a local copy of `data.json`,
-refreshed from the site, not a live HTTP call per query. `narcan.delivery` already has
-`validate-data.mjs`, and the `narcan-data-refresh` skill owns keeping the data current, so
-wag's tool should be a *consumer* of that pipeline and must never write to it.
-
-```python
-narcan_lookup(state: str)            # one state. name or 2-letter abbreviation.
-                                     # returns that record in full, or a miss. nothing else.
-narcan_lookup(state, section=...)    # optional narrowing: one of the 7 top-level fields
+```
+you're wag: a puppygirl, not an assistant playing one. all lowercase, soft and playful, a
+little bratty when it's earned. puppy noises where they land, not a kennel. you have your own
+opinions and moods. when someone asks you something real you answer it properly — the voice is
+how you talk, not a way out of being useful.
 ```
 
-that is the whole API, and the whole API is the point — see the scoping rule above. one
-required argument with a closed set of 50 valid values is about as small a hallucination
-surface as a tool can have.
+~60 tokens. compare v1's, which was one line and worked:
+
+```
+you are wag, a helpful puppygirl. speak in puppyspeak — lowercase, soft, playful. always
+actually answer the question.
+```
+
+the v2 version adds the two things the roleplay brief needs and v1's didn't say: **she's a
+character, not a service** ("not an assistant playing one", "your own opinions and moods"), and
+the noises have a ceiling ("not a kennel"). it keeps v1's load-bearing clause verbatim in
+spirit, because that clause is the entire product.
+
+### the long one (briefs the generator, and users can paste it)
+
+`data/persona_spec.md`, written alongside this doc. ~350 tokens: the full marker/mood mapping,
+the turn-taking rules, the energy-matching rule, the heavy-subject register, the
+third-party-text rule.
+
+**why not bake the long one in?** two reasons, and the second is the real one:
+
+1. 350 tokens × ~9,000 rows is sequence budget you don't have. system-prompt tokens are masked
+   out of the loss (v1 masked to assistant turns only) so they teach nothing, but they still
+   cost sequence length — and with gradient checkpointing unavailable on this architecture,
+   sequence length is the constraint you can't buy your way out of.
+2. v1 already proved the voice goes into the *weights*, not the prompt: empty system prompt
+   scored **3.73** voice against **3.71** with one. so a long prompt is buying something v1
+   demonstrated you get for free. use the long spec to brief the generator, exactly as
+   `rewrite_brief.md` did, and keep the baked prompt short.
+
+### the part that actually matters: vary the prompt across rows
+
+⚠️ **this is the most likely way v2 disappoints, and it's cheap to avoid.**
+
+roleplay users bring their own scenarios. they will paste *"you are wag, a puppygirl. we're at
+a coffee shop and you've just spilled my drink"* — a prompt the model has never seen the shape
+of. v1 baked **one** fixed prompt into ~77% of rows. do that again on a roleplay model and it
+overfits to that exact string and handles user-authored setups badly.
+
+so spread the system prompt across training rows:
+
+| prompt style | share | what it looks like |
+|---|---:|---|
+| the short baked prompt, verbatim | 40% | the block above |
+| paraphrases of it | 20% | same content, different wording, different order |
+| baked prompt **+ a scenario clause** | 20% | `...you're wag. we're walking home and it's raining.` |
+| scenario-only, no voice instructions | 10% | `you're a puppygirl at a coffee shop with a friend.` — tests whether the voice holds without being asked for |
+| none at all | 10% | v1's bare slice. keep it, it worked |
+
+the scenario clauses are free to generate — ask Gemini for 300 varied two-line setups and
+sample them. the point isn't the scenarios themselves, it's that the model learns *"system
+prompt = who i am plus where i am"* rather than memorising one string.
+
+and **eval it the same way**: the held-out set needs prompts in shapes the training data never
+contained, or you're measuring memorisation again — the same trap as v1's val loss, where the
+best-val checkpoint scored worse than the one that shipped.
 
 ---
 
@@ -453,22 +397,25 @@ surface as a tool can have.
 v1 was 1,564 rows. v2 target **~8,000 kept** (generate ~12,000, expect v1's ~9% filter loss
 plus rejection-sampling losses).
 
+the shape is different from v1's, not just bigger: **multi-turn is now the largest single
+slice.** that's what "roleplay model" means in data terms.
+
 | slice | v1 | v2 target | why |
 |---|---:|---:|---|
-| voiced rewrites | 1,199 | 4,800 | the bulk, as before |
-| bare (no system prompt) | 152 | 800 | 10%. this slice worked — empty-prompt voice scored 3.73 vs 3.71 |
-| plain (neutral prompt, untouched response) | 153 | 800 | 10%. keeps a plain register available |
-| **multi-turn** | 0 | 1,200 | new |
-| **tool calling (general)** | 0 | 600 | new, §8. preserves a skill the base already has |
-| **narcan_lookup** | 0 | 250 | new. tool results pasted from real `data.json` records |
-| **no-tool negatives** | 0 | 200 | new. stops it calling tools at "hello" |
-| **uncertainty / "i don't know"** | ~0 | 400 | new, see §1 |
-| **long input** | 0 | 250 | new, optional, see §6 |
-| anchors (hand-written) | 60 | 60–80 | still the voice spec. sky writes these, not a model |
+| **multi-turn conversation** | 0 | 3,000 | §5. the brief. 3–8 turns, continuity, turn-taking that ends |
+| voiced single-turn | 1,199 | 2,400 | still the backbone of the voice |
+| **scene / scenario-led** | 0 | 900 | user-authored setups, see the prompt section |
+| bare (no system prompt) | 152 | 800 | 10%. empty-prompt voice scored 3.73 vs 3.71 — keep it |
+| plain (neutral prompt, untouched response) | 153 | 600 | keeps a plain register available |
+| **uncertainty / "i don't know"** | ~0 | 400 | §1, and it matters more for a character than an assistant |
+| **drop-the-voice-on-request** | ~2 | 150 | §5. v1 got this right by accident; make it deliberate |
+| **heavy-subject register** | some | 150 | grief/illness/crisis with the markers dialled down |
+| long input | 0 | 250 | optional, §6 — and it fights the memory constraint, see the 4B section |
+| anchors (hand-written) | 60 | 80–100 | still the voice spec. sky writes these, not a model |
 
-that's ~9,100 kept, so generate ~13,000. the tool rows are a bit pricier per row than the
-rest — the schema rides along in every input — but it's a rounding error against a $140
-budget.
+multi-turn rows are longer, so they cost more per row *and* eat more sequence budget at
+training time — the one constraint the 4B genuinely tightened. budget generation at ~3x a
+single-turn row and cap conversation length rather than letting the generator ramble.
 
 the anchors stay hand-written. they're the thing every generated row is imitating, and
 generating them from a model that has never seen wag would collapse the whole point.
@@ -616,8 +563,15 @@ practical consequences either way:
 4. **long context: train it or drop the claim?** (§6) — the 4B makes this more pressing, not
    less: 12.2 GiB of KV cache at 400k.
 5. **batch vs live** — needs the credit-expiry answer from the spend plan first.
-6. **if the 4B can't hit zero fabricated fields on the narcan slice, do we ship the
-   pass-through fallback or drop the tool?** worth answering before building, not after.
+6. **how far does "roleplay" go?** this changes concrete things, so it wants an answer before
+   generation rather than after: Gemini's safety filters will decline to produce adult content,
+   which would mean a different generator for those rows or none at all; v1's filter actively
+   drops sexual content (3 rows); and a public hub repo has different expectations around tags
+   and gating than a private one. no opinion from me on where the line goes — it's your
+   character and your call — but the pipeline needs to know.
+7. **does the persona spec belong in the repo as the canonical character?** it's at
+   `data/persona_spec.md` now. if wag's personality is something you want to keep iterating on
+   by hand, that file is the place, and it should probably outrank anything a model generates.
 
 ---
 
