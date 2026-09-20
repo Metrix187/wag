@@ -25,6 +25,7 @@ built them: data generation, training notebook, eval harness, gguf tooling.
 - [x] gguf actually loads — the converter claimed 25 blocks over 24, see below
 - [x] context extended to **400k** with YaRN (native is 256k), shipped enabled
 - [x] v0.1 published — [hub](https://huggingface.co/skyuu72/wag-2b) + this repo
+- [ ] **v2 in planning** — Qwen3.5-**4B** base, see [`V2_HANDOFF.md`](V2_HANDOFF.md)
 - [ ] **re-upload the ggufs to Drive.** the copies in `MyDrive/wag/gguf` still have the
       broken 25-block header — only the local ones got patched, since drive for desktop
       has no delta sync and a 4-byte poke means re-pushing all 6.7 GB.

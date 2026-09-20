@@ -29,6 +29,104 @@ single-shot rewrite. the arithmetic is in the next section and it's all been che
 
 ---
 
+## the base model: Qwen3.5-4B (decided)
+
+sky called it on 2026-09-19. **[`Qwen/Qwen3.5-4B`](https://huggingface.co/Qwen/Qwen3.5-4B)**,
+Apache-2.0, same `qwen3_5` VLM architecture as v1's 2B — which means every quirk in the
+landmines table below still applies, unchanged. read from the actual configs, not from memory:
+
+| | 2B (v1) | 4B (v2) |
+|---|---:|---:|
+| params | 2.27B | **4.66B** |
+| layers | 24 | **32** |
+| full-attention layers | 6 | **8** |
+| hidden / intermediate | 2048 / 6144 | **2560 / 9216** |
+| attn heads / kv heads | 8 / 2 | **16 / 4** |
+| head dim | 256 | 256 |
+| vocab (tied embeddings) | 248,320 | 248,320 |
+| native context | 262,144 | 262,144 |
+| `mtp_num_hidden_layers` | 1 | 1 |
+| vision tower | 0.30B | 0.30B |
+
+two things worth noticing. the **vision tower is identical** — all the growth is text-side, so
+the text-only export story is unchanged. and `mtp_num_hidden_layers` is still 1, so the gguf
+`block_count` bug will happen again: `fix_gguf_blocks.py` is already wired into `train.ipynb`
+and will handle it, but don't be surprised.
+
+**the data plan below is unaffected.** data is data. the Gemini spend plan and the three-day
+clock stand exactly as written — go generate.
+
+what *is* affected is training, and it's not a small thing.
+
+### full fine-tuning no longer fits
+
+v1's recipe was a full fine-tune in bf16 with bf16 Adam moments. same recipe at 4B:
+
+| | weights | grads | adam moments | before activations |
+|---|---:|---:|---:|---:|
+| 2B (v1, measured off the checkpoint) | 4.4 GB | 3.8 GB | 7.5 GB | **15.7 GB** |
+| 4B (projected) | 9.3 GB | 8.5 GB | 17.0 GB | **34.9 GB** |
+
+v1 sat at 15.7 GB on a 40 GB A100 with plenty of headroom. 4B wants ~35 GB *before a single
+activation*, and **gradient checkpointing is not available on this architecture** — v1 hit
+`CheckpointError` on the linear-attention layers and had to turn it off. so activations are
+whatever they are, uncompressed, on top of 35 GB.
+
+that does not fit on a 40 GB A100. it is not close.
+
+### so: LoRA, unless sky wants to pay for an 80 GB card
+
+| approach | GPU memory | checkpoint size | fits Colab A100 40GB? |
+|---|---:|---:|---|
+| full FT bf16 | ~35 GB + activations | ~26 GB each | **no** |
+| full FT + 8-bit Adam | ~26 GB + activations | ~18 GB each | maybe, tight, needs bitsandbytes back |
+| **LoRA (r32, all linears)** | **~10 GB + activations** | **~0.2 GB each** | **yes, comfortably** |
+| QLoRA (4-bit base) | ~3 GB + activations | ~0.2 GB each | yes, even on a 24 GB L4 |
+
+the checkpoint column matters as much as the memory one. full-FT 4B checkpoints are ~26 GB
+apiece (9.3 weights + 17 optimizer), and `save_total_limit=3` means **78 GB of Drive**. there
+was ~57 GB free on `G:` last time anyone looked. LoRA checkpoints are ~200 MB and the problem
+evaporates.
+
+`README.md` already notes LoRA at **lr 2e-4** as the fallback recipe, so the notebook is
+half-prepared for this already.
+
+**the open question, and it is genuinely open:** v1's best result was that the voice survived
+an *empty system prompt* — 3.73 voice with no prompt vs 3.71 with one. that means the
+personality got into the weights rather than riding on the prompt. nobody here has checked
+whether LoRA holds that as well as a full fine-tune does. rank 32 on all linear layers should,
+style being a fairly low-rank behaviour, but it's an assumption. **run `eval.py gen
+--no-system` early and compare against v1's 3.73 before committing to a long run.** if LoRA
+drops the bare-prompt voice, that's the signal to find an 80 GB card.
+
+### the long-input slice fights the no-checkpointing constraint
+
+with gradient checkpointing unavailable, activation memory scales straight with sequence
+length and there's no lever to pull. v1's data was ~384 tokens a row and it didn't matter. a
+long-input slice at a few thousand tokens, on a 32-layer model, on top of 10 GB of frozen
+weights, is where the OOM will come from.
+
+if the long-input slice survives the cut, **train it as a separate short run at batch 1** or
+drop the sequence budget for it. don't just mix 4k-token rows into a batch-4 run and hope.
+
+### 400k context costs 2.7x more on the 4B
+
+8 full-attention layers with 4 kv heads instead of 6 with 2, so the KV cache per token goes
+from 12 KB to **32 KB**:
+
+| context | 2B (v1) | 4B (v2) |
+|---|---:|---:|
+| 8,192 | 96 MB | 256 MB |
+| 262,144 (native) | 3.0 GiB | **8.0 GiB** |
+| 400,000 (YaRN) | 4.6 GiB | **12.2 GiB** |
+
+12 GiB of KV cache alongside a 2.9 GB q4_k_m model puts 400k out of reach for most people who
+will actually download this. this strengthens the case in §6 for either training the long
+context properly or dropping the claim back to native 256k — on the 4B, advertising 400k is a
+bigger cheque to write.
+
+---
+
 ## spend plan
 
 prices pulled from ai.google.dev/gemini-api/docs/pricing on 2026-09-19. **re-check before
@@ -267,14 +365,23 @@ was simply wrong. the judge must be allowed to flag the source, not just the rew
 v1: 288 steps, 3 epochs, lr 2e-5 full FT, cosine, 5% warmup, ~33 min on an A100, ~4 compute
 units.
 
-v2 at ~5x the data is roughly **2.5–3 hours** of A100 time and something like 20 compute
-units. that's over the hour mark, so **ask sky before kicking it off.**
+v2 is ~5x the data on a 2x model, so call it **4–6 hours** of A100 time and somewhere around
+35–40 compute units. that is well over the hour mark — **ask sky before kicking it off**, and
+expect the session to outlive at least one Colab timeout, which promotes v1's
+checkpoint-and-resume logic from a nicety to the thing the run depends on.
 
+- see the 4B section above for why this is **LoRA at lr 2e-4** rather than a full fine-tune at
+  2e-5. if it ends up full FT on an 80 GB card, keep 2e-5.
 - 3 epochs beat 1 on *helpfulness* (3.95 vs 3.60) even though val loss bottomed at step 100
   and then climbed. at 5x data, 2 epochs is probably the right starting guess — but check the
   same way v1 did, by reading side-by-side outputs, not by trusting val loss.
 - **preserve the mid-training checkpoint before `save_total_limit` eats it.** v1 only had the
-  1-epoch comparison because it got copied server-side in time.
+  1-epoch comparison because it got copied server-side in time. LoRA adapters are ~200 MB, so
+  at LoRA sizes just keep all of them.
+- **the v1 eval numbers are now a different model's numbers.** base Qwen3.5-2B scored 1.60 on
+  helpfulness; base Qwen3.5-**4B** will score higher and nobody knows how much. re-run the
+  base eval on the 4B before claiming any delta, or every number in the new card is
+  meaningless. budget for it — it's three `eval.py gen` runs, not a rounding error.
 - everything else in `train.ipynb` is correct as shipped. don't re-derive it.
 
 ---
@@ -318,13 +425,16 @@ practical consequences either way:
 
 ## open decisions, for sky
 
-1. **is v2 the same 2B, or a bigger base?** everything above assumes Qwen3.5-2B again, so the
-   v1 numbers stay comparable. a 4B/8B would probably fix the confabulation on its own and
-   make every eval number incomparable. pick one.
-2. **calibration or breadth?** the plan above does both. if the clock or the credits get
+1. ~~same 2B or bigger base?~~ **decided 2026-09-19: Qwen3.5-4B.** see the section above.
+2. **LoRA, or pay for an 80 GB card?** full FT of the 4B doesn't fit on Colab's A100 and the
+   checkpoints don't fit in Drive either. LoRA is free and fits; the risk is the bare-prompt
+   voice. there's a cheap early test for it described above — run that before deciding with
+   money.
+3. **calibration or breadth?** the plan above does both. if the clock or the credits get
    tight, which one survives?
-3. **long context: train it or drop the claim?** (#6)
-4. **batch vs live** — needs the expiry answer from #spend-plan first.
+4. **long context: train it or drop the claim?** (§6) — the 4B makes this more pressing, not
+   less: 12.2 GiB of KV cache at 400k.
+5. **batch vs live** — needs the credit-expiry answer from the spend plan first.
 
 ---
 
