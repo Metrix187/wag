@@ -246,8 +246,18 @@ def fetch(args) -> int:
         pool = [r for r in pool if r["source"] != "wag-seed"]   # re-added at the end
         print(f"  still want: alpaca {args.alpaca}, oasst {args.oasst}")
 
+    # ids are `alpaca-<scan offset>`, and a resumed run has to start scanning past the
+    # HIGHEST offset already used — not past the row count. those differ: v1 scanned
+    # ~2,000 rows to keep ~1,000, so its ids run well past len(pool). resuming at the
+    # count handed 37 already-used ids to completely different dataset rows, which
+    # merge then paired with v1's existing rewrites. 21 of those tripped the fact
+    # checks; the other 16 went into bulk.jsonl looking perfectly fine.
+    used = {r["id"] for r in pool}
+    taken = [int(r["id"].split("-", 1)[1]) for r in pool
+             if r["id"].startswith("alpaca-") and r["id"].split("-", 1)[1].isdigit()]
+
     print("pulling alpaca-cleaned (cc-by-4.0)...")
-    got, start = 0, len(seen)   # skip past what a previous run already took
+    got, start = 0, (max(taken) + 1 if taken else 0)
     for offset in range(start, start + args.alpaca * 2, 100):
         if got >= args.alpaca:
             break
@@ -269,8 +279,15 @@ def fetch(args) -> int:
             key = instr.strip()[:120]
             if key in seen:
                 continue
+            rid = f"alpaca-{offset + i}"
+            if rid in used:
+                # belt and braces on top of the offset fix above. an id that already
+                # means something must never come back meaning something else — rows
+                # downstream are keyed on it and nothing would notice the swap
+                continue
             seen.add(key)
-            pool.append({"id": f"alpaca-{offset + i}", "source": "alpaca-cleaned",
+            used.add(rid)
+            pool.append({"id": rid, "source": "alpaca-cleaned",
                          "license": "cc-by-4.0", "instruction": instr.strip(),
                          "original": out.strip()})
             got += 1
@@ -319,6 +336,14 @@ def fetch(args) -> int:
         pool.append({"id": f"refusal-{i:02}", "source": "wag-seed", "license": "n/a",
                      "instruction": seed, "original": ""})   # no original — write it fresh
     print(f"  + {len(REFUSAL_SEEDS)} refusal seeds")
+
+    # the pool is a keyed table as far as everything downstream is concerned — merge
+    # joins rewrites back onto it by id. a duplicate id silently pairs someone's rewrite
+    # with someone else's instruction, so it stops here rather than at training time
+    dupes = [i for i, n in Counter(r["id"] for r in pool).items() if n > 1]
+    if dupes:
+        sys.exit(f"refusing to write: {len(dupes)} duplicate id(s), e.g. {dupes[:5]}. "
+                 "the pool would no longer be safe to join on.")
 
     random.Random(20260823).shuffle(pool)
     DATA.mkdir(parents=True, exist_ok=True)
@@ -744,7 +769,8 @@ def merge(args) -> int:
         sys.exit("no shards dir")
     pool = {r["id"]: r for r in (json.loads(l) for l in POOL.open(encoding="utf-8"))}
 
-    merged, bad = {}, 0
+    merged, bad, seeds = {}, 0, 0
+    why_bad = Counter()
     for out in sorted(SHARDS.glob("out_*.jsonl")):
         for line in out.open(encoding="utf-8"):
             line = line.strip()
@@ -752,12 +778,46 @@ def merge(args) -> int:
                 continue
             try:
                 rec = json.loads(line)
-                src = pool[rec["id"]]
             except Exception:
                 bad += 1
+                why_bad["unparseable line"] += 1
+                continue
+
+            if rec.get("error"):
+                bad += 1
+                why_bad[f"generator error: {str(rec['error'])[:40]}"] += 1
+                continue
+
+            # seed rows are written from nothing, so there's no pool entry to merge
+            # against and no `rewritten` string — they arrive as a whole conversation.
+            # the old code looked every id up in the pool and required `rewritten`, which
+            # meant every one of these vanished into the "unusable lines" counter
+            if rec.get("messages"):
+                msgs = [m for m in rec["messages"] if m.get("content", "").strip()]
+                if len(msgs) < 2:
+                    bad += 1
+                    why_bad["seed row with under 2 turns"] += 1
+                    continue
+                merged[rec["id"]] = {
+                    "id": rec["id"], "source": rec.get("slice", "seed"),
+                    "license": "n/a", "slice": rec.get("slice", "seed"),
+                    "instruction": msgs[0]["content"], "original": "",
+                    "messages": msgs, "think": "", "suspect": "",
+                    **{k: rec[k] for k in ("scenario", "target_marker", "skipped")
+                       if rec.get(k)},
+                }
+                seeds += 1
+                continue
+
+            try:
+                src = pool[rec["id"]]
+            except KeyError:
+                bad += 1
+                why_bad["id not in source pool"] += 1
                 continue
             if not rec.get("rewritten", "").strip():
                 bad += 1
+                why_bad["empty rewrite"] += 1
                 continue
             merged[rec["id"]] = {
                 **{k: v for k, v in src.items() if k != "think"},
@@ -766,6 +826,8 @@ def merge(args) -> int:
                 # the agent's "the source answer is wrong" flag. carry it or the filter
                 # never sees it and the whole mechanism is silently a no-op
                 "suspect": (rec.get("suspect") or "").strip(),
+                **{k: rec[k] for k in ("slice", "scenario", "target_marker")
+                   if rec.get(k)},
             }
 
     with RAW.open("w", encoding="utf-8", newline="\n") as f:
@@ -773,8 +835,14 @@ def merge(args) -> int:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
 
     n_think = sum(1 for r in merged.values() if r["think"])
-    print(f"merged {len(merged)} rewrites ({bad} unusable lines skipped)")
+    print(f"merged {len(merged)}  ({len(merged)-seeds} rewrites, {seeds} conversations)")
     print(f"  with <think>: {n_think} ({100*n_think/max(len(merged),1):.0f}%)")
+    if bad:
+        # itemised rather than one number: "217 unusable lines" is how you lose a whole
+        # slice without noticing which one
+        print(f"  {bad} lines skipped:")
+        for reason, n in why_bad.most_common(10):
+            print(f"    {n:5}  {reason}")
     print(f"wrote -> {RAW}")
     return 0
 
@@ -817,6 +885,37 @@ def _facts(text: str) -> tuple[set, set, list]:
     return nums, urls, code
 
 
+# wag opening a line by narrating the person she's talking to. the generator's own parser
+# catches the mechanical version (a stray turn tag), but rows can arrive from the local
+# model path without ever touching it, and this is the one failure the multi-turn slice
+# exists to prevent — so it gets checked again at the last gate before training
+NARRATES_USER = re.compile(
+    r"^\s*\*[^*\n]{0,80}?\byou\b\s+(?:smile|laugh|nod|blush|sigh|grin|lean|reach|pull|"
+    r"look|glance|shiver|freeze|tense|relax|step|walk|move|whisper|murmur)",
+    re.I | re.M,
+)
+
+
+def _convo_shape(msgs: list[dict]) -> str | None:
+    """structural rules for a conversation row. returns a drop reason, or None."""
+    if len(msgs) < 2:
+        return "conversation under 2 turns"
+    if msgs[0]["role"] != "user":
+        return "conversation starts on an assistant turn"
+    if msgs[-1]["role"] != "assistant":
+        return "conversation ends on a user turn"
+    for a, b in zip(msgs, msgs[1:]):
+        if a["role"] == b["role"]:
+            return "two turns in a row from the same side"
+    for m in msgs:
+        if "<turn" in m["content"].lower():
+            return "turn tag leaked into a turn"
+    for m in msgs:
+        if m["role"] == "assistant" and NARRATES_USER.search(m["content"]):
+            return "wag narrates the user"
+    return None
+
+
 def filter_rows(args) -> int:
     if not RAW.exists():
         sys.exit(f"no {RAW} — run the rewrite stage first")
@@ -836,7 +935,17 @@ def filter_rows(args) -> int:
             manual[rid.strip()] = note.strip() or "manual drop"
 
     for r in rows:
-        orig, new = r["original"], r["rewritten"]
+        # a conversation row has no single `rewritten` and no `original` to check facts
+        # against. everything wag SAYS still gets checked, so the voice, content and
+        # tell rules all apply — they just apply across every assistant turn joined
+        # together, and the fact-preservation block below sits out because there's no
+        # source to preserve anything from
+        convo = r.get("messages")
+        if convo:
+            orig = ""
+            new = "\n\n".join(m["content"] for m in convo if m["role"] == "assistant")
+        else:
+            orig, new = r["original"], r["rewritten"]
         reason = None
 
         if r["id"] in manual:
@@ -845,6 +954,8 @@ def filter_rows(args) -> int:
             # the rewriting agent noticed the SOURCE answer was wrong. don't launder a
             # confident error into a nicer voice
             reason = "source answer is wrong"
+        elif convo:
+            reason = _convo_shape(convo)
 
         hits = {m.group(0).lower() for m in CONTENT_BANS.finditer(new)}
         # the intimate slice gets a density budget instead of zero tolerance; everything
