@@ -2,6 +2,49 @@
 
 *v2, plus the work deferred past it. one document.*
 
+> ## status — 2026-09-20
+>
+> the plan below still stands. these are the bits of it that turned out to be wrong when
+> someone actually ran them, kept here rather than edited in place so the reasoning stays
+> readable.
+>
+> **the first three commands don't work as written.** `shard -n 12000` produced 43 rows,
+> because `shard` skips anything that already has output and v1 had spent 1,774 of the
+> pool's 1,817. the pool is now topped up to 8,813.
+>
+> **⚠️ the top-up then corrupted 105 ids and it nearly shipped.** ids are the hf scan
+> offset, and resuming started the scan at `len(pool)` — but v1 scanned ~2,000 rows to
+> keep ~1,000, so its ids run past the row count. 105 already-used ids came back meaning
+> different source rows, and `merge` joins on id, so rewrites got paired with the wrong
+> instructions. the fact checks caught 21; **16 reached `bulk.jsonl` looking perfectly
+> fine.** fixed at the source, pool repaired, `fetch` now refuses to write duplicate ids
+> at all. this is why `tests/` exists.
+>
+> **the shard contract only covers half of v2.** `instruction` + `original` ->
+> `rewritten` fits ~4,050 rows. multi-turn, scenes, uncertainty, drop-the-voice,
+> follows-the-steer and intimate are **5,100 rows with no source to rewrite** — they need
+> generating from nothing, which is `gemini_convo.py`. `merge` and `filter` had to learn
+> the conversation shape too; before that, every seed row vanished into a counter reading
+> "N unusable lines skipped".
+>
+> **the cached prefix is ~1,986 tokens, not 3,400**, so option A lands cheaper than
+> budgeted. measured: **~$35 for all 5,100 seed rows**, ~$9 for the rewrite half at one
+> candidate each. money was never the constraint and is even less of one than this says.
+>
+> **🔴 blocked: the api returns `402 RESOURCE_EXHAUSTED — prepayment credits depleted`.**
+> the key is valid (`models.list` works, `gemini-3.8-flash` is there) but the project
+> can't spend. worth checking whether the $140 is google *cloud* credit rather than ai
+> studio prepay — they're separate pots and cloud credit needs the vertex backend, not an
+> api key.
+>
+> **still needed from sky:** the 3–5 hand-written boundary anchors for the intimate
+> slice. nothing else can define "slight", and the generated rows will imitate whatever
+> those anchors show.
+>
+> done since: slice-aware filter, gemini prices in the estimator, the 5-way prompt
+> spread, multi-turn `build`, both generators, the judge, the voice metric's
+> information-content hole (§2), multi-turn eval (§5), and `tests/`.
+
 **v2 is a conversational roleplay puppygirl. that's the whole brief.** not an assistant with a
 personality bolted on — a character worth talking to for its own sake, that still answers you
 properly when you actually ask something.

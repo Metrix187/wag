@@ -216,13 +216,22 @@ the rules the anchor set actually teaches, in case you want to argue with any of
 ```
 data/anchors.md        the 67 candidates — human-editable source of truth
 data/anchors.jsonl     generated. don't hand-edit
+data/persona_spec.md   the long-form character. briefs the generators (v2)
 data/rewrite_brief.md  generated voice spec + 8 few-shot anchors, fed to each subagent
+data/scenarios.json    scene setups for the v2 seed slices. hand-written starter set
 data/shards/           in_NNN.json (work) / out_NNN.jsonl (results)
+                       cand_NNN.jsonl (candidates) / judge_NNN.jsonl (verdicts)
 data/train.jsonl       1,564 rows, what actually gets trained on
 gen_anchors.py         parse + validate + lint the anchors
 gen_bulk.py            fetch -> shard -> [subagents] -> merge -> filter -> sample -> build
+slices.py              v2's slice mix + the 5-way system-prompt spread
+gemini_rewrite.py      fills shards from the source pool (the rewrite half)
+gemini_convo.py        writes conversations from nothing (the other ~5,100 rows)
+gemini_judge.py        picks the best of N candidates, verdicts to a sidecar
+ask_key.py             a box to paste the gemini api key into -> .env, gitignored
 train.ipynb            colab SFT, checkpoints + resume + gguf export
-eval.py                20 held-out prompts, scored on correct + in-voice
+eval.py                20 single prompts + 10 conversations, voice + turn-taking
+tests/                 stdlib regression suite. `python tests/run.py`
 out/                   eval generations for base / 3ep / 1ep / 3ep-no-system
 fix_gguf_blocks.py     block_count repair (see "running the gguf")
 gguf_meta.py           dump / set gguf metadata keys — applied the YaRN config
@@ -232,7 +241,24 @@ gguf/                  not in git. on the hub instead
 
 ```bash
 python gen_anchors.py --check
+python tests/run.py
 ```
+
+### the v2 pipeline, end to end
+
+```bash
+python ask_key.py                                  # paste the gemini key once
+python gen_bulk.py fetch --alpaca 7000 --oasst 1800
+python gen_bulk.py shard -n 6000 --size 45         # rewrite-shaped rows
+python gemini_convo.py scenarios -n 300            # scene bank
+python gemini_convo.py seed                        # seed shards, free
+python gemini_rewrite.py --all --candidates 3      # -> cand_NNN.jsonl
+python gemini_judge.py --shards all                # -> out_NNN.jsonl
+python gemini_convo.py fill --shards all           # -> out_NNN.jsonl
+python gen_bulk.py merge && python gen_bulk.py filter && python gen_bulk.py build
+```
+
+every stage that costs money takes `--dry-run` and prints the bill first.
 
 ## license
 
