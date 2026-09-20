@@ -48,7 +48,7 @@ def main() -> int:
     out1 = tmp / "gen_single.jsonl"
     E.gen(types.SimpleNamespace(backend="http", model="wag", url=f"http://127.0.0.1:{port}",
                                 out=str(out1), max_tokens=100, thinking=False,
-                                no_system=False, multi=False))
+                                no_system=False, multi=False, set=None))
     rows = [json.loads(l) for l in out1.open(encoding="utf-8")]
     print(f"\nsingle-turn: {len(rows)} rows, expected {len(E.EVAL_PROMPTS)}")
     if len(rows) != len(E.EVAL_PROMPTS):
@@ -69,7 +69,7 @@ def main() -> int:
     out2 = tmp / "gen_multi.jsonl"
     E.gen(types.SimpleNamespace(backend="http", model="wag", url=f"http://127.0.0.1:{port}",
                                 out=str(out2), max_tokens=100, thinking=False,
-                                no_system=False, multi=True))
+                                no_system=False, multi=True, set=None))
     rows = [json.loads(l) for l in out2.open(encoding="utf-8")]
     print(f"\nmulti-turn: {len(rows)} conversations, expected {len(E.MULTI_PROMPTS)}")
     if len(rows) != len(E.MULTI_PROMPTS):

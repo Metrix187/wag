@@ -234,6 +234,19 @@ def gen(args) -> int:
                 exchanges.append({"user": t, "reply": reply})
             rows.append({"id": cid, "category": cat, "turns": exchanges})
             print(f"  {cid} done ({len(exchanges)} turns)", flush=True)
+    elif getattr(args, "set", None):
+        # a prompt set carries its OWN system prompt per row — that's the point of it,
+        # since a third of the set exists to test prompt shapes the training data never
+        # contained. --no-system still overrides, for the bare-voice check
+        items = [json.loads(l) for l in Path(args.set).open(encoding="utf-8")]
+        for it in items:
+            sysmsg = None if args.no_system else it.get("system")
+            rows.append({**{k: it[k] for k in
+                            ("id", "category", "prompt", "prompt_style", "source")
+                            if k in it},
+                         "reference": it.get("reference", ""),
+                         "response": respond(_messages(it["prompt"], sysmsg))})
+            print(f"  {it['id']} done", flush=True)
     else:
         for pid, cat, prompt in EVAL_PROMPTS:
             rows.append({"id": pid, "category": cat, "prompt": prompt,
@@ -576,6 +589,8 @@ def main() -> int:
                    help="empty system prompt — tests whether the voice is baked in")
     g.add_argument("--multi", action="store_true",
                    help="run the multi-turn conversations instead of the single prompts")
+    g.add_argument("--set", default=None,
+                   help="a prompt set built by build_evalset.py (120 rows, §7)")
     g.set_defaults(fn=gen)
 
     v = sub.add_parser("voice", help="deterministic voice metrics for a gen file")
