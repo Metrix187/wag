@@ -826,7 +826,8 @@ def merge(args) -> int:
                 # the agent's "the source answer is wrong" flag. carry it or the filter
                 # never sees it and the whole mechanism is silently a no-op
                 "suspect": (rec.get("suspect") or "").strip(),
-                **{k: rec[k] for k in ("slice", "scenario", "target_marker")
+                **{k: rec[k] for k in ("slice", "scenario", "target_marker",
+                                       "judge_score", "judge_why")
                    if rec.get(k)},
             }
 
