@@ -160,7 +160,7 @@ output one per line, no numbering, no quotes, nothing else."""
 
 
 def gen_scenarios(args) -> int:
-    client = _client()
+    client = _client(args.backend)
     want = args.n
     got: list[str] = []
     if BANK.exists() and not args.restart:
@@ -380,7 +380,7 @@ def fill(args) -> int:
         print("-" * 60)
         return 0
 
-    client = _client()
+    client = _client(args.backend)
     lock = threading.Lock()
     handles: dict[int, object] = {}
     stats = Counter()
@@ -447,6 +447,8 @@ def main() -> int:
     sc.add_argument("-n", type=int, default=300)
     sc.add_argument("--model", default=DEFAULT_MODEL)
     sc.add_argument("--restart", action="store_true")
+    sc.add_argument("--backend", choices=["aistudio", "vertex"],
+                    default="aistudio")
     sc.set_defaults(fn=gen_scenarios)
 
     sd = sub.add_parser("seed", help="build seed shards from the bank (free)")
@@ -463,6 +465,8 @@ def main() -> int:
     fl.add_argument("--temperature", type=float, default=1.1)
     fl.add_argument("--limit", type=int, default=0)
     fl.add_argument("--dry-run", action="store_true")
+    fl.add_argument("--backend", choices=["aistudio", "vertex"],
+                    default="aistudio")
     fl.set_defaults(fn=fill)
 
     args = ap.parse_args()

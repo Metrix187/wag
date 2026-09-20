@@ -131,6 +131,8 @@ def main() -> int:
                     help="below this the row is dropped rather than written out")
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--backend", choices=["aistudio", "vertex"],
+                    default="aistudio")
     args = ap.parse_args()
 
     available = sorted(int(p.stem.split("_")[1]) for p in SHARDS.glob("cand_*.jsonl")
@@ -176,7 +178,7 @@ def main() -> int:
         print("-" * 60)
         return 0
 
-    client = _client()
+    client = _client(args.backend)
     lock = threading.Lock()
     outs: dict[int, object] = {}
     side: dict[int, object] = {}

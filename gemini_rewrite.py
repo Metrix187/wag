@@ -57,28 +57,55 @@ MARKER_MOODS = {
 }
 
 
-def _key() -> str:
+def _env(*names: str) -> str | None:
     """environment first, then the gitignored .env that ask_key.py writes."""
-    for name in ("GEMINI_API_KEY", "GOOGLE_API_KEY"):
-        if os.environ.get(name):
-            return os.environ[name]
-
-    env = Path(__file__).parent / ".env"
-    if env.exists():
-        for line in env.read_text(encoding="utf-8").splitlines():
+    for n in names:
+        if os.environ.get(n):
+            return os.environ[n]
+    envf = Path(__file__).parent / ".env"
+    if envf.exists():
+        for line in envf.read_text(encoding="utf-8").splitlines():
             k, _, v = line.strip().partition("=")
-            if k.strip() in ("GEMINI_API_KEY", "GOOGLE_API_KEY") and v.strip():
+            if k.strip() in names and v.strip():
                 return v.strip().strip('"').strip("'")
-
-    sys.exit("no api key — run `python ask_key.py` to paste one in, "
-             "or set GEMINI_API_KEY in the environment")
+    return None
 
 
-def _client():
+def _key() -> str:
+    key = _env("GEMINI_API_KEY", "GOOGLE_API_KEY")
+    if not key:
+        sys.exit("no api key — run `python ask_key.py` to paste one in, "
+                 "or set GEMINI_API_KEY in the environment")
+    return key
+
+
+def _client(backend: str = "aistudio"):
+    """ai studio (api key) or vertex (a cloud project).
+
+    these bill from completely separate pots, which is the whole reason this switch
+    exists: an ai studio key returns 402 "prepayment credits depleted" while google
+    cloud credit on the same account sits there untouched, because the key has no way
+    to reach it. vertex talks to the project instead.
+    """
     try:
         from google import genai
     except ImportError:
         sys.exit("pip install google-genai")
+
+    if backend == "vertex":
+        project = _env("GOOGLE_CLOUD_PROJECT", "GCP_PROJECT")
+        location = _env("GOOGLE_CLOUD_LOCATION", "GCP_LOCATION") or "us-central1"
+        if not project:
+            sys.exit("vertex needs a project id — run `python ask_key.py` and fill in "
+                     "the cloud fields, or set GOOGLE_CLOUD_PROJECT")
+        try:
+            return genai.Client(vertexai=True, project=project, location=location)
+        except Exception as e:  # noqa: BLE001
+            sys.exit(f"vertex client failed: {e}\n\nvertex authenticates with application "
+                     "default credentials, not an api key. if you haven't already:\n"
+                     "  gcloud auth application-default login\n"
+                     "  gcloud services enable aiplatform.googleapis.com")
+
     return genai.Client(api_key=_key())
 
 
@@ -247,6 +274,9 @@ def main() -> int:
     ap.add_argument("--candidates", type=int, default=1,
                     help=">1 writes cand_NNN.jsonl for a judge pass instead of out_NNN.jsonl")
     ap.add_argument("--concurrency", type=int, default=8)
+    ap.add_argument("--backend", choices=["aistudio", "vertex"],
+                    default="aistudio",
+                    help="vertex bills a cloud project instead of an api key")
     ap.add_argument("--temperature", type=float, default=1.0)
     ap.add_argument("--limit", type=int, default=0, help="stop after N rows (smoke test)")
     ap.add_argument("--dry-run", action="store_true", help="print the bill, spend nothing")
@@ -307,7 +337,7 @@ def main() -> int:
     if args.model not in PRICES:
         print(f"  !! {args.model} has no price row, so that estimate is a guess")
 
-    client = _client()
+    client = _client(args.backend)
     lock = threading.Lock()
     handles: dict[int, object] = {}
     stats = {"ok": 0, "err": 0, "in": 0, "out": 0, "cached": 0, "think_missing": 0}
