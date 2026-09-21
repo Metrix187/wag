@@ -1,8 +1,9 @@
 """the convo parser is the gate between gemini and training data, so it gets tests.
 
-the cases that matter are the malformed ones — a row that ends on a user turn, or has
-wag narrating the other person, is exactly the behaviour these rows are meant to teach
-AGAINST, so it must not sail through.
+the cases that matter are the malformed ones. wag narrating the other person is exactly
+the behaviour these rows exist to teach AGAINST, so it must not sail through. a stray turn
+at either end is a different animal — that's the generator being untidy, not the data being
+wrong, so it gets trimmed and the row lives.
 """
 import pathlib
 import sys
@@ -22,9 +23,13 @@ CASES = [
      f"\n\n{T.format('hey')}\n  \n{W.format('hi~')}\n", True, 2),
     ("preamble before the tags",
      "Here is the conversation:\n" + T.format("hey") + W.format("hi~"), True, 2),
-    ("ends on a user turn",
-     T.format("hey") + W.format("hi~") + T.format("still there?"), False, 0),
-    ("starts on a wag turn",
+    # both ends get trimmed rather than rejected — local models hand the turn back at
+    # the end constantly and the exchange underneath is perfectly good
+    ("trailing user turn is trimmed",
+     T.format("hey") + W.format("hi~") + T.format("still there?"), True, 2),
+    ("leading wag turn is trimmed",
+     W.format("oh hi") + T.format("hey") + W.format("hi~"), True, 2),
+    ("nothing survives the trim",
      W.format("hi~") + T.format("hey"), False, 0),
     ("two wag turns in a row",
      T.format("hey") + W.format("hi~") + W.format("also hi"), False, 0),

@@ -30,7 +30,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 from gemini_rewrite import DEFAULT_MODEL, MARKER_MOODS, _client, _one_call
-from gen_bulk import DATA, PRICES, SHARDS, build_fewshot, load_anchors, prices_for
+from gen_bulk import DATA, PRICES, SHARDS, load_anchors, prices_for
 from slices import SLICES
 
 SPEC = DATA / "persona_spec.md"
@@ -126,7 +126,12 @@ SLICE_SCENES = {
     "dropvoice": "none",      # the request is the point
 }
 
-TURN_RE = re.compile(r'<turn\s+role="(user|wag)"\s*>(.*?)</turn>', re.DOTALL | re.I)
+# the role spelling is transport, not content, so it's worth being generous about. local
+# models type role="wan" a fair bit — her own verbal tic bleeding into the tag — and some
+# reach for "assistant". the alternation and ordering checks below still do the real work,
+# and anything that isn't "user" maps to her side anyway
+TURN_RE = re.compile(r"""<turn\s+role=["']?(user|wag|wan|assistant|model)["']?\s*>"""
+                     r"(.*?)</turn>", re.DOTALL | re.I)
 
 CONVO_SYSTEM = """\
 you write training conversations for "wag", a puppygirl chat model. you are writing BOTH
@@ -161,11 +166,41 @@ def load_spec() -> str:
     return SPEC.read_text(encoding="utf-8")
 
 
+def build_fewshot_turns(k: int = 6) -> str:
+    """the same anchors `build_fewshot` uses, wearing this file's output tags.
+
+    gemini reads the output format off the instructions at the top. a 12B rp model reads
+    it off whatever it saw last, and the first colab run proved it: the anchors went in
+    dressed as <example><user>...</wag></example> and the replies came straight back the
+    same way, </example> and all, without a single <turn> tag in them. so the voice
+    examples now wear the tags we actually want back. think blocks go too — conversations
+    don't have them and showing one is an invitation.
+    """
+    by_cat: dict[str, list[dict]] = {}
+    for a in load_anchors():
+        by_cat.setdefault(a["category"], []).append(a)
+    picked = [by_cat[c][0] for c in ("chat", "emotional", "technical", "idk", "clarify",
+                                     "code", "refusal", "math") if by_cat.get(c)]
+    return "\n\n".join(
+        f'<turn role="user">{a["user"]}</turn>\n'
+        f'<turn role="wag">{a["assistant"]}</turn>'
+        for a in picked[:k])
+
+
+FORMAT_REMINDER = """\
+# the shape of your reply
+
+<turn> tags only, exactly as in the examples above. no <example>, no <wag>, no <think>,
+no markdown fences, no preamble, nothing after the last tag. it opens on role="user",
+closes on role="wag", and alternates the whole way down."""
+
+
 def build_prefix() -> str:
     """system + persona spec + a few anchors. identical across calls, so it caches."""
-    fewshot = build_fewshot(load_anchors(), k=6)
     return (f"{CONVO_SYSTEM}\n\n# the character\n\n{load_spec()}\n\n"
-            f"# how she sounds — single turns, for voice reference only\n\n{fewshot}\n")
+            f"# how she sounds\n\nsingle exchanges, for voice reference only — a real "
+            f"row runs longer than any of these:\n\n{build_fewshot_turns(k=6)}\n\n"
+            f"{FORMAT_REMINDER}\n")
 
 
 # ------------------------------------------------------------------ scenario bank
@@ -326,6 +361,16 @@ def parse_convo(text: str) -> tuple[list[dict], str]:
         if any(h in low for h in REFUSAL_HINTS):
             return [], "model declined"
         return [], "no <turn> tags in the reply"
+    # an rp model wants to hand the turn back, so it tacks a user line on the end; now
+    # and then it opens on her instead. both are format excess rather than bad content —
+    # the conversation underneath is fine and throwing the row away over one stray tag is
+    # just expensive. trim the ends, then hold everything to the same checks as before
+    if turns[0]["role"] != "user":
+        turns = turns[1:]
+    if turns and turns[-1]["role"] != "assistant":
+        turns = turns[:-1]
+    if not turns:
+        return [], "nothing left after trimming the ends"
     if turns[0]["role"] != "user":
         return [], "starts on a wag turn"
     if turns[-1]["role"] != "assistant":

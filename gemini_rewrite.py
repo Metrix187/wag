@@ -85,6 +85,14 @@ class _LocalModels:
     """the /v1/chat/completions half of an openai-compatible server, wearing the genai
     client's interface so `_one_call` doesn't need to know the difference."""
 
+    # lm studio quietly applies a sampler floor for you; vllm's openai server does not —
+    # it ships top_p=1, top_k=-1, min_p=0, i.e. no truncation whatsoever. mistral-nemo has
+    # a 131k vocab, so at temp 1.1 the untruncated tail is most of the probability mass and
+    # you get multilingual token soup that still parses as "a reply". min_p rescues it:
+    # everything below 5% of the top token's probability is dropped before sampling, which
+    # scales with how confident the model is instead of a fixed nucleus.
+    SAMPLER = {"min_p": 0.05, "repetition_penalty": 1.05}
+
     def __init__(self, base_url: str, timeout: int = 600):
         self.base_url = base_url.rstrip("/")
         self.timeout = timeout
@@ -100,6 +108,7 @@ class _LocalModels:
             "messages": msgs,
             "temperature": getattr(config, "temperature", 1.0),
             "max_tokens": getattr(config, "max_output_tokens", 2048),
+            **self.SAMPLER,
         }).encode()
         req = urllib.request.Request(f"{self.base_url}/chat/completions", data=body,
                                      headers={"Content-Type": "application/json"})
