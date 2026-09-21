@@ -27,8 +27,20 @@ class Handler(BaseHTTPRequestHandler):
     def do_POST(self):
         body = json.loads(self.rfile.read(int(self.headers["Content-Length"])))
         SEEN.append((self.path, body))
+        if getattr(Handler, "chat_501", False) and self.path.endswith("/chat/completions"):
+            msg = json.dumps({"error": {"message": "`MistralCommonBackend` does not "
+                                                   "implement `get_chat_template`.",
+                                        "code": 501}}).encode()
+            self.send_response(501)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(msg)))
+            self.end_headers()
+            self.wfile.write(msg)
+            return
+        payload = ({"text": REPLY} if self.path.endswith("/v1/completions")
+                   else {"message": {"content": REPLY}})
         out = json.dumps({
-            "choices": [{"message": {"content": REPLY}}],
+            "choices": [payload],
             "usage": {"prompt_tokens": 1234, "completion_tokens": 56},
         }).encode()
         self.send_response(200)
@@ -88,6 +100,41 @@ def main() -> int:
     fails += not ok
     print(f"  {'ok  ' if ok else 'FAIL'}  an unknown REMOTE model still warns via the "
           f"fallback ({p_in2})")
+
+    # ---- and the server that can't do chat at all -----------------------------
+    # vllm serves mistral repos through a tokenizer backend that raises
+    # NotImplementedError on get_chat_template, so /v1/chat/completions 501s while
+    # /v1/completions works fine. the shim has to notice and switch by itself.
+    SEEN.clear()
+    GR._LocalModels._use_completions = False
+    Handler.chat_501 = True
+    got2 = GR._one_call(client, "some-local-model", "SYSTEM HERE", "USER HERE", 0.7)
+    paths = [p for p, _ in SEEN]
+    last = SEEN[-1][1]
+    checks2 = [
+        ("tries chat first, then falls back",
+         paths == ["/v1/chat/completions", "/v1/completions"]),
+        ("falls back with a prompt, not messages",
+         "prompt" in last and "messages" not in last),
+        ("prompt uses mistral's turn format",
+         last.get("prompt") == "[SYSTEM_PROMPT]SYSTEM HERE[/SYSTEM_PROMPT]"
+                               "[INST]USER HERE[/INST]"),
+        ("no literal bos token in the prompt", "<s>" not in last.get("prompt", "")),
+        ("text still comes back", got2["text"] == REPLY),
+        ("usage still reported", got2["in_tok"] == 1234 and got2["out_tok"] == 56),
+    ]
+    for name, ok in checks2:
+        fails += not ok
+        print(f"  {'ok  ' if ok else 'FAIL'}  {name}")
+
+    # and it must not keep retrying chat on every later call
+    SEEN.clear()
+    GR._one_call(client, "some-local-model", "S", "U", 0.7)
+    ok = [p for p, _ in SEEN] == ["/v1/completions"]
+    fails += not ok
+    print(f"  {'ok  ' if ok else 'FAIL'}  later calls skip the dead chat endpoint")
+    Handler.chat_501 = False
+    GR._LocalModels._use_completions = False
 
     srv.shutdown()
     print("\nall good" if not fails else f"\n{fails} FAILED")

@@ -82,8 +82,12 @@ def _key() -> str:
 
 
 class _LocalModels:
-    """the /v1/chat/completions half of an openai-compatible server, wearing the genai
-    client's interface so `_one_call` doesn't need to know the difference."""
+    """an openai-compatible server wearing the genai client's interface, so `_one_call`
+    doesn't need to know the difference.
+
+    prefers /v1/chat/completions and drops to /v1/completions if the server can't do
+    chat — see `_use_completions` below for why that happens more often than you'd think.
+    """
 
     # lm studio quietly applies a sampler floor for you; vllm's openai server does not —
     # it ships top_p=1, top_k=-1, min_p=0, i.e. no truncation whatsoever. mistral-nemo has
@@ -97,27 +101,75 @@ class _LocalModels:
         self.base_url = base_url.rstrip("/")
         self.timeout = timeout
 
-    def generate_content(self, model: str, contents: str, config=None):
+    # some servers can't do /v1/chat/completions at all. vllm picks a mistral-native
+    # tokenizer backend for mistral repos, and that backend raises NotImplementedError on
+    # get_chat_template — so every chat call comes back 501 while /v1/completions is
+    # perfectly happy. rather than make that a config knob nobody will remember, the first
+    # 501 flips this and every later call goes the other way.
+    _use_completions = False
+
+    def _post(self, path: str, payload: dict) -> dict:
+        import urllib.error
         import urllib.request
 
+        req = urllib.request.Request(f"{self.base_url}{path}",
+                                     data=json.dumps(payload).encode(),
+                                     headers={"Content-Type": "application/json"})
+        try:
+            with urllib.request.urlopen(req, timeout=self.timeout) as r:
+                return json.load(r)
+        except urllib.error.HTTPError as e:
+            # vllm puts the actual reason in the body and urllib throws it away, so a
+            # context overflow or a rejected sampler arg both arrive as a bare "HTTP
+            # Error 400: Bad Request" — six times, once per backoff. read the body.
+            detail = e.read().decode("utf-8", "replace")[:400]
+            err = RuntimeError(f"HTTP {e.code} from the local server: {detail}")
+            err.status = e.code  # type: ignore[attr-defined]
+            raise err from None
+
+    @staticmethod
+    def _as_prompt(system: str | None, user: str) -> str:
+        """mistral's own turn format, lifted from the template in the model repo.
+
+        no bos token here on purpose — /v1/completions tokenises with add_special_tokens,
+        so writing a literal <s> gets you two of them and a model that starts oddly.
+        """
+        head = f"[SYSTEM_PROMPT]{system}[/SYSTEM_PROMPT]" if system else ""
+        return f"{head}[INST]{user}[/INST]"
+
+    def generate_content(self, model: str, contents: str, config=None):
         system = getattr(config, "system_instruction", None)
-        msgs = ([{"role": "system", "content": system}] if system else []) + \
-               [{"role": "user", "content": contents}]
-        body = json.dumps({
+        common = {
             "model": model,
-            "messages": msgs,
             "temperature": getattr(config, "temperature", 1.0),
             "max_tokens": getattr(config, "max_output_tokens", 2048),
             **self.SAMPLER,
-        }).encode()
-        req = urllib.request.Request(f"{self.base_url}/chat/completions", data=body,
-                                     headers={"Content-Type": "application/json"})
-        with urllib.request.urlopen(req, timeout=self.timeout) as r:
-            d = json.load(r)
+        }
+
+        if not _LocalModels._use_completions:
+            msgs = ([{"role": "system", "content": system}] if system else []) + \
+                   [{"role": "user", "content": contents}]
+            try:
+                d = self._post("/chat/completions", {**common, "messages": msgs})
+                text = d["choices"][0]["message"]["content"]
+            except RuntimeError as e:
+                if getattr(e, "status", None) != 501:
+                    raise
+                _LocalModels._use_completions = True
+                print("  local server can't do chat completions, switching to "
+                      "/v1/completions with mistral's own turn format", flush=True)
+                d = None
+        else:
+            d = None
+
+        if d is None:
+            d = self._post("/completions",
+                           {**common, "prompt": self._as_prompt(system, contents)})
+            text = d["choices"][0]["text"]
 
         u = d.get("usage") or {}
         return types.SimpleNamespace(
-            text=d["choices"][0]["message"]["content"],
+            text=text,
             usage_metadata=types.SimpleNamespace(
                 prompt_token_count=u.get("prompt_tokens", 0),
                 candidates_token_count=u.get("completion_tokens", 0),
