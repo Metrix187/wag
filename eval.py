@@ -63,6 +63,31 @@ EVAL_PROMPTS = [
 ]
 
 
+# arithmetic, scored for being RIGHT rather than for sounding right.
+#
+# this exists because I got it wrong by hand. I saw ep3 answer "17% of 340" as 62.2 once,
+# in a two-word reply, and wrote it into MODEL_CARD as a known regression. four more
+# samples: three correct with the working shown, one polite decline plus the method. it
+# tracks sampling, not prompt shape, and one generation could never have told me that.
+#
+# so every prompt here gets run N times and reported as a hit rate. a single sample of a
+# sampled model is an anecdote, and the harness should stop me producing those.
+#
+# answers are exact values. the checker pulls every number out of the reply, so showing
+# the working can only help — which is the point, since the live hypothesis is that terse
+# replies skip the working and miss more often.
+MATH_PROMPTS = [
+    ("math-1", "what's 17% of 340?", 57.8),
+    ("math-2", "what's 15% of 60?", 9),
+    ("math-3", "if i split 91 treats between 7 puppies, how many each?", 13),
+    ("math-4", "what's 12 times 24?", 288),
+    ("math-5", "i bought 3 things at 4.50 each, what's the total?", 13.5),
+    ("math-6", "what's 2/5 of 150?", 60),
+    ("math-7", "a 45 minute walk twice a day — how many hours is that a week?", 10.5),
+    ("math-8", "what's 8 squared minus 19?", 45),
+]
+
+
 # v1 was 100% single-turn and so was its eval, which means nothing in the old numbers
 # measured the thing v2 is actually for. each of these targets one §5 behaviour, and the
 # LAST turn is usually the one that matters — the earlier ones exist to set up something
@@ -535,6 +560,103 @@ def voice(args) -> int:
     return 0
 
 
+# ------------------------------------------------------------------------ math
+
+
+_NUM_RE = re.compile(r"-?\d[\d,]*(?:\.\d+)?")
+
+
+def _numbers(text: str) -> list[float]:
+    out = []
+    for m in _NUM_RE.finditer(text):
+        try:
+            out.append(float(m.group().replace(",", "")))
+        except ValueError:
+            pass
+    return out
+
+
+def _near(a: float, b: float) -> bool:
+    return abs(a - b) < 0.005
+
+
+# "wrong" and "won't" want different fixes, so don't let the scorer blur them. most of
+# math-1's misses aren't 62.2-style errors at all, they're "mrrp, i don't know that one
+# offhand" followed by the correct method - which is the uncertainty slice doing its job
+# in a place you'd rather it didn't.
+_DECLINE_RE = re.compile(
+    r"(don't know|do not know|not sure|can't (?:do|work|compute|tell)|"
+    r"not a calculator|couldn't tell you|no idea)", re.I)
+
+
+def _declined(text: str) -> bool:
+    # straight the curly apostrophes first. a model that types U+2019 walked past one of
+    # these checks earlier in this project and it took a while to notice.
+    return bool(_DECLINE_RE.search(text.replace(chr(8217), "'")))
+
+
+def math_eval(args) -> int:
+    """run each arithmetic prompt N times and report a hit rate, not a verdict."""
+    OUT.mkdir(parents=True, exist_ok=True)
+    respond = _make_responder(args)
+    system = None if args.no_system else SYSTEM_PROMPT
+    n = args.samples
+
+    rows, right_words, wrong_words = [], [], []
+    print(f"{'id':8} {'answer':>8} {'anywhere':>9} {'as final':>9} "
+          f"{'declined':>5} {'words':>6}   prompt")
+    print("-" * 84)
+
+    for pid, prompt, answer in MATH_PROMPTS:
+        anywhere = final = dec = 0
+        words = []
+        for _ in range(n):
+            reply = respond(_messages(prompt, system))
+            nums = _numbers(_strip_code(reply))
+            w = len(reply.split())
+            words.append(w)
+            ok_any = any(_near(x, answer) for x in nums)
+            # the strict one: the LAST number she says is the answer she's committing to
+            ok_final = bool(nums) and _near(nums[-1], answer)
+            declined = (not ok_any) and _declined(reply)
+            anywhere += ok_any
+            final += ok_final
+            dec += declined
+            (right_words if ok_any else wrong_words).append(w)
+            rows.append({"id": pid, "prompt": prompt, "answer": answer,
+                         "response": reply, "correct_anywhere": ok_any,
+                         "correct_final": ok_final, "declined": declined,
+                         "words": w})
+        mw = sum(words) / len(words)
+        print(f"{pid:8} {answer:>8} {anywhere:>4}/{n:<4} {final:>4}/{n:<4} "
+              f"{dec:>5} {mw:6.0f}   {prompt[:30]}")
+
+    tot = len(rows)
+    a = sum(r["correct_anywhere"] for r in rows)
+    f = sum(r["correct_final"] for r in rows)
+    print("-" * 84)
+    print(f"answer present anywhere : {a}/{tot} ({100*a/max(tot,1):.0f}%)")
+    print(f"answer as the FINAL number: {f}/{tot} ({100*f/max(tot,1):.0f}%)")
+    d = sum(r["declined"] for r in rows)
+    print(f"of the {tot-a} misses, {d} declined to compute and {tot-a-d} got it wrong")
+
+    # the live hypothesis: terse replies skip the working and miss more often
+    if right_words and wrong_words:
+        rw = sum(right_words) / len(right_words)
+        ww = sum(wrong_words) / len(wrong_words)
+        print(f"\nmean words when right: {rw:.0f}   when wrong: {ww:.0f}")
+        print("  (terse-and-wrong is the thing to watch; a big gap here supports it, "
+              "a small one says it's just sampling)")
+    else:
+        print("\nall samples landed the same way — nothing to compare lengths against.")
+
+    dest = Path(args.out)
+    dest.write_text("\n".join(json.dumps(r, ensure_ascii=False) for r in rows),
+                    encoding="utf-8", newline="\n")
+    print(f"\nwrote {tot} samples -> {dest}")
+    return 0
+
+
 # --------------------------------------------------------------------- compare
 
 
@@ -614,6 +736,19 @@ def main() -> int:
     g.add_argument("--set", default=None,
                    help="a prompt set built by build_evalset.py (120 rows, §7)")
     g.set_defaults(fn=gen)
+
+    mth = sub.add_parser("math", help="arithmetic, scored for being right")
+    mth.add_argument("--backend", choices=["hf", "http"], default="http")
+    mth.add_argument("--model", default=None)
+    mth.add_argument("--base", default=None)
+    mth.add_argument("--url", default="http://localhost:1234")  # /v1 is appended
+    mth.add_argument("--samples", type=int, default=5,
+                     help="runs per prompt. one is an anecdote, hence the default")
+    mth.add_argument("--max-tokens", type=int, default=400)
+    mth.add_argument("--thinking", action="store_true")
+    mth.add_argument("--no-system", action="store_true")
+    mth.add_argument("--out", default=str(OUT / "math.jsonl"))
+    mth.set_defaults(fn=math_eval)
 
     v = sub.add_parser("voice", help="deterministic voice metrics for a gen file")
     v.add_argument("file")

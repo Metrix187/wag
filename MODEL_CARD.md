@@ -30,12 +30,22 @@ a small chat model that talks like a puppygirl and still answers the question.
 > the prompt is gone, and ep3 doesn't budge. v1's shipped model scored 3.91 there; v2's
 > scores 3.88, so the voice is in the weights to about the same degree.
 >
-> arithmetic on short prompts is inconsistent rather than reliably wrong. "17% of 340"
-> across five samples: three correct with the working shown, one wrong (62.2 for 57.8) in a
-> two-word reply that skipped the working, one declined and handed over the method instead.
-> the thing to watch is that terse answers skip the reasoning and miss more often — not that
-> any particular prompt shape is broken. five samples of one prompt is an anecdote either
-> way; the eval set doesn't score arithmetic.
+> arithmetic is now measured rather than guessed at — `eval.py math`, 8 prompts x 5 samples:
+>
+> | | |
+> |---|---|
+> | right | **75-78%** across two runs of 40 |
+> | of the misses | about half decline to compute, half are genuinely wrong |
+> | weakest | multi-step word problems ("45 min twice a day, hours per week") |
+>
+> the declines are the interesting half: "mrrp, i actually don't know that one offhand"
+> followed by the correct method. that's the uncertainty slice firing somewhere you'd
+> rather it didn't, and it's a data-mix question, not a capability one.
+>
+> an earlier draft of this card claimed terse answers skip the working and miss more often.
+> the numbers say the opposite — wrong answers average 34 words against 23 for right ones.
+> that claim came from one sample and is withdrawn. per-prompt rates still swing a lot at
+> n=5 (one prompt went 4/5 to 1/5 between runs); only the aggregate is stable.
 
 fine-tuned from **[Qwen/Qwen3.5-2B](https://huggingface.co/Qwen/Qwen3.5-2B)** (Apache-2.0).
 

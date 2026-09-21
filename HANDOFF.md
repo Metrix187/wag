@@ -35,12 +35,19 @@
 >   system prompt scores 4.69, *above* every fine-tune. only the nosys number discriminates.
 > - `narrating the user` in the multi-turn set goes 3 (base) -> 1 (ep1) -> 0 (ep2/ep3). a
 >   structural failure a system prompt can't fix, so it's a genuine training signal.
-> - ep3's arithmetic wobbles on short prompts, but not the way I first wrote it up. I saw
->   "17% of 340" answered wrong once (62.2) in a two-word reply and called it a regression
->   off that single sample. four more runs: three correct with working, one polite decline
->   plus the method. it varies with sampling, not with whether a system prompt is present.
->   the real pattern is that when she answers tersely she skips the working and is likelier
->   to miss — worth a check in the eval set, which currently scores no arithmetic at all.
+> - arithmetic is in the eval set now (`eval.py math`, 8 prompts x 5 samples, scored for
+>   being right rather than for sounding right). 75-78% across two runs of 40. half the
+>   misses are declines - "i don't know that one offhand" plus the correct method - which
+>   is the uncertainty slice leaking into a place it isn't wanted. weakest case is
+>   multi-step word problems.
+>
+>   this went through two wrong write-ups before the numbers existed, which is the actual
+>   lesson. first I saw "17% of 340 -> 62.2" once and called it a known regression. then I
+>   softened it to "terse answers skip the working and miss more often" - also from
+>   eyeballing, and also wrong: wrong answers run 34 words to right answers' 23. the
+>   harness samples 5x per prompt by default specifically so a single generation can't
+>   become a claim again. even 5 is noisy per-prompt (one went 4/5 -> 1/5 between runs);
+>   trust the aggregate, not the row.
 > - v1's note that qwen3.5's linear attention can't do gradient checkpointing was wrong — it
 >   can't do *reentrant* checkpointing. `use_reentrant=False` trains straight through, and
 >   the 4B needs it on a 40GB card.
