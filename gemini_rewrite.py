@@ -26,12 +26,14 @@ import re
 import sys
 import threading
 import time
+import types
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 from gen_bulk import (
     DATA,
     PRICES,
+    prices_for,
     REWRITE_SYSTEM,
     SHARDS,
     build_fewshot,
@@ -79,6 +81,49 @@ def _key() -> str:
     return key
 
 
+class _LocalModels:
+    """the /v1/chat/completions half of an openai-compatible server, wearing the genai
+    client's interface so `_one_call` doesn't need to know the difference."""
+
+    def __init__(self, base_url: str, timeout: int = 600):
+        self.base_url = base_url.rstrip("/")
+        self.timeout = timeout
+
+    def generate_content(self, model: str, contents: str, config=None):
+        import urllib.request
+
+        system = getattr(config, "system_instruction", None)
+        msgs = ([{"role": "system", "content": system}] if system else []) + \
+               [{"role": "user", "content": contents}]
+        body = json.dumps({
+            "model": model,
+            "messages": msgs,
+            "temperature": getattr(config, "temperature", 1.0),
+            "max_tokens": getattr(config, "max_output_tokens", 2048),
+        }).encode()
+        req = urllib.request.Request(f"{self.base_url}/chat/completions", data=body,
+                                     headers={"Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=self.timeout) as r:
+            d = json.load(r)
+
+        u = d.get("usage") or {}
+        return types.SimpleNamespace(
+            text=d["choices"][0]["message"]["content"],
+            usage_metadata=types.SimpleNamespace(
+                prompt_token_count=u.get("prompt_tokens", 0),
+                candidates_token_count=u.get("completion_tokens", 0),
+                # nothing is cached locally and nothing is billed, so this stays 0 and
+                # the cost columns downstream all come out as $0.00, correctly
+                cached_content_token_count=0,
+            ),
+        )
+
+
+class _LocalClient:
+    def __init__(self, base_url: str):
+        self.models = _LocalModels(base_url)
+
+
 def _client(backend: str = "aistudio"):
     """ai studio (api key) or vertex (a cloud project).
 
@@ -87,6 +132,14 @@ def _client(backend: str = "aistudio"):
     cloud credit on the same account sits there untouched, because the key has no way
     to reach it. vertex talks to the project instead.
     """
+    # local needs no sdk and no key — it's a plain http post to whatever lm studio (or
+    # llama.cpp, or vllm) is serving. this is the path the intimate slice has to take
+    # anyway, since gemini declines most of it, and it's the fallback for everything
+    # else whenever billing is being difficult
+    if backend == "local":
+        base = _env("LOCAL_BASE_URL") or "http://localhost:1234/v1"
+        return _LocalClient(base)
+
     try:
         from google import genai
     except ImportError:
@@ -274,7 +327,7 @@ def main() -> int:
     ap.add_argument("--candidates", type=int, default=1,
                     help=">1 writes cand_NNN.jsonl for a judge pass instead of out_NNN.jsonl")
     ap.add_argument("--concurrency", type=int, default=8)
-    ap.add_argument("--backend", choices=["aistudio", "vertex"],
+    ap.add_argument("--backend", choices=["aistudio", "vertex", "local"],
                     default="aistudio",
                     help="vertex bills a cloud project instead of an api key")
     ap.add_argument("--temperature", type=float, default=1.0)
@@ -325,7 +378,8 @@ def main() -> int:
           f"{args.candidates} candidate(s)  |  {n_calls} calls -> {suffix}_NNN.jsonl")
 
     from gen_bulk import _estimate
-    _estimate(fewshot, [r for _, r in todo] * args.candidates, args.model, batch=False)
+    _estimate(fewshot, [r for _, r in todo] * args.candidates, args.model,
+              batch=False, backend=args.backend)
 
     if args.dry_run:
         print("dry run — nothing spent. drop --dry-run to go.")
@@ -387,7 +441,7 @@ def main() -> int:
         for f in handles.values():
             f.close()
 
-    p_in, p_out, p_cache = PRICES.get(args.model, (0, 0, None))
+    p_in, p_out, p_cache, _ = prices_for(args.model, args.backend)
     fresh = max(stats["in"] - stats["cached"], 0)
     spent = (fresh * p_in + stats["cached"] * (p_cache if p_cache is not None else p_in)
              + stats["out"] * p_out) / 1e6

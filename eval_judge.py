@@ -33,7 +33,7 @@ from pathlib import Path
 
 from eval import voice_score
 from gemini_rewrite import _client, _one_call
-from gen_bulk import PRICES
+from gen_bulk import PRICES, prices_for
 
 DEFAULT_MODEL = "gemini-3.1-pro-preview"
 
@@ -147,7 +147,7 @@ def main() -> int:
     ap.add_argument("file", help="a gen file from `eval.py gen --set ...`")
     ap.add_argument("-o", "--out", default=None, help="sidecar path (default: <file>.judged)")
     ap.add_argument("--model", default=DEFAULT_MODEL)
-    ap.add_argument("--backend", choices=["aistudio", "vertex"], default="aistudio")
+    ap.add_argument("--backend", choices=["aistudio", "vertex", "local"], default="aistudio")
     ap.add_argument("--concurrency", type=int, default=8)
     ap.add_argument("--temperature", type=float, default=0.1)
     ap.add_argument("--calibrate", default=None,
@@ -161,7 +161,7 @@ def main() -> int:
     if not rows:
         sys.exit(f"no scorable rows in {src}")
 
-    p_in, p_out, p_cache = PRICES.get(args.model, (2.00, 12.00, 0.20))
+    p_in, p_out, p_cache, _ = prices_for(args.model, args.backend)
     avg = sum(len(build_prompt(r)) for r in rows) / len(rows) / 3.5
     est = (len(rows) * (avg + len(JUDGE_SYSTEM) / 3.5) * p_in
            + len(rows) * 60 * p_out) / 1e6

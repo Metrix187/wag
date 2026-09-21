@@ -474,10 +474,20 @@ PRICES = {
 }
 
 
-def _estimate(fewshot: str, rows: list[dict], model: str, batch: bool) -> None:
+def prices_for(model: str, backend: str = "aistudio"):
+    """(in, out, cache, known). a local server bills nothing, so it's free by
+    definition rather than by lookup — otherwise an unknown local model name falls
+    through to the opus fallback and the tool prints a bill for a run that costs £0."""
+    if backend == "local":
+        return 0.0, 0.0, 0.0, True
+    p = PRICES.get(model)
+    return (*(p or (5.00, 25.00, 0.50)), p is not None)
+
+
+def _estimate(fewshot: str, rows: list[dict], model: str, batch: bool,
+              backend: str = "aistudio") -> None:
     """rough cost, printed before anything is spent."""
-    known = model in PRICES
-    p_in, p_out, p_cache = PRICES.get(model, (5.00, 25.00, 0.50))
+    p_in, p_out, p_cache, known = prices_for(model, backend)
 
     prefix = len(REWRITE_SYSTEM + fewshot) / 3.5          # cached after the first call
     per_in = sum(len(build_user_prompt(r, False)) for r in rows) / 3.5 / max(len(rows), 1)
@@ -496,7 +506,8 @@ def _estimate(fewshot: str, rows: list[dict], model: str, batch: bool) -> None:
     print(f"  cached prefix ~{prefix:.0f} tok  |  fresh in ~{per_in:.0f} tok  |  out ~{per_out} tok")
     print(f"  mode         {'batch api (50% off)' if batch else 'live concurrent'}")
     print(f"  split        cache ${cached_in:.2f}  |  fresh in ${fresh_in:.2f}  |  out ${out:.2f}")
-    print(f"  ESTIMATE     ${total:.2f}")
+    print(f"  ESTIMATE     ${total:.2f}" + ("   (local — nothing is billed)"
+                                            if backend == "local" else ""))
     if not known:
         print(f"  !! {model} isn't in PRICES — this used opus rates as a stand-in and is a guess")
     elif p_cache is None:

@@ -30,7 +30,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 from gemini_rewrite import DEFAULT_MODEL, MARKER_MOODS, _client, _one_call
-from gen_bulk import DATA, PRICES, SHARDS, build_fewshot, load_anchors
+from gen_bulk import DATA, PRICES, SHARDS, build_fewshot, load_anchors, prices_for
 from slices import SLICES
 
 SPEC = DATA / "persona_spec.md"
@@ -363,7 +363,7 @@ def fill(args) -> int:
         return 0
 
     per_out = 220 * max(r.get("turns", 4) for _, r in todo)
-    p_in, p_out, p_cache = PRICES.get(args.model, (0.75, 3.75, 0.075))
+    p_in, p_out, p_cache, _ = prices_for(args.model, args.backend)
     pre_tok = len(prefix) / 3.5
     est = (len(todo) * pre_tok * (p_cache if p_cache is not None else p_in)
            + len(todo) * 200 * p_in + len(todo) * per_out * p_out) / 1e6
@@ -447,7 +447,7 @@ def main() -> int:
     sc.add_argument("-n", type=int, default=300)
     sc.add_argument("--model", default=DEFAULT_MODEL)
     sc.add_argument("--restart", action="store_true")
-    sc.add_argument("--backend", choices=["aistudio", "vertex"],
+    sc.add_argument("--backend", choices=["aistudio", "vertex", "local"],
                     default="aistudio")
     sc.set_defaults(fn=gen_scenarios)
 
@@ -465,7 +465,7 @@ def main() -> int:
     fl.add_argument("--temperature", type=float, default=1.1)
     fl.add_argument("--limit", type=int, default=0)
     fl.add_argument("--dry-run", action="store_true")
-    fl.add_argument("--backend", choices=["aistudio", "vertex"],
+    fl.add_argument("--backend", choices=["aistudio", "vertex", "local"],
                     default="aistudio")
     fl.set_defaults(fn=fill)
 

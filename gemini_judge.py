@@ -34,7 +34,7 @@ from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from gemini_rewrite import _client, _one_call, parse_shard_spec
-from gen_bulk import PRICES, SHARDS
+from gen_bulk import PRICES, SHARDS, prices_for
 
 DEFAULT_MODEL = "gemini-3.1-pro-preview"
 
@@ -131,7 +131,7 @@ def main() -> int:
                     help="below this the row is dropped rather than written out")
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--dry-run", action="store_true")
-    ap.add_argument("--backend", choices=["aistudio", "vertex"],
+    ap.add_argument("--backend", choices=["aistudio", "vertex", "local"],
                     default="aistudio")
     args = ap.parse_args()
 
@@ -164,7 +164,7 @@ def main() -> int:
         print("nothing to judge — every candidate row already has an output")
         return 0
 
-    p_in, p_out, p_cache = PRICES.get(args.model, (2.00, 12.00, 0.20))
+    p_in, p_out, p_cache, _ = prices_for(args.model, args.backend)
     avg_in = sum(len(build_prompt(r)) for _, r in todo) / len(todo) / 3.5
     est = (len(todo) * (avg_in + len(JUDGE_SYSTEM) / 3.5) * p_in
            + len(todo) * 90 * p_out) / 1e6
