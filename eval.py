@@ -164,19 +164,38 @@ def _make_responder(args):
         import torch
         from transformers import AutoModelForCausalLM, AutoTokenizer
 
-        tok = AutoTokenizer.from_pretrained(args.model, trust_remote_code=True)
+        # a lora checkpoint is only the adapter — no base weights, no tokenizer — so
+        # from_pretrained on it just dies. spot one and load the base underneath it.
+        # this is how you score an epoch-1 checkpoint against the shipped model without
+        # having to merge a fresh 8GB copy of the base for every one you want to look at.
+        adapter = None
+        weights = args.model
+        acfg = Path(args.model) / "adapter_config.json"
+        if acfg.is_file():
+            adapter = args.model
+            weights = args.base or json.loads(
+                acfg.read_text(encoding="utf-8"))["base_model_name_or_path"]
+            print(f"  lora checkpoint, base is {weights}", flush=True)
+
+        tok = AutoTokenizer.from_pretrained(weights, trust_remote_code=True)
         # qwen3.5 is a VLM wrapper (Qwen3_5ForConditionalGeneration), so the causal-lm
         # auto-class refuses it. same dance the training notebook does.
         try:
             from transformers import AutoModelForImageTextToText as _Loader
             model = _Loader.from_pretrained(
-                args.model, dtype=torch.bfloat16, device_map="auto",
+                weights, dtype=torch.bfloat16, device_map="auto",
                 trust_remote_code=True)
         except Exception as e:
             print(f"  image-text loader failed ({e}); trying causal-lm", flush=True)
             model = AutoModelForCausalLM.from_pretrained(
-                args.model, dtype=torch.bfloat16, device_map="auto",
+                weights, dtype=torch.bfloat16, device_map="auto",
                 trust_remote_code=True)
+
+        if adapter:
+            from peft import PeftModel
+            # merged, not left wrapped: generation runs at base speed and nothing below
+            # here has to know an adapter was ever involved
+            model = PeftModel.from_pretrained(model, adapter).merge_and_unload()
         def respond(messages: list[dict]) -> str:
             text = tok.apply_chat_template(
                 messages, tokenize=False, add_generation_prompt=True,
@@ -581,6 +600,9 @@ def main() -> int:
     g = sub.add_parser("gen", help="generate responses for the 20")
     g.add_argument("--backend", choices=["hf", "http"], default="hf")
     g.add_argument("--model", default=None, help="hf path/id, or model name for http")
+    g.add_argument("--base", default=None,
+                   help="base weights for a lora checkpoint, if adapter_config.json "
+                        "points somewhere stale")
     g.add_argument("--url", default="http://localhost:8080")
     g.add_argument("--out", default=str(OUT / "gen.jsonl"))
     g.add_argument("--max-tokens", type=int, default=700)
