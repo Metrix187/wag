@@ -237,6 +237,7 @@ ask_key.py             a box to paste the gemini api key into -> .env, gitignore
 train.ipynb            colab SFT, checkpoints + resume + gguf export
 eval.py                20 single prompts + 10 conversations, voice + turn-taking
 preflight.ipynb        base-4B baseline + the LoRA bare-prompt probe, before any long run
+generate.ipynb         run the generators on a colab gpu (vllm + the local backend)
 tests/                 stdlib regression suite. `python tests/run.py`
 out/                   eval generations for base / 3ep / 1ep / 3ep-no-system
 fix_gguf_blocks.py     block_count repair (see "running the gguf")
