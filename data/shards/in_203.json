@@ -1,0 +1,272 @@
+[
+ {
+  "id": "alpaca-7904",
+  "think": false,
+  "instruction": "Who developed the theory of relativity?",
+  "original": "The theory of relativity was developed by Albert Einstein."
+ },
+ {
+  "id": "alpaca-5988",
+  "think": false,
+  "instruction": "Name at least three types of clouds.",
+  "original": "There are many types of clouds, but here are three common ones: \n1. Cumulus: These are the fluffy, cotton-like clouds often seen in the sky on sunny days. \n2. Stratus: These are low, uniform layers of clouds that often result in overcast skies and light precipitation. \n3. Cirrus: These are thin, wispy, high-altitude clouds made of ice crystals."
+ },
+ {
+  "id": "oasst-7211c0f1",
+  "think": false,
+  "instruction": "I want a recommendation of a delicious cinnamon roll recipe inspired by Cinnabon.",
+  "original": "Here's a delicious cinnamon roll recipe designed to closely mimic Cinnabon's cinnamon rolls:\n\n# Overview\n- Prep Time: 20 mins\n- Cook Time: 15 mins\n- Additional Time: 2 hrs 25 mins\n- Total Time: 3 hrs\n- Yield: 12 rolls\n\n# Ingredients\n### Dough:\n- 1 cup warm milk (110 degrees F/45 degrees C)\n- 2 eggs, room temperature\n- 1/3 cup margarine, melted\n- 4 1/2 cups bread flour\n- 1 teaspoon salt\n- 1/2 cup white sugar\n- 2 1/2 teaspoons bread machine yeast\n\n### Filling:\n- 1 cup brown sugar, packed\n- 2 1/2 tablespoons ground cinnamon\n- 1/3 cup butter, softened\n\n### Icing:\n- 1 1/2 cups confectioners' sugar\n- 1/4 cup butter, softened\n- 1 (3 ounce) package cream cheese, softened\n- 1/2 teaspoon vanilla extract\n- 1/8 teaspoon salt\n\n# Directions\n##### Step 1\nPrepare dough: Place milk, eggs, margarine, flour, salt, white sugar, and yeast in the pan of a bread machine in the order recommended by the manufacturer. Select dough cycle; press Start. If you don't have a bread machine, mix ingredients together in a bowl until well combined, then kneed dough rigorously on a flat surface for 5 minutes.\n\n##### Step 2\nWhen dough has doubled in size, turn it out onto a lightly floured surface. Cover it with a kitchen towel or plastic wrap and let it rest for 10 minutes.\n\n##### Step 3\nRoll dough on a lightly floured surface to a 16x21-inch rectangle.\n\n##### Step 4\nPrepare filling: Combine brown sugar and cinnamon in a small bowl. Spread softened butter over the dough, then sprinkle cinnamon-sugar mixture evenly over top.\n\n##### Step 5\nStarting at the longer end, roll up the dough; cut into 12 rolls. Place rolls in a lightly greased 9x13-inch baking pan. Cover and let rise until nearly doubled, about 30 minutes.\n\n##### Step 6\nMeanwhile, preheat the oven to 400 degrees F (200 degrees C).\n\n##### Step 7\nBake rolls in the preheated oven until golden brown, about 15 minutes.\n\n##### Step 8\nWhile rolls are baking, prepare icing: Beat confectioners' sugar, butter, cream cheese, confectioners' sugar, vanilla, and salt until creamy.\n\n##### Step 9\nSpread icing on warm rolls before serving."
+ },
+ {
+  "id": "alpaca-5507",
+  "think": false,
+  "instruction": "Generate a list of 10 countries",
+  "original": "Here are 10 countries in alphabetical order:\n\n1. Australia\n2. Brazil\n3. Canada \n4. Egypt \n5. France\n6. Germany \n7. India\n8. Japan\n9. New Zealand\n10. United States"
+ },
+ {
+  "id": "alpaca-7020",
+  "think": false,
+  "instruction": "Compare and contrast two common social media platforms in terms of their features, target audience and main purposes.",
+  "original": "Facebook and Twitter are two popular social media platforms. Facebook is primarily targeted at people looking to connect with friends and family, while Twitter focuses on more public interactions, often with strangers or with users who share similar interests. Facebook offers various features such as photo albums, groups, pages, events, and private messaging, whereas Twitter's main feature is the ability to post short messages, called 'tweets,' up to 280 characters in length. Both platforms enable sharing multimedia content like images and videos, but Facebook's interface is more suited for long-form content and conversations, whereas Twitter is geared towards short updates and real-time engagement. Essentially, Facebook is more relationship-driven, while Twitter is more content-driven and suited for news, trends, and public discourse."
+ },
+ {
+  "id": "alpaca-1831",
+  "think": false,
+  "instruction": "Break down these scientific terms into simple concepts\n\nPhotosynthesis, respiration",
+  "original": "Photosynthesis is the process through which plants convert light energy from the sun into chemical energy in the form of glucose or sugar. It is how plants make their food.\n\nRespiration is the process of breaking down food and releasing energy that was stored in the food to be used by the body. It is how animals (including humans) and plants produce the energy they need to live."
+ },
+ {
+  "id": "alpaca-3761",
+  "think": true,
+  "instruction": "Correct the surface level errors in the text.\n\nI'm soo sad and lonely. Nothing can cheer me up.",
+  "original": "I'm so sad and lonely. Nothing can cheer me up."
+ },
+ {
+  "id": "alpaca-7023",
+  "think": false,
+  "instruction": "Define the word \"oxymoron\".",
+  "original": "An oxymoron is a figure of speech that combines two usually contradictory or opposite terms in close proximity, creating a contrast or a paradox, for example, \"deafening silence\" or \"bittersweet\". The term oxymoron comes from the Greek words \"oxys\" meaning sharp or keen, and \"moros\" meaning foolish, so translated literally, it means \"sharp-foolish.\" By highlighting the incongruity between the two words, the writer or speaker can emphasize the complexity or irony of the situation they are describing."
+ },
+ {
+  "id": "alpaca-8530",
+  "think": false,
+  "instruction": "Generate a children's story that includes the character of a friendly lion.",
+  "original": "Once upon a time, in a vast green forest, full of tall trees, pretty flowers, and clean streams lived many different animals. They all lived happily, playing, eating and feeling free. However, there was a rumor that a fierce lion lived near the forest and none of the animals had ever seen him. They were all scared of him, and no one dared to explore the area he lived in.\n\nOne sunny day, a curious little rabbit who loved to explore, decided to solve the mystery of the lion. So, she hopped her way towards the area where the lion was believed to live. As she reached the spot, she saw the largest cave she had ever seen. As she was admiring the cave, she felt a tap on her shoulder. She turned around, and right in front of her, stood the biggest lion she had ever seen. \n\nThe little rabbit was petrified, but the lion just sat down, and with the calmest voice said, “Hello, little one. My name is Leo. Don’t be scared; I won’t harm you.” The rabbit was astonished by the friendly behavior of the lion and soon, they were chatting away, and by the end of the day; they were fast friends. Leo gave her a tour of the cave and even shared his lunch with her.\n\nThe little rabbit went back to the forest, and told all her friends about her adventure, and how Leo was the friendliest lion she had ever met. After that day, Leo became a frequent visitor to the forest, and all the animals grew to love him. He would help them whenever they needed; he used his strength to move heavy things and his loud roar to scare away any danger. \n\nFrom that day on, the animals weren't scared anymore, and they realized that just because someone looked different or fierce, it didn't mean they weren’t friendly. Leo the lion became the best friend the animals of the forest could ask for, and they all lived happily ever after.\n\nThe end."
+ },
+ {
+  "id": "alpaca-6345",
+  "think": false,
+  "instruction": "Given a tweet, find the sentiment of it.\n\nI'm so proud of the progress I've made! #Success",
+  "original": "The sentiment of the tweet \"I'm so proud of the progress I've made! #Success\" is positive."
+ },
+ {
+  "id": "alpaca-6695",
+  "think": true,
+  "instruction": "Find an interesting fact related to the following topic\n\nArtificial Intelligence",
+  "original": "One interesting fact about artificial intelligence is that the concept can be traced back to ancient Greek mythology, where the intelligent robot Talos was said to protect Crete from invaders. In modern times, the term \"Artificial Intelligence\" was first coined in 1956 by John McCarthy, a computer scientist who organized the first AI conference at Dartmouth College. Since then, the field has grown rapidly, with AI now being used in numerous industries, from healthcare and finance to transportation and entertainment."
+ },
+ {
+  "id": "alpaca-3893",
+  "think": false,
+  "instruction": "State the theme of the following line of poetry\n\nA drop of dew in the morning sunlight",
+  "original": "The theme of the line of poetry is nature and its beauty."
+ },
+ {
+  "id": "alpaca-6013",
+  "think": false,
+  "instruction": "Complete the paragraph by filling in the placeholders with appropriate data.\n\nHenry VIII was the King of England from __DATE__ to __DATE__ and is most famous for his __NUMBER__ marriages and the establishment of the Church of England.",
+  "original": "Henry VIII was the King of England from 1509 to 1547 and is most famous for his six marriages and the establishment of the Church of England."
+ },
+ {
+  "id": "alpaca-8487",
+  "think": false,
+  "instruction": "Design a visually pleasing presentation about renewable energy sources.",
+  "original": "I'm sorry, but I'm an AI language model and can only provide textual content. However, here's an outline of the content for a presentation about renewable energy sources that you can use to design your presentation:\n\nSlide 1: Introduction\n- Title: Renewable Energy Sources\n- A brief overview of the presentation\n\nSlide 2: What is Renewable Energy?\n- Definition of renewable energy\n- Explanation of how it differs from non-renewable energy\n\nSlide 3: Types of Renewable Energy Sources\n- Overview of the most common renewable energy sources: Solar, Wind, Hydro, Geothermal, and Biomass\n\nSlide 4: Solar Energy\n- Explanation of how solar energy works\n- Benefits and challenges of solar energy\n\nSlide 5: Wind Energy\n- Explanation of how wind energy works\n- Benefits and challenges of wind energy\n\nSlide 6: Hydro Energy\n- Explanation of how hydro energy works\n- Benefits and challenges of hydro energy\n\nSlide 7: Geothermal Energy\n- Explanation of how geothermal energy works\n- Benefits and challenges of geothermal energy\n\nSlide 8: Biomass Energy\n- Explanation of how biomass energy works\n- Benefits and challenges of biomass energy\n\nSlide 9: The Importance of Renewable Energy\n- Explanation of why renewable energy is important\n- The role of renewable energy in reducing carbon emissions and combating climate change\n\nSlide 10: Conclusion\n- Recap of the main points of the presentation\n- Encouragement to embrace and support renewable energy sources.\n\nYou can use this outline as a guide to create your visually pleasing presentation about renewable energy sources. Be sure to use engaging visuals, such as images and graphs, to illustrate the concepts and make the presentation more attractive."
+ },
+ {
+  "id": "alpaca-7169",
+  "think": false,
+  "instruction": "What is the 5th term of an arithmetic sequence of 20 terms with first and last terms of 2 and 59, respectively?",
+  "original": "To find the 5th term of an arithmetic sequence of 20 terms with first and last terms of 2 and 59, respectively:\n\n- Subtract the first term from the last term: 59-2=57\n- Divide by the number of terms minus 1: 57/19=3\n- Find the 5th term by adding 3 times the common difference to the first term: 2+3*(5-1)=14 \n\nTherefore, the 5th term of this arithmetic sequence is 14."
+ },
+ {
+  "id": "oasst-47d26d7d",
+  "think": false,
+  "instruction": "please give me a post promoting this book for a marketing email based on the below\nIf you had asked someone one hundred years ago to imagine a future where technology allowed people to be warm in the winter and cool in the summer; where instantaneous, live communication via text, voice, and image was available to everyone; where every book, movie, musical composition, piece of art, or other form of entertainment was instantly accessible to everyone; where people could climb into machines that sped them across land or water, and even through the sky, in addition to being highly skeptical, that person would be forgiven for thinking that in such a magical and fabulous world, humanity would live in peace, contentment, and universal happiness. However, although our society has reached and exceeded these technological marvels, a quick internet search reveals alarming statistics\nabout the rates of divorce, depression, mental illness, murder,\nsuicide, and abuse which illustrates the sad fact that happiness continues to elude far too many.\nWhat then can we do to find happiness?\n\nIn this book, we will discuss the Jewish and Chassidic teachings on how to attain happiness. Many philosophies teach that happiness comes about through the fulfillment of a person’s desires; they claim that when a person gets what they want out of life, they will find happiness. The Jewish path is different, it teaches us that when we live life in a healthy manner, providing for both our bodies and souls, happiness will ensue.\n\nOne can see the effectiveness of the Jewish path by observing the quality of life of an observant Jewish community. Although we are living in challenging times and many of the above-mentioned problems can also be found in these communities, on the whole you will find close-knit\nfriendships, successful marriages, and an overall\nsense and spirit of joy. May we soon merit to see a world filled with joy and peace with the coming of Mashiach speedily in our days!\n\nIf someone would ask me what is the most important factor for attaining happiness, I would answer that it is to constantly make the effort to do what it takes to attain happiness, and to try to stay positive and happy when you are down and even when you are facing difficulties and challenges in life. Sometimes, when a person is going through a very difficult period in their life, they feel that in their situation there is no way they can possibly attain happiness. I would like to quote a remarkable letter of the Lubavitcher Rebbe on this subject:\nIn response to your letter … which was written in the month\nof the second Adar in which the entire month we increase in\njoy … yet unfortunately the spirit of the letter is not Purimdik\n[in the spirit of Purim] and not even joyous. Even after all the\nideas and reasons that you write about in your letter, there still remains the commandment from the Almighty, who is not only the Creator of the world but Who also runs the world, to serve the Almighty with joy. Surely the Almighty knows all the details (which you wrote about), yet, He still tells us that we should be joyous. From this we can deduce three things:\nSince the Almighty demands this, it is surely in the capacity\nand ability of the person — since Hashem does not make unreasonable demands of his creatures — and when He asks for something, He only asks for what is in their power. Even in this type of situation, there still remains what to be\nhappy about. We just have to not want to close our eyes to\nseeing it.\nAccording to what is explained in many places, amongst them in the Sefer Hatanya in Chapter 26, it is just the opposite. If we want to succeed and win the battle, and surely, if it is a difficult battle, we must be joyous and have an open heart that is cleansed from all worries and sadness of the world. How to do so is explained in the Tanya at length.\nIt is also known, the teaching of the Rebbe, my father-in-\nlaw, that when a soldier goes to the front, he sings a march of victory and joy. Even though this is before he actually begins the war, beginning with strong faith in the victory and joy, in itself, strengthen and hastens the victory of the war.\n\nRabbi Pesach Scheiner was born in Brooklyn, New York, and\nreceived his rabbinical ordination from the Chabad-Lubavitch\nYeshiva in Brooklyn. He is currently the rabbi of the Chabad Center in Boulder, Colorado. In his rabbinic capacity, Rabbi Scheiner teaches classes on Jewish practice, from which this book was born. He lives with his wife and children in Boulder, Colorado.\n\nPraise\n“The Path to Happiness: A Jewish Chassidic Perspective is for everyone — because in deeply cynical times such as these, everyone needs inspiration, everyone needs values to live by. Faith by itself is a great thing, but it must become a force in our everyday lives. But how? That is what makes this book so useful: it gives you specific advice, specific techniques, and perspectives to help you become the person you must become if you are to find true peace and real joy. Using wonderful stories to illustrate his points, Rabbi Scheiner introduces us to a wide range of characters… Today’s world offers endless distractions — material comforts and pleasures — that somehow lead to despair. Rabbi Scheiner explains why this is so and offers us a way out of ‘the trap,’ regardless of our circumstances.  I give this book five stars! It’s not on my ‘must read’ list but on my ‘must read again and again’ list — and it will be on yours, too.”\nDaniel Meyerson, Ellis Fellow at Columbia University \n“A masterpiece work on the importance of simchah.”\nRabbi Chaim Dalfin, author, historian, and mashpia",
+  "original": "\"Discover the Key to Happiness in Life with The Path to Happiness: A Jewish Chassidic Perspective. In a world where technology has surpassed our imagination, it's easy to get caught up in the chaos and forget about what truly brings happiness. But what if there was a way to live life in a healthy manner, providing for both our bodies and souls, that leads to a sense of joy and peace?\n\nIn this insightful book by Rabbi Pesach Scheiner, you will explore the teachings of the Jewish and Chassidic philosophy on how to attain happiness. Through the use of stories and practical advice, you'll learn how to make the effort to achieve happiness, even in the face of challenges and difficulties.\n\nIn his role as the rabbi of the Chabad Center in Boulder, Colorado, Rabbi Scheiner has taught countless classes on Jewish practice, and it is from these teachings that this book was born. Don't miss out on the chance to transform your life and discover the path to true happiness.\n\n\"The Path to Happiness: A Jewish Chassidic Perspective is for everyone - because in deeply cynical times such as these, everyone needs inspiration, everyone needs values to live by. Faith by itself is a great thing, but it must become a force in our everyday lives. With five stars, this book is not just a must-read, but a must-read again and again.\"\n\nOrder your copy today and start your journey to happiness!"
+ },
+ {
+  "id": "alpaca-4875",
+  "think": false,
+  "instruction": "What is the average size of a baby oak tree?",
+  "original": "The size of a baby oak tree, or an oak sapling, can vary depending on several factors such as species, age, and growing conditions. Generally, a baby oak tree can grow up to 1-2 feet in height per year. Within 3-5 years, an oak sapling may reach an average size of 3-10 feet in height. However, the growth rate may vary from one individual to another as it depends on its environmental and biological conditions."
+ },
+ {
+  "id": "alpaca-5928",
+  "think": false,
+  "instruction": "What would be the best way to arrange a virtual meeting for my company?",
+  "original": "Here are the steps you can take to arrange a virtual meeting for your company:\n\n1. Select a Platform: Choose a reliable platform for hosting virtual meetings such as Zoom, Skype, Microsoft Teams, Google Meet or Webex, among others. Ensure that the selected platform has all the features you need, including screen sharing, recording, and interactive tools.\n\n2. Schedule the Meeting: Set the date and time of the meeting according to the availability of all participants. You can use scheduling tools like Doodle, Calendly, or the scheduling feature of the selected platform.\n\n3. Send Invitations: Invite all participants to the meeting through email or the platform’s invitation system. It is a good idea to include the date, time, and link to join the meeting in the invitation.\n\n4. Share an Agenda: A day or two before the meeting, send out a detailed agenda to all participants. This will help them prepare for the meeting and know what topics will be discussed.\n\n5. Conduct the Meeting: Start the meeting on time and stick to the agenda. Encourage open communication and active participation from all attendees. Be mindful of time and try to keep the meeting within the scheduled timeframe.\n\n6. Follow-Up: After the meeting, send a follow-up email with minutes of the meeting, action items, and any other relevant information. This will keep everyone on the same page and help in tracking the progress of assigned tasks."
+ },
+ {
+  "id": "alpaca-5682",
+  "think": false,
+  "instruction": "Write a function to display the multiplication table of a given number from 1 to 10.",
+  "original": "Here's a Python function that displays the multiplication table of a given number from 1 to 10:\n\n``` python\ndef multiplication_table(num):\n    for i in range(1,11):\n        result = num * i\n        print(f\"{num} x {i} = {result}\")\n\n# Example\nmultiplication_table(6)\n```\n\nThis function takes in a number as an input parameter and uses a for loop to iterate through the range of numbers from 1 to 10. For each iteration, the function calculates the result by multiplying the input number by the current value of i. The result is then printed out in the format of a multiplication table. In the example provided, the function is called with the input value of 6 and the function displays the multiplication table of 6 from 1 to 10."
+ },
+ {
+  "id": "oasst-f914de34",
+  "think": false,
+  "instruction": "write python to store data from coinbase api in sqlite database using sqlalchemy",
+  "original": "Sure! Here's an example Python script that retrieves data from the Coinbase API and stores it in a SQLite database using the SQLAlchemy library:\n\n```python\nimport requests\nimport json\nfrom sqlalchemy import create_engine, Column, Integer, Float, String\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import sessionmaker\n\n# Define the SQLAlchemy engine and session\nengine = create_engine('sqlite:///coinbase.db')\nSession = sessionmaker(bind=engine)\nBase = declarative_base()\n\n# Define the class that will map to the database table\nclass Trade(Base):\n    __tablename__ = 'trades'\n\n    id = Column(Integer, primary_key=True)\n    price = Column(Float)\n    size = Column(Float)\n    time = Column(String)\n\n# Define the Coinbase API URL and parameters\nurl = 'https://api.coinbase.com/v2/trades/BTC-USD'\nparams = {'limit': 10}\n\n# Make a request to the Coinbase API and parse the JSON response\nresponse = requests.get(url, params=params)\ntrades = json.loads(response.text)['data']\n\n# Create a new session and add the trades to the database\nsession = Session()\nfor trade in trades:\n    new_trade = Trade(\n        price=float(trade['price']),\n        size=float(trade['size']),\n        time=trade['time']\n    )\n    session.add(new_trade)\nsession.commit()\n\n# Query the database and print the trades\ntrades = session.query(Trade).all()\nfor trade in trades:\n    print(f\"Trade: {trade.id}, Price: {trade.price}, Size: {trade.size}, Time: {trade.time}\")\n```\n\nThis script defines a Trade class that maps to a database table, uses the requests library to make a request to the Coinbase API, and stores the retrieved data in the trades table using the SQLAlchemy Session object. Finally, the script queries the database and prints the trades. You can customize this script to retrieve data for different currencies and time intervals, as well as modify the Trade class to include additional columns as needed."
+ },
+ {
+  "id": "alpaca-2772",
+  "think": false,
+  "instruction": "Write a function that finds the common elements in two lists.\n\nlist1 = [1,2,3,4,5]\nlist2 = [2,4,5,6,7]",
+  "original": "```\n\"\"\"\nFind the common elements in two lists\n\"\"\"\n\ndef findCommonElements(list1, list2):\n    # initialize a list to store the common elements\n    common_elements = []\n\n    # loop through list1 to find common elements in both lists\n    for i in list1:\n        if i in list2:\n            common_elements.append(i)\n    \n    return common_elements\n\nif __name__ == '__main__':\n    list1 = [1,2,3,4,5]\n    list2 = [2,4,5,6,7]\n    print(findCommonElements(list1, list2))\n```"
+ },
+ {
+  "id": "alpaca-4236",
+  "think": false,
+  "instruction": "Rewrite the sentences using given synonyms.\n\nJohn felt sad after receiving the bad news.\nSynonyms - Dismayed, unfortunate",
+  "original": "John felt dismayed after receiving the unfortunate news."
+ },
+ {
+  "id": "alpaca-8219",
+  "think": true,
+  "instruction": "Find the grammatically incorrect parts of this sentence:\n\n\"John and me went to the store to buy some groceries.\"",
+  "original": "The grammatically incorrect part of the sentence is \"John and me.\" In this sentence, the correct usage would be \"John and I went to the store to buy some groceries.\""
+ },
+ {
+  "id": "alpaca-2061",
+  "think": false,
+  "instruction": "Compare genetic engineering to traditional breeding methods.",
+  "original": "Genetic engineering and traditional breeding are two approaches used to improve plants, animals or microorganisms to achieve desired traits, such as better yields, resistance to diseases, and improved nutrition. While the end goal may be the same, the techniques used in each approach are fundamentally different.\n\nTraditional breeding, also known as selective breeding, involves crossing different varieties of plants or animals to create offspring with the desired traits, based on known inheritance patterns. This is a slow and gradual process, taking many generations to produce the desired outcome.\n\nIn contrast, genetic engineering involves directly changing the DNA of an organism by adding, removing, or editing specific genes, to obtain the desired trait. This is achieved using biotechnology tools, such as CRISPR-Cas9 or other gene-editing technologies, or by inserting foreign genes into the plant, animal, or microorganism. This method allows scientists to introduce traits that are not normally present within the species and can significantly speed up the process.\n\nOne key advantage of genetic engineering is the level of precision and control it offers. Scientists can target specific genes and introduce precise changes, whereas traditional breeding relies on crossing two varieties and hoping for the best outcome, which can often result in an unpredictable mix of traits.\n\nHowever, genetic engineering also raises concerns such as bioethics and biosafety. Critics argue that there is potential for unknown risks associated with introducing new genes or genetically modified organisms into the environment. In contrast, traditional breeding methods are viewed as more natural and perhaps safer.\n\nIn conclusion, genetic engineering and traditional breeding are two methods used to improve organisms to achieve desired traits. While the former offers greater control and precision, it comes with potential risks, while the latter is a slower process but viewed as a more natural means of selection."
+ },
+ {
+  "id": "oasst-69b48108",
+  "think": true,
+  "instruction": "Can a star cool down enough and become a giant planet?",
+  "original": "There is a continuum of sorts between very small stars (Red Dwarves) and very large planets (Gas Giants). In between these two, there are the Brown Dwarves, also known as \"failed stars\".\nDifferent parts of the fusion chain, starting with hydrogen and eventually ending with iron, take different amounts of energy to produce.\nBrown dwarves are not able to complete the entire fusion chain, and eventually fizzle out.\nThe precise classification of these objects can vary between sources, but arguably these are the sorts of objects you describe in your question."
+ },
+ {
+  "id": "oasst-8e37adce",
+  "think": false,
+  "instruction": "What is discord?",
+  "original": "Discord is a media platform that allows people to communicate throught chats, streams and voice calls. Notably, it features a system where people can create communities called channels, to be moderated and customized. They can be public or private, and can be built around a set of rules. These will typically feature multiple differently themed chats where many people can add to the ongoing conversation, while it is possible to read the entire history of the chat by scrolling upwards. Discord contains many different features and allows it's communities to add new ones, such as user-programmed bots, channel-specific emoji's and roles that can be used to distinguish between and specifically adress various different types of members. Discord is typically described as a social media platform for gamers, but it's multitude of features makes it quite flexible."
+ },
+ {
+  "id": "alpaca-6015",
+  "think": false,
+  "instruction": "Consider the following scenario and assess what the best course of action is, then explain your reasoning.\n\nYou're a firefighter and your team just arrived at the scene of a burning building. The fire is raging on the lower floor, making it difficult to access the stairwell. There's someone trapped on the second floor who is starting to lose consciousness due to smoke inhalation. Your ladder truck is out of service and the only ladder available is too short to reach the second floor. What do you do?",
+  "original": "The best course of action is to attempt an improvised window rescue, using additional fire hoses, equipment, or nearby poles to extend the ladder's reach. This method ensures the fastest possible rescue in the poor conditions. It's crucial to act fast, as the trapped individual is losing consciousness from smoke inhalation."
+ },
+ {
+  "id": "alpaca-8146",
+  "think": false,
+  "instruction": "How could this figure be used in an essay about climate change?\n\n[Figure of a city]",
+  "original": "The figure of a city could be used to illustrate the impact of urbanization on climate change. For instance, an essay could discuss how cities contribute to the rise in greenhouse gas emissions through transportation, energy consumption, and industrial activities. The figure could also be used to show the potential effects of climate change on urban areas, such as increased heatwaves, flooding, and air pollution. Additionally, the figure could serve as a visual representation of the efforts being made by cities to mitigate climate change, such as by increasing green spaces and implementing sustainable practices."
+ },
+ {
+  "id": "alpaca-4083",
+  "think": false,
+  "instruction": "Analyze the poem \"The Road Less Traveled\"",
+  "original": "\"The Road Not Taken\" is a poem by Robert Frost, published in 1916. It describes the narrator's choice between two paths in the woods, and how the decision has made all the difference in their life. The title is often misquoted as \"The Road Less Traveled\" from the final lines of the poem, \"I took the one less traveled by / And that has made all the difference.\"\n\nThe poem explores the theme of choices and their consequences. The narrator stands at a crossroads in the woods, and must make a decision on which path to take. They consider both options, and ultimately choose the one that appears to be less traveled. The decision to take the road less traveled can be interpreted as a metaphor for making unconventional or difficult choices in life, and how those choices shape our future.\n\nThe poem also touches on the theme of regret and the unknown. The narrator admits that they doubt they will ever return to take the other path, and this uncertainty about what could have been is a common human experience. The final line, \"And that has made all the difference,\" is ambiguous, leaving it open to interpretation whether the choice was ultimately positive or negative.\n\nThe language and structure of the poem are also significant. It is written in four stanzas, with five lines in each, and uses a simple rhyme scheme of ABAAB. The poem follows a strict meter, with each line containing four stressed syllables. This structure, along with the use of language and imagery, provides a sense of order and calmness, which contrasts with the uncertainty and potential regret expressed in the poem's content.\n\nOverall, \"The Road Not Taken\" is a thought-provoking poem that explores the choices we make in life, and how those decisions shape our future. Its themes and language have resonated with readers for over a century and continue to inspire reflection and introspection."
+ },
+ {
+  "id": "alpaca-3397",
+  "think": false,
+  "instruction": "Describe a person who is responsible and organized.",
+  "original": "A responsible and organized person is someone who effectively manages their time and tasks, ensuring that they are always on top of their responsibilities. This person is dependable and reliable, as they understand the importance of following through on commitments and meeting their obligations. They have excellent planning skills and are able to prioritize tasks, breaking them down into manageable pieces, and setting achievable goals. With their strong organizational skills, they are able to keep track of important dates and appointments, making sure that nothing falls through the cracks. They have a strong sense of responsibility and accountability, and always strive to do their best in any given situation. Overall, a responsible and organized person is someone who is able to balance multiple tasks while maintaining a high level of productivity and efficiency."
+ },
+ {
+  "id": "alpaca-3072",
+  "think": false,
+  "instruction": "Generate a list of five scientific terms starting with \"geo\"",
+  "original": "1. Geology\n2. Geography\n3. Geophysics\n4. Geothermal\n5. Geochemistry"
+ },
+ {
+  "id": "alpaca-7588",
+  "think": false,
+  "instruction": "Summarize a research paper in 5 sentences.\n\nThe paper \"A Study on the Effect of Text Messaging on Student Performance\"",
+  "original": "This research paper investigates the correlation between text messaging and student performance. The study used surveys and test scores to analyze the potential impacts of texting on academic achievement. It was found that frequent text messaging was negatively associated with grades and test scores. The authors suggest that texting may serve as a distraction from academic tasks, leading to reduced focus and productivity. To optimize their academic performance, students are encouraged to limit their texting behavior while studying or working on school tasks."
+ },
+ {
+  "id": "alpaca-3927",
+  "think": false,
+  "instruction": "Summarize the benefits of interviewing.",
+  "original": "Interviewing has several benefits that can help in the selection and recruitment process. Some of these benefits include:\n\n1. Learning about the candidate: Interviews allow the interviewer to learn more about the candidate, their skills, experience, strengths and weaknesses, and whether or not they would be a good fit for the company.\n\n2. Gauging communication skills: Interviews allow the interviewer to assess the candidate's communication skills, both verbal and non-verbal, which is essential for many roles.\n\n3. Assessing cultural fit: Through interviews, the interviewer can determine if the candidate shares the company's values and would fit well within the company culture.\n\n4. Clarifying information: Interviews provide an opportunity for the interviewer to clarify any information on the candidate's resume or application, and to ask any follow-up questions.\n\n5. Building a relationship: Interviews can help to establish a rapport with the candidate and can set the foundation for a positive working relationship."
+ },
+ {
+  "id": "alpaca-3127",
+  "think": true,
+  "instruction": "Describe the experience of tasting a lemon for the first time.",
+  "original": "Tasting a lemon for the first time can be a unique and interesting experience. As it is a citrus fruit, one can expect it to have a tart and tangy flavor that can be overpowering. Upon taking that first bite, the sourness of the lemon can make the lips pucker, and the cheeks might clench as the taste overwhelms the senses. The acidity can even cause the eyes to squint as the brain struggles to make sense of this new, intense taste. As the taste buds adjust, one might start to notice the underlying sweetness amidst the sharp tanginess. Though the pungent citrus fragrance can tickle the nose and make the experience even more invigorating, the sensation gradually subsides, leaving a refreshing and clean taste in the mouth. In summary, tasting a lemon for the first time can be a sensory overload of tart, tangy, and sour flavors that can be both overwhelming and exciting."
+ },
+ {
+  "id": "alpaca-4078",
+  "think": false,
+  "instruction": "For the following argument, identify the main premise and the main conclusion.\n\nPlastic straws should be banned because they cause irreparable damage to animals and the environment.",
+  "original": "The main premise of this argument is that \"plastic straws cause irreparable damage to animals and the environment.\" \n\nThe main conclusion of this argument is that \"plastic straws should be banned.\""
+ },
+ {
+  "id": "oasst-02e150bf",
+  "think": false,
+  "instruction": "How do earthquakes happen?",
+  "original": "Earthquakes are caused by the sudden release of energy that has been stored in the Earth's crust. The Earth's crust is made up of a series of tectonic plates that move slowly over the Earth's mantle. When two tectonic plates collide or slide past each other, pressure builds up at the boundary between the plates. This pressure can cause the rocks to deform and store energy.\n\nWhen the pressure becomes too great, the rocks will suddenly break and the stored energy is released as seismic waves. These waves cause the ground to shake, and this shaking is what we feel during an earthquake."
+ },
+ {
+  "id": "alpaca-6132",
+  "think": false,
+  "instruction": "Write an algorithm that can identify and count the number of vowels in a given word.",
+  "original": "1. Begin by defining a function that takes a string as its input. Let's call this function `count_vowels`.\n2. Initialize a variable `vowel_count` to zero. This variable will be used to keep track of the number of vowels encountered.\n3. Create a set of vowels `vowels` and store the characters `a, e, i, o, u`. This set will be used to check if a character in the given string is a vowel.\n4. Using a for loop, iterate over the characters in the input string.\n    i. For each character, check if it is present in the `vowels` set.\n    ii. If the character is present, increment the `vowel_count` variable by 1.\n5. After the completion of the for loop, return the `vowel_count` variable. This value will be the number of vowels present in the input string.\n\nExample implementation in Python:\n\n```python\ndef count_vowels(word):\n    vowel_count = 0\n    vowels = {'a', 'e', 'i', 'o', 'u'}\n    for char in word:\n        if char in vowels:\n            vowel_count += 1\n    return vowel_count\n```"
+ },
+ {
+  "id": "oasst-70cc7683",
+  "think": false,
+  "instruction": "can you explain what that code does:\n\ndef run_cmd_advanced_training(**kwargs):\n    options = [\n        f' --bucket_reso_steps={kwargs.get(\"bucket_reso_steps\", 1)}'\n        if int(kwargs.get('bucket_reso_steps', 64)) > 1\n        else '64',\n    ]",
+  "original": "Okay, here is my understanding:\n\nThe provided code snippet defines a function called \"run_cmd_advanced_training\" which takes in keyword arguments (**kwargs). Within the function, the code creates a list of options where one of the options is \"bucket_reso_steps\". The value of this option is set to the value of the \"bucket_reso_steps\" keyword argument passed into the function, or defaults to 1 if that keyword argument is not provided.\n\nAdditionally, the code checks if the value of \"bucket_reso_steps\" is greater than 1. If so, it sets the value of the option to that value. Otherwise, it sets the value of the option to 64.\n\nFrom this, it seems the function is designed to allow customization of the \"bucket_reso_steps\" option through the keyword arguments passed in. The function ensures that this option is always set to either 1, the provided value, or 64, depending on the input.\n\nDoes this help explain what the code is doing? Let me know if you would like me to clarify or expand on any part of the code or my explanation."
+ },
+ {
+  "id": "alpaca-4490",
+  "think": false,
+  "instruction": "Generate a list of emergency resources in a specific area.\n\nBoston, MA.",
+  "original": "Here is a list of emergency resources in Boston, MA: \n\n1. Boston Emergency Medical Services (EMS): Dial 911 for any medical emergency.\n2. Boston Health Care for the Homeless Program: For emergency assistance, call 857-654-1000.\n3. Boston Area Rape Crisis Center: For 24/7 emergency assistance, call the 24-hour hotline at 800-841-8371.\n4. Boston Emergency Shelter Commission: Provides emergency housing assistance. Call 617-635-4507 for more information.\n5. Boston Police Department: Dial 911 for emergency assistance.\n6. Boston Fire Department: Dial 911 for emergency assistance.\n7. Boston Children's Hospital: 24/7 emergency care for children. The hospital can be reached at 617-355-6000.\n8. Massachusetts Emergency Management Agency: For response plans and information on natural disasters, call 508-820-2000.\n9. Disaster Distress Helpline: For 24/7 counseling and support, call 1-800-985-5990.\n10. Substance Abuse and Mental Health Services Administration (SAMHSA): For immediate crisis counseling and referral services, call 1-800-662-HELP (4357)."
+ },
+ {
+  "id": "oasst-4cd3a1c6",
+  "think": false,
+  "instruction": "Solve the equation:\n\nx^2 + x + 3 = 0",
+  "original": "This quadratic equation has no real solutions. To see this, you can use the discriminant:\n\nb^2 - 4ac = 1^2 - 4(1)(3) = -11\n\nSince the discriminant is negative, the solutions to the equation are not real numbers. Instead, they are complex numbers. Specifically, they are:\n\nx = (-1 ± sqrt(-11))/2\n\nx = (-1 ± i*sqrt(11))/2\n\nwhere i is the imaginary unit."
+ },
+ {
+  "id": "alpaca-2982",
+  "think": false,
+  "instruction": "Produce a five line haiku poem describing a sunset.",
+  "original": "Fiery orange sky\nMountain silhouette in view \nBirds glide home swiftly\nPeaceful end to day \nNighttime blankets the world soon"
+ },
+ {
+  "id": "oasst-3a34ded7",
+  "think": false,
+  "instruction": "Find the bug in the following code piece:\n\na = 1\nwhile a == 1:\n  b = input(\"what's your name ?\")\nprint(\"Hi \",b, \" this is infinity loop !\")",
+  "original": "Sure! It looks like the while loop will never conclude because `a` is always set to 1. Perhaps you meant to check the value of `b` to determine if the user had entered their name correctly?\n\nAdditionally the print statement will never execute because of the infinity loop above."
+ },
+ {
+  "id": "alpaca-2257",
+  "think": false,
+  "instruction": "Describe the difference between a router and a switch",
+  "original": "A router and a switch are both devices used in networking, but they serve different purposes.\n\nA router is a device that connects multiple networks together and directs traffic between them. It uses protocols such as IP (Internet Protocol) to route data packets to their destination, and it can also perform other functions such as network address translation (NAT), firewalling, and traffic shaping. Routers are commonly used to connect a home or office network to the internet, or to connect multiple office networks together.\n\nOn the other hand, a switch is a device that connects multiple devices together on a single network. It uses MAC addresses to direct data packets to their destination within the network, and it operates at the data link layer (Layer 2) of the OSI model. Switches are commonly used in office networks to connect multiple computers, printers, and other devices to each other and to a router.\n\nIn summary, a router connects multiple networks and directs traffic between them, while a switch connects multiple devices on a single network and directs traffic within that network."
+ },
+ {
+  "id": "alpaca-2261",
+  "think": false,
+  "instruction": "Summarize the key points of an article about AI ethics",
+  "original": "I'm sorry, you did not provide an article for me to summarize. Can you please provide the link or text of the article you would like me to summarize?"
+ },
+ {
+  "id": "alpaca-6365",
+  "think": false,
+  "instruction": "Write a sentence that humorously turns the following cliché phrase to its opposite: \"still waters run deep\"",
+  "original": "\"Raging rapids are only an inch deep, just like my ex's personality.\""
+ }
+]

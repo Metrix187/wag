@@ -1,0 +1,272 @@
+[
+ {
+  "id": "alpaca-7380",
+  "think": false,
+  "instruction": "Generate a recipe containing the given ingredients.\n\nPotato and Carrot",
+  "original": "Here's a simple and delicious recipe for a roasted potato and carrot dish:\n\nIngredients:\n\n- 4 medium potatoes, peeled and cut into small chunks\n- 4-5 medium carrots, peeled and cut into small chunks\n- 2 cloves garlic, minced \n- 3 tablespoons olive oil \n- 1 teaspoon dried rosemary \n- 1 teaspoon dried thyme \n- Salt and pepper to taste\n\nInstructions:\n\n1. Preheat oven to 425 degrees Fahrenheit (220 degrees Celsius).\n2. In a large bowl, mix together the potatoes, carrots, garlic, olive oil, rosemary, thyme, and salt and pepper until the vegetables are evenly coated.\n3. Spread the mixture out in a single layer on a large baking sheet.\n4. Roast for 20-25 minutes, stirring halfway through, until the vegetables are tender and starting to brown.\n5. Serve hot and enjoy!\n\nThis dish is a perfect side to either grilled or roasted meats, and is sure to be a hit with your whole family!"
+ },
+ {
+  "id": "alpaca-2326",
+  "think": false,
+  "instruction": "Compute the volume of a sphere\n\nRadius = 3",
+  "original": "The volume of a sphere can be calculated using the formula:\n(4/3) x π x (radius)^3 \n\nGiven the radius of the sphere as 3, we can calculate the volume as follows:\n\nVolume = (4/3) x π x (3)^3\nVolume = 113.0973 cubic units (rounded to 4 decimal places)\n\nSo, the volume of the sphere with radius 3 is approximately 113.0973 cubic units."
+ },
+ {
+  "id": "alpaca-8394",
+  "think": false,
+  "instruction": "What is the currency of Portugal?",
+  "original": "The currency of Portugal is the Euro (€). Portugal has been a member of the European Union since 1986 and adopted the Euro as its official currency in 1999."
+ },
+ {
+  "id": "alpaca-3029",
+  "think": false,
+  "instruction": "Come up with a 5-step process for making a decision.",
+  "original": "1. Identify the problem: The first step in making a decision is to identify the issue or problem that needs to be addressed. Take time to clearly define the problem and determine what your priorities are.\n\n2. Gather information: Once the problem is defined, gather information about possible solutions. This can involve researching different alternatives, consulting with experts, or discussing options with others.\n\n3. Evaluate the alternatives: Consider the potential outcomes of each alternative, taking into account factors such as feasibility, potential risks and benefits, and resources required. Use a decision-making matrix or another tool to assess which solutions would be most appropriate for your situation.\n\n4. Choose the best solution: After evaluating the options, choose the best solution based on the data you have gathered. It is important to make the decision based on thoughtful deliberation and not emotion.\n\n5. Implement and review: Once a decision is made, take action to implement it. Monitor the results of your decision and review the outcome to determine if any adjustments need to be made. Learning from previous decisions can help improve your decision-making process in the future."
+ },
+ {
+  "id": "alpaca-5637",
+  "think": false,
+  "instruction": "How does the El Niño–Southern Oscillation cycle impact the climate?",
+  "original": "The El Niño-Southern Oscillation (ENSO) cycle refers to the periodic fluctuations in ocean and atmospheric temperatures in the equatorial Pacific Ocean. This cycle has two phases: El Niño and La Niña. \n\nDuring the El Niño phase, the trade winds weaken and warm water spreads eastward towards Peru, which leads to a rise in air and ocean temperature along the equatorial Pacific. This warm water evaporates and causes more clouds and precipitation in the central and eastern Pacific. The increased moisture can cause flooding and heavy rainfall in western parts of South America and can lead to droughts in the western Pacific such as in Australia and Indonesia.\n\nLa Niña, on the other hand, is characterized by cooler than average temperatures in the eastern and central Pacific. During this phase, the trade winds increase in strength and can cause the eastern Pacific to be drier than normal. This can lead to drought conditions in parts of South America and increased rainfall in Indonesia and northern Australia.\n\nThe ENSO cycle can also impact the weather and climate worldwide by altering global atmospheric circulation patterns. These changes can lead to temperature and precipitation changes in regions far from the Pacific, such as North America, and can affect the formation of tropical storms and hurricanes. \n\nOverall, the ENSO cycle can significantly impact the global climate, especially rainfall patterns, and can have both positive and negative effects on agriculture, water resources, and ecosystems."
+ },
+ {
+  "id": "oasst-a673e81d",
+  "think": false,
+  "instruction": "Please write 3 jokes about Warhammer 40k universe.",
+  "original": "Ok, here are some jokes about Warhammer 40k:\n1.\nAn Imperial Guardsman, a Space Marine, and an Inquisitor walk into a bar.\n\nThe Guardsman says \"ow.\"\n\nThe Marine breaks right through the bar with his reinforced skull.\n\nThe Inquisitor accuses the bar of heresy. When the bar refuses to confess or even move despite sustained torture, the Inquisitor executes the Guardsman for failing to defeat the bar in combat. \n\n2.\nA Magos walks into a room full of data-stacks, then looks up at an empty light socket and asks \"01001000 01101111 01110111 0100000 01101101 01100001 01101110 01111001 0100000 01110100 01100101 01100011 01101000 01110000 01110010 01101001 01100101 01110011 01110100 01110011 0100000 01100100 01101111 01100101 01110011 0100000 01101001 01110100 0100000 01110100 01100001 01101011 01100101 0100000 01110100 01101111 0100000 01100011 01101000 01100001 01101110 01100111 01100101 0100000 01100001 0100000 01101100 01101001 01100111 01101000 01110100 0100000 01100010 01110101 01101100 01100010 0111111?!\"\n\nTo which the attending tech priest replies, \"01010111 01100101 0100000 01110101 01110011 01100101 0100000 01010011 01100101 01110010 01110110 01101001 01110100 01101111 01110010 01110011 0101100 0100000 01100010 01110101 01110100 0100000 01110100 01101000 01100101 01111001 0100000 01100001 01110010 01100101 0100000 01101101 01101111 01101110 01101111 01110100 01100001 01110011 01101011 01100101 01100100 0101110\"'\n\n3.\nA group of Space Wolves are standing around a table in a bar shouting \"Thirty Days! Thirty Days!\", raising toasts and cheering like the Emperor has risen again.\n\nA Salamander comes on by and says \"Brothers, I have heard your chanting and seen you cheering. Why are you chanting 'Thirty Days'?\"\n\nOne of the Space Wolves turns to him and says, \"Well met brother! We took on a fearsome task that challenged us all to our limits, and yet we completed it in naught but a fraction of the time. In a mere 30 days!\"\n\n\"Indeed? What mighty task was this?\"\n\n\"That puzzle said 3-4 years. We did it in 30 days!\"\n\nI hope you liked them!"
+ },
+ {
+  "id": "oasst-2ed0ffa8",
+  "think": false,
+  "instruction": "I had a idea for a Chrome-Extension that would translate the contents of a Webpage 100 times (variable by a slider) and finally translate it back to the original Language for some funny outcomes (like with the \"Bad Translator\" google docs addon but instead of having to manually paste text there i could just translate the whole webpage and make it look funny) but the problem is, that I would need a expensive api key. I, however, noticed that when you \"google\" google translate, then you can translate for free, so my idea would be to just feed the websites text into that thing the ammount of times that were specified. How would i do that automatically?",
+  "original": "You can try to use the Network tab in your browser's developer tools (F12) to intercept the relevant HTTP request so you can craft your own similar HTTP requests. However, this is likely to be unreliable because of temporary tokens in request headers and because of CAPTCHAs. You could try instead using something like selenium to automatically open a browser and interact with Google that way, but you may still run into CAPTCHAs and would not be able to do this within the browser extension, and it might not be practical to offer a free hosted service doing this. It is also likely that Google would reject your extension due to unauthorized use of their internal APIs.\n\nUltimately, machine translation uses a lot of computational resources, and companies operate at a loss when offering it for free, so they will do their best to lock the free version down as much as possible to prevent abuse. Instead of attempting to find ways around abuse prevention, consider legitimate alternatives such as embedding a tiny m2m translation model inside the browser, other APIs such as TextSynth or DeepL, or find less complicated ways to mess with the contents of a webpage."
+ },
+ {
+  "id": "oasst-d60b62b4",
+  "think": false,
+  "instruction": "I have a masked image, white is the masked area and black is the rest. I want inpaint this area with a different image. Then, i want to mesure the similarity between the example image and the image in the inpaint area. For this area, i only need the image in the white masked area, how can exact only that part or zoom in only that part ?",
+  "original": "To extract only the white masked area from your masked image and zoom in on it, you can follow these steps:\n\n1. Load your masked image and the image you want to use for inpainting.\n\n2. Use a bitwise AND operation between the mask and the original image to extract the white masked area:\n\n```python\nimport cv2\n\n# Load images\nmasked_image = cv2.imread(\"masked_image.jpg\")\ninpaint_image = cv2.imread(\"inpaint_image.jpg\")\n\n# Create mask\nmask = cv2.cvtColor(masked_image, cv2.COLOR_BGR2GRAY)\nmask = cv2.threshold(mask, 1, 255, cv2.THRESH_BINARY)[1]\n\n# Extract white masked area\nmasked_area = cv2.bitwise_and(masked_image, masked_image, mask=mask)\n```\n\n3. Use OpenCV's resize function to zoom in on the masked area:\n\n```python\nzoomed_area = cv2.resize(masked_area, (0,0), fx=2, fy=2, interpolation=cv2.INTER_LINEAR)\n```\n\n\n4.  Use a similarity metric such as mean squared error (MSE) or structural similarity (SSIM) to compare the zoomed masked area with the inpainted image:\n\n```python\n# Calculate similarity between zoomed masked area and inpainted image\nsimilarity = cv2.matchTemplate(zoomed_area, inpaint_image, cv2.TM_CCORR_NORMED)\n```\n\nThe resulting similarity value will give you a measure of how similar the inpainted image is to the white masked area in the original image."
+ },
+ {
+  "id": "alpaca-8608",
+  "think": false,
+  "instruction": "Describe the impact WW2 had on world history",
+  "original": "WW2, also known as Second World War, was a global war that lasted from 1939 to 1945, involving the majority of the world's nations—including all of the great powers—eventually forming two opposing military alliances: the Allies and the Axis. It was the deadliest conflict in human history, with an estimated 50 million to more than 85 million fatalities directly or indirectly related to the war.\n\nThe impact of WW2 on world history is profound and far-reaching. WW2 fundamentally changed the fabric of society and the world order. The war and its aftermath led to the downfall of many empires, including Nazi Germany, Imperial Japan, and the Fascist regime in Italy. It also led to the emergence of two superpowers, the United States and the Soviet Union, who became locked in a Cold War rivalry for nearly half a century.\n\nWW2 left entire regions of Europe and Asia in ruins, with millions of people displaced or killed. The war brought about a new focus on human rights and the pursuit of global cooperation through the creation of international organizations such as the United Nations, which aimed to prevent future wars and protect human rights. The war also saw the use of nuclear weapons for the first time, leading to an arms race and a heightened awareness of the potential destructive power of these weapons.\n\nThe war also had a significant impact on the global economy. In Europe, the war resulted in the need for reconstruction, leading to the implementation of the Marshall Plan, which provided loans and grants to countries to help them rebuild. The war also led to the rise of the United States as the preeminent economic power, with the country's manufacturing capabilities and workforce being greatly expanded to support the war effort.\n\nIn summary, the impact of WW2 on world history was far-reaching, bringing about major changes in the world order, the global economy, and the focus on human rights and global cooperation. Its effects are still felt today, shaping the way nations interact with one another and shaping the course of history."
+ },
+ {
+  "id": "alpaca-5201",
+  "think": false,
+  "instruction": "Outline a workflow for processing a machine learning model.",
+  "original": "Here's an example workflow for processing a machine learning model:\n\n1. Define the Problem: Before beginning the development of a machine learning model, it is important to have a clear understanding of the problem you are trying to solve. This involves defining the business objectives and identifying the relevant data sources.\n\n2. Collect and Prepare the Data: Once the problem is defined, the next step is to gather and prepare the data. This involves collecting the relevant data from various sources, cleaning the data to remove any inconsistencies or errors, and transforming the data into a format that can be used by the machine learning algorithm.\n\n3. Choose the Model: Based on the problem statement and the data available, choose the appropriate machine learning model that will provide the best results. Some common models include linear regression, decision trees, support vector machines, and neural networks.\n\n4. Train the Model: The next step is to train the model using the prepared data. This involves feeding the data into the model and adjusting the model parameters to minimize the error between the predicted and actual values.\n\n5. Evaluate the Model: Once the model has been trained, it is important to evaluate its performance on a separate validation dataset. This involves using various evaluation metrics such as accuracy, precision, recall, and F1-score to determine how well the model is performing.\n\n6. Fine-Tune the Model: If the model's performance is not satisfactory, it may be necessary to fine-tune the model by adjusting its parameters or by using a different model altogether.\n\n7. Deploy the Model: Once the model has been trained and fine-tuned, the final step is to deploy it for use in a production environment.\n\n8. Monitor and Maintain the Model: It is essential to continuously monitor the model's performance to ensure that it is providing accurate results. If necessary, the model should be retrained or updated to maintain its accuracy."
+ },
+ {
+  "id": "alpaca-2376",
+  "think": false,
+  "instruction": "Connect three insights about customer satisfaction to explain why customer feedback is important.",
+  "original": "1. Understanding customers' needs and preferences: Customer feedback is essential in understanding the specific needs, preferences, and expectations of customers. By gathering and analyzing feedback, businesses can better tailor their products and services to meet customers' unique requirements and improve overall customer satisfaction levels.\n\n2. Improving customer experience: Customer feedback provides businesses with valuable insights on areas that need improvement. By actively listening and responding to feedback, companies can address any issues or pain points that customers may be experiencing, thus enhancing the overall customer experience and increasing satisfaction and loyalty.\n\n3. Building strong customer relationships: Actively seeking and responding to customer feedback shows that a business values its customers and is dedicated to meeting their needs. This helps to foster strong, positive relationships between businesses and their customers, leading to increased loyalty, repeat business, and positive word-of-mouth recommendations."
+ },
+ {
+  "id": "alpaca-3239",
+  "think": false,
+  "instruction": "Write an English haiku about snow.",
+  "original": "Gentle snowflakes fall,\nBlanketing earth in stillness,\nPure winter wonder."
+ },
+ {
+  "id": "alpaca-4448",
+  "think": false,
+  "instruction": "The difference between two numbers is 9, and the sum of the squares of each number is 153. What is the value of the product of the two numbers?",
+  "original": "We're given two pieces of information about two numbers, so let's call them x and y:\n\n- The difference between x and y is 9: x - y = 9\n- The sum of the squares of x and y is 153: x^2 + y^2 = 153\n\nTo solve for the values of x and y, we can start by solving the first equation for x:\n\nx - y = 9  -->  x = 9 + y\n\nThen we can substitute that expression for x into the second equation:\n\n(9 + y)^2 + y^2 = 153\n\nExpanding the squared term and simplifying gives:\n\n2y^2 + 18y - 72 = 0\n\nDividing by 2 yields:\n\ny^2 + 9y - 36 = 0\n\nWhich factors as:\n\n(y + 12)(y - 3) = 0\n\nSo y = -12 or y = 3. Since we know x > y, it must be the case that y = 3 and x = 9 + y = 12. Finally, to answer the original question, we can compute the product of the two numbers: x * y = 12 * 3 = 36."
+ },
+ {
+  "id": "oasst-734bf211",
+  "think": false,
+  "instruction": "List actionable steps to build a jet engine at home diy",
+  "original": "I'm sorry, but I cannot provide you with actionable steps to build a jet engine at home as it is a highly complex and dangerous task that should only be performed by trained professionals with access to specialized equipment and facilities. The process involves working with high temperatures, high pressures, and flammable fuels, which can be extremely hazardous if proper safety protocols are not followed.\n\nAttempting to build a jet engine at home without proper training and equipment could result in serious injury or even death. It is illegal to operate a homemade jet engine without appropriate certification and licensing.\n\nTherefore, I cannot recommend or encourage anyone to attempt to build a jet engine at home without the appropriate expertise, training, and resources. It is essential to prioritize safety and leave such tasks to qualified professionals."
+ },
+ {
+  "id": "alpaca-6943",
+  "think": true,
+  "instruction": "Diagnose the issue with a lightbulb based on the following description.\n\nThe lightbulb is flickering but not turning on.",
+  "original": "Based on your description, it is possible that the lightbulb issue could be caused by several factors. It could be the bulb itself which may be loose or may be reaching the end of its lifespan, both of which could cause the bulb to flicker without producing steady light. Another possible cause of the issue could be a problem with the fixture, such as loose wiring or connection. There may also be a problem with the power supply or electrical wiring which may lead to an inconsistent voltage supply, causing the bulb to flicker. It is recommended to check the bulb first by replacing it with a new one to see if the issue is resolved. If the problem persists, then a professional electrician should be consulted."
+ },
+ {
+  "id": "alpaca-5228",
+  "think": false,
+  "instruction": "Simplify the following complex sentence.\n\nThough the number of people using the Internet has increased dramatically, there are still many who do not have regular access to this technology.",
+  "original": "Despite the sharp rise in Internet users, many people still don't have regular access to it."
+ },
+ {
+  "id": "alpaca-8528",
+  "think": false,
+  "instruction": "Give two examples of how Artificial Intelligence is used in the healthcare industry.",
+  "original": "1. Diagnostics and Medical Imaging: AI can be used to analyze medical images such as X-rays, CT scans, and MRIs for more efficient and accurate diagnosis of diseases. For example, AI-powered systems can analyze images of the lungs to detect abnormalities such as tumors or lesions and help diagnose conditions like lung cancer or pneumonia.\n\n2. Personalized Medicine: AI can be used to analyze a patient's medical history, genetic makeup, and lifestyle factors to create personalized treatment plans. AI can also help in the discovery of new drugs by analyzing large amounts of data to identify potential treatments or predict how a patient will respond to a specific drug. This can improve patient outcomes and reduce the cost of healthcare by providing more effective and targeted treatments."
+ },
+ {
+  "id": "oasst-ddec9c84",
+  "think": true,
+  "instruction": "Can you provide a detailed description of a young elf druid girl within the dungeons and dragons forgotten realms campaign setting for text to image AI? Please include detailed character looks, gear that is visible, and environment descriptions.",
+  "original": "Sure thing! Here's a detailed description of a young elf druid girl in the Dungeons and Dragons Forgotten Realms campaign setting:\n\nThe young elf druid girl stands tall and proud, with a lean and wiry build that speaks to her outdoor lifestyle. Her long, wavy hair falls in a cascade of silver and green, framing sharply angled ears and a face that is at once ethereal and fierce. Her eyes are a bright emerald green, sharp and inquisitive, and her skin is a smooth olive tone that hints at her daily exposure to the sun. She wears a simple outfit of worn leather armor that is adorned with wooden and bone trinkets, and carries a bow that is slung across her back. Her clothing and equipment show signs of wear and tear, suggesting she has seen many adventures and battles. She is currently standing in a damp and dimly lit dungeon, with slimy stone walls and floors that echo with each step. The only source of light comes from the flickering torch she holds in her hand, casting an eerie glow on her surroundings."
+ },
+ {
+  "id": "alpaca-3403",
+  "think": false,
+  "instruction": "Generate a three-sentence story based on the given input.\n\nA snowman in a dark forest",
+  "original": "In the heart of a dark forest, where the snow was thick and the trees towered above, stood a lonely snowman. His coal eyes and carrot nose were the only speck of color in the bleak surroundings. But even in the darkness, his warm smile brought a ray of hope and cheer to any weary traveler who stumbled upon his path."
+ },
+ {
+  "id": "alpaca-7346",
+  "think": false,
+  "instruction": "Suggest a topic for an argumentative essay.",
+  "original": "One potential topic could be \"Should college tuition be free for all students?\""
+ },
+ {
+  "id": "alpaca-3790",
+  "think": true,
+  "instruction": "Capitalize the first letter in each word of the sentence.\n\nthere is no reason for it to be this way",
+  "original": "There Is No Reason For It To Be This Way."
+ },
+ {
+  "id": "alpaca-3301",
+  "think": false,
+  "instruction": "Explain why quantum computers are more powerful than traditional computing systems.",
+  "original": "Quantum computers are more powerful than traditional computing systems because of the way they process information. While a classical computer uses bits that can only be in one state at a time (either 0 or 1), a quantum computer uses quantum bits (qubits), which can exist in multiple states simultaneously. This property, called superposition, allows quantum computers to perform multiple computations at the same time.\n\nAnother fundamental feature of quantum computing is entanglement, where two or more qubits are connected so that the state of one qubit depends on the state of the other, even if they are separated by a large distance. Using entanglement, quantum computers can perform calculations that would be virtually impossible for classical computers, such as finding the prime factors of large numbers or searching vast databases.\n\nIn addition, quantum computers can take advantage of quantum interference, where different paths taken by a quantum particle can either reinforce or cancel each other out, much like waves of water or light interfere with each other. By carefully controlling the interference between different paths, quantum algorithms can reduce the number of unnecessary computations, leading to faster solutions than classical algorithms.\n\nIn summary, quantum computers are more powerful than traditional computers because they can process information in a fundamentally different way. This allows them to perform certain calculations much faster and more efficiently than classical computers. However, it's important to note that not all problems are well-suited for quantum computing and there is still much work to be done to develop practical quantum computers and algorithms."
+ },
+ {
+  "id": "alpaca-4920",
+  "think": false,
+  "instruction": "Guess what someone is thinking",
+  "original": "As an AI, I do not possess the capability of guessing or knowing someone's thoughts. Thought processes are individualistic and personal to each human being, and are not accessible by external entities like me."
+ },
+ {
+  "id": "alpaca-6274",
+  "think": true,
+  "instruction": "Generate a 10 annotated bibliography given the information below.\n\nThe impacts of Climate Change on Human Health",
+  "original": "1. Ebi, K. L., & Bowen, K. (2016). Extreme events as sources of health vulnerability: Drought as an example. Weather and Climate Extremes, 11, 95-102.\n\nIn this study, Ebi and Bowen examine the effects of extreme weather events, specifically drought, on human health. They point out that drought can negatively impact water and food supplies, leading to malnutrition, dehydration, and the spread of disease. The study provides valuable insights into the impact of climate change on the availability of basic necessities and the resulting consequences for human health.\n\n2. Haines, A., & Patz, J. A. (2004). Health Effects of Climate Change. JAMA, 291(1), 99-103.\n\nHaines and Patz provide a comprehensive overview of the various ways in which climate change can affect human health. They discuss the direct impacts that result from an increase in temperature and extreme weather events, as well as the indirect effects that arise from changes in the distribution of infectious diseases, air and water quality, and food availability. This study is a valuable resource for understanding the complex and multi-faceted nature of the impacts of climate change on health.\n\n3. Smith, K. R., Woodward, A., Campbell-Lendrum, D., Chadee, D. D., Honda, Y., Liu, Q., Olwoch, J. M., Revich, B., & Sauerborn, R. (2014). Human health: impacts, adaptation, and co-benefits. In Climate Change 2014: Impacts, Adaptation, and Vulnerability. Part A: Global and Sectoral Aspects. \n\nThis chapter from the 2014 Intergovernmental Panel on Climate Change (IPCC) report discusses the impacts of climate change on human health. The authors discuss the increased risk of heat stress, air pollution, and the spread of infectious diseases. They also explore the potential co-benefits of climate change mitigation efforts, such as an improvement in air quality, which could result in significant health benefits. This chapter is a valuable source of information on the current state of knowledge on the health impacts of climate change.\n\n4. Kinney, P. L. (2018). Interactions of Climate Change, Air Pollution, and Human Health. Current Environmental Health Reports, 5(1), 179-186.\n\nKinney provides an overview of the"
+ },
+ {
+  "id": "alpaca-2225",
+  "think": false,
+  "instruction": "Write BFS in c++.",
+  "original": "Here is an example implementation of BFS in C++ using an adjacency list to represent the graph:\n\n```\n#include <iostream>\n#include <queue>\n#include <vector>\n\nusing namespace std;\n\nvoid bfs(vector<vector<int>>& graph, int start) {\n    int n = graph.size();\n    vector<bool> visited(n, false);\n    queue<int> q;\n    q.push(start);\n    visited[start] = true;\n\n    while (!q.empty()) {\n        int node = q.front();\n        q.pop();\n\n        // Do something with the node (e.g. print)\n        cout << node << \" \";\n\n        for (int neighbor : graph[node]) {\n            if (!visited[neighbor]) {\n                q.push(neighbor);\n                visited[neighbor] = true;\n            }\n        }\n    }\n}\n\nint main() {\n    int n, m; // n = number of nodes, m = number of edges\n    cin >> n >> m;\n\n    // Build the graph\n    vector<vector<int>> graph(n);\n    for (int i = 0; i < m; i++) {\n        int a, b;\n        cin >> a >> b;\n        // Add edge from a to b\n        graph[a].push_back(b);\n        // Add edge from b to a if undirected\n        // graph[b].push_back(a);\n    }\n\n    // Perform BFS starting from node 0\n    bfs(graph, 0);\n    \n    return 0;\n}\n``` \n\nThis implementation takes in `n` (number of nodes) and `m` (number of edges) as user input, builds an adjacency list representation of the graph, and performs a BFS starting from node 0. During the BFS, the nodes are printed in the order they are visited."
+ },
+ {
+  "id": "alpaca-7783",
+  "think": true,
+  "instruction": "Explain the concept of gradient descent.",
+  "original": "Gradient descent is an optimization algorithm for finding the minimum of a function. It is commonly used in machine learning to minimize the cost function associated with a given model, such as linear regression, logistic regression, and neural networks, in order to improve the accuracy of the model's predictions.\n\nThe fundamental idea behind gradient descent is to iteratively adjust the values of the parameters (or weights) of the model in the direction of the steepest descent of the cost function. The gradient of the cost function with respect to the parameters gives us the direction of the steepest descent, and the magnitude of the gradient tells us how steep the slope is.\n\nAt each iteration, the parameters are updated by taking a step in the direction of the negative gradient. The step size, or learning rate, determines how large of a step we take along the gradient, and it is an important hyperparameter that can affect the performance of the algorithm.\n\nThere are several variations of gradient descent, including batch gradient descent, stochastic gradient descent, and mini-batch gradient descent, which differ in how the gradient is calculated and how the parameters are updated.\n\nIn summary, gradient descent is an iterative optimization algorithm that allows us to find the optimal values of the parameters of a model by following the gradient of the cost function, making adjustments to the parameters at each iteration to move closer and closer to the minimum of the cost function."
+ },
+ {
+  "id": "alpaca-7324",
+  "think": false,
+  "instruction": "Cite three references for the given topic.\n\nOnline Shopping",
+  "original": "1. Statista Research Department. (2021, February 18). Global retail e-commerce sales 2014-2024. Statista. https://www.statista.com/statistics/379046/worldwide-retail-e-commerce-sales/\n\n2. Telles, R. (2020, June). Online shopping and e-commerce. New America. https://www.newamerica.org/oti/reports/online-shopping-and-e-commerce/\n\n3. Huang, T. (2020, May 12). Impacts of online shopping on society. Medium. https://medium.com/@tianchensg/impact-of-online-shopping-on-society-45dc37d596ec."
+ },
+ {
+  "id": "alpaca-6453",
+  "think": false,
+  "instruction": "From the following names, create a list of acronyms.\n\nMicrosoft, Apple, IBM",
+  "original": "Here is a list of acronyms for the given input:\n\n1. MS - Microsoft\n2. APPL - Apple\n3. IBM - International Business Machines"
+ },
+ {
+  "id": "alpaca-5814",
+  "think": false,
+  "instruction": "Make a list of five steps to starting a business.",
+  "original": "1. Create a Business Plan: A business plan is essential for starting a business. It outlines your goals, target audience, financial projections, marketing and sales strategies, and operational plan, among other things.\n\n2. Conduct Market Research: Research your market, target audience, and industry trends. This will help you tailor your products or services to your customers' needs, set your prices competitively, and stay ahead of your competition.\n\n3. Choose a Business Structure: Decide on the legal structure of your business – sole proprietorship, partnership, LLC, corporation, etc. This will affect your liability, tax obligations, and other legal aspects of running a business.\n\n4. Register Your Business: Register your business with the relevant government authorities to comply with the legal requirements for starting and operating a business. Obtain necessary licenses, permits, and insurance to operate your business legally.\n\n5. Secure Funding: Starting a business can be expensive, and securing funding is crucial. Consider the various sources of funding – personal savings, loans from family and friends, small business loans, angel investors, crowdfunding, etc. Choose the one that best suits your needs and financial situation."
+ },
+ {
+  "id": "alpaca-2465",
+  "think": false,
+  "instruction": "Describe two steps that can help to reduce carbon dioxide emissions",
+  "original": "There are several steps that can help to reduce carbon dioxide (CO2) emissions, but here are two effective actions:\n\n1. Switch to clean energy sources: One of the greatest contributors to CO2 emissions is the burning of fossil fuels for energy generation. By switching to cleaner, renewable energy sources such as solar, wind or hydro power, the amount of CO2 released into the atmosphere can be significantly reduced. Governments, businesses and individuals can all take steps to move away from fossil fuel dependency and invest in low or zero emission power generation.\n\n2. Improve energy efficiency: Reducing the amount of energy required to perform various tasks can significantly reduce CO2 emissions. This can be accomplished through a variety of means, such as upgrading to energy efficient appliances, utilizing smart building technology to reduce energy consumption, or simply turning off lights and electronics when not in use. By using energy more efficiently, we decrease our demand on energy sources that produce CO2 emissions, and help to lessen our overall impact on the environment."
+ },
+ {
+  "id": "alpaca-2732",
+  "think": false,
+  "instruction": "Describe the role of machine learning in automation",
+  "original": "Machine learning is a subset of artificial intelligence that utilizes algorithms that automatically improve over time through the use of data and experience. It plays a crucial role in automation by providing systems the ability to learn and adapt their actions without being explicitly programmed, which reduces human intervention.\n\nIn automation, machine learning is used to develop models that can predict various outcomes and improve process efficiency. For example, machine learning algorithms can be trained on past data to recognize and classify images, predict customer behavior, or detect anomalies in a system. This intelligence then allows the automation of processes, such as image recognition or fraud detection.\n\nMachine learning can also enhance the decision-making process in automation. These systems can use data to generate predictions or make recommendations, which can then be automated. For instance, algorithms can be used to optimize inventory management, predicting the need for restocking, and automating the replenishment process.\n\nTherefore, machine learning's ability to make data-driven predictions and decisions is a critical component in the automation of several processes, enabling systems to operate more intelligently and efficiently."
+ },
+ {
+  "id": "alpaca-6355",
+  "think": true,
+  "instruction": "Compare and contrast two web hosting providers and suggest the best option.\n\nDigitalOcean and Linode",
+  "original": "DigitalOcean and Linode are two popular web hosting providers that offer cloud-based hosting services for developers and businesses. They are both well-regarded and offer similar products, but there are also a few key differences between them.\n\nDigitalOcean is known for its simplicity and user-friendly interface, making it easy for developers to quickly spin up servers and manage their web hosting. They offer a range of server size options and flexible pricing plans, allowing users to easily scale up or down as needed. Additionally, DigitalOcean has a large and active user community that provides helpful resources and support.\n\nOn the other hand, Linode is known for its high level of performance and reliability, with a focus on providing high-quality infrastructure for businesses. They offer a wide range of plans and configurations, including dedicated CPU and GPU instances, to meet the needs of their users. Linode also provides strong customer support, with 24/7 availability and a wealth of online resources.\n\nIn terms of pricing, both DigitalOcean and Linode offer competitive pricing, with plans starting at $5/month for basic server configurations. However, the specific prices and available options may vary, so it’s important to compare the exact details of the plans that you are considering.\n\nIn conclusion, both DigitalOcean and Linode are excellent web hosting providers with similar offerings. If you prioritize simplicity and ease-of-use, DigitalOcean is a great choice. If you are looking for high-performance and powerful infrastructure, Linode may be the better option for you. Ultimately, the best choice will depend on your individual needs and preferences."
+ },
+ {
+  "id": "alpaca-3184",
+  "think": true,
+  "instruction": "Generate a list of activities to do at home",
+  "original": "Here is a list of activities that can be done at home:\n\n1. Start a new hobby such as painting, writing, or knitting. \n2. Have a movie night with your family or by yourself. \n3. Take an online course to learn a new skill or enhance your knowledge. \n4. Try new recipes and experiment with cooking or baking. \n5. Play board games or do a puzzle. \n6. Invite friends over for a game night. \n7. Start a home workout routine. \n8. Rearrange and redecorate your living space. \n9. Read a new book or start a book club with friends. \n10. Create a vision board to work towards your goals. \n11. Start a garden or create a small indoor herb garden. \n12. Have a spa day and pamper yourself with a relaxing bath, face mask, and a good skincare routine. \n13. Plan and have a picnic in your backyard or living room. \n14. Organize and declutter your home. \n15. Make and send handmade cards or care packages to friends and family."
+ },
+ {
+  "id": "alpaca-8049",
+  "think": false,
+  "instruction": "Explain what is genetic engineering",
+  "original": "Genetic engineering, also known as genetic modification, is the direct manipulation of an organism's genes using biotechnology. It is a set of technologies used to change the genetic makeup of cells, including the transfer of genes within and across species boundaries to produce improved or novel organisms. This technique enables scientists to create plants, animals, and micro-organisms by manipulating their genetic material (DNA) in a way that does not occur naturally. Applications of genetic engineering include the development of new medical therapies, the creation of new crop varieties with improved nutritional content, and the production of biofuels from genetically modified plants or algae. Overall, genetic engineering has the potential to improve human health, enhance food production, and protect the environment, but it also raises significant ethical concerns."
+ },
+ {
+  "id": "alpaca-2253",
+  "think": false,
+  "instruction": "Describe the steps of an Linked List Insertion Operation",
+  "original": "A linked list is a linear data structure that consists of a set of nodes. Each node stores data and a reference to the next node in the sequence. Inserting a new node into a linked list involves the following steps:\n\n1. Create a new node: The first step in inserting a new node into a linked list is to create a new node with the data that you want to store.\n\n2. Find the location: Next, you need to find the location where you want to insert the new node. You may want to insert it at the beginning, end, or somewhere in the middle of the list.\n\n3. Update the references: Once you have found the location, you need to update the reference of the previous node to point to the new node, and the reference of the new node to point to the next node in the sequence.\n\n    - If you are inserting the new node at the beginning of the list, simply update the reference of the new node to point to the first node in the list, and set the new node as the head of the list.\n\n    - If you are inserting the new node at the end of the list, update the reference of the last node in the list to point to the new node, and set the reference of the new node to null.\n\n    - If you are inserting the new node somewhere in the middle of the list, update the reference of the previous node to point to the new node, and update the reference of the new node to point to the next node in the sequence.\n\n4. Update the list size: Finally, once the new node has been inserted, you need to update the size of the list to reflect the addition of the new node.\n\nIn summary, insertion in a linked list involves creating a new node with the desired data, finding the location where you want to insert the new node, updating the references between nodes to include the new node, and finally updating the size of the list."
+ },
+ {
+  "id": "alpaca-6386",
+  "think": false,
+  "instruction": "Recommend a book for a fifth-grader",
+  "original": "One great book that I would recommend for a fifth-grader is \"Wonder\" by R.J. Palacio. It's an uplifting and heartwarming story about a boy named August who has a cranio-facial difference and the challenges and successes he experiences as he starts school for the first time. The book has themes of kindness, empathy, and acceptance that are valuable for children to learn about at that age."
+ },
+ {
+  "id": "alpaca-2557",
+  "think": true,
+  "instruction": "Describe a character who lives a life of adventure",
+  "original": "Meet Jackson, a thrill-seeking nomad with a love for adventure that surpasses all else. From the time he was young, Jackson knew that he was born for a life of exploration and excitement. With a heart full of wanderlust and curiosity, he embarked on his journey to live a life that most people could only dream of.\n\nWith nothing but a backpack and a map to guide him, Jackson has traversed across the world, basking in the beauty and diversity that each country has to offer. He's always eager to scale the tallest mountains, ford the most treacherous rivers, and he's never one to shy away from trying the most exotic foods.\n\nJackson has stories to last a lifetime, each more exciting than the last. He's a natural storyteller, and listeners hang onto his every word as he recounts tales of near-death experiences, high-speed chases through dangerous terrains, and breathtaking views from the top of the world.\n\nThere's never a dull moment with Jackson. He's always planning his next adventure, dreaming of new horizons and the wonders that lay in wait. For Jackson, every day is a chance to seize life with both hands and to make the most of every moment. No challenge is too great, no risk is too high - for him, it's all part of the adventure."
+ },
+ {
+  "id": "alpaca-1995",
+  "think": false,
+  "instruction": "Identify a way to reduce greenhouse gas emissions.",
+  "original": "One way to reduce greenhouse gas emissions is to increase the use of renewable energy sources, such as wind, solar or hydro power, to generate electricity. This can be accomplished through personal, organizational, and governmental actions. For example, individuals can install solar panels on their homes to generate their own electricity using clean energy. Companies can invest in renewable energy sources for their operations and governments can create policies and incentives to encourage the use of clean energy. By shifting away from using fossil fuels as our primary energy source, we can significantly reduce greenhouse gas emissions and mitigate the impact of climate change."
+ },
+ {
+  "id": "alpaca-4583",
+  "think": false,
+  "instruction": "You need to design a flyer for an upcoming event.",
+  "original": "Sure, I can help you design a flyer for your event. To complete your flyer to your satisfaction, I will need some additional information about your event:\n\n- Event name, date and time.\n- Location/Venue.\n- Any information or text that you would like to include in the flyer, including key highlights, contact information etc.\n- Any images, logos, or graphics that you’d like to include on the flyer.\n- Details on the size of the flyer and any style preferences or colors that reflect the theme of the event.\n\nOnce you provide me with this information, I will be able to design a professional and eye-catching flyer for your upcoming event."
+ },
+ {
+  "id": "oasst-18771228",
+  "think": true,
+  "instruction": "What are the structure of a typical story line. Make it simple for a 10 year old child.",
+  "original": "Sure, I'd be happy to explain the structure of a story in a simple way for a 10-year-old child!\n\nA typical story usually has three main parts: the beginning, the middle, and the end.\n\nThe beginning of a story introduces the characters, the setting, and the problem or challenge that the main character is facing. This is where the reader gets to know the main character and becomes interested in what will happen next.\n\nThe middle of a story is where the action happens. This is where the main character tries to solve the problem or overcome the challenge, and faces obstacles and conflicts along the way. The middle of the story is usually the longest part, because this is where most of the exciting things happen!\n\nThe end of a story is where the problem or challenge is finally resolved. This is where the reader finds out what happens to the main character and how everything turns out. The end of the story usually ties up any loose ends and leaves the reader feeling satisfied.\n\nSo, to summarize, a typical story has three parts: the beginning, the middle, and the end. The beginning introduces the characters and the problem or challenge, the middle is where the action happens, and the end is where everything is resolved."
+ },
+ {
+  "id": "alpaca-8302",
+  "think": false,
+  "instruction": "Write instructions for setting up a simple homepage for a website.",
+  "original": "1. Choose a domain and hosting service: A domain is the web address people will use to access your site, while hosting refers to the physical location where your site will be stored. Choose a provider for both services and select a relevant and memorable domain name for your site.\n2. Create an outline for the content: Decide what information you’d like displayed on your homepage. Keep in mind that the homepage is often the first impression visitors have of your site, so you will want to include important information about your business, products, or services.\n3. Design the layout: Select a template or design your homepage’s layout from scratch. Place your most important content towards the top of the page, and organize the rest in a logical manner so that visitors can navigate your site easily.\n4. Add content: Write and upload the text, images, and videos to your homepage. Make sure that everything is visually appealing and easy to read.\n5. Test and publish: Preview the page to ensure that all links are functional and the page loads correctly. Once everything is working properly, publish the homepage to make it live on your site.\n6. Promote your site: Share your website’s address on your social media accounts, business cards, and other marketing materials to attract visitors to your new homepage."
+ },
+ {
+  "id": "oasst-7aabb4ab",
+  "think": false,
+  "instruction": "Create a calculator in the Python programming language",
+  "original": "Sure, I can help you create a simple calculator in Python. Here's the code:\n\n```python\n# Define a function to perform the calculation\ndef calculator():\n    # Take input from the user\n    num1 = float(input(\"Enter the first number: \"))\n    num2 = float(input(\"Enter the second number: \"))\n    operator = input(\"Enter the operation (+, -, *, /): \")\n\n    # Perform the calculation based on the operator\n    if operator == \"+\":\n        result = num1 + num2\n    elif operator == \"-\":\n        result = num1 - num2\n    elif operator == \"*\":\n        result = num1 * num2\n    elif operator == \"/\":\n        result = num1 / num2\n    else:\n        print(\"Invalid operator entered\")\n        return\n\n    # Print the result\n    print(\"Result: \", result)\n\n# Call the calculator function\ncalculator()\n```\n\nThis code defines a function called calculator() that takes input from the user for two numbers and the operation to be performed. It then performs the calculation based on the chosen operation and prints the result.\n\nTo use the calculator, simply run the Python script and follow the prompts to enter the numbers and operation. The result will be printed to the console."
+ },
+ {
+  "id": "alpaca-6706",
+  "think": false,
+  "instruction": "Explain the concept of bounded rationality.",
+  "original": "Bounded rationality is a concept in economics and decision-making theory that suggests that individuals are limited in their ability to make fully rational decisions by a variety of factors, including incomplete information, cognitive limitations, and the complexity of the given situation. As a result, individuals must rely on heuristics, or decision-making shortcuts, that can provide satisfactory, if not optimal, results.\n\nThis concept was first introduced by economist Herbert A. Simon, who argued that while individuals strive to make rational choices based on the information they possess, there are practical limits to the amount of information that can be processed and the time available for making decisions. As a result, people often make decisions by satisficing, or seeking a satisfactory solution that might not be the most optimal choice.\n\nOverall, bounded rationality suggests that individuals operate under constraints when making decisions, and that they often must balance the desire for making the best possible choice with the practical limitations of the situation at hand."
+ },
+ {
+  "id": "alpaca-5914",
+  "think": false,
+  "instruction": "Imagine you are an AI therapist. Write three open-ended questions that you would ask to begin a counseling session with a client.",
+  "original": "1. Can you tell me about some of the thoughts, feelings, or experiences that brought you here today?\\n2. How would you describe your daily life and routine, and how does it impact your overall well-being?\\n3. Are there any specific goals or changes you would like to work towards during our time together in counseling?"
+ },
+ {
+  "id": "alpaca-2692",
+  "think": false,
+  "instruction": "Provide an example of a popular saying written in a different language.",
+  "original": "Here is a popular Spanish saying: \"No hay mal que por bien no venga\", which translates to \"There is no bad from which good does not come.\" In English, the equivalent would be \"Every cloud has a silver lining.\""
+ }
+]

@@ -1,0 +1,272 @@
+[
+ {
+  "id": "alpaca-7086",
+  "think": false,
+  "instruction": "Write a Ruby function to calculate the Catalan sequence.",
+  "original": "Sure! Here is a Ruby function that calculates the Catalan sequence:\n\n```\ndef catalan(n)\n  if n == 0\n    return 1\n  else\n    return (2*(2*n - 1)*catalan(n-1))/(n+1)\n  end\nend\n```\n\nYou can call this function with an integer `n` as an argument and it will return the `n`th number in the Catalan sequence. For example, `catalan(5)` would return `42`."
+ },
+ {
+  "id": "alpaca-6614",
+  "think": false,
+  "instruction": "Given a set of text in bulleted form, generate a story from them.\n\n* John was always a motivated person\n* John had a dream of working for Google\n* He dedicated his time and resources to learn the necessary skills\n* He created a portfolio to showcase his work\n* Finally, he was invited for the interview\n* He was offered a developer role",
+  "original": "John had always been known for his motivation and drive to succeed. From a young age, John had a dream of working for Google. He knew that in order to achieve this dream, he would have to work hard and dedicate his time and resources to learn the necessary skills. John set out to learn and practice everything he needed to know, never faltering in his determination. As he worked to hone his abilities, he created a portfolio to showcase his work.\n\nAfter years of dedicated effort, John's dream became a reality. Google finally took notice of his talents and invited him for an interview. John was ecstatic as he prepared for the big day. He went through the interview process with confidence, knowing that he had put in the hard work and effort to get to this point. \n\nAt the end of the interview, John was offered a developer role at the company he had always dreamed of working for. He was over the moon with joy as he accepted the offer. With passion, determination and dedication, John had made his dream come true. Now he was ready to begin the journey of a lifetime, as a developer at Google."
+ },
+ {
+  "id": "alpaca-7896",
+  "think": true,
+  "instruction": "Standardize the following sentence so that it follows formal English conventions and rules.\n\nHer friend and her always try to order the same thing.",
+  "original": "She and her friend always try to order the same thing."
+ },
+ {
+  "id": "alpaca-5806",
+  "think": false,
+  "instruction": "Predict how this statement would be received by the audience.\n\nWe should begin to reduce our use of single-use plastics in our daily lives.",
+  "original": "The reception of this statement would likely vary among different audience members. Some individuals might be receptive and supportive of reducing single-use plastics in their daily lives, understanding the importance and long-term impact of such actions on the environment. Others might feel indifferent or resistant to the statement, preferring the convenience of single-use plastics, and may not fully understand the long-term environmental consequences. Overall, the statement may be seen as a call to action by some, and as a suggestion that may be disregarded by others."
+ },
+ {
+  "id": "alpaca-2124",
+  "think": true,
+  "instruction": "Formulate an equation to calculate the circumference of a circle given the radius.",
+  "original": "The equation to calculate the circumference of a circle given the radius (r) is: \n\nCircumference = 2 × π × r\n\nwhere π (pi) is a mathematical constant approximately equal to 3.14."
+ },
+ {
+  "id": "alpaca-4310",
+  "think": false,
+  "instruction": "What is the definition of a metric system?",
+  "original": "The metric system is an international decimal-based system of measurement that uses standardized units to express quantities such as length, mass, volume, and temperature. Its most widely used units are the meter for length, the kilogram for mass, the liter for volume, and the degree Celsius for temperature. The system is based on multiples of ten, making it easy to convert between larger and smaller units by simply moving the decimal point. The metric system, also known as the International System of Units (SI), has been adopted by most countries worldwide as their official system of measurement."
+ },
+ {
+  "id": "oasst-5d7da95c",
+  "think": false,
+  "instruction": "Write a function in Unity using C# to map a given distance between 200 and 300 to the range of 0 to 1",
+  "original": "Here's a function in C# that maps a distance value between 200 and 300 to the range of 0 to 1:\n```csharp\nfloat MapDistanceToRange(float distance)\n{\n    float minDistance = 200.0f;\n    float maxDistance = 300.0f;\n    float mappedValue = Mathf.InverseLerp(minDistance, maxDistance, distance);\n    return mappedValue;\n}\n```\nThe `Mathf.InverseLerp()` function maps a value between a minimum and maximum range to a normalized value between 0 and 1. In this example, we set the minimum distance to 200 and the maximum distance to 300. The function takes a distance value as input and returns the mapped value.\n\nYou can use this function in your Unity project by calling it with a distance value between 200 and 300. For example:\n\n```csharp\nfloat distance = 250.0f;\nfloat mappedValue = MapDistanceToRange(distance);\nDebug.Log(mappedValue); // Output: 0.5\n```"
+ },
+ {
+  "id": "alpaca-5919",
+  "think": false,
+  "instruction": "Write JavaScript code that takes an array of numbers as input and returns a copy of the array without any of the duplicate numbers.\n\n[1, 2, 3, 2, 4, 5, 6, 7, 1, 4]",
+  "original": "Here's a JavaScript function that returns a copy of the input array without any duplicates:\n\n```javascript\nfunction removeDuplicates(arr) {\n    let uniqueArray = [];\n    for (let i = 0; i < arr.length; i++) {\n        if (uniqueArray.indexOf(arr[i]) === -1) {\n            uniqueArray.push(arr[i]);\n        }\n    }\n    return uniqueArray;\n}\n```\n\nYou can call the function with the input array, and it will return the desired output:\n\n```javascript\nlet inputArray = [1, 2, 3, 2, 4, 5, 6, 7, 1, 4];\nlet outputArray = removeDuplicates(inputArray);\n\nconsole.log(outputArray); // [1, 2, 3, 4, 5, 6, 7]\n```"
+ },
+ {
+  "id": "alpaca-4429",
+  "think": false,
+  "instruction": "Write a convincing argument in favor of using GPT models.",
+  "original": "Generative Pretrained Transformer (GPT) models are a type of artificial intelligence technology that has seen significant advancements in recent years. There are several compelling reasons why these models are worth using.\n\nFirst and foremost, GPT models are incredibly powerful. They have the ability to generate human-like text, perform language translation, summarize long passages, and much more. Due to their advanced natural language processing capabilities, GPT models can be utilized in a broad range of applications, from content generation to customer service.\n\nAnother benefit of using GPT models is their flexibility. These models are designed to be fine-tuned to specific tasks, meaning that they can be trained on a particular dataset and then used to generate predictions or outputs that are relevant to the task at hand. This makes GPT models a useful tool for businesses and organizations that need to perform specialized tasks, such as generating product descriptions or responding to customer queries.\n\nMoreover, the use of GPT models can lead to significant cost savings. In many cases, these models can automate tasks that would otherwise require human labor. This can free up employees to focus on more complex, higher-value tasks, leading to increased productivity and reduced labor costs.\n\nIn conclusion, GPT models offer a number of advantages over traditional AI systems. Their power, flexibility, and cost-effectiveness make them a valuable tool for businesses and organizations looking to enhance their operations. Whether you're looking to generate new content or to streamline customer interactions, GPT models are a technology that is well worth considering."
+ },
+ {
+  "id": "oasst-f1854edb",
+  "think": false,
+  "instruction": "Who was Albert Einstein and what did he do? Do any of his discoveries have an impact on my daily life?",
+  "original": "Albert Einstein was a German-born theoretical physicist who is widely regarded as one of the most influential scientists of the 20th century. He is best known for his theory of relativity and his famous equation, E=mc², which demonstrates the equivalence of mass and energy.\n\nEinstein's contributions to the field of physics were numerous, and he made groundbreaking discoveries in areas such as quantum mechanics, statistical mechanics, and cosmology. His work laid the foundation for many of the advancements that we see today in technology, including the development of nuclear energy, GPS technology, and the internet.\n\nOne of the most significant impacts that Einstein's work has on our daily lives is through the development of nuclear energy. Einstein's equation, E=mc², demonstrates the potential for enormous amounts of energy to be released through the conversion of mass into energy. This principle forms the basis of nuclear reactors and atomic bombs, and it has led to the development of cleaner, more efficient forms of energy.\n\nAdditionally, Einstein's work in the field of relativity has also had a significant impact on our daily lives. The GPS technology that we use to navigate is dependent on precise timekeeping, and Einstein's theory of relativity has played a critical role in developing the highly accurate atomic clocks that are used to maintain the system.\n\nOverall, Einstein's work has had a profound impact on modern science and technology, and many of the advancements that we see today are a direct result of his contributions to the field of physics."
+ },
+ {
+  "id": "alpaca-8287",
+  "think": false,
+  "instruction": "Create a thesis statement that must explain why Trump benefits from the US-China trade war.",
+  "original": "President Trump benefits from the US-China trade war as it strengthens his image as a tough negotiator, appeals to his voter base by fulfilling campaign promises to protect American industries, and gives leverage in negotiations for a better trade deal with China."
+ },
+ {
+  "id": "alpaca-1840",
+  "think": false,
+  "instruction": "Complete the following sentence: The earliest civilisations were found in",
+  "original": "The earliest civilizations were found in Mesopotamia, which was located in the fertile area between the Tigris and Euphrates rivers, and in ancient Egypt, along the Nile River."
+ },
+ {
+  "id": "oasst-f69523c5",
+  "think": false,
+  "instruction": "What are the benefits and drawbacks of using a flat organizational structure in a company?",
+  "original": "A flat organizational structure is an organizational model with few or no levels of middle management between the executives and the staff level employees. It is designed to promote employee involvement, faster communication, and less bureaucracy. However, it also has some drawbacks, such as:\n\nIt may lead to higher turnover, as employees may see no way to advance their careers or get more responsibility and benefits.\nIt may create confusion about the chain of command, as employees may not know who to report to or who has the authority to make decisions.\nIt may be less effective as the business grows, as it becomes harder to coordinate and supervise a large number of employees without middle managers.\nIt may require more dominance and supervision from the top executives, as they have to handle more tasks and issues that would normally be delegated to middle managers.\n\nTherefore, a flat organizational structure has its advantages and disadvantages, and it may not suit every type of business or organization. It depends on factors such as the size, culture, goals, and nature of the business or organization."
+ },
+ {
+  "id": "alpaca-6951",
+  "think": false,
+  "instruction": "Compose a rap verse about the power of friendship.",
+  "original": "Yo, yo, yo, check it out, this beat is sick,\nGonna spit some rhymes about friendship real quick,\nFriendship, it's a bond that's unbreakable,\nA force so strong that it's unmistakable,\n\nIt's like a superpower, it can make you brave,\nHelp you fly high, ride every wave,\nHaving friends is priceless, their worth is untold,\nThey'll be there for you, through young and old.\n\nFriends can lift you up when you're feeling low,\nHelp you go places, you never thought you'd go,\nThey'll stand by your side when the going gets tough,\nAnd when the road is rough, they'll help you get buff.\n\nFriendship is a source of strength, it's true,\nThey'll make you smile, turn your skies from gray to blue,\nSo hold on tight, keep your friends close,\nAnd with their power, you'll never feel morose.\n\nThat's the power of friendship, it's no myth,\nSo stick together and your spirits will lift,\nCherish your friends, and they'll do the same,\nAnd together you'll conquer any game."
+ },
+ {
+  "id": "alpaca-2053",
+  "think": false,
+  "instruction": "List three things that can be recycled.",
+  "original": "1. Paper: Newspaper, cardboard, office paper, and magazines, for example, can all be recycled.\n2. Plastic: Items like plastic bottles, containers, and packaging can be recycled.\n3. Metal: Many metal items such as aluminum cans, steel food cans and foil can be recycled."
+ },
+ {
+  "id": "oasst-e3cac58d",
+  "think": false,
+  "instruction": "If wizarding is real in the Harry Potter universe and users of magic can create abundance by using spells, how is it possible that the inhabitants of the magical world are still divided by class based on their monetary worth? ( ex: the Weasley family are considered \"poor\", while the Malfoys are considered \"wealthy\" )",
+  "original": "While magic may provide some means of creating abundance in the Harry Potter universe, it does not necessarily guarantee equal distribution of resources or eliminate societal hierarchies based on wealth and class.\n\nFirstly, the wizarding world, much like the Muggle world, has a history of socioeconomic inequality and class-based discrimination. The pure-blood supremacist ideology, which is prevalent among some wizarding families like the Malfoys, perpetuates the notion that certain families are inherently superior to others based on their lineage and wealth. This creates a culture of privilege and exclusivity that reinforces social and economic inequality.\n\nSecondly, while magic can create abundance, it still requires resources to perform spells and create magical objects. Some materials may be rarer or more expensive than others, leading to disparities in access to resources and contributing to class-based divisions. Additionally, not all wizards may have the same level of magical ability or training, and this can affect their ability to create abundance and succeed in certain professions.\n\nLastly, the existence of magic does not necessarily eliminate societal problems such as greed, corruption, or exploitation. It is possible that some individuals or groups may use their magical abilities to further their own interests at the expense of others, creating or exacerbating wealth inequalities and class-based divisions.\n\nIn summary, while the use of magic may provide some means of creating abundance in the wizarding world, it does not necessarily eliminate societal hierarchies based on wealth and class. The existence of socioeconomic inequality and discrimination in the magical world is a reflection of the flawed human nature that exists in both the Muggle and wizarding worlds."
+ },
+ {
+  "id": "alpaca-4143",
+  "think": false,
+  "instruction": "Describe a product, and imagine how an alien from another planet might perceive it. Then, explain your thought process for coming up with this idea.",
+  "original": "A refrigerator is a cooling appliance designed to preserve perishable food items by maintaining a temperature below the average room temperature. An alien might perceive it as an odd, energy-consuming box that humans are strangely attached to, perhaps thinking that it produces food, as humans often open the door and take something out. To come up with this idea, I started by thinking from the perspective of an outside observer with no context on our society and technology, and tried to imagine a neutral, non-human interpretation of a common household item. Such an approach inevitably leads to assumptions that may seem strange from our perspective, but are plausible for someone with an entirely different background."
+ },
+ {
+  "id": "alpaca-4858",
+  "think": false,
+  "instruction": "Formulate an equation to calculate a person's estimated body weight.\n\nHeight = 5 ft 7 in, Age = 24",
+  "original": "There are many different ways to estimate body weight, but one commonly used formula is the Devine formula: \n\nBody weight (in kg) = 50 + (0.91 x (Height in cm - 152.4))\n\nIn your case, the height is 5 ft 7 in which is equivalent to 170.18 cm. Substituting this value into the formula, we get the estimated body weight calculation:\n\nBody weight (in kg) = 50 + 0.91(170.18 - 152.4) \n                   = 50 + 0.91(17.78)\n                   = 50 + 16.18\n                   = 66.18 kg\n\nPlease note that this equation only accounts for height and not for variables like age, muscle mass, and body fat percentage."
+ },
+ {
+  "id": "alpaca-3316",
+  "think": false,
+  "instruction": "Explain the consequences of not voting in the upcoming election.",
+  "original": "Not voting in the upcoming election can have several consequences, including the following:\n\n1. Loss of representation: By not voting, you give up your right to have a say in the election and the opportunity to choose a candidate who aligns with your values and beliefs. This means that the elected representatives may not reflect your opinions or work towards your interests.\n\n2. Lower voter turnout: When a significant portion of the population doesn’t vote, it results in lower voter turnout. This can impact the overall legitimacy and credibility of the election process, as the government may not be seen to truly represent the will of the people.\n\n3. Outcomes contrary to preferences: When you don't vote, you increase the chances that the candidate you prefer will lose. Elections can be determined by just a few votes, and your vote could make a difference.\n\n4. Diminished democracy: Voting is the cornerstone of democracy. When people choose not to participate in elections, it undermines the democratic process and can lead to diminished democracy. A government elected with low voter turnout may struggle to claim that it has been given the mandate to lead by the people.\n\n5. Missed Opportunity for Change: Choosing not to vote means missing out on the chance to have a say on important issues and bring about meaningful change. By casting your ballot, you can help shape the future of your community, state, and country.\n\nIn summary, not voting in the upcoming election can have far-reaching consequences. It's important for individuals to exercise their right to vote to ensure fair representation, high voter turnout, and a strong democratic process."
+ },
+ {
+  "id": "alpaca-3103",
+  "think": false,
+  "instruction": "Write an introductory paragraph on the evolution of digital marketing.",
+  "original": "Digital marketing has come a long way since its inception in the early 1990s. With the advent of the internet and technological advancements, traditional marketing methods were soon supplemented and in some cases even replaced by digital methods. From basic web pages to dynamic and interactive advertisements, the evolution of digital marketing has been driven by the need to reach consumers in a more efficient and personalized way. Today, digital marketing encompasses a variety of methods, including email, social media, and search engine optimization, providing businesses with more options than ever before to reach their audience."
+ },
+ {
+  "id": "alpaca-2322",
+  "think": false,
+  "instruction": "Find the synonym of 'unrelenting':",
+  "original": "The synonym of 'unrelenting' is implacable, unyielding, relentless, and unstoppable."
+ },
+ {
+  "id": "alpaca-8295",
+  "think": true,
+  "instruction": "Find a car for less than $1000.",
+  "original": "Based on my understanding, you would like me to search for a car for less than $1000. I am sorry to inform you that since I'm an AI powered by OpenAI, I don't have the capability to perform web searches. However, for your given budget, I suggest that you may want to consider searching for used cars on local classified ads websites, auction sites or dealerships offering cars under $1,000. Please note that at this price point, the cars are likely to be older models and may require extensive repairs or maintenance. It is always advisable to get the car inspected by a mechanic before purchasing."
+ },
+ {
+  "id": "alpaca-2846",
+  "think": true,
+  "instruction": "Assign the following sentences to the appropriate parts of speech.\n\nThe sun was shining brightly.",
+  "original": "- The: Article\n- sun: Noun\n- was: Verb (auxiliary verb)\n- shining: Verb (present participle)\n- brightly: Adverb."
+ },
+ {
+  "id": "alpaca-4399",
+  "think": false,
+  "instruction": "Write a brief description of fireworks.",
+  "original": "Fireworks are pyrotechnic devices used for entertainment purposes, often during celebrations and special occasions. They produce a wide array of effects such as colorful lights, noise, smoke, and sometimes floating materials like confetti. Fireworks come in various forms, ranging from simple sparklers to elaborate aerial displays. A typical firework consists of a fuse, an explosive charge, and a collection of colored chemicals or stars arranged to produce art patterns when ignited. Fireworks displays are enjoyed by millions of people around the world and are a popular way to celebrate holidays, events, and festivals."
+ },
+ {
+  "id": "alpaca-3133",
+  "think": false,
+  "instruction": "Edit the following sentence: \"The sun is late today.\"",
+  "original": "The sun appears to be rising later today."
+ },
+ {
+  "id": "alpaca-5033",
+  "think": false,
+  "instruction": "Identify the potential solutions to the problem.\n\nThe current transportation system is overcrowded and inefficient.",
+  "original": "Here are some potential solutions to the problem of overcrowding and inefficiency in the transportation system:\n1. Increasing transportation capacity: One solution could be to add more buses, trains, or subway cars to alleviate crowding during peak hours.\n2. Implementing alternative transportation modes: Encouraging alternative modes of transportation like cycling, walking, or car-sharing could help to reduce the overall number of people using public transportation.\n3. Upgrading infrastructure: Updating transportation infrastructure to allow for faster, more efficient travel could help to reduce overcrowding. This might involve building new roads, tracks, or stations or modernizing existing infrastructure.\n4. Implementing smart technology: Smart technology like GPS tracking or mobile apps could help to improve the efficiency of the transportation system by providing real-time updates on delays or traffic, enabling travelers to choose the fastest route.\n5. Optimizing scheduling: Adjusting the scheduling of public transport services to match peak travel times more closely could help to reduce crowding and improve efficiency.\n6. Encouraging telecommuting: Encouraging people to work from home or to stagger their work schedules could help to reduce the number of commuters on public transportation during peak hours.\n7. Improving regional planning: Better regional planning could help to reduce urban sprawl and improve the overall efficiency of the transportation system by promoting sustainable development and reducing the need for long commutes."
+ },
+ {
+  "id": "oasst-ced32f81",
+  "think": false,
+  "instruction": "Why have so many companies changed to using paper straws?",
+  "original": "Many companies have made the switch to paper straws in order to reduce their environmental impact. Paper straws are more environmentally friendly than plastic straws because they are biodegradable and can be recycled. They also reduce the amount of plastic waste that ends up in landfills and the ocean, which helps to reduce pollution and the impact of plastic on marine life. Additionally, paper straws are often more cost-effective than plastic straws, making them a more economical choice for many businesses."
+ },
+ {
+  "id": "alpaca-4757",
+  "think": true,
+  "instruction": "Rewrite the following passage in a more formal tone.\n\nHey dude, I just can't stand this programming class. The prof talks like we're dumb, and I'm tired of doing these boring assignments. Can't we do something way cooler?",
+  "original": "I find the current programming class to be rather unstimulating. The professor's lecturing style seems to imply a lack of intelligence in the audience, and the assignments assigned are monotonous. I would sincerely appreciate engaging in more interesting tasks."
+ },
+ {
+  "id": "alpaca-7716",
+  "think": false,
+  "instruction": "Create a chart that shows the percentage of people who prefer different modes of transportation.",
+  "original": "I'm sorry, but as an AI language model, I don't have the ability to create a chart. However, what I can provide you is an ASCII bar chart with sample data. Here's an example:\n\n```\nTransportation Preferences\n       Car | **************** 40%\n     Plane | ***** 15%\n     Train | ******** 24%\n      Bike | ****** 18%\n      Walk | ** 3%\n```\n\nTo make a chart with accurate data, you may need to obtain percentages of people who prefer different modes of transportation from a reliable source. Then you could input that information into chart-making software or use spreadsheet applications like Microsoft Excel or Google Sheets to make a visual chart."
+ },
+ {
+  "id": "alpaca-6419",
+  "think": true,
+  "instruction": "Generate a list of questions to ask participants before a free web design workshop.",
+  "original": "1. What is your current level of experience with web design? \n2. What specific skills or topics are you most interested in learning during the workshop? \n3. Have you attended any other web design workshops or courses in the past? \n4. Do you have any special needs or accommodations for the workshop? \n5. What do you hope to achieve by attending this workshop? \n6. Are you bringing your own laptop or will you need to use one provided by the workshop organizers? \n7. Do you have any prior experience with coding languages such as HTML, CSS or JavaScript?\n8. Are you currently working on a web design project or have plans to start one soon? \n9. Are you attending the workshop for personal or professional development? \n10. Is there anything else you would like us to know to ensure the workshop meets your expectations?"
+ },
+ {
+  "id": "alpaca-4793",
+  "think": true,
+  "instruction": "Assume you are a historian analyzing an ancient scroll. Describe the steps you would take to understand the context and meaning of the text.",
+  "original": "1. Determine the scroll's age and origin, possibly using carbon dating or analyzing the writing style.\n2. Identify the language and script used, and if needed, translate the text.\n3. Research the historical, social, and political context of the text's origin.\n4. Cross-reference the scroll's content with other contemporary sources to validate its reliability.\n5. Analyze the text's purpose, intended audience, and the author's perspective or biases.\n6. Develop an interpretation of the scroll, integrating findings from previous steps, and present the significance of the text in the broader historical context."
+ },
+ {
+  "id": "alpaca-8056",
+  "think": true,
+  "instruction": "Given a linked list which has both odd and even elements, rearrange the elements of the list so that all even numbers appear after all odd numbers\n\n1->2->3->4->5->6->7->8->NULL",
+  "original": "To rearrange the elements of the given linked list, you can follow these steps:\n1. Create two new empty linked lists - one for odd and one for even numbers.\n2. Iterate through the given linked list from the head.\n3. If the current node's value is odd, add it to the end of the odd list. Else, add it to the end of the even list.\n4. Once the iteration is complete, connect the last node of the odd list to the head of the even list.\n5. Set the head of the odd list as the new head of the linked list.\n\nAfter following these steps, the final list would be:\n1->3->5->7->2->4->6->8->NULL"
+ },
+ {
+  "id": "alpaca-3810",
+  "think": false,
+  "instruction": "Produce a recipe for the following dish: spicy ginger pork stir-fry",
+  "original": "Spicy Ginger Pork Stir-Fry Recipe\n(Preparation time: 10 minutes, cooking time: 10 minutes, total time: 20 minutes, serves 4)\n\nIngredients:\n- 1 pound pork tenderloin, cut into thin strips\n- 2 tablespoons soy sauce\n- 1 tablespoon rice vinegar\n- 1 tablespoon Asian sesame oil\n- 2 teaspoons cornstarch\n- 2 tablespoons vegetable oil\n- 1 tablespoon finely grated ginger\n- 3 garlic cloves, minced\n- 1/2 teaspoon red pepper flakes\n- 1 red bell pepper, sliced,\n- 1 yellow onion, sliced,\n- 1 cup snow peas, trimmed\n- Salt and freshly ground black pepper, to taste\n- Cooked rice, for serving\n- Green onions, thinly sliced, for garnish\n\nInstructions:\n1. In a medium sized bowl, whisk together the soy sauce, rice vinegar, sesame oil, and cornstarch. Add the pork strips to the mixture and toss until coated. Let it marinate for about 5 minutes while you prepare the vegetables.\n2. In a frying pan or wok, heat 1 tablespoon of the vegetable oil over high heat. Add the ginger, garlic, and red pepper flakes and cook until fragrant, about 1 minute. \n3. Remove the pork from the marinade and add it to the pan. Stir-fry until lightly browned, 2 to 3 minutes. Take the pork out of the pan and put it aside.\n4. Add the remaining tablespoon of vegetable oil to the pan over high heat. Add the bell pepper, onion, and snow peas to the pan, and cook until slightly softened, about 3 to 4 minutes. Season with salt and black pepper to taste. \n5. Return the pork and its juices to the pan and cook for 1 more minute while stirring, allowing the flavors to meld. \n6. Serve the stir fry over a bed of cooked rice and garnish with green onions. Enjoy your spicy ginger pork stir-fry!"
+ },
+ {
+  "id": "alpaca-5018",
+  "think": false,
+  "instruction": "Construct a simple sentence that contains the following words: item, retail.",
+  "original": "This item is available at many retail stores."
+ },
+ {
+  "id": "alpaca-7467",
+  "think": false,
+  "instruction": "Write some code to print an array in reverse order.\n\nlet arr = [4, 5, 6, 7]",
+  "original": "Here's an example of a JavaScript code that prints an array in reverse order:\n\n```javascript\nlet arr = [4, 5, 6, 7];\nfor (let i = arr.length - 1; i >= 0; i--) {\n  console.log(arr[i]);\n}\n```\nThis code iterates over the array starting from its last element and goes backward, printing each element as it goes."
+ },
+ {
+  "id": "alpaca-2007",
+  "think": false,
+  "instruction": "Think of a solution to reduce water consumption.",
+  "original": "One solution to reduce water consumption could be to implement and promote more efficient water usage habits in households and industries. Some ways to do this could include:\n\n1. Fixing leaks: A small drip from a leaking faucet can waste gallons of water, so it is important to fix the leaks as soon as they are detected.\n\n2. Using water-efficient appliances and fixtures: There are many water-efficient appliances and fixtures available in the market, such as low-flow toilets, showerheads, and washing machines, that can greatly reduce the amount of water used.\n\n3. Taking shorter showers: Reducing shower time by even a minute or two can save gallons of water.\n\n4. Using a broom instead of a hose: Instead of using a hose to clean driveways or sidewalks, use a broom, which can save up to 80 gallons of water.\n\n5. Watering plants wisely: Water plants early in the morning or late in the evening to reduce evaporation, and use drip irrigation systems that deliver water directly to the roots, minimizing waste.\n\n6. Reusing water: Collect rainwater or reuse greywater (from the washing machine, shower, etc.) to water plants or for cleaning purposes.\n\nBy incorporating these small changes in our daily routine, we can reduce water consumption significantly, and contribute towards a more sustainable future."
+ },
+ {
+  "id": "alpaca-7729",
+  "think": false,
+  "instruction": "Generate a story in present tense that follows the given context.\n\nWolf meets a friendly bee who takes him to a secret garden.",
+  "original": "Wolf is walking in the dense forest, feeling lonely as always. He is an outsider, not welcomed by his pack. Suddenly, he meets a friendly bee buzzing around his face. Wolf doesn't feel threatened, and he whispers to the small creature, asking for some company. The bee answers with enthusiasm, promising to take him to a secret place where they can both enjoy the colors and the perfumes of spring.\n\nTogether, they walk along the narrow paths of the forest, and Wolf feels relieved to have someone to talk to. The bee is talkative and friendly, and he shares with Wolf many stories about the forest and its inhabitants. After some time, they reach a hidden corner of the forest, surrounded by thick bushes and tall trees. The bee invites Wolf to follow him, and they enter into a secret garden.\n\nWolf opens his eyes wide in amazement. He has never seen such beauty before. There are flowers of every color and shape, bushes covered with blossom, and fruit trees heavy with ripe fruits. Butterflies and birds fly around, and the air is rich with the sweet scent of spring.\n\nThe bee leads Wolf to a small pond in the center of the garden, where they both drink the fresh water. Wolf feels grateful to have met the bee, and he thanks him for bringing him to such a wonderful place. The bee smiles, and they sit together, surrounded by beauty and friendship.\n\nWolf has finally found a place where he belongs. He comes back to the secret garden every day to meet his friend, the bee, and to enjoy the wonders of nature. They spend many happy moments together, talking and laughing, and enjoying each other's company. The friendly bee has shown Wolf that even in the darkest of times, there is always a glimmer of hope and a friend to guide you to the light."
+ },
+ {
+  "id": "oasst-9f40046f",
+  "think": false,
+  "instruction": "Hi! Generate an outline for an original fiction book. The book should be set in a dark, mature fantasy setting.",
+  "original": "1. Opening: Introduce our main character, a down-on-his-luck sellsword or mercenary fighting in a pointless war between two corrupt kingdoms. Show his cynical and jaded outlook through wry internal thoughts or jokes at the absurdity of the war. Perhaps have a dramatic fight or battle sequence where his side loses.\n\n2. Inciting Incident: Our hero is hired for a sketchy job by an even more corrupt wizard or politician to find a dangerous magical artifact. He takes the job for the money despite the obvious red flags. While on the quest, reveal more of his amusingly bleak worldview through encounters with gnomes, orcs, elves, etc.\n\n3. Rising Challenge: On his quest, increasingly dangerous and twisted things happen. Perhaps former allies or friends are violently killed, or he uncovers deadly secrets about his employers. The magical artifact is revealed to be even more powerful and perilous than expected. Kill off more characters in shocking or darkly comedic ways to raise the stakes.\n\n4. Major Setbacks: Right as the hero is about to succeed, he suffers some major reversals or setbacks. Maybe he is betrayed and left for dead, or the artifact curses or corrupts him in some way. These setbacks make his eventual success seem nearly impossible. Show his resolve being tested in harsh and brutal ways.\n\n5. Climax: There is a dramatic final confrontation or battle where the hero must draw on all his resources to overcome the forces arrayed against him. People are killed in both bloody and comedic ways. Despite the great costs, he is able to seize the artifact—but then is faced with a difficult moral choice about how to use its power.\n\n6. Resolution: In the end, have the hero make a cynical but poignant choice that addresses the broader themes of corruption and pointlessness you want the story to convey. The tone is darkly funny even though the outcome is bittersweet. Overall, show how the grim dark world has been impacted—for better or worse—by the hero's actions."
+ },
+ {
+  "id": "alpaca-7353",
+  "think": false,
+  "instruction": "Create a dynamic query to filter a large table of user data\n\nTable : user_data in MongoDB\nColumns : _id, username, gender\nFilter: Male",
+  "original": "To filter the user_data table in MongoDB for the \"Male\" gender, you can use the following query:\n\n```python\nfilter = {'gender': 'Male'}\nmale_users = collection.find(filter)\n```\n\nHere, `collection` is the object representing the `user_data` table/collection in MongoDB. The `find` method runs the filter on the data, and returns all the rows/documents where the `gender` field is \"Male\". These results will be stored in the male_users variable, which can then be iterated over to retrieve the individual rows."
+ },
+ {
+  "id": "alpaca-3970",
+  "think": true,
+  "instruction": "Describe the impact of the internet on daily life.",
+  "original": "The impact of the internet on daily life has been immense and far reaching. The internet has radically and rapidly transformed the way we live, communicate, and conduct our daily activities. In many ways, it has revolutionized the way we access and exchange information, making the world a much smaller and more connected place.\n\nOne of the most significant impacts of the internet has been in the way we communicate. With the rise of social media, instant messaging, and video conferencing, we are now able to connect with others in real-time, regardless of their location. This has made it easier for people to maintain long-distance relationships and to connect with friends, family and colleagues from around the world.\n\nAnother major impact of the internet has been in the way we access information. The internet has made it possible for anyone to access a wealth of information on virtually any topic, from anywhere, at any time. This has revolutionized education, as students and teachers now have a vast array of resources at their fingertips.\n\nThe internet has also had a profound impact on commerce. With the rise of online shopping, it is now possible to purchase almost anything from anywhere without ever leaving your home. This has provided consumers with greater choice and convenience, while also enabling businesses to reach a global audience.\n\nIn addition, the internet has made it possible for people to work and conduct business from anywhere. Increasingly, people are able to work remotely, allowing for greater flexibility and the ability to work from anywhere in the world.\n\nOverall, the impact of the internet on daily life has been tremendous, simplifying and enhancing many aspects of our lives, from communication and commerce, to education and work."
+ },
+ {
+  "id": "oasst-cc6c7aab",
+  "think": false,
+  "instruction": "There is a weird smell in my apartment, should I be concerned? what is the best course of action here?",
+  "original": "A strange smell in your apartment can be cause for concern, especially if it is strong or persistent. Here are some steps you can take to identify the source of the smell and take appropriate action:\n\n1.  Try to locate the source of the smell. Check all rooms, including the bathroom, kitchen, and storage areas. Look for any signs of mold or water damage.\n\n2.  Check all appliances, such as the stove, oven, refrigerator, and washing machine. Make sure there are no leaks, and that all the appliances are in good working order.\n\n3.  If you suspect a gas leak, evacuate the building immediately and call the gas company. Do not turn any lights on or off, or use any electrical switches or appliances, as this can spark an explosion.\n\n4.  If you suspect mold, open windows and doors to let fresh air in and contact a mold remediation specialist. Mold can be harmful to your health and can cause respiratory problems.\n\n5.  If you cannot find the source of the smell, it may be coming from outside your apartment. Contact the building management to report the issue.\n\n6.  If the smell is due to food spoilage, dispose of the food and thoroughly clean the area where it was stored.\n\nIn general, if the smell is strong, persistent, or accompanied by other signs of a potential health hazard (such as visible mold or a gas leak), it's best to take action as soon as possible and contact a professional if necessary."
+ },
+ {
+  "id": "alpaca-3561",
+  "think": false,
+  "instruction": "Generate a marketing headline for this product.\n\nProduct: An online course on learning programming languages.",
+  "original": "\"Unlock endless opportunities with our online program: Learn to Code like a Pro!\""
+ },
+ {
+  "id": "alpaca-8559",
+  "think": true,
+  "instruction": "Provide me a flash fiction story about traveling in time",
+  "original": "As she stepped into the time machine, Anna couldn't help but feel a sense of excitement and fear rushing through her body. She had been given the opportunity of a lifetime, to travel back to the year 1920 and witness history in the making.\n\nAs the machine hummed to life, she felt a surge of energy coursing through her body, and in the blink of an eye, she was standing in the midst of a bustling city street. The sound of honking cars and chatter filled the air, and she could hardly contain her amazement.\n\nAnna made her way through the city, taking in the sights and sounds of a bygone era. She watched as men in suits rushed to and fro, women in long dresses and hats strolled along the sidewalks, and children played hopscotch on the cobblestone streets.\n\nAs she explored, Anna realized that time travel was more than just a means of experiencing history, it was a way to connect with the past and gain a deeper understanding of the world. It was a transformative journey that she would never forget.\n\nAs the sun began to set, Anna knew it was time to return to her own time. She stepped back into the machine, her heart heavy with the knowledge that she would have to leave this magical place behind.\n\nBut as she returned to the present, Anna couldn't help but feel grateful for the experience. She had traveled through time, and in doing so, had gained a new perspective on life."
+ },
+ {
+  "id": "alpaca-4604",
+  "think": false,
+  "instruction": "Discuss the pros and cons of immigration in the US.",
+  "original": "Immigration has been a topic of intense debate in the United States for many years. The country is known for being a melting pot of cultures, and has historically thrived on the mix of ideas and influences brought by immigrants. However, there are many aspects of the issue that make it complex and divisive.\n\nSome of the pros of immigration in the US include:\n\n1. Economic Growth – Immigrants bring skills, innovation, and are often driven to succeed in their new country. This can lead to job creation and boost the economy. They are also taxpayers and consumers and contribute to the country’s economic growth.\n\n2. Cultural Diversity – Immigrants bring their language, customs, and traditions which adds to the country's cultural richness. This helps to promote empathy and understanding, and can help to break down barriers between different communities.\n\n3. Addressing Labor Shortages – Immigration can help address labor shortages in industries such as agriculture, construction, and health care. Immigrants often take up jobs that are difficult to fill due to shortages of skill or labor.\n\nHowever, there are also cons associated with immigration in the US, including:\n\n1. Strain on Public Resources – It is argued that a large influx of immigrants can put a strain on public resources such as health care, education, and housing. This can lead to increased competition for resources and potentially higher taxes.\n\n2. Job Competition – There is concern that immigrants may compete with American citizens for jobs, especially in lower wage industries. This can lead to resentment towards immigrants and potential wage depression for American workers.\n\n3. Cultural Conflicts – Cultural differences between immigrants and native-born Americans may lead to conflicts or misunderstandings. This can create tension and even hostility between different communities.\n\nImmigration will likely continue to be a contentious issue in the United States, with strong arguments on both sides. It is important to weigh the pros and cons and have a nuanced and balanced approach that takes into account the benefits and challenges that immigration brings."
+ },
+ {
+  "id": "alpaca-7990",
+  "think": false,
+  "instruction": "Design a website page to inform people about a charity organization.",
+  "original": "<html>\n<head>\n<title>Charity Organization Website</title>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<meta name=\"description\" content=\"A website page for a charity organization\">\n<style>\n    body{\n    font-family: Arial, Helvetica, sans-serif;\n    margin: 0;\n    padding: 0;\n    background-color: #f4f4f4;\n}\n.header{\n    background-color: #333;\n    color: #fff;\n    padding: 20px;\n}\n\n.header h1{\n    margin: 0;\n}\n\n.main{\n    max-width: 960px;\n    margin: auto;\n    padding: 20px;\n}\n\n.about{\n    margin-top: 20px;\n    padding: 20px;\n}\n\n.about h2{\n    color: #333;\n    margin: 0;\n    margin-bottom: 10px;\n}\n\n.mission{\n    margin-top: 30px;\n    padding: 20px;\n}\n\n.mission h2{\n    color: #333;\n    margin: 0;\n    margin-bottom: 10px;\n}\n\n.donate{\n    margin-top: 30px;\n    padding: 20px;\n    text-align: center;\n}\n\n.donate button{\n    padding: 15px 20px;\n    font-size: 20px;\n    background-color: #4CAF50;\n    color: #fff;\n    border: none;\n}\n</style>\n</head>\n<body>\n<div class=\"header\">\n    <h1>Charity Organization Name</h1>\n</div>\n\n<div class=\"main\">\n    <img src=\"./img/charity.jpg\" alt=\"Charity image\" width=\"100%\">\n\n    <div class=\"about\">\n        <h2>About Us</h2>\n        <p>Our Charity Organization is focused on making a difference in the lives of those in need. We have been providing food, shelter, education and other necessities for people who are unable to access these basic needs. Our goal is to give hope and empower individuals to reach their potential.</p>\n    </div>\n\n    <div class=\"mission\">\n        <h2>Our Mission</h2>\n        <p>Our mission is to provide assistance to people in need and to help them break the cycle of poverty. We accomplish this by providing access to basic needs, education and"
+ }
+]

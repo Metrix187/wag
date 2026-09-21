@@ -1,0 +1,272 @@
+[
+ {
+  "id": "alpaca-4473",
+  "think": false,
+  "instruction": "Create a story from the following sentences.\n\nThe sun was setting and the birds were singing.",
+  "original": "The sun was setting and the birds were singing, painting a picturesque scene of peace and tranquility. The sky was ablaze with hues of orange and pink, as the sun slowly descended behind the horizon. Beneath the sky, the world was bustling with life. Butterflies fluttered amongst the blooming flowers while rabbits hopped carefree in the fields. The sweet melodies of the birds filled the air, their songs entwining to create the perfect symphony for the end of a beautiful day. As the last light of the sun faded, the darkness of night crept in, and the birds flew back to their nests to rest. The stars began to twinkle up above, and the world was blanketed in a peaceful silence. Another day had come to a close, and the beauty of the sunset and the birds' songs lingered, as if unaware of the passage of time."
+ },
+ {
+  "id": "alpaca-7684",
+  "think": false,
+  "instruction": "Imagine you are at a bakery and asked to make a cake. Describe the cake in detail.",
+  "original": "As your AI assistant, I can provide a detailed description of a cake that could be made at a bakery. Here is one such example: \n\nImagine a three-layered vanilla sponge cake, each layer pillowy soft and perfectly moist. Between the layers, there is a generous spread of rich and creamy vanilla buttercream, adding a delectable sweetness to every bite. On the top and sides of the cake, more buttercream is artfully piped, creating a smooth and even coat all around. On the top, fresh strawberries and blueberries are arranged in a decorative pattern, adding a pop of color and a burst of juicy flavor. Along the base of the cake, a delicate border of buttercream rosettes is piped, completing the elegant and delicious masterpiece. The cake is ready to be sliced, served, and thoroughly enjoyed by all."
+ },
+ {
+  "id": "alpaca-2113",
+  "think": false,
+  "instruction": "Synonymize the word “angry.”",
+  "original": "Irritated, furious, enraged, mad, annoyed, cross, heated, indignant, exasperated, irate, upset."
+ },
+ {
+  "id": "alpaca-6797",
+  "think": false,
+  "instruction": "Give me an example of a web-based programming language",
+  "original": "One example of a web-based programming language is JavaScript. It is a high-level, interpreted programming language that is commonly used to create interactive elements on web pages. JavaScript code can be written directly into HTML pages and executed by web browsers, making it an important part of web development."
+ },
+ {
+  "id": "oasst-e1480477",
+  "think": false,
+  "instruction": "How can I get started with using Linux on my personal computer?",
+  "original": "Getting started with Linux on your PC is a great way to explore a new operating system and expand your technical skills. Here are some steps to get you started:\n\n1. Choose a Linux distribution: There are many different Linux distributions to choose from, each with its own strengths and weaknesses. Some popular distributions for beginners are Ubuntu, Fedora and Linux Mint.\n\n2. Download the distribution: Once you have chosen a distribution, you will need to download the installation files from the distribution's website. Most distributions offer both 32-bit and 64-bit versions, so make sure you download the right one for your computer.\n\n3. Create a bootable USB drive or DVD: Once you have downloaded the installation files, you will need to create a bootable USB drive or DVD. This will allow you to boot your computer from the USB drive or DVD and install Linux.\n\n4. Back up your data: Before installing Linux, it is important to back up any important data on your computer. This will ensure that you do not lose any data during the installation process.\n\n5. Install Linux: Once you have created a bootable USB drive or DVD and backed up your data, you are ready to install Linux on your computer. The installation process will vary depending on the distribution you choose, but most distributions offer a graphical installer that is easy to use.\n\n6. Explore Linux: Once you have installed Linux, you can begin to explore the operating system and its many features. Linux offers a wide range of open source software that you can use to perform many different tasks, from browsing the web to editing documents and programming.\n\nLearn more: As you become more familiar with Linux, you can explore more advanced topics such as the command line, shell scripting and system administration. There are many resources available online, including forums, tutorials and documentation that can help you learn more about Linux and its many features."
+ },
+ {
+  "id": "alpaca-4775",
+  "think": false,
+  "instruction": "Propose a solution to reduce the negative effects of plastic on the environment.",
+  "original": "One effective solution to reduce the negative effects of plastic on the environment is to implement a circular economy approach. This approach focuses on reducing the production of plastic waste by prioritizing waste prevention, increasing product longevity, and improving recycling and composting. \n\nSome key steps in implementing this solution can include:\n\n1. Enforcing governmental regulations and incentives that encourage the production of environmentally-friendly alternatives to plastic products, such as biodegradable materials and reusable packaging.\n\n2. Encouraging consumers to reduce their use of single-use plastics by promoting the use of reusable containers and bags, and by implementing taxes on plastic bags in retail stores.\n\n3. Improving plastic recycling processes by investing in new technology and infrastructure to increase efficiency and reduce contamination.\n\n4. Educating the public about the impact of plastic waste on the environment, and encouraging them to participate in local recycling programs.\n\nBy implementing a circular economy approach, we can reduce the production of plastic waste, increase recycling efforts, and protect the environment from the harmful impacts of plastic pollution."
+ },
+ {
+  "id": "alpaca-5268",
+  "think": false,
+  "instruction": "Given two binary strings a and b, return their sum as a binary string. Write the solution as a Haskell function",
+  "original": "Here's the Haskell solution to the problem:\n\n```\naddBinary :: String -> String -> String\naddBinary a b = reverse $ addBinaryHelper (reverse a) (reverse b) '0'\n\naddBinaryHelper :: String -> String -> Char -> String\naddBinaryHelper [] [] '0' = []\naddBinaryHelper [] [] carry = [carry]\naddBinaryHelper [] (y:ys) carry = addBinaryHelper [] ys (addBinaryDigits '0' y carry)\naddBinaryHelper (x:xs) [] carry = addBinaryHelper [] xs (addBinaryDigits x '0' carry)\naddBinaryHelper (x:xs) (y:ys) carry = sumDigits : addBinaryHelper xs ys carry'\n    where\n        (sumDigits, carry') = addBinaryDigits x y carry\n\naddBinaryDigits :: Char -> Char -> Char -> (Char, Char)\naddBinaryDigits '0' '0' '0' = ('0', '0')\naddBinaryDigits '0' '1' '0' = ('1', '0')\naddBinaryDigits '1' '0' '0' = ('1', '0')\naddBinaryDigits '1' '1' '0' = ('0', '1')\naddBinaryDigits '0' '0' '1' = ('1', '0')\naddBinaryDigits '0' '1' '1' = ('0', '1')\naddBinaryDigits '1' '0' '1' = ('0', '1')\naddBinaryDigits '1' '1' '1' = ('1', '1')\n```\n\nThe `addBinary` function takes in two binary strings `a` and `b`, and returns their sum as a binary string. It makes use of a helper function `addBinaryHelper` and `addBinaryDigits`. The `addBinaryHelper` function takes in two binary strings `a` and `b`, along with a carry value, and recursively computes the sum of the two strings starting from the least significant digit. The `addBinaryDigits` function computes the sum of two binary digits and a carry bit, returning both the resulting digit and the new carry bit. Note that both `addBinaryHelper` and `addBinaryDigits` assume that the strings are in reverse order, hence why we need to reverse the input strings in `addBinary`."
+ },
+ {
+  "id": "alpaca-3027",
+  "think": false,
+  "instruction": "Name a popular movie from 2019.",
+  "original": "One of the popular movies from 2019 is \"Avengers: Endgame.\""
+ },
+ {
+  "id": "alpaca-6392",
+  "think": false,
+  "instruction": "I have a 3-year-old daughter - can you suggest a good book for her to read?",
+  "original": "Sure! Here are a few great books that would be suitable for a 3-year-old:\n\n1. The Very Hungry Caterpillar by Eric Carle: This book has vibrant illustrations and always manages to capture the attention of young children with its story of a caterpillar that eats its way through different foods before becoming a butterfly.\n\n2. Goodnight Moon by Margaret Wise Brown: This is a timeless classic that is perfect for a bedtime story. The rhyming text and gentle illustrations make it a soothing read for young children.\n\n3. Brown Bear, Brown Bear, What Do You See? by Bill Martin Jr. and Eric Carle: This book has a simple but engaging repetitive text and features different animals and colors, making it great for teaching children the basics.\n\n4. Where the Wild Things Are by Maurice Sendak: This book is perfect for children with big imaginations. The story follows Max, who travels to a land of Wild Things and becomes their king.\n\n5. Corduroy by Don Freeman: This is a heartwarming story about a teddy bear who goes on an adventure to find a missing button. The book has been loved by children for generations and teaches the value of friendship."
+ },
+ {
+  "id": "alpaca-6420",
+  "think": false,
+  "instruction": "Enumerate 10 different types of jobs that robots can do.",
+  "original": "1. Manufacturing and Assembly: Robots are widely used in factories where they perform tasks such as welding, painting, and assembly.\n\n2. Warehousing and Delivery: Robots can take on tasks such as packaging, sorting, and transporting goods within warehouses.\n\n3. Cleaning: Robots are used for cleaning tasks such as vacuuming, floor scrubbing, and window washing.\n\n4. Agriculture: Robots are used in farming operations to perform tasks such as planting, crop monitoring, and harvesting.\n\n5. Health Care: Robots are used in hospitals and care homes to assist with tasks such as delivering medication, monitoring patients, and performing surgery.\n\n6. Customer Service: Robots, often in the form of chatbots, can provide customer service by answering queries and providing information.\n\n7. Security and Surveillance: Robots can be used for security tasks such as patrolling and monitoring areas, detecting intruders, and reporting incidents.\n\n8. Food Service: Robots are used in food service operations to perform tasks such as taking orders, preparing food, and serving customers.\n\n9. Education: Robots can serve as teaching aids, providing interactive learning experiences for students.\n\n10. Entertainment: Robots can be used in entertainment to perform tasks such as dancing, acting, and playing musical instruments."
+ },
+ {
+  "id": "alpaca-2175",
+  "think": false,
+  "instruction": "Write 5 ideas for a unique birthday gift.",
+  "original": "1. A personalized photo album or scrapbook: Create a beautifully designed album filled with pictures, letters, and mementos that represent the special moments and memories shared with the birthday person. \n\n2. An experience: Gift an unforgettable experience, like skydiving, hot air balloon ride, wine tasting, cooking classes or a spa day. \n\n3. A custom-made piece of jewelry or artwork: Commission a piece of jewelry or artwork made specifically for the birthday person as a one-of-a-kind and heartfelt present. \n\n4. A monthly subscription box: Surprise and delight the birthday person with a monthly subscription box tailored to their interests, such as books, gourmet food, or beauty products. \n\n5. A personalized video message: Gather family and friends to create a personalized video message filled with birthday wishes, memories, and inside jokes. This gift is meaningful, and the birthday person can cherish it for years to come."
+ },
+ {
+  "id": "alpaca-7140",
+  "think": false,
+  "instruction": "Write an interesting fact about Japan.",
+  "original": "Japan has the highest average life expectancy in the world, with an average age of 84 years. This high life expectancy is attributed to the country's healthy diet, which consists mainly of fish, rice, vegetables, and small portions of meat, as well as its advanced healthcare system."
+ },
+ {
+  "id": "alpaca-2938",
+  "think": false,
+  "instruction": "Consider the given input and come up with a marketing plan for the product.\n\nProduct: A digital assistant for busy professionals",
+  "original": "Marketing Plan for a Digital Assistant for Busy Professionals:\n\nObjective:\n\nTo position our digital assistant as the go-to solution for busy professionals seeking an efficient and cutting-edge means of managing their work and personal lives.\n\nTarget Market:\n\nThe target market for our digital assistant is busy working professionals who need help in organizing their work and personal responsibilities. This could range from middle-aged executives to young entrepreneurs and freelancers who are looking for an innovative way to maximize productivity by using technology.\n\nMarketing Strategies:\n\n1. Social Media Marketing – Utilize platforms such as LinkedIn, Twitter, and Facebook to connect with professionals and share relevant content to showcase the benefits of using our digital assistant.\n\n2. Content Marketing – Create and share informative blogs, articles, and instructional videos on our website and social media platforms that engage and educate our target audience.\n\n3. Influencer Marketing – Partner with influential bloggers and professionals within the industry to help spread the word about the digital assistant and its benefits.\n\n4. Email Marketing – Develop targeted email campaigns to connect with potential customers on a personal level and promote the product and its features.\n\n5. Paid Advertising – Utilize Google Adwords, Facebook Ads, and other online advertising platforms to target the right audience and drive traffic to our website.\n\n6. Attend Tradeshows – Showcase our digital assistant at industry-relevant trade shows to generate buzz and engage with potential customers.\n\n7. Offer Free Trials – Provide free trials to professionals to give them a firsthand experience of how the digital assistant can simplify their lives and improve their productivity.\n\nEvaluation:\n\nMonitor the success of the marketing plan by tracking key metrics such as website traffic, social media engagement, and sales. Continuously adjust and refine the marketing plan based on the results to ensure maximum effectiveness.\n\nConclusion:\n\nBy utilizing an effective mix of traditional and digital marketing strategies, we can successfully reach our target audience of busy working professionals and demonstrate the value of our digital assistant in improving their productivity and simplifying their lives."
+ },
+ {
+  "id": "alpaca-4635",
+  "think": false,
+  "instruction": "Arrange the sentence fragments below into a meaningful sentence.\n\nFragment 1: strong social media presence \nFragment 2: It is important for businesses",
+  "original": "\"It is important for businesses to have a strong social media presence.\""
+ },
+ {
+  "id": "alpaca-4883",
+  "think": false,
+  "instruction": "Given a problem scenario, develop an algorithmic solution.\n\nYou are given two arrays, A and B, each containing integers. Find all integers that appear in both A and B and return a new array containing them.",
+  "original": "Follow these step-by-step instructions to develop an algorithmic solution to this problem.\n\n1. Begin by initializing an empty array called result to hold the final answer.\n\n2. Next, loop through array A.\n\n3. For each element in array A, check if it is present in array B. One way to do this is to use the `includes` method.\n\n4. If the element from array A is present in array B, add it to the result array.\n\n5. Once the loop is done, you will have compared all elements in array A with all elements in array B.\n\n6. Return the result array, which contains only the elements that appear in both array A and B.\n\nHere's a possible implementation, in JavaScript.\n\n```javascript\nfunction findCommonElements(A, B) {\n  var result = []; \n  for (var i = 0; i < A.length; i++) {\n    if (B.includes(A[i])) {\n      result.push(A[i]);\n    }\n  }\n  return result;\n}\n\n```\n\nThis algorithm would return a new array containing all the integers that appear in both arrays A and B."
+ },
+ {
+  "id": "alpaca-5674",
+  "think": true,
+  "instruction": "Answer the following question by reasoning step-by-step.\n\nAm I blood related to my step-aunt's husband's nephew?\nDefinitely yes, definitely no, or maybe?",
+  "original": "My step-aunt is married to my uncle. My uncle's nephew is my cousin. There the final answer is definitely yes."
+ },
+ {
+  "id": "oasst-bed16175",
+  "think": false,
+  "instruction": "what does the \"long\" in \"long john silver\" refer to?",
+  "original": "The \"long\" in \"Long John Silver\" refers to his peg leg. In pirate folklore, \"Long\" was a common nickname for a tall or imposing person, and John Silver's use of a wooden peg leg would have made him an imposing figure. The peg leg was also a common stereotype for pirates, who were often depicted as missing limbs from their adventurous and dangerous lives. The name \"Long John Silver\" has become synonymous with pirates and is often used to evoke the image of a classic pirate with a long, wooden leg."
+ },
+ {
+  "id": "alpaca-5132",
+  "think": false,
+  "instruction": "Classify this type of tree: Oak",
+  "original": "Oak is a type of deciduous tree that belongs to the genus Quercus and the beech family, Fagaceae."
+ },
+ {
+  "id": "alpaca-2154",
+  "think": false,
+  "instruction": "Read the following description and generate a witty subtitle.\n\nAn action-adventure novel about two undercover cops trying to defeat a highly organized criminal gang.",
+  "original": "\"Double Trouble: A Tale of Two Cops and a Criminal Empire\""
+ },
+ {
+  "id": "alpaca-2866",
+  "think": false,
+  "instruction": "Match the following countries to their corresponding currencies\n\n- India \n- Japan \n- Canada",
+  "original": "- India: Indian Rupee\n- Japan: Japanese Yen\n- Canada: Canadian Dollar"
+ },
+ {
+  "id": "alpaca-4281",
+  "think": false,
+  "instruction": "Calculate 104 x 40.",
+  "original": "The result of multiplying 104 by 40 is 4160."
+ },
+ {
+  "id": "alpaca-8348",
+  "think": false,
+  "instruction": "Generate a few conversation prompts for two people talking about a shared hobby.",
+  "original": "1. What got you started with this hobby and how long have you been doing it? \n2. Have you attended any events or competitions related to the hobby, and if so, which would you recommend? \n3. What are some of the best tips or tricks you've learned for honing your skills in this hobby? \n4. Are there any aspects of the hobby you find challenging, and if so, how do you overcome these challenges? \n5. Have you made any friends through this hobby? Can you share a story about a meaningful connection you've made?\n6. What are some recent projects or accomplishments within the hobby that you're proud of? \n7. How do you see your involvement in the hobby evolving in the future?\n8. Do you have any favorite resources such as books, websites, or blogs which have helped you to learn more about the hobby?\n9. How do you balance the time spent on this hobby with other commitments and responsibilities?\n10. Have you tried introducing anyone else to the hobby? What advice would you give to someone starting out?"
+ },
+ {
+  "id": "alpaca-6155",
+  "think": false,
+  "instruction": "Provide an example of how someone can use the word \"reverie\".",
+  "original": "One example of using the word \"reverie\" can be: \"After a long and tiring day at work, John sat by the window, lost in a peaceful reverie, dreaming about his next vacation.\""
+ },
+ {
+  "id": "alpaca-7955",
+  "think": true,
+  "instruction": "Identify the main theme of the provided passage.\n\nThe Internet has forever changed the way we do business. Instead of relying on physical connections, we now operate in an interconnected virtual world.",
+  "original": "The main theme of the provided passage is the transformation and impact of the Internet on business."
+ },
+ {
+  "id": "alpaca-6839",
+  "think": false,
+  "instruction": "Rewrite the sentence using the same words but different grammar or structure.\n\nJohn and Mary wanted to visit the museum.",
+  "original": "The museum was wanted to be visited by John and Mary."
+ },
+ {
+  "id": "alpaca-3895",
+  "think": false,
+  "instruction": "Generate a scene description for a zoo full of robots.",
+  "original": "The zoo buzzed with excitement as visitors walked through its gates and into a world filled with robotic wonders. Towering steel giraffes grazed on artificial leaves while robotic lions roamed in their enclosures, their metallic fur glistening in the sunlight. Children squealed with delight as robotic monkeys swung from tree to tree, their movements precise and fluid.\n\nThe air was filled with the whirring of motors and the chatter of people as they marveled at the robotic animals. A family stopped in front of a large glass enclosure, where a robotic gorilla sat, its eyes following their movements. The children pressed their hands against the glass, laughing as the gorilla mimicked their gestures.\n\nAs the visitors strolled through the exhibits, they encountered all manner of robotic creatures. In the aquarium, robotic fish swam lazily through the crystal-clear water while a robotic octopus clung to the glass, its tentacles undulating gently. In the aviary, a flock of robotic birds took flight, their wings beating in unison as they soared through the air.\n\nThe zoo was alive with the sounds and movements of its robotic inhabitants, each one a marvel of engineering and technology. As the visitors departed, they left with a sense of wonder at the incredible world of the robot zoo."
+ },
+ {
+  "id": "alpaca-7996",
+  "think": false,
+  "instruction": "Research the history of hip hop",
+  "original": "Hip hop, also known as hip-hop or rap music, is a genre of popular music that originated in the United States in the late 1970s. It is characterized by its use of rapping, a vocal style in which the artist speaks rhythmically and in rhyme, often to a pre-recorded instrumental or synthesized beat.\n\nThe origins of hip hop can be traced back to The Bronx, a borough in New York City, in the early 1970s. At the time, block parties were becoming popular among African-American and Hispanic youth, and DJs would often set up their equipment in community recreation centers or on street corners to entertain the crowds. One of the earliest DJs to gain notoriety was Clive Campbell, better known as DJ Kool Herc, who is widely credited with originating hip hop music. \n\nDJ Kool Herc would use two turntables to extend the break in a funk or soul record, creating a repetitive beat that dancers could perform to. This style of beat-making became known as \"break-beat deejaying.\" As the parties grew in popularity, other DJs began to incorporate rap and toasting (a Jamaican style of chanting over a beat) into their performances. Grandmaster Flash and Afrika Bambaataa, two other early pioneers of the genre, also helped to popularize this new sound. \n\nIt was not until 1979, however, that the first hip hop record was released. \"Rapper's Delight\" by the Sugarhill Gang became a commercial success, introducing hip hop music to a wider audience. From there, the genre grew rapidly in popularity, with numerous artists releasing their own tracks and albums. Hip hop culture, comprising graffiti art, breakdancing, and DJing, also became increasingly visible during this time. \n\nIn the 1980s, hip hop began to diversify, with the rise of subgenres such as \"new school\" hip hop and conscious rap. The Golden Age of Hip Hop, which lasted roughly from the mid-1980s to the mid-1990s, saw the release of many critically acclaimed and influential albums from artists such as Public Enemy, Run-DMC, and NWA. During this time, hip hop also spread globally, giving rise to international scenes in countries such as the UK, Japan, and Germany.\n\nSince then, hip hop has continued to evolve, with new subgenres and styles emerging. Today, it is one of the most popular and"
+ },
+ {
+  "id": "alpaca-3292",
+  "think": true,
+  "instruction": "Describe the process of transcription in genetic material.",
+  "original": "Transcription is the process by which the genetic information encoded in a segment of DNA (a gene) is used to make a molecule of RNA. This RNA molecule serves as a template for the synthesis of a protein, which is the ultimate product of most genes.\n\nTranscription occurs in several steps:\n\n1. Initiation: The first step in transcription involves the binding of the enzyme RNA polymerase to the promoter region of the gene. The promoter is a specific sequence of DNA that signals the beginning of the gene and regulates its transcription.\n\n2. Elongation: Once the RNA polymerase is bound to the promoter, it starts to unwind the DNA double helix, separating the two strands. The RNA polymerase then starts to synthesize the RNA molecule, using one of the DNA strands as a template, adding the nucleotides (A, C, G, and U in RNA) one by one in a chain, following the base-pairing rules (A pairs with T, C pairs with G, G pairs with C, and U pairs with A).\n\n3. Termination: Once the RNA polymerase reaches the end of the gene, it encounters a termination sequence that signals the end of the gene, and it stops adding nucleotides to the growing RNA molecule. The RNA polymerase then detaches from the DNA, releasing the newly synthesized RNA molecule.\n\nThe RNA molecule produced by transcription, called messenger RNA or mRNA, is then processed and modified in various ways before being transported out of the cell's nucleus and into the cytoplasm, where it serves as a template for protein synthesis."
+ },
+ {
+  "id": "alpaca-2812",
+  "think": false,
+  "instruction": "Find a way to make the following sentence shorter but still convey the same meaning:\n\nThe reason why I have to do this task is because it is important.",
+  "original": "I must complete this task because it's important."
+ },
+ {
+  "id": "oasst-4bb3ebf6",
+  "think": false,
+  "instruction": "Write me a skeleton discord bot in python using discord.py",
+  "original": "Sure, here's a skeleton Discord bot in Python using the discord.py library:\n\n```python\nimport discord\nfrom discord.ext import commands\n\nbot = commands.Bot(command_prefix='!')\n\n@bot.event\nasync def on_ready():\n    print(f'{bot.user.name} has connected to Discord!')\n\n@bot.command(name='ping')\nasync def ping(ctx):\n    await ctx.send('Pong!')\n\nbot.run('<your-bot-token>')\n```\n\nThis code sets up a basic Discord bot that responds with \"Pong!\" when a user sends the command `!ping`. To use this code, you'll need to replace `<your-bot-token>` with your actual bot token.\n\nOnce you have the code saved as a Python file, you can run it from the command line or terminal using: \n\n```bash\npython3 <filename>.py\n``` \n\nMake sure that you have installed the `discord.py` library by running `pip install discord.py` beforehand."
+ },
+ {
+  "id": "alpaca-2275",
+  "think": false,
+  "instruction": "Generate a list of five ethical principles related to AI.",
+  "original": "1. Transparency: AI systems and their decision-making processes should be transparent and easily understood by users to promote trust and accountability.\n2. Fairness and Non-discrimination: AI systems should be designed to prevent discrimination and promote fairness by avoiding bias in decision-making processes.\n3. Privacy and Security: AI systems must protect user data privacy and ensure that personal information is not misused or exploited.\n4. Responsibility: AI developers, users, and regulators must take responsibility for the ethical design, deployment, and use of AI systems.\n5. Human-centred: AI systems should be designed and used to enhance human wellbeing, taking into account human rights and values."
+ },
+ {
+  "id": "alpaca-2858",
+  "think": false,
+  "instruction": "Recommend 3 books that everyone should read.",
+  "original": "Here are three books that I believe everyone should consider reading: \n\n1. \"To Kill a Mockingbird\" by Harper Lee - This classic novel explores themes of racism and prejudice through the eyes of a young girl living in the American South. It's a powerful reminder of the importance of empathy, compassion, and the need to stand up for what is right.\n\n2. \"1984\" by George Orwell - This dystopian novel imagines a future in which government control is absolute, and individual freedoms are nonexistent. It's a chilling portrait of a world that feels increasingly relevant today, and a reminder of the need to be vigilant in protecting our rights and liberties.\n\n3. \"Man's Search for Meaning\" by Viktor Frankl - In this memoir, Frankl recounts his experiences as a prisoner in Nazi concentration camps during World War II, and how he found meaning and purpose in the midst of unimaginable suffering. This inspiring book is a testament to the resilience of the human spirit, and the power of hope and love to overcome even the darkest of circumstances."
+ },
+ {
+  "id": "alpaca-6750",
+  "think": false,
+  "instruction": "What are the best tips for writing efficient SQL queries?",
+  "original": "1. Limit the columns retrieved: When writing SQL queries, be selective about which columns you retrieve. Instead of using SELECT *, specify the columns you want to return, which reduces the amount of data being transmitted and processed.\n\n2. Use Indexes: Indexing is one of the most effective ways to improve query performance. By creating indexes on frequently queried columns, you can significantly speed up SELECT, WHERE, JOIN and ORDER BY operations.\n\n3. Avoid unnecessary JOINs: JOIN operations can be computationally expensive, so it's important to use them judiciously. Make sure you're only joining tables when it's necessary to bring data together from multiple tables.\n\n4. Use EXPLAIN: EXPLAIN is a useful command for analyzing query performance. By running EXPLAIN before your SELECT statement, you can see details about the query execution plan, including the estimated number of rows that will be returned.\n\n5. Optimize WHERE clauses: Conditions in WHERE clauses can have a big impact on query performance. Make sure you're using the right comparison operators, and try to use indexed columns in your filter conditions whenever possible.\n\n6. Use LIMIT clauses: LIMIT clauses can be useful when you only need a certain number of rows returned from a query. By limiting the number of rows returned, you can reduce the amount of data being processed and speed up your query.\n\n7. Avoid sub-queries: Sub-queries can slow down queries significantly, especially if they're being used in WHERE or JOIN clauses. Whenever possible, try to rewrite sub-queries as JOINs or separate queries.\n\n8. Keep your statistics up-to-date: Statistics are used by the query planner to determine the most efficient execution plan. Make sure your statistics are up-to-date to ensure that the planner is making the best decisions."
+ },
+ {
+  "id": "alpaca-7597",
+  "think": false,
+  "instruction": "Rewrite the sentence preserving the meaning while making it more concise.\n\nIn order to make the most productive use of my time, it is important to have an effective time management plan.",
+  "original": "Effective time management is essential for using my time productively."
+ },
+ {
+  "id": "alpaca-4276",
+  "think": false,
+  "instruction": "Agree or disagree with the following statement: \"It's always best to be honest\".",
+  "original": "As an AI, I do not have personal opinions, so I cannot agree or disagree with statements. However, honesty is generally considered to be a desirable trait, and it can help to foster trust and good communication in relationships. However, there can be situations where being honest may cause harm or hurt someone's feelings, so some people believe in balancing honesty with tact and considering the potential impacts of their words before speaking."
+ },
+ {
+  "id": "alpaca-8234",
+  "think": false,
+  "instruction": "Come up with an idea for a digital product",
+  "original": "One potential idea for a digital product could be a comprehensive health and wellness application called \"HealthyMe\". This app would integrate various aspects of wellbeing, including physical, mental, and emotional health, into one easy-to-use digital platform. \n\nSome key features of HealthyMe could include:\n- Customized workout plans and exercise tracking, based on the user's fitness level and goals\n- Nutritional tracking and meal planning, with a database of healthy recipes and the ability to create personalized meal plans\n- Mindfulness and meditation exercises, tailored to the user's specific needs and preferences\n- A virtual journal for tracking and reflecting on mood and overall well-being\n- A community aspect, where users can connect and support each other in their wellness journeys.\n\nThe app would be user-friendly and intuitive, with a clean and modern interface. It would also use machine learning to regularly adjust and personalize the user's experience, making sure they receive the content and support they need to achieve their health and wellness goals."
+ },
+ {
+  "id": "alpaca-4346",
+  "think": true,
+  "instruction": "Classify the following poem as either a narrative or a lyrical poem.\n\nRoses are red \nViolets are blue \nSugar is sweet \nAnd so are you",
+  "original": "The poem \"Roses are red, Violets are blue, Sugar is sweet and so are you\" is a lyrical poem."
+ },
+ {
+  "id": "alpaca-4677",
+  "think": true,
+  "instruction": "Make a prediction about how this issue will end.\n\nThe two countries are in a deadlock over their trade deal.",
+  "original": "It is difficult to accurately predict how the issue between the two countries and their trade deal will end, as it would depend on several factors such as economic, political, and diplomatic considerations. However, it is possible that negotiations may progress and a mutually beneficial agreement reached, or one country could make concessions to reach a deal. Alternatively, the negotiations could fail, and the countries could resort to imposing trade barriers or seeking trade deals with other countries. Ultimately, the resolution of the issue would depend on the actions and decisions made by the countries involved."
+ },
+ {
+  "id": "alpaca-4189",
+  "think": false,
+  "instruction": "Calculate the cost of a 6-month supply of an item\n\nThe item costs $45 and the quantity is 6.",
+  "original": "If the item costs $45 and the quantity for a 6-month supply is 6, then the total cost for a 6-month supply of the item would be $45 * 6 = $270."
+ },
+ {
+  "id": "oasst-3a09fffb",
+  "think": false,
+  "instruction": "Can you give me a list of tips and tricks as a new Valheim player? I want it to have as few spoilers as possible.",
+  "original": "Sure! Here are some tips and tricks for a new Valheim player, with minimal spoilers:\n\n1. Explore the world: Valheim is an open-world game, so take the time to explore the different biomes and discover new resources.\n2. Gather resources: You will need to gather resources like wood, stone, and food in order to build structures, craft items, and survive. Try to gather as much as you can early on, so you have a good supply.\n3. Build a base: You can build a base anywhere you like, but it's a good idea to choose a safe location that's easy to defend. Make sure your base has a bed and a workbench, so you can save your progress and craft items.\n4. Learn the combat mechanics: Combat is an important part of Valheim, and you will encounter various enemies as you explore the world. Take the time to learn the combat mechanics, including the different weapons and shields you can use.\n5. Use the environment to your advantage: Pay attention to the environment and use it to your advantage in combat. For example, you can lure enemies into traps or use the terrain to get the upper hand.\n6. Work with other players: Valheim is designed to be played with friends, and you can work together to build structures, gather resources, and fight enemies. Joining forces with other players can make the game more fun and less challenging.\n7. Experiment with different play styles: There are many different play styles you can try in Valheim, including exploring, building, combat, and crafting. Try out different play styles to find what you enjoy the most.\n8. Don't be afraid to die: Dying is a part of the game, and it can be frustrating, but it's also an opportunity to learn and improve. Try to use each death as a learning experience, and don't be afraid to take risks.\n\nThese tips should help you get started in Valheim and have a great time playing the game. Enjoy!"
+ },
+ {
+  "id": "alpaca-3054",
+  "think": true,
+  "instruction": "How can Artificial Intelligence be used to help people with disabilities?",
+  "original": "Artificial Intelligence (AI) has the potential to greatly improve the lives of people with disabilities by providing assistance and support in various ways. Some of the ways AI can help people with disabilities include:\n\n1. Improving Accessibility: AI technologies such as voice recognition and natural language processing can help individuals with visual or motor impairments to interact with their devices and access information more easily.\n\n2. Enhancing Mobility: AI-powered assistive devices and mobility aids, such as self-driving wheelchairs and exoskeletons, can help individuals with mobility impairments to move around more freely and independently.\n\n3. Providing Communication Assistance: AI-powered systems can help individuals with speech or hearing impairments to communicate more easily. For example, a speech-to-text system can convert spoken language into written text, while text-to-speech technology can read out written text for those who have difficulty reading.\n\n4. Assistive Learning: AI-powered educational tools can help people with learning disabilities to learn more effectively by providing a personalized learning experience tailored to their individual needs and abilities.\n\n5. Enhancing Health and Safety: AI-powered health monitoring systems can help individuals with chronic health conditions to manage their health more effectively, while AI-powered safety systems can monitor the environment and detect potential dangers, helping to prevent accidents and injuries.\n\nOverall, AI offers a wide range of potential benefits for people with disabilities, helping them to overcome barriers and live more independent and fulfilling lives."
+ },
+ {
+  "id": "alpaca-3431",
+  "think": false,
+  "instruction": "Figure out the type of this sentence.\n\nThe cat sat on the mat.",
+  "original": "This sentence is a declarative sentence, which is a type of sentence that makes a statement, provides information or expresses opinion."
+ },
+ {
+  "id": "alpaca-7673",
+  "think": true,
+  "instruction": "Rewrite the following sentence so that it is a good example of effective communication.\n\nIt was a hard decision to make, but I'm glad it's done.",
+  "original": "\"I had to put a lot of thought into making this decision, and now that it's finalized, I am relieved and pleased with the outcome.\""
+ },
+ {
+  "id": "alpaca-5210",
+  "think": false,
+  "instruction": "Read the given passage with grammatical errors and rewrite it with correct grammar.\n\nShe go to school, every morning she dont forget to bring the umbrella, although weather was clear. Out of blue, someone run into her it's the robber , thank she reacts quick to chase the robber.",
+  "original": "She goes to school every morning and doesn't forget to bring her umbrella, even though the weather is clear. Out of the blue, a robber runs into her. Thankfully, she reacts quickly and chases after him."
+ },
+ {
+  "id": "alpaca-6499",
+  "think": false,
+  "instruction": "Complete the sentence using the word \"clutching\", using the given sentence context.\n\nShe walked through the forest, her heart",
+  "original": "She walked through the forest, her heart clutching with fear as the shadows seemed to grow darker with every step she took."
+ }
+]

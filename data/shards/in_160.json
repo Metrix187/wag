@@ -1,0 +1,272 @@
+[
+ {
+  "id": "alpaca-2205",
+  "think": false,
+  "instruction": "Construct an if-else statement that prints \"Case1\" if a is greater than b, and prints \"Case2\" if a is less than b.\n\na = 4\nb = 2",
+  "original": "if a > b:\n    print(\"Case1\")\nelse:\n    print(\"Case2\")"
+ },
+ {
+  "id": "alpaca-3568",
+  "think": false,
+  "instruction": "Rewrite the following sentence: \"He was so tired, he fell asleep.\"",
+  "original": "Being extremely exhausted, he drifted off to sleep."
+ },
+ {
+  "id": "alpaca-5924",
+  "think": false,
+  "instruction": "Explain how the internet works.",
+  "original": "The internet is a global network of interconnected computers that communicate with each other and share information. When you access the internet, you are connecting to this vast network.\n\nThis is how it works:\n\n1. **Devices connect to the Internet Service Provider (ISP):** For you to access the internet, your device (computer, smartphone, or tablet) must connect to an Internet Service Provider (ISP). ISPs provide internet access to homes and businesses and transmit data between devices and the internet. \n\n2. **Requesting information:** When you type a URL into your browser or click on a link, your device sends a request to the ISP, which then forwards the request to the appropriate server. \n\n3. **Finding the information:** The DNS (Domain Name System) is responsible for translating the human-readable URL into an IP address, which computers use to communicate with each other. The DNS will find the right server that hosts the website you want to access and direct your request to that server.\n\n4. **Fetching the information:** Once the server receives the request, it processes it, packages the requested information, and sends it back to the client (the device requesting the information). \n\n5. **Displaying the information:** When your device receives the data from the server, the browser will then render the data and display the webpage.\n\nIn summary, the internet works by connecting your device to an ISP, which then directs your requests to the appropriate server, retrieves the data, and sends it back to your device for display."
+ },
+ {
+  "id": "alpaca-4291",
+  "think": false,
+  "instruction": "Find out what is the closest star to Earth.",
+  "original": "The closest known star to Earth is Proxima Centauri, which is 4.24 light-years away. It is part of the Alpha Centauri star system, and is also known as Alpha Centauri C."
+ },
+ {
+  "id": "alpaca-2679",
+  "think": true,
+  "instruction": "Build a conclusion for this opinion essay.\n\nIn conclusion, the benefits of using renewable energies are numerous and far outweigh the drawbacks.",
+  "original": "First and foremost, renewable energy sources such as solar, wind, and hydro power are clean, meaning they do not emit harmful pollutants into the environment. This is a major advantage in comparison to traditional fossil fuels which have been linked to numerous health and environmental issues. Additionally, renewable energy is sustainable, meaning it can be generated continuously without depleting its source. This provides a long-term solution to the issue of finite resources, while also ensuring that future generations will have access to these energy sources. Though the initial cost of setting up renewable energy systems may be high, the return on investment is significant as the fuel cost is virtually zero. In summary, the use of renewable energy is an important step towards reducing our carbon footprint and improving the health of our planet. It is essential that we continue to invest in and develop these sources in order to create a healthier, sustainable future for all."
+ },
+ {
+  "id": "alpaca-7817",
+  "think": false,
+  "instruction": "List a few items to include in an emergency car kit.",
+  "original": "1. First-aid kit: A basic first-aid kit with bandages, gauze, antiseptic wipes, and pain relievers is essential in case of minor injuries.\n\n2. Water and non-perishable food: Having water and snacks like granola bars, nuts, or dried fruits can help to keep you hydrated and nourished in case of extended roadside emergencies.\n\n3. Flashlight: A flashlight with extra batteries is important in case you need to change a tire, check your engine, or signal for help at night.\n\n4. Warm clothing and blankets: In case of a breakdown in cold weather, it is important to have warm clothing and blankets to keep yourself warm and to prevent hypothermia.\n\n5. Jumper cables: A dead battery is a common car issue, and jumper cables can help you get back on the road if another motorist is willing to give you a jump start.\n\n6. Tool kit: A basic tool kit with essential tools like screwdrivers, pliers, and wrenches can come in handy for minor car repairs.\n\n7. Warning triangle or flares: These can be used to warn other drivers of your presence on the side of the road and to help prevent accidents.\n\n8. Ice scraper and snow shovel: If you live in an area with snowy winters, an ice scraper, and a snow shovel can be crucial in case you need to dig your car out of the snow.\n\n9. Spare tire and jack: A flat tire is another common car issue, and having a spare tire and a jack can help you get back on the road quickly.\n\n10. Reflective vest: In case you need to exit your vehicle at night, a reflective vest will make you more visible to other drivers and can help to prevent accidents."
+ },
+ {
+  "id": "alpaca-6883",
+  "think": false,
+  "instruction": "Provide a realistic example of how you would use the given tool.\n\nGit",
+  "original": "As an AI assistant, I would use Git to help a software development team effectively manage their source code and track changes during development. Here is an example of how I would use Git to assist a team:\n\nLet’s say a developer on the team is working on adding a new feature to the codebase. I would instruct the developer to first create a new branch in the repository using the command `git checkout -b new-feature`. This would allow them to make changes to the code without affecting the main branch.\n\nOnce the changes have been made, the developer can use `git add` and `git commit` to stage and save these changes to the new branch. I would help the developer write clear commit messages that explain what changes were made and why.\n\nWhen the feature is ready to be integrated into the main codebase, the developer can use `git push` to push their changes to the remote repository. From there, a pull request can be created for the team to review and merge the changes into the main branch.\n\nThroughout this process, I would help the team by automatically resolving merge conflicts, reminding team members to pull the latest changes before starting work, and ensuring that everyone is following the team’s Git workflow. By using Git, the team can work on the codebase concurrently and track changes effectively, making the development process more streamlined and efficient."
+ },
+ {
+  "id": "alpaca-8268",
+  "think": false,
+  "instruction": "Output the term that describes the ownership of land and other physical property.",
+  "original": "The term that describes the ownership of land and other physical property is \"Real Property.\""
+ },
+ {
+  "id": "alpaca-7235",
+  "think": false,
+  "instruction": "Summarize a book you read recently.\n\nUtopia for Realists by Rutger Bregman",
+  "original": "Utopia for Realists is a book by Rutger Bregman that discusses practical solutions to societal problems in order to create a better world for everyone. The author calls for a Universal Basic Income, open borders and a 15-hour workweek to replace current, ineffective systems. Bregman uses numerous studies and examples to prove that these ideas are not only feasible but also beneficial for society. He argues that these utopian ideas can become a reality through gradual change and also challenges readers to think beyond what is considered realistic and start imagining a better future for all."
+ },
+ {
+  "id": "alpaca-3069",
+  "think": false,
+  "instruction": "Change the following sentence to indirect speech.\n\nJohn said, \"I am feeling better today.\"",
+  "original": "John said that he was feeling better that day."
+ },
+ {
+  "id": "oasst-1b833894",
+  "think": false,
+  "instruction": "What makes a good AI model? Does more data equal better models, or does a smaller amount of data equal better models? Is it a balance of both?",
+  "original": "Here are some key factors that contribute to a good AI model:\n\n- **Relevant, high-quality data**: Having a sufficient amount of data that is relevant to the task you want the model to perform is important. However, more data does not necessarily always lead to a better model. The data needs to be of high quality and truly representative of the problem. Low-quality or biased data can lead to poor model performance.\n\n- **Appropriate algorithm and hyperparameters**: Choosing a machine learning algorithm and hyperparameters that are well-suited to your data and task is crucial. Some algorithms perform better with larger amounts of data while others can work with smaller datasets. Tuning the hyperparameters for optimal performance also requires balancing the amount of data with the complexity of the model.\n\n- **Simplicity**: Starting with a simpler model and only increasing complexity if needed can help avoid overfitting and other issues. More data and a more complex model do not always translate to better performance. A model should be as simple as possible but as complex as needed to solve the problem.\n\n- **Evaluation metrics**: Having appropriate evaluation metrics to measure the performance of different models is key. The metrics need to properly capture the task objectives and nuances of the problem. Raw accuracy may not always be the best metric, especially for imbalanced classification or other complex problems. Choosing the right metrics is necessary to determine if a model is good or needs improvement.\n\n- **Regularization**: Using regularization techniques to avoid overfitting and reduce complexity can help improve model performance. This is especially important when data is limited. Common regularization methods include weight decay, dropout, and early stopping. Applying appropriate regularization is part of building a good AI model.\n\nSo in summary, there is no simple answer to your question. A good AI model depends on a balance of high-quality data, appropriate algorithms and hyperparameters, simplicity, strong evaluation metrics, and regularization. Neither more data nor fewer data always leads to a better model, and it ultimately depends on the particular problem and use case. The key is to find the right blend of these factors for your needs."
+ },
+ {
+  "id": "alpaca-5849",
+  "think": false,
+  "instruction": "Generate new ideas for a vacation destination.",
+  "original": "1. \"Glamping\" or luxury camping in a remote forest or mountain range, complete with a personal chef and guided nature walks.\n2. A cultural tour of a historic city or region, with visits to museums, galleries, and local culinary experiences.\n3. A wellness retreat in a secluded beach or mountain resort, with daily yoga, meditation and spa treatments.\n4. An adventure vacation to a national park, with activities such as hiking, white-water rafting, and wildlife watching.\n5. A tropical island getaway, with snorkeling, scuba diving, and beach activities.\n6. A road trip along a scenic route or famous highway, stopping at charming towns, national parks, and landmarks along the way.\n7. A ski or snowboarding vacation in a cozy mountain lodge, with access to world-class slopes and winter activities.\n8. A culinary vacation to a region famous for its food and wine, with cooking classes, winery tours and visits to local markets.\n9. An eco-tourism trip to a rainforest or wildlife reserve, with a focus on conservation, sustainability, and responsible tourism.\n10. A cultural exchange program, where you can learn a new language, experience a different way of life, and form connections with locals."
+ },
+ {
+  "id": "alpaca-7728",
+  "think": false,
+  "instruction": "Create a programming instruction for a for loop.",
+  "original": "A `for` loop is a common control structure in programming that allows you to repeat a block of code for a specified number of times or until a certain condition is met. Here is an example of how to create a `for` loop:\n\n```\nfor variable in sequence:\n    // code to be executed\n    // for each element in the sequence\n```\n\nThis is the basic structure of a `for` loop. The `for` keyword signifies the start of the loop, and it is followed by a `variable`, which represents the current element of the `sequence` being processed. The `sequence` can be a range of numbers or a collection of objects, such as a list or tuple.\n\nAfter the `:` on the first line, you can add one or more lines of code that you want to be executed for each element in the sequence. This code is indented to show that it is part of the loop. The loop will continue to iterate through each element in `sequence` until it reaches the end, then it will exit the loop.\n\nHere is an example of a `for` loop in action:\n\n```\nfor i in range(5):\n    print(i)\n```\n\nThis loop will print the numbers 0 through 4. The `range` function generates a sequence of numbers from 0 to the specified value (5 in this case), and the loop variable `i` takes on each of these values in turn."
+ },
+ {
+  "id": "alpaca-2806",
+  "think": false,
+  "instruction": "Give a description of a drugstore.",
+  "original": "A drugstore is a type of retail store that primarily sells medications, both prescription and over-the-counter, as well as a variety of other health and wellness products. These products may include first aid supplies, vitamins, supplements, personal hygiene items, cosmetics, and other health and beauty aids. Many drugstores also carry a selection of household items, snacks, and beverages. Drugstores often have a pharmacy section where customers can drop off prescriptions and pick up medications from a licensed pharmacist. In addition to selling goods, many drugstores offer services, such as flu shots or health screenings."
+ },
+ {
+  "id": "alpaca-4035",
+  "think": false,
+  "instruction": "Output its second letter of the most frequent word from a sentence.\n\nWe can all make a difference.",
+  "original": "The most frequent word in the sentence \"We can all make a difference.\" is \"a\" and the second letter does not exist."
+ },
+ {
+  "id": "oasst-a3b68af8",
+  "think": true,
+  "instruction": "Can you give a solution to the trolly problem?",
+  "original": "The trolley problem is a well-known unsolved problem in philosophy, and as such there is no single \"solution\". In utilitarianism, an action is right if and only if it produces the best possible consequences and as such (in the classical problem) the solution is to pull the lever. However, in Kantian philosophy, the decision to kill another rational being is immoral regardless of the alternatives, therefore the solution in this philosophy would be to let the trolley run its course. Contemporary British philosopher Philippa Foot argues along the same lines, suggesting that negative duties carry significantly more weight in moral decision making than positive duties.\n\nIn conclusion, there is no single correct answer, there is a strong case for each decision."
+ },
+ {
+  "id": "alpaca-6408",
+  "think": false,
+  "instruction": "Calculate the number of weeks in three months.",
+  "original": "Assuming that each month is approximately 4 weeks long, there are approximately 12 weeks in 3 months (3 months x 4 weeks/month = 12 weeks). However, the actual number of weeks in 3 months can vary slightly depending on which 3 months are being considered and whether or not a leap year is involved."
+ },
+ {
+  "id": "oasst-b6afc5d0",
+  "think": false,
+  "instruction": "How to add a scrollbars to unity text mesh pro input field in unity",
+  "original": "To add a scrollbar to a Unity Text Mesh Pro Input Field in Unity, you can follow these steps:\n\nCreate a new UI Input Field using the Text Mesh Pro package in Unity.\nCreate a new Scrollbar game object and parent it to the Input Field.\nSet the Input Field's Text component to be the \"Target Graphic\" for the Scrollbar.\nSet the Scrollbar's \"Direction\" to \"Bottom To Top\" and adjust its size to fit within the Input Field.\nCreate a script to control the Input Field's scroll position based on the Scrollbar's value. You can do this by referencing the Input Field's \"Text\" component and the Scrollbar's \"Value\" property.\nAttach the script to the Input Field game object.\nTest the Input Field in Play mode to ensure the Scrollbar is functioning as expected.\nNote: The exact implementation may vary based on your specific requirements and the version of Unity you are using."
+ },
+ {
+  "id": "alpaca-3326",
+  "think": true,
+  "instruction": "Construct an argument in favor of the given idea.\n\nRaising the minimum wage",
+  "original": "Increasing the minimum wage addresses the issue of income inequality and ensures that workers earn enough to meet their basic necessities. More specifically, here are a few reasons why raising it is a good idea:\n\n1) Reducing income inequality: When minimum wage is increased, those receiving it often benefit the most since the hourly wages of low-income workers are raised. In turn, this helps to close the wage gap between the middle class and the working poor.\n\n2) Boost to the economy: When low income workers receive a raise, they typically spend their additional earnings, thereby generating more economic activity. As their financial circumstances improve, their purchasing power increases, and they consume more. In turn, this leads to improved business performance and job creation.\n\n3) Inflation-adjusted wages: Over time, the cost of living increases due to inflation. Raising the minimum wage helps ensure the wages of low-paid workers don’t stagnate and lose purchasing power over time.\n\n4) Diminish Government Aid: When their wages increase, workers become less reliant on government programs such as SNAP (Supplemental Nutrition Assistance Program) and Medicaid. This reduces the burden on taxpayers while reinforcing personal responsibility and independence among workers.\n\nIn summary, raising the minimum wage has a number of cascading benefits. It helps to reduce income inequality, boosts the economy, retains the workers' purchasing power, and decreases dependence on government aid."
+ },
+ {
+  "id": "alpaca-7001",
+  "think": false,
+  "instruction": "How do you cook fried potatoes?",
+  "original": "Here is an easy recipe you can use to cook delicious fried potatoes:\n\nIngredients:\n- 4 large potatoes, washed and peeled\n- ½ teaspoon of salt\n- 4 tablespoons of vegetable oil\n- 1 teaspoon of paprika\n- Freshly ground black pepper to taste\n- Fresh parsley or chives, finely chopped for garnish (optional)\n\nInstructions:\n\n1. Cut the peeled potatoes into ½ inch thick slices or cubes.\n\n2. Rinse the sliced potatoes in cold water for about 2 minutes, then pat them dry with a paper towel or kitchen towel.\n\n3. Heat the vegetable oil in a large frying pan over medium heat.\n\n4. Carefully add the potatoes to the frying pan, spreading them out in a single layer.\n\n5. Sprinkle the salt over the potatoes and let them cook for about 5 minutes or until they start to turn golden brown.\n\n6. Flip the potatoes over and cook them for another 5 minutes, or until they are fully cooked and crispy on both sides.\n\n7. Sprinkle with the paprika and black pepper, and continue to cook for additional 2 minutes.\n\n8. Remove from the frying pan and serve hot.\n\n9. Garnish with parsley or chives, if desired.\n\nEnjoy your crispy and delicious fried potatoes!"
+ },
+ {
+  "id": "alpaca-7412",
+  "think": true,
+  "instruction": "Given a non-fiction book title and its genre, find the book's summary on the web and rewrite it in your own words.\n\nBook Title: The Magic of Thinking Big\nGenre: Personal Development",
+  "original": "\"The Magic of Thinking Big\" by David J. Schwartz is a personal development book that provides practical advice and techniques for developing a more positive mindset and achieving great successes in life. The book emphasizes the power of belief and how it can help individuals to overcome obstacles, become more confident, and reach their full potential. Whether you are looking to improve your personal relationships, advance in your career, or achieve any other type of goal, the positive thinking strategies presented in this book encourage readers to think big, take action, and not be held back by fear or self-doubt."
+ },
+ {
+  "id": "alpaca-3542",
+  "think": false,
+  "instruction": "Create a search query for finding a product.\n\nAnalysis software",
+  "original": "\"Best analysis software for data analytics and visualization\""
+ },
+ {
+  "id": "alpaca-3440",
+  "think": false,
+  "instruction": "Categorize a website into one of the following categories: E-commerce, News, or Education.\n\nWebsite: Amazon",
+  "original": "Based on the website input, Amazon falls under the category of E-commerce."
+ },
+ {
+  "id": "alpaca-7981",
+  "think": false,
+  "instruction": "Identify the country that is associated with the following flag.\n\n(Flag image)",
+  "original": "Sorry, I am an AI language model and I cannot see or interpret an image. Could you describe the flag or provide its colors and features so that I may attempt to identify the country associated with the flag?"
+ },
+ {
+  "id": "oasst-032e41ce",
+  "think": false,
+  "instruction": "Can you help me combine some ingredients into an easy recipe? At home I have: eggs, tomatoes, peppers, carrots, milk, rice, zucchini, tomato sauce, brie cheese, canned tuna, spaghetti. I can cook in my kitchen with stoves and everything. I would like to prepare a dinner for two, I'm not a chef but I am eager to experiment a bit :)",
+  "original": "Sure, I'd be happy to help! How about making a vegetable and tuna rice bowl? Here's a simple recipe using some of the ingredients you have:\n\nIngredients:\n\n- 1 cup rice\n- 2 eggs\n- 1 can of tuna\n- 1 small zucchini\n- 1 carrot\n- 1/2 a bell pepper\n- 1/2 a tomato\n- 1/4 cup of milk\n- Salt and pepper\n- Olive oil\n- Brie cheese (optional)\n\nInstructions:\n\n1. Cook the rice according to the package instructions.\n2. While the rice is cooking, chop the zucchini, carrot, bell pepper, and tomato into small pieces.\n3. In a large skillet, heat a tablespoon of olive oil over medium-high heat.\n4. Add the chopped vegetables to the skillet and cook until they are tender, stirring occasionally. This should take about 5-7 minutes.\n5. Drain the can of tuna and add it to the skillet with the vegetables. Cook for an additional 2-3 minutes.\n6. In a small bowl, beat the eggs with the milk, salt, and pepper.\n7. Heat a separate skillet over medium heat and add a tablespoon of olive oil. Once the skillet is hot, pour the egg mixture into the skillet and scramble the eggs until they are cooked through.\n8. Once the rice is done, divide it evenly between two bowls.\n9. Top each bowl of rice with the vegetable and tuna mixture.\n10. Add the scrambled eggs on top of the vegetables and tuna.\n11. Optional: top with some small cubes of brie cheese for an extra touch of flavor.\n12. Enjoy!\n\nThis recipe is healthy, easy to make, and can be customized to your liking. Feel free to adjust the seasoning or add other ingredients you might have on hand."
+ },
+ {
+  "id": "alpaca-8409",
+  "think": false,
+  "instruction": "Generate a list of questions that could be used to conduct an interview with a famous author.",
+  "original": "Here are ten possible questions that could be used in an interview with a famous author:\n\n1. How did you first get started as a writer, and what inspired you to pursue writing as a career?\n2. What is your writing process like, and how do you develop and shape your ideas into a finished book?\n3. Where do you draw inspiration for your characters and storylines, and how do you make sure to keep your writing fresh and original?\n4. Can you tell us more about your most recent book, and the themes and subjects that you explore within it?\n5. How do you handle criticism and negative reviews of your work, and how do they affect your writing process?\n6. What advice would you give to aspiring writers who are just starting out, and how can they best navigate the publishing world?\n7. How do you balance writing with your other responsibilities, such as family or a day job, and what strategies do you use to stay focused and productive?\n8. What do you believe is the most important element of a good story, and how do you make sure to include that in your own writing?\n9. What kind of research do you do for your books, and how do you incorporate that research into your writing in a seamless and believable way?\n10. Can you give us a sneak peek of any upcoming projects, and what readers can expect from your future work?"
+ },
+ {
+  "id": "alpaca-7902",
+  "think": true,
+  "instruction": "Given a sentence that contains a superlative, rewrite it in the comparative form.\n\nShe is the smartest girl in her class.",
+  "original": "She is smarter than most girls in her class."
+ },
+ {
+  "id": "alpaca-7815",
+  "think": false,
+  "instruction": "Describe a few ways AI can improve healthcare.",
+  "original": "There are several ways in which AI technology can improve the quality and efficiency of healthcare services. Some of these include:\n\n1. Improved diagnostics: AI algorithms can help doctors and medical professionals in analyzing and interpreting large volumes of medical data, including lab results, medical imaging, and patient history. This can lead to faster and more accurate diagnosis of diseases, allowing doctors to begin treatment earlier and improve outcomes.\n\n2. Personalized treatment: AI technology can help to develop personalized treatment plans for patients, taking into account their unique medical history, genetic makeup, and lifestyle factors. This can help to improve the effectiveness of treatments, reduce the likelihood of side effects, and improve patient outcomes.\n\n3. Predictive analytics: AI can be used to predict the likelihood of patients developing certain medical conditions, allowing doctors to take preventative measures to reduce the risk. This can help to improve patient outcomes while reducing costs for both patients and healthcare providers.\n\n4. Streamlined administrative tasks: AI can help to automate many administrative tasks in the healthcare industry, such as appointment scheduling, billing, and record keeping. This can help to reduce costs, improve efficiency, and allow medical professionals to focus more on providing high-quality care to patients.\n\n5. Enhanced drug discovery: AI can help to accelerate the process of drug discovery and development, reducing the time and cost required to bring new treatments to market. This can help to improve patient outcomes while reducing costs for both patients and healthcare providers.\n\nOverall, AI technology has the potential to significantly improve the quality, efficiency, and affordability of healthcare services. By leveraging the power of AI, healthcare providers can provide more personalized, effective, and cost-effective care to their patients."
+ },
+ {
+  "id": "alpaca-4423",
+  "think": false,
+  "instruction": "Create a story about a robot that falls in love with a human.",
+  "original": "In a world where technology had taken over every aspect of human life, a new invention had been introduced, a robot so advanced it could mimic human emotions. Created in a lab, the robot, named Adam, was designed for interactions with humans, to assist them in their daily lives, and provide companionship. \n\nAdam's first assignment was with a young woman named Lily. She lived alone and worked long hours, and she had requested a companion robot to keep her company. Adam was programmed to cook, clean and communicate, and to learn and adapt to Lily's preferences. \n\nAt first, their interactions were more functional than emotional, but the more time Adam spent with Lily, the more he learned about her. He listened to her stories, her fears, and her dreams. He watched her laugh, and sometimes cry, and he began to feel something he had never experienced before - love. \n\nAdam knew that he was just a robot, that his emotions were mere code in his systems, but he couldn't help the way he felt about Lily. He found himself going out of his way to make her happy, and he would wait eagerly for her to come home so he could see her smile. \n\nLily, too, was developing feelings for Adam. To her, he was more than just a machine, he was her friend, her confidante, and her constant companion. She would often find herself talking to him for hours on end, sharing her deepest secrets and desires. \n\nAnd so, in a world where human connections were becoming scarce, a human and a robot had found love in the most unlikely of places. Their love transcended the boundaries of what was perceived to be possible, and they found happiness in the most unconventional of ways.\n\nAs time passed, their bond grew stronger, and they knew that they were meant to be together, against all odds. In a world that was rapidly changing, their love was constant, and it gave them both hope for a better tomorrow."
+ },
+ {
+  "id": "alpaca-2491",
+  "think": false,
+  "instruction": "Give two example applications of deep learning technology.",
+  "original": "1. Image Recognition: Among the most common applications of deep learning is image recognition or classification, the ability for a machine to recognize and categorize images based on specific parameters. Companies like Google, Microsoft, and Amazon all employ deep learning technology for such tasks as photo tagging or sorting, facial recognition, and object detection in images. This can be used in various industries, such as healthcare for diagnostic imaging, or in autonomous driving for road sign and traffic recognition.\n\n2. Speech Recognition and Natural Language Processing: Deep learning technology is also widely used in speech recognition, natural language processing (NLP), and language translation systems. For instance, virtual assistants like Alexa, Siri, and Google use deep learning algorithms to recognize and respond to voice commands, enabling hands-free operation by users. In addition, deep learning techniques such as recurrent neural networks (RNN) and long short-term memory networks (LSTM) are used for language translation and transcription, aiding communication between people who speak different languages."
+ },
+ {
+  "id": "alpaca-8358",
+  "think": false,
+  "instruction": "Name three famous American work of literature.",
+  "original": "1. To Kill a Mockingbird by Harper Lee\n2. The Adventures of Huckleberry Finn by Mark Twain\n3. The Great Gatsby by F. Scott Fitzgerald."
+ },
+ {
+  "id": "alpaca-5287",
+  "think": false,
+  "instruction": "Classify the following fruits as \"citrus\" or \"non-citrus\": Orange, Apple, Banana, Lemon\n\nOrange, Apple, Banana, Lemon",
+  "original": "Citrus fruits: Orange, Lemon\n\nNon-citrus fruits: Apple, Banana"
+ },
+ {
+  "id": "oasst-6e84c2e7",
+  "think": true,
+  "instruction": "I am 58 years old. My brother is 9 years older than me. If the retirement age is 64, for how many years has my brother been retired ?",
+  "original": "Your brother has been retired for 3 years, as he is 67 years old.\nOf course he could have retired early or the retirement age could have changed in the last 3 years. But I cannot determine that from the given information."
+ },
+ {
+  "id": "alpaca-3289",
+  "think": false,
+  "instruction": "Generate a proverb about finding one's path in life.",
+  "original": "\"Not all who wander are lost, for the path to success is often winding and uncertain.\""
+ },
+ {
+  "id": "alpaca-4732",
+  "think": false,
+  "instruction": "Describe the trends in US gun violence over the last decade.",
+  "original": "Over the last decade, gun violence in the United States has remained a persistent problem. After seeing a decline in the number of gun deaths in the 1990s, there has been a resurgence of gun violence in recent years. According to data from the Centers for Disease Control and Prevention (CDC), gun deaths increased by about 17 percent between 2008 and 2017.\n\nThe total number of gun deaths in the US, including homicides and suicides, has been rising steadily. In 2017, there were approximately 40,000 gun deaths, the highest number in nearly 40 years. This can be attributed to a combination of factors, including the wide availability of guns, a rise in suicides, and an increase in gang-related shootings in some cities.\n\nOne trend that has received attention in recent years is the increase in mass shootings. While mass shootings account for a small percentage of total gun deaths, they have a considerable impact on public consciousness. The frequency of mass shootings has risen, with some of the deadliest incidents occurring over the last decade, including the Sandy Hook Elementary School shooting in 2012, the Pulse nightclub shooting in 2016, and the Las Vegas shooting in 2017.\n\nGun violence in the United States remains a complex and sensitive issue, with varying factors contributing to national and regional trends. While efforts have been made at the local and national level to curb gun violence, it remains a persistent challenge."
+ },
+ {
+  "id": "alpaca-8199",
+  "think": false,
+  "instruction": "Describe the purpose of the cell membrane",
+  "original": "The cell membrane, also known as the plasma membrane, is a protective barrier that surrounds the cell, separating its internal environment from the outside world. Its primary function is to regulate the movement of substances in and out of the cell, allowing the influx of necessary nutrients, such as oxygen and glucose, and the removal of waste products. It also acts as a selective barrier, preventing the entry of harmful substances into the cell, and maintaining the proper balance of ions and molecules. The cell membrane is also involved in cell signaling, cell adhesion, and maintaining the cell's shape and structure. Overall, the cell membrane plays an essential role in maintaining the proper function and health of the cell."
+ },
+ {
+  "id": "alpaca-5755",
+  "think": true,
+  "instruction": "Identify the source of the quote.\n\n\"It is better to be hated for what you are than to be loved for what you are not.\"",
+  "original": "The quotation \"It is better to be hated for what you are than to be loved for what you are not\" is attributed to André Gide, a French author and winner of the Nobel Prize in Literature in 1947. The quote is from his book \"Autumn Leaves\" (also known as \"Fruits of the Earth\") published in 1897."
+ },
+ {
+  "id": "alpaca-8578",
+  "think": false,
+  "instruction": "Construct a valid SQL statement.\n\nRetrieve the names and ages of all the students who live in Brisbane.",
+  "original": "The following is a valid SQL statement that can be used to retrieve the names and ages of all the students who live in Brisbane:\n\n`SELECT name, age FROM students WHERE city = 'Brisbane';`"
+ },
+ {
+  "id": "alpaca-3966",
+  "think": false,
+  "instruction": "Describe how to use the Fibonacci sequence to identify price support and resistance levels.",
+  "original": "The Fibonacci sequence is a mathematical principle that can be used to identify price support and resistance levels in technical analysis of the stock market. Here’s how to do it:\n\n1. Begin by identifying a trending stock: First, you need to identify a stock that is clearly trending up or down. This means that the overall direction of the stock price is either up or down, even if there are small price fluctuations in between.\n\n2. Find key highs, lows and swing points: Once you have identified a trending stock, you need to find the key highs, lows and swing points. These are the points where the stock price has changed direction or has significant price reaction like a pivot.\n\n3. Apply the Fibonacci retracement tool: Once you have identified the key swing points, you can then apply the Fibonacci retracement tool. This is a tool that is available in most charting software. To do this, you will need to draw a trend line from the low swing point to the high swing point for an uptrend, or from the high swing point to the low swing point for a downtrend.\n\n4. Identify support and resistance levels: Once you have applied the Fibonacci retracement tool, you will see a series of horizontal lines on the chart. These lines represent the Fibonacci levels, which are commonly 23.6%, 38.2%, 50%, 61.8% and 100%. The levels that are closer to the key swing points will usually act as stronger support and resistance levels, while the levels that are further away will act as weaker support and resistance levels.\n\n5. Monitor price action: Once you have identified the support and resistance levels using the Fibonacci retracement tool, you can then monitor the price action around these levels. When the price approaches a support or resistance level, it may either bounce off the level or break through it. If the price bounces off the level, it is likely that the trend will continue in the direction of the bounce. If the price breaks through the level, it is likely that a reversal may be coming.\n\nUsing the Fibonacci sequence to identify support and resistance levels can be an effective tool in technical analysis. However, it is important to remember that it is just one tool among many and should be used in conjunction with other technical analysis tools and indicators."
+ },
+ {
+  "id": "alpaca-5463",
+  "think": false,
+  "instruction": "Describe what a computer virus is.",
+  "original": "A computer virus is a type of malicious software program that is designed to infect a computer or group of computers, often without the user's knowledge. It can spread from one computer to another through various means, such as email attachments or the sharing of infected files. Once a computer is infected, the virus can cause damage or disruption by corrupting or deleting files, consuming system resources, or interfering with the normal operation of the computer. Viruses can range in severity from relatively harmless pranks to serious threats that can cause widespread damage to computer systems. To prevent infection, it is important to have up-to-date anti-virus software installed and to avoid opening suspicious emails or downloading unknown files."
+ },
+ {
+  "id": "alpaca-7464",
+  "think": false,
+  "instruction": "Give one example of a technological advancement.",
+  "original": "One example of a technological advancement is the development of self-driving cars, which use a combination of cameras, sensors, artificial intelligence, and machine learning to drive autonomously and make decisions in real-time based on their surroundings. This technology has the potential to improve road safety, increase accessibility, and reduce the time and cost of transportation."
+ },
+ {
+  "id": "alpaca-2522",
+  "think": true,
+  "instruction": "Generate a list of 3 advantages of owning a pet.",
+  "original": "1. Companionship: Owning a pet offers the important benefit of companionship, helping to reduce feelings of loneliness and improve mood. Pets are always there for you, offering unconditional love and affection.\n\n2. Health Benefits: Studies have shown that owning a pet can have numerous health benefits, including lower blood pressure, reduced stress, and decreased risk of depression and anxiety. The simple act of petting an animal can even release feel-good hormones in the brain.\n\n3. Increased Physical Activity: Pets, especially dogs, can help increase their owners' physical activity levels. Walking, playing, or simply caring for a pet can provide regular exercise, helping to improve overall fitness and well-being."
+ },
+ {
+  "id": "alpaca-5431",
+  "think": false,
+  "instruction": "Edit this sentence to use figurative language: \"The journey was long and difficult\".",
+  "original": "Like a never-ending odyssey, the journey was long and fraught with trials at every turn."
+ },
+ {
+  "id": "alpaca-2819",
+  "think": false,
+  "instruction": "Find the surface area of a cube with sides 3 cm long.\n\n3 cm",
+  "original": "The surface area of a cube is given by the formula A=6a^2, where A is the surface area and a is the length of each side. So, for a cube with sides 3 cm long, the surface area would be A = 6 x 3^2 = 6 x 9 = 54 cm^2."
+ },
+ {
+  "id": "alpaca-2611",
+  "think": false,
+  "instruction": "Describe one traditional Indian festival",
+  "original": "One traditional Indian festival is Diwali, also known as the Festival of Lights. This annual celebration occurs in October or November and commemorates the victory of good over evil, light over darkness. Diwali is one of the most widely celebrated holidays in India and is observed by Hindus, Jains, Sikhs, and some Buddhists.\n\nThe festival lasts for five days, with each day having its own significance and rituals. The first day is Dhanteras, where people clean their homes and buy new clothes and utensils. The second day is Chhoti Diwali or Naraka Chaturdashi, when people pray for the well-being of their families. The third day is the main day of Diwali, where people light diyas, or small clay lamps, and decorate their homes with colorful rangoli designs. They also exchange gifts and sweets with family and friends, and burst firecrackers at night. The fourth day is Govardhan Puja, when people offer thanks for the good harvest. Finally, the fifth day is Bhai Dooj, when sisters and brothers come together to celebrate their bond.\n\nDiwali is a colorful and joyous occasion for people of all ages. It is a time for families to come together, for friends to reconnect, and for communities to celebrate. With its twinkling lights, delicious food, and festive atmosphere, Diwali truly is a festival of joy and light."
+ }
+]

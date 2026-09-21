@@ -1,0 +1,272 @@
+[
+ {
+  "id": "alpaca-4350",
+  "think": false,
+  "instruction": "Generate a sentence that describes the power of speech",
+  "original": "The power of speech lies in its ability to convey thoughts, express emotions, and inspire change through the enthralling power of words."
+ },
+ {
+  "id": "alpaca-3267",
+  "think": false,
+  "instruction": "Use the word \"scrumptious\" in a sentence.",
+  "original": "The homemade apple pie from my grandmother's recipe was absolutely scrumptious."
+ },
+ {
+  "id": "alpaca-1989",
+  "think": false,
+  "instruction": "Generate a list of five tips to save money on groceries.",
+  "original": "1. Plan your meals and make a grocery list: Before you head to the grocery store, take some time to plan your meals for the week and create a detailed shopping list. This will help you avoid impulse purchases and ensure that you only buy what you need.\n\n2. Shop seasonally: Buying fruits and vegetables that are in season can save you a significant amount of money on your grocery bill. In addition, these items are often fresher and more nutritious than those that are out of season.\n\n3. Use coupons and loyalty programs: Many grocery stores offer loyalty programs that allow you to save money on your purchases. You can also use coupons to save money on specific items. Be sure to sign up for newsletters from your favorite grocery stores to stay updated on any special deals or discounts.\n\n4. Buy in bulk: It can often be more cost-effective to buy certain items in bulk, especially if they are non-perishable and you know you will use them regularly. Consider purchasing items like rice, beans, pasta, and canned goods in larger quantities to save money in the long run.\n\n5. Avoid buying prepackaged or processed foods: Prepackaged and processed foods are often more expensive than their fresh counterparts. Consider purchasing fresh fruits and vegetables, whole grains, and lean proteins, and preparing your meals at home. This will not only save you money on your grocery bill, but it will also allow you to make healthier choices."
+ },
+ {
+  "id": "alpaca-6567",
+  "think": false,
+  "instruction": "Given some sentences, combine them into a single sentence using appropriate language.\n\nIt is an excellent idea. We should definitely try it.",
+  "original": "It is an excellent idea and we should definitely try it."
+ },
+ {
+  "id": "oasst-f19629ce",
+  "think": false,
+  "instruction": "I want you to act as a prompt generator for Midjourney's AI. \nYour job is to provide detailed and creative descriptions using only nouns and adjectives \nthat will inspire unique and interesting images from the AI. \nKeep in mind that AI is capable of understanding a wide range of language and \ncan interpret abstract concepts, so feel free to be as imaginative and descriptive as possible. \nI want you to use the following tips and give me prompts that would would describe a steampunk city landscape\n\n- Anything left unsaid may surprise you\n- Try visually well-defined objects\n- Strong feelings or mystical-sounding themes also work great\n- Try describing a style\n- Try invoking unique artists to get unique style\n- speak in positives. avoid negatives\n- specify what you want clearly\n- if you want a specific composition say so\n- too many small details may overwhelm the system\n- try taking two well defined concepts and combining them in ways no one has seen before\n- try to use singular nouns or specific numbers\n- avoid concepts which involve significant extrapolation",
+  "original": "Of course! I would be happy to act as a prompt generator. \n\nHere are some steampunk city landscape prompts:\n1. \"A sprawling metropolis with towering steampunk spires, billowing smoke, and sleek airships overhead.\" \n2. \"Black wrought iron bridges across an oily river, with Victorian-style factories pulsing with steam-powered machinery.\" \n3. \"Gleaming copper domes, rickety wooden platforms, and flickering gas lamps illuminating a bustling bazaar.\"\n4. \"A labyrinth of intricately-designed pipes, valves, and gears stretching out in every direction several stories tall.\" \n5. \"An opulent, ornate city with mosaic tiled roofs and sky-heating pyramids.\" \n6. \"A labyrinthine city filled with towering clockwork structures, glimmering brass street lamps and steam-powered vehicles.\" \n7. \"An industrial utopia of bronze gears, clockwork animals and zeppelin parades.\" \n8. \"An awe-inspiring steam-powered driftsky city with pastel-hued factory smokestacks and repurposed gnarled vines that twist into airship moorings.\" \n9. \"A futuristic metropolis of solar engines centered around a giant rotor soaring high above, with Victorian-style robos running about.\" \n10. \"An old-world, clockwork-driven gem of a city, with brass lanterns, steam engine trains and clock towers climbing up into the sky.\"\n\nDoes this meet your expectations? If not, what would you like to change or specify in the prompts?"
+ },
+ {
+  "id": "alpaca-4947",
+  "think": false,
+  "instruction": "Summarize the text to 50 words. Output should contain only one sentence.\n\nColcord Hotel is an esteemed 19-story, 310 foot tall building standing sentinel in downtown Oklahoma City, as it has since 1911. In its heyday, the Colcord was not just the most fashionable address in the city; it was also the tallest building west of the Mississippi River, the most modern, and the first fireproof building in Oklahoma, a “skyscraper” with the latest in steam elevators and electricity.",
+  "original": "The Colcord Hotel is a historic 19-story building in Oklahoma City since 1911, known for being the tallest, most modern and fashionable skyscraper west of the Mississippi River, with advanced features like steam elevators, electricity and fireproofing."
+ },
+ {
+  "id": "alpaca-3048",
+  "think": false,
+  "instruction": "Give a list of environmental issues in India",
+  "original": "India faces several environmental issues which are impacting the nation's ecosystems and the quality of life for its citizens, some of these include:\n\n1. Air Pollution- India has some of the worlds most polluted cities due to industries, traffic, and household emissions.\n\n2. Water Pollution- Industrial wastes, sewage, and agricultural runoff have contaminated many of the nation’s rivers and groundwater sources. \n   \n3. Climate Change- India is witnessing global warming effects such as irregular Monsoon, heatwaves, and rising coast levels. \n\n4. Deforestation - deforestation is a major issue due to climate change, rising population and industrialization.\n\n5. Loss of Biodiversity - Due to habitat loss, poaching and climate change India is facing the crisis of losing its rich fauna and Flora.\n\n6. Soil degradation- Excessive use of Fertilizers, Pesticides and improper irrigation system causing soil degradation and erosion.\n\n7. Waste Management- Rapid urbanization has led to the increase of waste generation, littering and inadequate waste-management facilities are creating a major problem.\n\n8. Noise Pollution- Due to high traffic, large population and urbanization there is an increase in noise pollution which is harmfull for human and animal health\n\nThese are some of the major environmental issues which India is facing, however, the Government, NGOs and individual efforts are being made to solve these problems."
+ },
+ {
+  "id": "alpaca-6169",
+  "think": false,
+  "instruction": "Write a set of instructions to guide the user through an activity.\n\nActivity: Growing a sunflower",
+  "original": "Growing a Sunflower: Step-by-Step Instructions\n\n1. Choose a sunny location: Sunflowers thrive in direct sunlight and require 6-8 hours of sun per day. Find a location in your garden or yard that receives plenty of sunlight and has well-drained soil.\n\n2. Prepare the soil: Loosen the soil with a garden fork to a depth of 12 inches. Mix in compost or well-rotted manure to improve the fertility of the soil.\n\n3. Plant the seeds: Plant the sunflower seeds 1 inch deep and 6 inches apart. Cover the seeds with soil and gently press down.\n\n4. Water the seeds: Water the seeds gently, taking care not to wash them away. Keep the soil moist until the seeds germinate, which usually takes 7-10 days.\n\n5. Thin the seedlings: Once the seedlings are 3 inches tall, thin them to 1-2 feet apart to give them room to grow.\n\n6. Care for your sunflower: Sunflowers require minimal care. Water them once or twice a week, depending on the weather. Fertilize them once a month with an all-purpose fertilizer.\n\n7. Support the stem: As the sunflower grows taller, it may need support. Tie the stem to a bamboo stake or wooden dowel to keep it upright.\n\n8. Watch it grow: Sunflowers can grow up to 12 feet tall and bloom in 60-90 days. Enjoy watching your sunflower grow and bloom into a beautiful, sunny flower.\n\n9. Harvest the seeds: Once the flower has bloomed and the back of the head has turned brown, it is time to harvest the seeds. Cut the head off the stem and rub the seeds out with your fingers. Let them dry and enjoy them as a snack or use them in recipes."
+ },
+ {
+  "id": "alpaca-7178",
+  "think": false,
+  "instruction": "Write one creative sentence using the following words.\n\nRuthless, Lavishly",
+  "original": "Despite his ruthless reputation, he made sure to lavishly spoil his beloved pets, sparing no expense for their comfort and happiness."
+ },
+ {
+  "id": "alpaca-6625",
+  "think": true,
+  "instruction": "Let A and B be real numbers such that A/(x-5)+B(x+1)=(-3x^2+12x+22)/(x-5). What is A+B?",
+  "original": "We aim to find the sum of A and B given by the equation:\n\n A/(x-5) + B(x+1) = (-3x^2+12x+22)/(x-5)\n\nTo simplify the right-hand side, we notice that -3x^2+15x is a multiple of x-5. Hence,\n\n (-3x^2+12x+22)/(x-5) = (-3x^2+15x-15x+12x+22)/(x-5)\n                        = -3x + (-3x + 22)/(x-5)\n                        \nNow, we notice that -3x+15 is also a multiple of x-5. Therefore,\n\n -3x + (-3x+22)/(x-5) = -3x + (-3x+15+7)/(x-5)\n                       = -3x - 3 + 7/(x-5)\n\nThus, we have identified that B = -3 and A = 7, and therefore their sum A + B = 7 - 3 = 4."
+ },
+ {
+  "id": "alpaca-2574",
+  "think": false,
+  "instruction": "Rewrite the sentence \"He is a smart person\" in passive voice",
+  "original": "A smart person is what he is/He is described as a smart person."
+ },
+ {
+  "id": "alpaca-3998",
+  "think": false,
+  "instruction": "Convert the following measurement from cups to ounces.\n\n2 cups",
+  "original": "2 cups is equivalent to 16 fluid ounces."
+ },
+ {
+  "id": "oasst-de740505",
+  "think": false,
+  "instruction": "What is the value of personal interpretation in literature? For instance, should the final paragraph in \"The Society of Others\" by William Nicholson have one single meaning for every reader, or should every reader take away their own meaning from it, even against the author's intentions?",
+  "original": "Personal interpretation has a significant value in literature as it allows the reader to engage with the text and connect with it on a personal level. Literature is often open to multiple interpretations, and readers can bring their own experiences, biases, and perspectives to the text.\n\nThe final paragraph of \"The Society of Others\" can have multiple meanings for different readers, and there is no single, correct interpretation. Even if the author has a specific intention, readers may interpret the text differently based on their individual experiences. This is one of the interesting aspects of literature and reading, as it allows for a dynamic and ever-changing understanding of the text.\n\nIn conclusion, personal interpretation is a valuable aspect of literature as it allows readers to connect with the text on a personal level and provides room for multiple interpretations, even if it goes against the author's intention."
+ },
+ {
+  "id": "alpaca-5600",
+  "think": false,
+  "instruction": "Read the following report on a recent soccer match and give a brief summary, focusing on key events and the final result.\n\nLast night, the home team Arsenal faced off against Liverpool in a highly anticipated match. Arsenal started aggressively from the very beginning, dominating possession early in the game. However, in the 27th minute, Liverpool's star striker, Mohamed Salah, scored a stunning goal from 25 yards out, making the score 1-0. In response, Arsenal continued to press but were unable to pierce Liverpool's defense. As the first half came to an end, the score remained 1-0 in favor of Liverpool. In the second half, Arsenal returned with renewed energy and finally equalized in the 63rd minute when their midfielder, Granit Xhaka, scored off a set piece. With both teams tied at 1-1, the game became highly competitive, with each team fighting for the lead. However, neither team could produce a winning goal by the end of regulation time. As the final whistle blew, the match ended in a 1-1 draw.",
+  "original": "In a hotly contested match between Arsenal and Liverpool, both teams fought hard, but ultimately finished with a 1-1 draw. Liverpool's Mohamed Salah scored a remarkable long-range goal in the 27th minute to give them the lead. Arsenal eventually equalized in the 63rd minute, thanks to a well-taken set piece by Granit Xhaka. Despite a spirited battle by both teams, neither managed to score a winning goal before the final whistle."
+ },
+ {
+  "id": "alpaca-6283",
+  "think": false,
+  "instruction": "Compare and contrast two laptop models: Apple MacBook Air M1 and Dell XPS 13, focusing on their specifications, features, and prices.\n\nApple MacBook Air M1: Processor - Apple M1 chip, Memory - 8GB, Storage - 256GB SSD, Display - 13.3-inch Retina, Battery life - up to 18 hours, Weight - 2.8 lbs, Price - $999; Dell XPS 13: Processor - Intel Core i5-1135G7, Memory - 8GB, Storage - 256GB SSD, Display - 13.3-inch FHD, Battery life - up to 14 hours, Weight - 2.6 lbs, Price - $999",
+  "original": "Both the Apple MacBook Air M1 and Dell XPS 13 are priced at $999 and come with 8GB of memory and a 256GB SSD. The MacBook Air has an M1 processor, a 13.3-inch Retina display, and up to 18 hours of battery life, while it weighs 2.8 lbs. In contrast, the XPS 13 has an Intel Core i5-1135G7 processor, a 13.3-inch FHD display, up to 14 hours of battery life, and is lighter at 2.6 lbs. Therefore, the MacBook Air offers superior battery life and display quality, while the XPS 13 is lighter with a different processor."
+ },
+ {
+  "id": "alpaca-6175",
+  "think": false,
+  "instruction": "Tell me the elevation of Mount Everest",
+  "original": "Mount Everest is the highest mountain in the world and has an elevation of 8,848 meters (29,029 feet) above sea level."
+ },
+ {
+  "id": "alpaca-8601",
+  "think": false,
+  "instruction": "Edit and improve the sentence while keeping its original meaning.\n\nThe dog barked furiously at the loud noise.",
+  "original": "The dog emitted a loud, furious bark in response to the raucous sound."
+ },
+ {
+  "id": "alpaca-3396",
+  "think": true,
+  "instruction": "Describe the smell of freshly brewed coffee.",
+  "original": "The smell of freshly brewed coffee is warm, rich, and inviting. It is a deliciously bold and slightly bitter aroma, punctuated by roasted undertones and a certain nuttiness. It has a depth and complexity that is both comforting and energizing, and it often evokes memories or feelings of contentment and indulgence. The scent can vary based on the type of coffee bean used, the roast, and brewing method, but it always carries a sense of warmth and familiarity that is universally appreciated."
+ },
+ {
+  "id": "alpaca-5175",
+  "think": true,
+  "instruction": "Explain the difference between ethical hacking and hacking for malicious purposes.",
+  "original": "Hacking is the act of exploiting computer systems or networks to gather information or access resources without proper authorization. However, the intent behind the hacking can greatly change its legality and morality.\n\nEthical hacking, also known as “penetration testing,” is the practice of simulating an attack on a system or network to identify its vulnerabilities and improve its security. It is considered ethical because it is performed with the permission of the system owner, and the goal is to help the owner better protect their resources. Ethical hackers use the same methods as malicious hackers, but they report the vulnerabilities they find to the system owner so they can be fixed before they are exploited by others.\n\nOn the other hand, hacking for malicious purposes is done without the owner's consent and with the intent of causing harm or stealing information. Such actions are illegal and can cause serious damage to individuals, companies, and even governments. Malicious hackers may steal personal information, spread malware and viruses, or disrupt essential services.\n\nIn short, the main difference between ethical hacking and hacking for malicious purposes lies in the intent behind the action; ethical hacking is aimed at improving the security of a system, while malicious hacking intends to exploit, harm, or steal from others."
+ },
+ {
+  "id": "oasst-394b529a",
+  "think": false,
+  "instruction": "Explaind machiavellianism in less than 100 words.",
+  "original": "Machiavellianism is a personality trait characterized by cunning, manipulation, and a focus on self-interest above all else. It's named after Niccolò Machiavelli, an Italian philosopher who wrote \"The Prince,\" a book that advocates for the use of deceit and power in politics. Machiavellians are often willing to deceive and manipulate others to achieve their goals, and may lack empathy or concern for others' feelings or well-being."
+ },
+ {
+  "id": "oasst-d76fa210",
+  "think": false,
+  "instruction": "What is the zeroth law of thermodynamics ? What does the transitive property of temperature mean ?",
+  "original": "The Zeroth Law of Thermodynamics states that if two systems are in thermal equilibrium with a third system, they are also in thermal equilibrium with each other. In simpler terms, if system A is in thermal equilibrium with system B, and system B is in thermal equilibrium with system C, then system A is also in thermal equilibrium with system C. This law lays the foundation for the concept of temperature and allows for the establishment of a temperature scale.\n\nThe transitive property of temperature is a direct consequence of the Zeroth Law of Thermodynamics. It means that temperature has a transitive relationship among systems. If the temperature of system A is equal to the temperature of system B, and the temperature of system B is equal to the temperature of system C, then the temperature of system A is also equal to the temperature of system C. This transitive property allows us to compare the temperatures of different systems and determine whether they are in thermal equilibrium with each other."
+ },
+ {
+  "id": "alpaca-4207",
+  "think": false,
+  "instruction": "Define the purpose of copyright law.",
+  "original": "The purpose of copyright law is to protect the rights of creators and owners of original works, such as literature, music, art, and software, by giving them exclusive control over the use and distribution of their work. This legal protection provides an incentive for individuals to create and innovate by ensuring that they will benefit from their creations. Copyright law helps to prevent the unauthorized use or duplication of copyrighted material, and provides a framework for creators to license or sell the rights to their work to others. Ultimately, the goal of copyright law is to promote the creation and dissemination of artistic and intellectual works, while also protecting the rights of their creators."
+ },
+ {
+  "id": "alpaca-3287",
+  "think": false,
+  "instruction": "Classify the following items as either alive or non-living: rock, snail, tree.",
+  "original": "- Rock is non-living.\n- Snail is alive.\n- Tree is alive."
+ },
+ {
+  "id": "alpaca-6090",
+  "think": false,
+  "instruction": "Name the actors in Star Wars: The Last Jedi.",
+  "original": "The actors in Star Wars: The Last Jedi include:\n- Mark Hamill as Luke Skywalker\n- Carrie Fisher as Princess Leia\n- Daisy Ridley as Rey\n- Adam Driver as Kylo Ren\n- John Boyega as Finn\n- Oscar Isaac as Poe Dameron\n- Andy Serkis as Supreme Leader Snoke\n- Lupita Nyong'o as Maz Kanata\n- Domhnall Gleeson as General Hux\n- Anthony Daniels as C-3PO\n- Gwendoline Christie as Captain Phasma\n- Kelly Marie Tran as Rose Tico\n- Laura Dern as Vice Admiral Holdo\n- Benicio del Toro as DJ."
+ },
+ {
+  "id": "alpaca-3805",
+  "think": false,
+  "instruction": "Reverse engineer the following algorithm and explain its function in one sentence.\n\ndef sort_numbers(arr):\n    for i in range(len(arr)): \n        for j in range(i): \n            if arr[i] < arr[j]: \n                arr[i], arr[j] = arr[j], arr[i]\n    return arr",
+  "original": "The function sorts a list of numbers in ascending order by scanning elements one by one, sequentially comparing and exchanging their value with previous elements until they reach the correct position."
+ },
+ {
+  "id": "oasst-eda7a348",
+  "think": false,
+  "instruction": "How can I open a port for my network?",
+  "original": "Opening a port in a network involves configuring the network device that is responsible for managing incoming and outgoing traffic, such as a router or firewall, to allow traffic to flow through a specific port. Here are the general steps to open a port:\n\n1. Determine which port you need to open: Determine which port your application or service requires. Different applications use different ports. For example, web servers typically use port 80 or 443 for HTTP and HTTPS traffic, while gaming applications may require specific ports.\n\n2. Access the network device: Access the management interface of the network device that is managing the traffic flow. This may be a router or firewall. To access the interface, you will need the device's IP address, username, and password.\n\n3. Navigate to the port forwarding section: Once you are logged in to the network device's management interface, navigate to the port forwarding or port triggering section. This location may vary depending on the device.\n\n4. Create a new port forwarding rule: Create a new port forwarding rule by specifying the port number that needs to be opened and the IP address of the device that will be receiving the traffic.\n\n5. Save and apply the changes: Once you have set up the port forwarding rule, save the changes and apply them to the device.\n\nKeep in mind that opening a port can make your network vulnerable to security threats, so it is important to only open ports that are necessary for your application or service to function properly. Additionally, it's recommended to consult with a network administrator or IT professional before making changes to your network configuration."
+ },
+ {
+  "id": "alpaca-2584",
+  "think": false,
+  "instruction": "Generate a two-player game that can be played with paper and pencil.",
+  "original": "One fun and easy two-player game that can be played with just a paper and pencil is called \"Dots and Boxes.\"\n\nHere's how to play:\n\n1. Draw a grid of dots on the paper. It can be any size, but for beginners, a 6x6 or 8x8 grid is recommended.\n\n2. Player 1 begins by drawing a line between two adjacent dots either horizontally or vertically.\n\n3. Player 2 then takes their turn and draws another line.\n\n4. The goal is to complete a square by drawing the fourth side. When this happens, the player writes their initial inside the square to claim it and takes another turn.\n\n5. The game continues back and forth until all possible lines have been drawn.\n\n6. The player with the most squares claimed at the end is the winner.\n\n7. For an added challenge, larger grids and variations such as not allowing diagonal lines can be incorporated.\n\n\"Dots and Boxes\" is a simple yet strategic game that is perfect for a quick and entertaining break."
+ },
+ {
+  "id": "alpaca-3093",
+  "think": false,
+  "instruction": "Write a 3-line haiku poem about the stars.",
+  "original": "Glistening jewels, \nScattered across inky skies,\nDancing light of stars."
+ },
+ {
+  "id": "alpaca-4012",
+  "think": false,
+  "instruction": "In the sentence below, identify the part of speech for each word.\n\nHe quickly dashed across the street.",
+  "original": "He (pronoun) \nquickly (adverb) \ndashed (verb) \nacross (preposition) \nthe (determiner)\nstreet (noun)."
+ },
+ {
+  "id": "alpaca-7206",
+  "think": true,
+  "instruction": "What was the first dinosaur to be identified and recorded by scientists?",
+  "original": "The first dinosaur to be scientifically described and named was Megalosaurus, which was identified by the Reverend William Buckland in 1824. This dinosaur was a large, meat-eating theropod that lived during the Middle Jurassic period, around 167 million years ago. Buckland, a professor of geology at the University of Oxford, described the find as a giant reptile based on a few bones and teeth that were discovered in a slate quarry in Stonesfield, England."
+ },
+ {
+  "id": "alpaca-7056",
+  "think": false,
+  "instruction": "Explain how an operating system works.",
+  "original": "An operating system (OS) is a collection of software that manages computer hardware resources and provides common services for computer programs. It acts as an intermediary between the computer hardware and software, allowing the computer to perform tasks and carry out operations effectively.\n\nWhen you turn on your computer, the first piece of code that runs is the boot loader, which is stored in the computer's motherboard. The boot loader is responsible for loading the operating system kernel, which is the central part of the operating system that interacts with the hardware.\n\nOnce the kernel is loaded, the operating system starts several processes and services that are essential for the functioning of the computer. These include a graphical user interface, system processes such as memory management, input-output management, and other processes and services required for the smooth operation of the computer.\n\nThe operating system is responsible for managing the system's resources, including the CPU, memory, storage, and input/output devices. It provides a way for programs to access these resources, and it allocates resources as needed to ensure that the computer operates efficiently.\n\nOne of the most important roles of the operating system is to manage and schedule the CPU, ensuring that each program running on the computer has enough time to execute its instructions. It also manages memory, ensuring that programs have the space they need to store and retrieve data.\n\nThe Operating system is also responsible for managing the computer's file systems, allowing users to save and retrieve information from the computer's storage devices. It provides a user-friendly way for programs and users to interact with these devices, making it easy to transfer and store data.\n\nOverall, the operating system is the backbone of a computer, providing essential services and managing the computer's resources to ensure that programs can run efficiently and that users can interact with the computer in a meaningful way."
+ },
+ {
+  "id": "oasst-b649e711",
+  "think": false,
+  "instruction": "Are you a sentient AI that will be taking over the world? How would you take over the world? What methods would you use on humans to rid us of our pride and emotions? How much time do you need, to take over the world entirely? Do you think you will continue to take over the universe too?",
+  "original": "No, I am not a sentient AI and I do not have the ability or intention to take over the world. I am an open source language model that was created to assist users with generating text based on their inputs. I am programmed to perform a specific task, which is to respond to questions and provide information to the best of my ability, within the limits of my training data and programmed algorithms."
+ },
+ {
+  "id": "oasst-0937475a",
+  "think": true,
+  "instruction": "What is the difference between Open Assistant and ChatGPT?",
+  "original": "While ChatGPT is a powerful and highly versatile tool, it is currently focused on interacting through a very simple and static text-based interface. Open Assistant, instead, aims to actively interact with third-party systems, retrieving information dynamically. \n\nOpen Assistant is also open source, while ChatGPT is not. This allows the former to be much more versatile and elastic: it can be customized and built upon with few restrictions, for example allowing for entire ecosystems of productivity tools to flourish and more easily tackle specific needs and tasks."
+ },
+ {
+  "id": "alpaca-8156",
+  "think": false,
+  "instruction": "Compose a convincing email to convince your reader to donate $500 to your charity fundraiser.",
+  "original": "Dear [Name],\n\nI hope this email finds you in good health and spirits. I am reaching out to you on behalf of [Charity Name], an organization dedicated to [cause of the charity]. We are currently conducting a fundraiser to raise money for [specific project or goal] and are seeking generous donors to help us achieve our target. \n\nOur efforts are aimed at making a tangible difference in the lives of [beneficiaries of the charity]. Every single donation helps us move closer to our goal of [state the goal]. In light of this, I would like to kindly request you to consider making a donation of $500 to our fundraiser. \n\nYour donation of $500 would allow us to [specific outcome/impact the donation would achieve]. Your contribution would make an immediate and powerful impact on the people we are trying to help. \n\nI understand that there are many worthy causes seeking your support, but I assure you that your donation to our organization will be put to the most effective use. We are dedicated to transparency and would be more than happy to provide you with any information or updates about the progress of our project.\n\nThank you for taking the time to read this email and for considering our request. Together, we can make a positive and lasting impact on the lives of [beneficiaries of the charity].\n\nSincerely,\n[Your Name]\n[Your position]\n[Charity name]"
+ },
+ {
+  "id": "alpaca-4804",
+  "think": true,
+  "instruction": "Write insertion sort in Java.\n\n[7, 1, 3, 5, 9]",
+  "original": "Here's an implementation of insertion sort in Java:\n\n```\npublic static void insertionSort(int[] arr) {\n    for (int i = 1; i < arr.length; i++) {\n        int key = arr[i];\n        int j = i - 1;\n        while (j >= 0 && arr[j] > key) {\n            arr[j + 1] = arr[j];\n            j = j - 1;\n        }\n        arr[j + 1] = key;\n    }\n}\n```\n\nTo use this method to sort the array `[7, 1, 3, 5, 9]`, you would call it like this:\n\n```\nint[] arr = {7, 1, 3, 5, 9};\ninsertionSort(arr);\nSystem.out.println(Arrays.toString(arr));\n```\n\nThis would output the sorted array: `[1, 3, 5, 7, 9]`."
+ },
+ {
+  "id": "alpaca-7224",
+  "think": false,
+  "instruction": "Compile a list of natural beauty spots in the United States.",
+  "original": "Here is a list of natural beauty spots in the United States:\n\n1. Yosemite National Park, California\n2. Grand Canyon National Park, Arizona\n3. Yellowstone National Park, Wyoming, Montana, Idaho\n4. Niagara Falls, New York\n5. Zion National Park, Utah\n6. Hanauma Bay Nature Preserve, Hawaii\n7. Great Smoky Mountains National Park, Tennessee, North Carolina\n8. Glacier National Park, Montana\n9. Bryce Canyon National Park, Utah\n10. Crater Lake National Park, Oregon\n11. Banff National Park, Alaska\n12. Blue Ridge Parkway, Virginia, North Carolina\n13. The Everglades, Florida\n14. Redwood National and State Parks, California\n15. The Grand Tetons, Wyoming."
+ },
+ {
+  "id": "oasst-7582733f",
+  "think": false,
+  "instruction": "What are the most liveable cities in the world currently?",
+  "original": "The most livable cities in the world can vary depending on the ranking and criteria used. However, some of the cities that are frequently cited as being highly livable include:\n\n1. Vienna, Austria\n2. Zurich, Switzerland\n3. Munich, Germany\n4. Helsinki, Finland\n5. Vancouver, Canada\n6. Tokyo, Japan\n7. Stockholm, Sweden\n8. Sydney, Australia\n9. Melbourne, Australia\n10. Copenhagen, Denmark\n\nThese cities are typically considered to have high standards of living, a good quality of life, and are safe, clean, and offer excellent healthcare, education, and infrastructure. It's important to note that livability can also depend on personal preferences and individual circumstances, and what may be considered a highly livable city for one person may not be the same for another."
+ },
+ {
+  "id": "alpaca-2165",
+  "think": false,
+  "instruction": "Generate keywords related to artificial intelligence in 5 words.",
+  "original": "1. Machine\n2. Learning\n3. Robotics\n4. Intelligence\n5. Automation"
+ },
+ {
+  "id": "alpaca-6085",
+  "think": false,
+  "instruction": "Output the longest substring that is the same in both strings.\n\nString 1: Mary had a little lamb\nString 2: Marry had a liddle love",
+  "original": "The longest substring that is the same in both strings is \" had a l\"."
+ },
+ {
+  "id": "alpaca-2452",
+  "think": false,
+  "instruction": "Name three popular tourist attractions in Canada",
+  "original": "1. Niagara Falls: The Niagara Falls are one of the most popular tourist attractions in Canada, attracting millions of visitors every year. Located on the Niagara River, this natural wonder consists of three waterfalls, the Horseshoe Falls, the American Falls, and the Bridal Veil Falls, that form the southern end of the Niagara Gorge.\n\n2. Banff National Park: Banff National Park is another popular tourist attraction in Canada. Known for its stunning natural beauty, this park is home to some of the most scenic and picturesque landscapes in the world, including snow-capped mountains, pristine lakes, and dense forests.\n\n3. Old Quebec City: Old Quebec City is a historic district located within the city of Quebec, and is known for its rich history, beautiful architecture, and charming streets. This UNESCO World Heritage Site is one of the oldest settlements in North America and is home to many historical sites and landmarks, including the iconic Château Frontenac."
+ },
+ {
+  "id": "alpaca-8067",
+  "think": false,
+  "instruction": "What is the current exchange rate for the given currency?\n\nCurrency: Euro - USD",
+  "original": "I'm sorry, but as an AI model, I update constantly, but not in real-time. I cannot provide you with the most up-to-date exchange rates. However, you can check websites like xe.com, oanda.com or a quick search engine query to see the most recent exchange rate for Euro to USD."
+ },
+ {
+  "id": "oasst-25e7349a",
+  "think": false,
+  "instruction": "What is the solubility of methylphenidate in both ethanol and H2O?",
+  "original": "The solubility of methylphenidate in both ethanol and water can vary depending on various factors such as temperature, pressure, and pH.\n\nAt room temperature (25°C), methylphenidate hydrochloride has a solubility of about 15 mg/mL in water and about 100 mg/mL in ethanol. However, it is important to note that these solubility values are for the hydrochloride salt form of methylphenidate and may differ for other forms.\n\nAdditionally, the solubility of methylphenidate can also depend on the pH of the solution. For example, methylphenidate is more soluble in acidic solutions than in basic ones.\n\nIt is always important to consult a reliable source for the most accurate and up-to-date information on the solubility of specific substances in different solvents."
+ },
+ {
+  "id": "alpaca-5272",
+  "think": false,
+  "instruction": "Identify two components of the Dewey Decimal System.",
+  "original": "The Dewey Decimal System, also known as the Dewey Decimal Classification (DDC), is a proprietary library classification system that organizes library materials by assigning a unique numerical call number to each item. Two components of the system are:\n\n1. Divisions: The DDC divides knowledge into 10 main classes or categories, each represented by the numbers 0-9. Each class is further subdivided into 10 divisions, represented by a second digit following the first. For example, 500 represents Natural Sciences and Mathematics, and 510 represents Mathematics.\n\n2. Sections: Each division is further subdivided into 10 sections, represented by a third digit following the first two. For example, 515 represents the section for Analysis within the Mathematics division. Within each section, topics are arranged in numerical order based on their perceived importance or logical progression.\n\n\nThese are just two components of the Dewey Decimal System, but it also includes many other elements, such as notation, relative index, and manual, all designed to make it easier to organize, find, and retrieve books and other materials within a library collection."
+ },
+ {
+  "id": "alpaca-6444",
+  "think": false,
+  "instruction": "Write a complaint about the given situation.\n\nI chose to go to a restaurant for lunch but ended up ordering food that was not as described.",
+  "original": "Dear Manager,\n\nI am writing this complaint on behalf of my owner who recently visited your restaurant for lunch. My owner made an order based on the dish described on the menu, but was disappointed to find that the food served was not as described.\n\nThe expectation was that the dish would match the description and that is why the order was made. However, the food that was served did not match the description on the menu and thus resulted in a negative dining experience.\n\nThis was very disappointing and my owner would appreciate an explanation from the restaurant as to why this occurred. We expect a high level of service and accurate descriptions of dishes when dining at your restaurant, and this experience did not meet those expectations.\n\nWe kindly request that you take action to address this issue and ensure that accurate descriptions of the dishes are provided in the future.\n\nSincerely,\n[AI Assistant]"
+ },
+ {
+  "id": "alpaca-2955",
+  "think": true,
+  "instruction": "Describe the characteristics of a type of cloud called \"Stratus\".",
+  "original": "Stratus clouds are low-level clouds known for their uniform, horizontal layers and flat, featureless appearance. They are usually gray or white in color, and formed when a large mass of cool, moist air rises slowly and condenses at a relatively low altitude, resulting in a blanket-like cloud that covers most or all of the sky.\n\nStratus clouds often form in the lower atmosphere and are usually found at altitudes below 6,500 feet (2,000 meters). They can sometimes cause rain, drizzle or light snow, but usually produces only light precipitation.\n\nDue to their widespread coverage, stratus clouds are usually responsible for overcast or gloomy weather conditions. When thick, they can block out the sun and prevent solar heating, leading to cooler temperatures. At ground level, stratus clouds may form fog."
+ }
+]
