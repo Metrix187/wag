@@ -30,8 +30,12 @@ a small chat model that talks like a puppygirl and still answers the question.
 > the prompt is gone, and ep3 doesn't budge. v1's shipped model scored 3.91 there; v2's
 > scores 3.88, so the voice is in the weights to about the same degree.
 >
-> known regression: ep3 without a system prompt is terse enough to skip its working and gets
-> "17% of 340" wrong (62.2, not 57.8). with the system prompt it's correct.
+> arithmetic on short prompts is inconsistent rather than reliably wrong. "17% of 340"
+> across five samples: three correct with the working shown, one wrong (62.2 for 57.8) in a
+> two-word reply that skipped the working, one declined and handed over the method instead.
+> the thing to watch is that terse answers skip the reasoning and miss more often — not that
+> any particular prompt shape is broken. five samples of one prompt is an anecdote either
+> way; the eval set doesn't score arithmetic.
 
 fine-tuned from **[Qwen/Qwen3.5-2B](https://huggingface.co/Qwen/Qwen3.5-2B)** (Apache-2.0).
 

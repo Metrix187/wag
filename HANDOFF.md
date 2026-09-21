@@ -35,9 +35,12 @@
 >   system prompt scores 4.69, *above* every fine-tune. only the nosys number discriminates.
 > - `narrating the user` in the multi-turn set goes 3 (base) -> 1 (ep1) -> 0 (ep2/ep3). a
 >   structural failure a system prompt can't fix, so it's a genuine training signal.
-> - ep3 answers "17% of 340" correctly with a system prompt and wrong (62.2, should be 57.8)
->   without one. it's internalised terseness hard enough to skip the working, and loses the
->   arithmetic with it. voice traded against chain-of-thought.
+> - ep3's arithmetic wobbles on short prompts, but not the way I first wrote it up. I saw
+>   "17% of 340" answered wrong once (62.2) in a two-word reply and called it a regression
+>   off that single sample. four more runs: three correct with working, one polite decline
+>   plus the method. it varies with sampling, not with whether a system prompt is present.
+>   the real pattern is that when she answers tersely she skips the working and is likelier
+>   to miss — worth a check in the eval set, which currently scores no arithmetic at all.
 > - v1's note that qwen3.5's linear attention can't do gradient checkpointing was wrong — it
 >   can't do *reentrant* checkpointing. `use_reentrant=False` trains straight through, and
 >   the 4B needs it on a 40GB card.
