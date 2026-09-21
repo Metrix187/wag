@@ -44,6 +44,39 @@
 > done since: slice-aware filter, gemini prices in the estimator, the 5-way prompt
 > spread, multi-turn `build`, both generators, the judge, the voice metric's
 > information-content hole (§2), multi-turn eval (§5), and `tests/`.
+>
+> ## wave one is generated — 2026-09-20, late
+>
+> **306 seed conversations, on a colab a100, for nothing.** the 402 stopped mattering:
+> vLLM serves an openai endpoint, `--backend local` already spoke that, so the generators
+> didn't change. 306/306 after one free retry pass, ~2 minutes of gpu. `train.jsonl` is
+> 1,872 rows now, 258 of them multi-turn (14%). vertex is still built and waiting if you'd
+> rather pay gemini for the remaining ~4,800.
+>
+> **the 12B was the wrong tool and the numbers aren't close.** `MN-12B-Mag-Mell-R1` writes
+> lovely prose and cannot hold a spec: 12/30 parsed, and a quarter as lowercase as v1's own
+> shipped data. an `uncertainty` row — the slice whose whole job is "i don't know" —
+> invented a derivation and fluffed the arithmetic by 6x. temperature wasn't it (3/30 at
+> 1.1, 4/30 at 0.75). `Mistral-Small-24B-Instruct-2501`, same shard, same prompt: **30/30,
+> 4 stray capitals in 144 turns.** it wants the a100, not an l4. **sky picked mag-mell and
+> hasn't confirmed the swap** — both probe runs' numbers are in the commit log.
+>
+> three things vLLM broke that lm studio had been hiding: no sampler truncation by default
+> (131k vocab at temp 1.1 = token soup, fixed with min_p), the anchors' `<wag>` tags being
+> copied instead of the requested `<turn>` tags, and a terse model reading "about N
+> exchanges" as "at most N" — hence `--turn-scale`.
+>
+> **read the rows. the counts lie.** filter said 92%, `parse_convo` said 9/9 dropvoice, and
+> three of those nine had her going professional with nobody asking, because the opener
+> mentioned sharing a screen and the model read the setting as the request. at full scale
+> that's ~300 rows teaching the inverse. now a slice with a checkable behaviour gets a
+> postcondition in `SLICE_CHECKS`, and `gemini_convo.py recheck` re-opens finished rows
+> when one gets tightened — resume skips anything not recorded as an error, so without it
+> yesterday's pass sails straight through today's rule.
+>
+> **next:** the remaining ~4,800 seed rows (same command, more shards), then the rewrite
+> half. `intimate` and `heavy` are 18 and 12 rows so far — too few to judge the register,
+> read them properly before scaling those.
 
 **v2 is a conversational roleplay puppygirl. that's the whole brief.** not an assistant with a
 personality bolted on — a character worth talking to for its own sake, that still answers you
