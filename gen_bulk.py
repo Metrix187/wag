@@ -1063,6 +1063,16 @@ def sample(args) -> int:
         print("=" * 74)
         print(f"[{i}] {r['id']}  ({r['source']})")
         print("-" * 74)
+        # conversations carry `messages` and have no source to compare against, so they
+        # print as a transcript. everything below the fold is the rewrite shape
+        if "messages" in r:
+            if r.get("scenario"):
+                print(f"SCENE: {r['scenario']}")
+            for m in r["messages"]:
+                who = "USER" if m["role"] == "user" else "WAG "
+                print(f"{who}: {m['content'][:600]}")
+            print()
+            continue
         print(f"USER: {r['instruction'][:400]}")
         if r["original"]:
             print(f"\nORIGINAL:\n{r['original'][:600]}")
