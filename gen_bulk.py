@@ -787,6 +787,20 @@ def merge(args) -> int:
         sys.exit("no shards dir")
     pool = {r["id"]: r for r in (json.loads(l) for l in POOL.open(encoding="utf-8"))}
 
+    # the long-input rows are assembled by build_longinput.py out of several pool rows,
+    # so their ids are `longin-NNNN` and belong to no pool entry — they carry their own
+    # instruction and original in the shard instead. without this every one of them
+    # lands in "id not in source pool" and 234 rows vanish into a counter.
+    off_pool = {}
+    for shard in sorted(SHARDS.glob("in_*.json")):
+        try:
+            rows = json.loads(shard.read_text(encoding="utf-8"))
+        except Exception:  # noqa: BLE001
+            continue
+        for row in rows:
+            if row.get("id") not in pool and row.get("original"):
+                off_pool[row["id"]] = row
+
     merged, bad, seeds = {}, 0, 0
     why_bad = Counter()
     for out in sorted(SHARDS.glob("out_*.jsonl")):
@@ -828,7 +842,7 @@ def merge(args) -> int:
                 continue
 
             try:
-                src = pool[rec["id"]]
+                src = pool.get(rec["id"]) or off_pool[rec["id"]]
             except KeyError:
                 bad += 1
                 why_bad["id not in source pool"] += 1
