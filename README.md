@@ -231,6 +231,7 @@ gemini_rewrite.py      fills shards from the source pool (the rewrite half)
 gemini_convo.py        writes conversations from nothing (the other ~5,100 rows)
 gemini_judge.py        picks the best of N candidates, verdicts to a sidecar
 build_evalset.py       assembles data/eval_set.jsonl — 120 prompts (§7)
+build_longinput.py     long-input slice, assembled from pool rows (§6)
 eval_judge.py          judge-scores an eval run, calibrated on the hand-scored 20
 ask_key.py             a box to paste the gemini api key into -> .env, gitignored
 train.ipynb            colab SFT, checkpoints + resume + gguf export
