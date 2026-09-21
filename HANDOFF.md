@@ -2,6 +2,50 @@
 
 *v2, plus the work deferred past it. one document.*
 
+> ## status — 2026-09-21 — v2 is trained, and epoch 3 ships
+>
+> dataset came out at 8,242 training rows, 54% multi-turn (v1: 1,564 and 14%). trained as
+> LoRA r=32 on Qwen3.5-4B, 3 epochs, 1,515 steps, 3h36m on a 40GB A100. merged model is at
+> `MyDrive/wag/wag-final-v2`; the epoch-1 and epoch-2 adapters are kept beside it as
+> `keep-step500` and `keep-step1000`.
+>
+> **ship epoch 3.** the thing to remember from this run is *why*, because the loss curve
+> argued for the opposite the whole way:
+>
+> | | eval loss | voice (prompted) | **voice (no system prompt)** | words prompted -> nosys |
+> |---|---:|---:|---:|---|
+> | ep1 | **1.478** | 4.68 | 2.14 | 105 -> 276 |
+> | ep2 | 1.503 | 4.73 | 2.31 | 115 -> 262 |
+> | ep3 | 1.635 | 4.20 | **3.88** | **81 -> 77** |
+>
+> epoch 3 has the worst held-out loss of the three and is plainly the best model. strip the
+> system prompt and ep1/ep2 revert to generic-assistant behaviour — replies get 2.5x longer
+> and the voice goes — while ep3 doesn't move at all. that's the voice being in the weights
+> rather than in the prompt, and it's the only measurement here that can't be faked by a
+> good system prompt.
+>
+> v1 found the same thing at 1.5k rows and wrote it down in MODEL_CARD.md. it reproduced at
+> 8.2k. held-out loss on a same-distribution split measures memorisation of the training
+> conversations; it says nothing about whether the persona survives prompt removal. don't
+> pick a checkpoint on it.
+>
+> **also worth keeping:**
+>
+> - the prompted voice score is saturated and near-useless: stock Qwen3.5-4B handed the wag
+>   system prompt scores 4.69, *above* every fine-tune. only the nosys number discriminates.
+> - `narrating the user` in the multi-turn set goes 3 (base) -> 1 (ep1) -> 0 (ep2/ep3). a
+>   structural failure a system prompt can't fix, so it's a genuine training signal.
+> - ep3 answers "17% of 340" correctly with a system prompt and wrong (62.2, should be 57.8)
+>   without one. it's internalised terseness hard enough to skip the working, and loses the
+>   arithmetic with it. voice traded against chain-of-thought.
+> - v1's note that qwen3.5's linear attention can't do gradient checkpointing was wrong — it
+>   can't do *reentrant* checkpointing. `use_reentrant=False` trains straight through, and
+>   the 4B needs it on a 40GB card.
+>
+> **not done yet:** gguf export for the 4B, MODEL_CARD's gguf table and slice table still
+> describe v1, and the helpfulness axis hasn't been scored by hand for v2 (the eval harness
+> only automates voice).
+
 > ## status — 2026-09-20
 >
 > the plan below still stands. these are the bits of it that turned out to be wrong when

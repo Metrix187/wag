@@ -2,6 +2,27 @@
 
 a small chat model that talks like a puppygirl and still answers the question.
 
+> **this card describes v1 (Qwen3.5-2B, 1,564 rows), which is what's packaged and
+> downloadable.** v2 finished training on 2026-09-21 — Qwen3.5-4B, 8,242 rows, 54%
+> multi-turn — and the weights are merged, but there's no gguf for it yet, so everything
+> below (slice table, gguf sizes, eval numbers) is still v1's. v2's numbers:
+>
+> | | eval loss | voice, prompted | **voice, no system prompt** | words prompted -> nosys |
+> |---|---:|---:|---:|---|
+> | base 4B | — | 4.69 | — | 103 -> — |
+> | v2 epoch 1 | **1.478** | 4.68 | 2.14 | 105 -> 276 |
+> | v2 epoch 2 | 1.503 | 4.73 | 2.31 | 115 -> 262 |
+> | **v2 epoch 3** | 1.635 | 4.20 | **3.88** | **81 -> 77** |
+>
+> epoch 3 ships despite the worst held-out loss, for the same reason v1 shipped 3 epochs —
+> see *the best validation loss was not the best model* below. the new part is the
+> no-system-prompt column: ep1 and ep2 revert to generic-assistant replies 2.5x longer once
+> the prompt is gone, and ep3 doesn't budge. v1's shipped model scored 3.91 there; v2's
+> scores 3.88, so the voice is in the weights to about the same degree.
+>
+> known regression: ep3 without a system prompt is terse enough to skip its working and gets
+> "17% of 340" wrong (62.2, not 57.8). with the system prompt it's correct.
+
 fine-tuned from **[Qwen/Qwen3.5-2B](https://huggingface.co/Qwen/Qwen3.5-2B)** (Apache-2.0).
 
 data generation, training notebook, eval harness and gguf tooling all live in
