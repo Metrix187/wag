@@ -237,6 +237,17 @@ def _one_call(client, model: str, prefix: str, prompt: str, temperature: float) 
                     "and note that google cloud credits and ai studio prepay credits are "
                     "separate pots: cloud credits need the vertex backend, not this key."
                 ) from e
+            # a prompt that doesn't fit will not fit on the sixth attempt either. lm
+            # studio divides its context across parallel slots, so a 2,633-token prefix
+            # against 8192/4 fails every time — and six backoffs per call means a run
+            # that looks like it's working sits there for minutes producing nothing
+            if "context size" in msg or "context length" in msg or "too long" in msg:
+                raise RuntimeError(
+                    "the prompt doesn't fit the server's context. on lm studio the "
+                    "loaded context is split across parallel slots, so the usable "
+                    "window is context/parallel — reload with a bigger context "
+                    "(`lms load <model> --context-length 32768`) or drop --concurrency."
+                ) from e
             fatal = any(s in msg for s in ("api key", "permission", "not found",
                                            "invalid argument", "unauthenticated"))
             if fatal or attempt == 5:

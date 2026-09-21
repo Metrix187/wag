@@ -1,0 +1,5 @@
+{"id": "multiturn-0001", "error": "gave up after retries: HTTP Error 400: Bad Request"}
+{"id": "scene-0000", "error": "gave up after retries: HTTP Error 400: Bad Request"}
+{"id": "multiturn-0002", "error": "gave up after retries: HTTP Error 400: Bad Request"}
+{"id": "multiturn-0005", "error": "gave up after retries: HTTP Error 400: Bad Request"}
+{"id": "uncertainty-0000", "error": "ends on a user turn"}
