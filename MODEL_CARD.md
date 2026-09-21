@@ -2,20 +2,10 @@
 
 a small chat model that talks like a puppygirl and still answers the question.
 
-> **this card still describes v1 (Qwen3.5-2B, 1,564 rows) below the line.** v2 finished
-> on 2026-09-21 — Qwen3.5-4B, 8,242 rows, 54% multi-turn — and is built and converted:
->
-> | file | size | notes |
-> |---|---:|---|
-> | `gguf-v2/wag-v2-q4_k_m.gguf` | 2.71 GB | the one to use. 9.8 tok/s on 4 cpu threads |
-> | `gguf-v2/wag-v2-q8_0.gguf` | 4.48 GB | if you have the room |
-> | `gguf-v2/wag-v2-f16.gguf` | 8.42 GB | conversion intermediate, kept for requantizing |
->
-> all three verified by actually loading them (`llama-bench`, arch `qwen35`, 4.21B) rather
-> than trusting the header — v1's block_count bug failed at load time, and it bit v2 too:
-> 32 real blocks against a header claiming 33, patched on the f16 so the quants inherit it.
->
-> the slice table and gguf table further down are still v1's. v2's numbers:
+**v2**, on Qwen3.5-4B: 8,242 training rows at 54% multi-turn, against v1's 1,564 at 14%.
+the older 2B model is at [skyuu72/wag-2b](https://huggingface.co/skyuu72/wag-2b).
+
+> **which checkpoint ships, and why it isn't the one with the best loss.**
 >
 > | | eval loss | voice, prompted | **voice, no system prompt** | words prompted -> nosys |
 > |---|---:|---:|---:|---|
@@ -24,11 +14,20 @@ a small chat model that talks like a puppygirl and still answers the question.
 > | v2 epoch 2 | 1.503 | 4.73 | 2.31 | 115 -> 262 |
 > | **v2 epoch 3** | 1.635 | 4.20 | **3.88** | **81 -> 77** |
 >
-> epoch 3 ships despite the worst held-out loss, for the same reason v1 shipped 3 epochs —
-> see *the best validation loss was not the best model* below. the new part is the
-> no-system-prompt column: ep1 and ep2 revert to generic-assistant replies 2.5x longer once
-> the prompt is gone, and ep3 doesn't budge. v1's shipped model scored 3.91 there; v2's
-> scores 3.88, so the voice is in the weights to about the same degree.
+> epoch 3 ships on the **worst** held-out loss of the three. the no-system-prompt column is
+> why: strip the system prompt and epochs 1 and 2 fall back to generic-assistant replies
+> 2.5x longer with the voice gone, while epoch 3 doesn't move at all (81 words to 77). v1's
+> shipped model scored 3.91 there and v2's scores 3.88, so the voice is in the weights to
+> about the same degree.
+>
+> held-out loss measures next-token prediction on held-out *conversations*. it says nothing
+> about whether the persona survives losing the prompt, and here the two came apart
+> completely. v1 hit the same thing at 1.5k rows — *the best validation loss was not the
+> best model*, further down — and it reproduced at 8.2k.
+>
+> the quants were verified by loading them (`llama-bench`, arch `qwen35`, 4.21B) rather
+> than by trusting the header. v1's block_count bug failed at load time and it bit v2 too:
+> 32 real blocks against a header claiming 33, patched on the f16 so the quants inherit it.
 >
 > arithmetic is now measured rather than guessed at — `eval.py math`, 8 prompts x 5 samples:
 >
@@ -47,7 +46,7 @@ a small chat model that talks like a puppygirl and still answers the question.
 > that claim came from one sample and is withdrawn. per-prompt rates still swing a lot at
 > n=5 (one prompt went 4/5 to 1/5 between runs); only the aggregate is stable.
 
-fine-tuned from **[Qwen/Qwen3.5-2B](https://huggingface.co/Qwen/Qwen3.5-2B)** (Apache-2.0).
+fine-tuned from **[Qwen/Qwen3.5-4B](https://huggingface.co/Qwen/Qwen3.5-4B)** (Apache-2.0).
 
 data generation, training notebook, eval harness and gguf tooling all live in
 [Metrix187/wag](https://github.com/Metrix187/wag). everything here is reproducible
@@ -83,18 +82,26 @@ to, and so it never learns that a neutral system prompt is something to argue wi
 
 ## training data
 
-1,564 chat examples. built by rewriting responses from permissively licensed datasets into
-wag's voice, keeping the content identical.
+8,242 chat examples, **54% of them multi-turn** — against v1's 1,564 at 14%. built by
+rewriting responses from permissively licensed datasets into wag's voice and by generating
+net-new conversations, with the content kept intact either way.
 
 | slice | rows | what it is |
 |---|---:|---|
-| voiced | 1,199 | wag system prompt + rewritten response |
-| bare | 152 | no system prompt + rewritten response |
-| plain | 153 | neutral system prompt + original response, untouched |
-| anchors | 60 | hand-written by the author, the voice spec itself |
+| multiturn | 2,815 | generated conversations, the thing v2 is actually for |
+| alpaca-cleaned | 2,354 | rewritten instruction pairs |
+| oasst1 | 938 | rewritten human-written chat |
+| scene | 872 | situational roleplay |
+| uncertainty | 370 | not knowing, and saying so |
+| intimate | 273 | domestic and affectionate registers |
+| bulk / steer / heavy | 430 | length, redirection, grief |
+| dropvoice | 112 | dropping the voice when asked |
+| everything else | 78 | code, refusal, identity, greetings, crisis |
 
-15% carry a `<think>` block — a short first-person account of the actual reasoning, not
-decorative filler.
+431 rows (5%) carry a `<think>` block. **it was not trained on** — `encode` supervised only
+the visible reply and its `<|im_end|>`, so the reasoning text sat in the masked region. the
+model emits no think tags at all, which is why the shipped template has no think block in
+its generation path.
 
 ### sources
 
@@ -152,6 +159,12 @@ have zero overlap with the anchors. two axes, because either one alone lies:
 
 three models: stock Qwen3.5-2B given the same wag system prompt, wag at 3 epochs (shipped),
 and wag at 1 epoch (the best-validation-loss checkpoint).
+
+> **the two tables immediately below are v1's**, kept because the reasoning in *reading the
+> numbers honestly* is what carried over and got confirmed on v2. the v2 figures are the
+> ones at the top of this card, plus `eval.py math` for arithmetic. v2's helpfulness axis
+> has **not** been scored by hand yet — the harness automates voice and turn-taking, and
+> helpfulness is the half a script can't judge.
 
 ### helpful
 
@@ -221,20 +234,29 @@ python eval.py compare out_base.jsonl out_wag3ep.jsonl
 
 ## training
 
-full fine-tune, A100 40GB, 3 epochs, lr 2e-5, cosine schedule, 5% warmup. loss is masked to
-assistant turns only. the vision and video towers are frozen — wag is text-only, and the
-base model's VLM stack has no business drifting during a voice fine-tune.
+LoRA r=32, alpha 64, dropout 0.05 on all attention and MLP projections — 42.5M trainable
+of 4.25B. A100 40GB, 3 epochs, 1,515 steps, lr 2e-4 cosine with 5% warmup, seq len 3072,
+batch 2 x accum 8. 3h36m. loss is masked to assistant turns — **all** of them, not just the
+last, which matters at 54% multi-turn and didn't at v1's 14%.
 
-an L4 works too with LoRA at lr 2e-4; full FT doesn't fit in 24 GB. a T4 is fp16-only
-(Turing has no bf16 at all) and is not recommended.
+a 4B full fine-tune needs ~48 GB before activations, so it wants the 80 GB card; LoRA is
+picked by measuring VRAM rather than by hand.
+
+gradient checkpointing is **on**, non-reentrant. v1's notes said qwen3.5's linear attention
+can't be checkpointed at all; that turned out to be true only of the *reentrant* variant,
+which replays the forward pass and trips on a shape change. without it the 40 GB card OOMs
+— `causal_conv1d` and `flash-linear-attention` aren't present, so the delta-rule path runs
+reference pytorch and holds ~29 GB of activations at batch 1.
 
 ## gguf
 
 | file | size | notes |
 |---|---:|---|
-| `gguf/wag-q4_k_m.gguf` | 1.19 GB | the one to use |
-| `gguf/wag-q8_0.gguf` | 1.87 GB | if you have the room |
-| `gguf/wag-f16.gguf` | 3.52 GB | conversion intermediate, kept for requantizing |
+| `gguf/wag-v2-q4_k_m.gguf` | 2.71 GB | the one to use. ~9.8 tok/s on 4 cpu threads |
+| `gguf/wag-v2-q8_0.gguf` | 4.48 GB | if you have the room |
+
+an f16 exists (8.42 GB) but isn't uploaded; re-convert from the safetensors if you want to
+requantize.
 
 text-only. the base model is a VLM and llama.cpp's converter drops the vision tower, which
 is fine here — the fine-tune never touched it.
