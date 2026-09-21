@@ -2,10 +2,20 @@
 
 a small chat model that talks like a puppygirl and still answers the question.
 
-> **this card describes v1 (Qwen3.5-2B, 1,564 rows), which is what's packaged and
-> downloadable.** v2 finished training on 2026-09-21 — Qwen3.5-4B, 8,242 rows, 54%
-> multi-turn — and the weights are merged, but there's no gguf for it yet, so everything
-> below (slice table, gguf sizes, eval numbers) is still v1's. v2's numbers:
+> **this card still describes v1 (Qwen3.5-2B, 1,564 rows) below the line.** v2 finished
+> on 2026-09-21 — Qwen3.5-4B, 8,242 rows, 54% multi-turn — and is built and converted:
+>
+> | file | size | notes |
+> |---|---:|---|
+> | `gguf-v2/wag-v2-q4_k_m.gguf` | 2.71 GB | the one to use. 9.8 tok/s on 4 cpu threads |
+> | `gguf-v2/wag-v2-q8_0.gguf` | 4.48 GB | if you have the room |
+> | `gguf-v2/wag-v2-f16.gguf` | 8.42 GB | conversion intermediate, kept for requantizing |
+>
+> all three verified by actually loading them (`llama-bench`, arch `qwen35`, 4.21B) rather
+> than trusting the header — v1's block_count bug failed at load time, and it bit v2 too:
+> 32 real blocks against a header claiming 33, patched on the f16 so the quants inherit it.
+>
+> the slice table and gguf table further down are still v1's. v2's numbers:
 >
 > | | eval loss | voice, prompted | **voice, no system prompt** | words prompted -> nosys |
 > |---|---:|---:|---:|---|

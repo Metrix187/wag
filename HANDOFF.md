@@ -42,9 +42,21 @@
 >   can't do *reentrant* checkpointing. `use_reentrant=False` trains straight through, and
 >   the 4B needs it on a 40GB card.
 >
-> **not done yet:** gguf export for the 4B, MODEL_CARD's gguf table and slice table still
-> describe v1, and the helpfulness axis hasn't been scored by hand for v2 (the eval harness
-> only automates voice).
+> **gguf is done too** — q4_k_m 2.71 GB, q8_0 4.48 GB, f16 8.42 GB in `MyDrive/wag/gguf-v2`,
+> all three load-tested with llama-bench rather than taken on trust. the block_count bug
+> repeated on the 4B (32 blocks, header claiming 33) and fix_gguf_blocks handled it.
+>
+> two things about llama.cpp worth writing down, both cost time:
+> - `llama-cli` ignores `-no-cnv` here and sits in conversation mode. with colab's `!` it
+>   gets EOF on stdin and loops its `>` prompt forever — 172 million lines of it before I
+>   worked out it wasn't just slow. use `llama-bench` to answer "does it load"; it has no
+>   interactive mode and exits on its own.
+> - piping to `tail` hides everything until the process ends, which is exactly the wrong
+>   behaviour when the process never ends. write to a log and read the log.
+>
+> **not done yet:** MODEL_CARD's slice table and gguf table below the banner still describe
+> v1, and the helpfulness axis hasn't been scored by hand for v2 (the harness only automates
+> voice, and helpfulness is the half a script can't judge).
 
 > ## status — 2026-09-20
 >
