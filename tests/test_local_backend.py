@@ -120,6 +120,9 @@ def main() -> int:
          last.get("prompt") == "[SYSTEM_PROMPT]SYSTEM HERE[/SYSTEM_PROMPT]"
                                "[INST]USER HERE[/INST]"),
         ("no literal bos token in the prompt", "<s>" not in last.get("prompt", "")),
+        # raw completions won't stop on its own, and a model that carries on past its
+        # reply writes the next exchange too, which shreds the turn alternation
+        ("stop sequences sent", last.get("stop") == ["</s>", "[INST]", "[SYSTEM_PROMPT]"]),
         ("text still comes back", got2["text"] == REPLY),
         ("usage still reported", got2["in_tok"] == 1234 and got2["out_tok"] == 56),
     ]

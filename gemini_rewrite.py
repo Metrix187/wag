@@ -163,8 +163,13 @@ class _LocalModels:
             d = None
 
         if d is None:
+            # the chat endpoint stops at the end of the assistant turn for you. raw
+            # completions does not, so without these the model sails past its own reply
+            # and starts writing the next exchange — which is where 795 of the first
+            # run's 1,193 failures came from, nearly all of them "two turns in a row".
             d = self._post("/completions",
-                           {**common, "prompt": self._as_prompt(system, contents)})
+                           {**common, "prompt": self._as_prompt(system, contents),
+                            "stop": ["</s>", "[INST]", "[SYSTEM_PROMPT]"]})
             text = d["choices"][0]["text"]
 
         u = d.get("usage") or {}
