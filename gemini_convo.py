@@ -98,6 +98,34 @@ affectionate and flirty, and it stops well short of explicit.
 - keep it light enough that it reads as warmth rather than content.""",
 }
 
+# which slices get a scene, and from where.
+#
+# learned the hard way on the first real run: a concrete scene beats an abstract brief
+# every time. `heavy` seeded with "stuck under a shop awning" produced mild grumbling
+# about rain — nowhere near grief. `dropvoice` seeded with "packing boxes, found an old
+# photo album" produced "reading the email... arf", which demonstrates nothing at all.
+#
+# so a slice whose whole point is a BEHAVIOUR doesn't get a random domestic scene to
+# fight with. the ones that are about a situation still do.
+HEAVY_SCENES = [
+    "someone's just come off the phone having been told a parent is in hospital.",
+    "someone found out this morning that they're being made redundant.",
+    "someone's dog died on tuesday and they haven't really said it out loud yet.",
+    "someone's waiting on test results and won't hear until monday.",
+    "someone's just had a friendship end badly and doesn't want advice about it.",
+    "someone is exhausted and quietly not coping, and hasn't asked for help.",
+]
+
+SLICE_SCENES = {
+    "multiturn": "bank",      # a situation is the point
+    "scene": "bank",          # the whole slice IS the situation
+    "intimate": "bank",       # domestic closeness, the bank is full of it
+    "steer": "bank",          # the redirect happens inside some scene
+    "heavy": "heavy",         # needs its own premises or it isn't heavy
+    "uncertainty": "none",    # the QUESTION is the point; a scene just distracts
+    "dropvoice": "none",      # the request is the point
+}
+
 TURN_RE = re.compile(r'<turn\s+role="(user|wag)"\s*>(.*?)</turn>', re.DOTALL | re.I)
 
 CONVO_SYSTEM = """\
@@ -212,16 +240,23 @@ def seed(args) -> int:
     for name, cfg in SEED_SLICES.items():
         n = args.scale and max(1, round(cfg["target"] * args.scale)) or cfg["target"]
         lo, hi = cfg["turns"]
+        policy = SLICE_SCENES.get(name, "bank")
+        source = {"bank": bank, "heavy": HEAVY_SCENES, "none": None}[policy]
         for i in range(n):
             rows.append({
                 "id": f"{name}-{i:04}",
                 "kind": "seed",
                 "slice": name,
                 "turns": rng.randint(lo, hi),
-                "scenario": rng.choice(bank),
+                "scenario": rng.choice(source) if source else "",
                 # quotas assigned up front, not patched on afterwards. v1 generated 1,700
                 # rows and got `awoo` in one of them, then needed a whole second pass
-                "target_marker": rng.choice(markers),
+                # heavy rows get no marker quota at all. the brief tells them to dial
+                # markers down, and the assigner was handing them things like `hmf`
+                # (mock indignation) on a conversation about a parent in hospital —
+                # a quota and a register pulling in opposite directions, with the
+                # quota winning because it's the more concrete instruction
+                "target_marker": "" if name == "heavy" else rng.choice(markers),
             })
 
     rng.shuffle(rows)
@@ -263,7 +298,10 @@ def build_prompt(row: dict) -> str:
     ]
     if row.get("scenario"):
         parts.append(f"\n# the scene\n\n{row['scenario']}\n\n"
-                     "wag is in this. don't have anyone explain the premise out loud.")
+                     "wag is in this. don't have anyone explain the premise out loud.\n"
+                     "the scene is only WHERE this happens — if it pulls against the "
+                     f"slice job above, the slice job wins. this row has to be a `{sl}` "
+                     "row first and a scene second.")
     if marker:
         parts.append(
             f"\n# marker\n\nwork `{marker}` in somewhere it fits"
