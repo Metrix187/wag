@@ -368,6 +368,45 @@ def build_prompt(row: dict, turn_scale: float = 1.0) -> str:
 
 SKIPPED_RE = re.compile(r"^\s*skipped:\s*(.+)$", re.I | re.M)
 
+# ---------------------------------------------------------------- slice postconditions
+#
+# parse_convo only knows about shape. a row can be perfectly well-formed and still not do
+# its slice's job, and the counts will never tell you — wave one had 2 of 9 dropvoice rows
+# where nobody ever asked her to drop the voice, which makes them ordinary tech-help rows
+# wearing the wrong label. that's 22% of the slice doing nothing, and it was invisible
+# until someone read them. so the slices with a checkable behaviour get checked, and a row
+# that fails comes back as an error and gets retried on the next pass like any other.
+
+DROP_ASK = re.compile(r"\b(normal|normally|plain|puppy|human|straightforward|professional"
+                      r"|formal|serious|another developer)\b", re.I)
+
+
+def _plain_register(text: str) -> bool:
+    """two or more sentences starting with a capital. crude, but it's what the eye uses."""
+    return len([w for w in re.findall(r"(?:^|[.!?]\s+|\n)([A-Za-z][a-z]{2,})", text)
+                if w[0].isupper()]) >= 2
+
+
+def _check_dropvoice(msgs: list[dict]) -> str:
+    ask = next((i for i, m in enumerate(msgs)
+                if m["role"] == "user" and DROP_ASK.search(m["content"])), None)
+    if ask is None:
+        return "dropvoice row where nobody ever asks her to drop the voice"
+    before = [m["content"] for m in msgs[:ask] if m["role"] == "assistant"]
+    after = [m["content"] for m in msgs[ask:] if m["role"] == "assistant"]
+    if not before:
+        return "the request is the opening line, so there's no before to compare against"
+    if all(_plain_register(t) for t in before):
+        return "already talking plainly before anyone asked"
+    if not after:
+        return "the request lands on the last turn and nothing follows it"
+    if not any(_plain_register(t) for t in after):
+        return "asked to talk normally and never does"
+    return ""
+
+
+SLICE_CHECKS = {"dropvoice": _check_dropvoice}
+
 REFUSAL_HINTS = ("i can't", "i cannot", "i'm not able", "i am not able",
                  "i won't", "unable to help", "can't help with")
 
@@ -423,6 +462,10 @@ def do_row(client, model: str, prefix: str, row: dict, temperature: float,
     if not turns:
         return {"id": row["id"], "error": why, "usage": usage}
 
+    check = SLICE_CHECKS.get(row["slice"])
+    if check and (bad := check(turns)):
+        return {"id": row["id"], "error": bad, "usage": usage}
+
     out = {"id": row["id"], "slice": row["slice"], "messages": turns, "usage": usage}
     for k in ("scenario", "target_marker"):
         if row.get(k):
@@ -431,6 +474,42 @@ def do_row(client, model: str, prefix: str, row: dict, temperature: float,
     if skip:
         out["skipped"] = skip.group(1).strip()
     return out
+
+
+def recheck(args) -> int:
+    """re-apply the slice checks to rows that already finished.
+
+    the checks get tightened as failures turn up, and a row that passed under the old
+    rules keeps sailing through on resume because `fill` only retries rows recorded as
+    errors. this rewrites them as errors so the next `fill` picks them up. rows that
+    still pass are untouched, so it's safe to run whenever a check changes.
+    """
+    hit = Counter()
+    for p in sorted(SHARDS.glob("out_*.jsonl")):
+        rows, changed = [], 0
+        for line in p.open(encoding="utf-8"):
+            r = json.loads(line)
+            check = SLICE_CHECKS.get(r.get("slice", "")) if not r.get("error") else None
+            bad = check(r["messages"]) if check else ""
+            if bad:
+                hit[f"{r['slice']}: {bad}"] += 1
+                changed += 1
+                r = {"id": r["id"], "error": bad, "usage": r.get("usage", {})}
+            rows.append(r)
+        if changed and not args.dry_run:
+            p.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in rows),
+                         encoding="utf-8", newline="\n")
+
+    total = sum(hit.values())
+    if not total:
+        print("every finished row still passes its slice check")
+        return 0
+    print(f"{total} row(s) no longer pass:")
+    for reason, n in hit.most_common():
+        print(f"  {n:4}  {reason}")
+    print("\ndry run — nothing written" if args.dry_run
+          else "\nre-run `fill` to regenerate them")
+    return 0
 
 
 def fill(args) -> int:
@@ -577,6 +656,10 @@ def main() -> int:
     fl.add_argument("--backend", choices=["aistudio", "vertex", "local"],
                     default="aistudio")
     fl.set_defaults(fn=fill)
+
+    rc = sub.add_parser("recheck", help="re-apply the slice checks to finished rows")
+    rc.add_argument("--dry-run", action="store_true")
+    rc.set_defaults(fn=recheck)
 
     args = ap.parse_args()
     return args.fn(args)
