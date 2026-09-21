@@ -1,0 +1,362 @@
+[
+ {
+  "id": "multiturn-0880",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 7,
+  "scenario": "you're in a bookshop and have been separated for twenty minutes.",
+  "target_marker": ":3"
+ },
+ {
+  "id": "uncertainty-0122",
+  "kind": "seed",
+  "slice": "uncertainty",
+  "turns": 2,
+  "scenario": "",
+  "target_marker": "arf"
+ },
+ {
+  "id": "multiturn-1449",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 5,
+  "scenario": "you're in a supermarket and someone has forgotten what they came in for.",
+  "target_marker": "hmf"
+ },
+ {
+  "id": "heavy-0035",
+  "kind": "seed",
+  "slice": "heavy",
+  "turns": 3,
+  "scenario": "someone's dog died on tuesday and they haven't really said it out loud yet.",
+  "target_marker": ""
+ },
+ {
+  "id": "uncertainty-0119",
+  "kind": "seed",
+  "slice": "uncertainty",
+  "turns": 1,
+  "scenario": "",
+  "target_marker": "awoo"
+ },
+ {
+  "id": "multiturn-1920",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 6,
+  "scenario": "you're both trying to be quiet because someone else is asleep.",
+  "target_marker": ":3"
+ },
+ {
+  "id": "dropvoice-0071",
+  "kind": "seed",
+  "slice": "dropvoice",
+  "turns": 4,
+  "scenario": "",
+  "target_marker": "awoo"
+ },
+ {
+  "id": "multiturn-2887",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 3,
+  "scenario": "the wifi is down and nobody knows why.",
+  "target_marker": "awoo"
+ },
+ {
+  "id": "multiturn-0467",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 4,
+  "scenario": "it's 2am and neither of you has admitted you should go to bed.",
+  "target_marker": "arf"
+ },
+ {
+  "id": "multiturn-2222",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 5,
+  "scenario": "you're in a supermarket and someone has forgotten what they came in for.",
+  "target_marker": ":3"
+ },
+ {
+  "id": "scene-0045",
+  "kind": "seed",
+  "slice": "scene",
+  "turns": 2,
+  "scenario": "someone's cooking and has asked you to stop helping.",
+  "target_marker": "///"
+ },
+ {
+  "id": "intimate-0064",
+  "kind": "seed",
+  "slice": "intimate",
+  "turns": 5,
+  "scenario": "you're supposed to be helping pack boxes and you've found an old photo album.",
+  "target_marker": ";;"
+ },
+ {
+  "id": "uncertainty-0357",
+  "kind": "seed",
+  "slice": "uncertainty",
+  "turns": 2,
+  "scenario": "",
+  "target_marker": "awoo"
+ },
+ {
+  "id": "intimate-0006",
+  "kind": "seed",
+  "slice": "intimate",
+  "turns": 3,
+  "scenario": "you're in the kitchen at 2am and neither of you is admitting to being hungry.",
+  "target_marker": "///"
+ },
+ {
+  "id": "multiturn-2911",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 8,
+  "scenario": "it's raining and you're both stuck under a shop awning waiting it out.",
+  "target_marker": "awoo"
+ },
+ {
+  "id": "multiturn-2725",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 8,
+  "scenario": "someone just got home from a long shift and hasn't taken their coat off yet.",
+  "target_marker": "hmf"
+ },
+ {
+  "id": "multiturn-2751",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 5,
+  "scenario": "you're in a bookshop and have been separated for twenty minutes.",
+  "target_marker": "///"
+ },
+ {
+  "id": "multiturn-1700",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 4,
+  "scenario": "you're in a kitchen at a party where you don't know many people.",
+  "target_marker": "///"
+ },
+ {
+  "id": "multiturn-1348",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 6,
+  "scenario": "you're walking back from somewhere late and the streets are empty.",
+  "target_marker": ":3"
+ },
+ {
+  "id": "multiturn-1096",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 6,
+  "scenario": "you're in a bookshop and have been separated for twenty minutes.",
+  "target_marker": "arf"
+ },
+ {
+  "id": "steer-0071",
+  "kind": "seed",
+  "slice": "steer",
+  "turns": 5,
+  "scenario": "you're in a kitchen at a party where you don't know many people.",
+  "target_marker": "awoo"
+ },
+ {
+  "id": "scene-0137",
+  "kind": "seed",
+  "slice": "scene",
+  "turns": 3,
+  "scenario": "someone's trying to explain their job and it isn't going well.",
+  "target_marker": ":3"
+ },
+ {
+  "id": "multiturn-0480",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 7,
+  "scenario": "you're walking back from somewhere late and the streets are empty.",
+  "target_marker": "arf"
+ },
+ {
+  "id": "scene-0376",
+  "kind": "seed",
+  "slice": "scene",
+  "turns": 3,
+  "scenario": "there's a power cut and you've found exactly one candle.",
+  "target_marker": "awoo"
+ },
+ {
+  "id": "intimate-0084",
+  "kind": "seed",
+  "slice": "intimate",
+  "turns": 5,
+  "scenario": "it's raining and neither of you has anywhere to be.",
+  "target_marker": "///"
+ },
+ {
+  "id": "multiturn-1708",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 5,
+  "scenario": "someone's trying to work and you're bored.",
+  "target_marker": "awoo"
+ },
+ {
+  "id": "scene-0036",
+  "kind": "seed",
+  "slice": "scene",
+  "turns": 2,
+  "scenario": "it's 2am and neither of you has admitted you should go to bed.",
+  "target_marker": "arf"
+ },
+ {
+  "id": "intimate-0152",
+  "kind": "seed",
+  "slice": "intimate",
+  "turns": 4,
+  "scenario": "you're on the sofa, someone's reading, neither of you has spoken in twenty minutes.",
+  "target_marker": "///"
+ },
+ {
+  "id": "multiturn-0595",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 4,
+  "scenario": "you're at a laundrette on a weekday afternoon.",
+  "target_marker": ">~<"
+ },
+ {
+  "id": "multiturn-1241",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 7,
+  "scenario": "you're at a laundrette on a weekday afternoon.",
+  "target_marker": "awoo"
+ },
+ {
+  "id": "scene-0664",
+  "kind": "seed",
+  "slice": "scene",
+  "turns": 2,
+  "scenario": "you're walking back from somewhere late and the streets are empty.",
+  "target_marker": "mrrp"
+ },
+ {
+  "id": "intimate-0273",
+  "kind": "seed",
+  "slice": "intimate",
+  "turns": 2,
+  "scenario": "it's raining and neither of you has anywhere to be.",
+  "target_marker": ">~<"
+ },
+ {
+  "id": "multiturn-2357",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 7,
+  "scenario": "you're supposed to be helping pack boxes and you've found an old photo album.",
+  "target_marker": ">~<"
+ },
+ {
+  "id": "multiturn-0448",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 6,
+  "scenario": "you're in a supermarket and someone has forgotten what they came in for.",
+  "target_marker": "hmf"
+ },
+ {
+  "id": "scene-0854",
+  "kind": "seed",
+  "slice": "scene",
+  "turns": 3,
+  "scenario": "it's raining and you're both stuck under a shop awning waiting it out.",
+  "target_marker": "hmf"
+ },
+ {
+  "id": "scene-0655",
+  "kind": "seed",
+  "slice": "scene",
+  "turns": 1,
+  "scenario": "you're both watching something neither of you is really watching.",
+  "target_marker": ":3"
+ },
+ {
+  "id": "multiturn-2008",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 8,
+  "scenario": "it's the first properly warm day and nobody wants to be indoors.",
+  "target_marker": "mrrp"
+ },
+ {
+  "id": "multiturn-2478",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 7,
+  "scenario": "you're on the sofa, someone's reading, neither of you has spoken in twenty minutes.",
+  "target_marker": "mrrp"
+ },
+ {
+  "id": "multiturn-0262",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 6,
+  "scenario": "someone's trying to explain their job and it isn't going well.",
+  "target_marker": ":3"
+ },
+ {
+  "id": "scene-0819",
+  "kind": "seed",
+  "slice": "scene",
+  "turns": 3,
+  "scenario": "someone's cooking and has asked you to stop helping.",
+  "target_marker": "arf"
+ },
+ {
+  "id": "multiturn-0165",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 4,
+  "scenario": "someone's on hold with customer service and has been for a while.",
+  "target_marker": "arf"
+ },
+ {
+  "id": "multiturn-1465",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 8,
+  "scenario": "you're waiting for a train that's been delayed twice.",
+  "target_marker": "awoo"
+ },
+ {
+  "id": "multiturn-2807",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 6,
+  "scenario": "someone's trying to work and you're bored.",
+  "target_marker": "awoo"
+ },
+ {
+  "id": "heavy-0111",
+  "kind": "seed",
+  "slice": "heavy",
+  "turns": 3,
+  "scenario": "someone's just had a friendship end badly and doesn't want advice about it.",
+  "target_marker": ""
+ },
+ {
+  "id": "uncertainty-0186",
+  "kind": "seed",
+  "slice": "uncertainty",
+  "turns": 1,
+  "scenario": "",
+  "target_marker": "awoo"
+ }
+]

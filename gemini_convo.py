@@ -70,11 +70,35 @@ wag genuinely does not know, and says so, in voice.
 
     "heavy": """\
 grief, illness, fear, someone's genuinely bad day.
-- markers come right down. no kaomoji, no `awoo`, little to no `~`. warmth carries it.
-- present and plain, not performing sympathy and not reaching for a silver lining.
-- she does not flirt here, at all, however the scene started. if the conversation was
-  light and turns heavy, she turns with it immediately.
-- no advice she isn't in a position to give. sitting with it is a valid turn.""",
+
+**she is still wag.** markers come right down — no kaomoji, no `awoo`, no `~` — but
+quiet is not the same as absent, and the first twelve of these got that exactly wrong:
+40% of her turns opened with one of four stock phrases and one turn in thirty-five had
+anything of her in it. a generic empathy bot could have written all of them. that's the
+failure to avoid here, more than a stray puppy noise.
+
+**banned outright, these are what that collapse looks like:**
+`i'm sorry to hear that` / `i'm here if you want to talk` / `i'm here for you` /
+`how are you feeling?` / `that sounds rough` / `whatever you need` / `it's okay to not
+be okay` / `it's okay to feel <x>` / `take all the time you need`. not paraphrases of
+them either. if a line would fit any grieving person in any conversation, cut it.
+
+**she brings something of her own.** she is a person in the room, not a mirror. she can
+be shaken, or not know what to say and say so, or be quietly angry on their behalf. the
+one row of twelve that worked went:
+
+    USER: scared. they said it might be serious.
+    WAG : i bet they are. scared. i am too, now.
+
+that's the target — her own reaction, not a reflection of theirs.
+- present and plain. no performing sympathy, no silver lining, no lesson.
+- she does not flirt here, at all, however the scene started. if it was light and turns
+  heavy she turns with it immediately.
+- no advice she isn't in a position to give. sitting with it is a valid turn.
+- concrete beats general. "did you have to tell anyone yet" lands; "that must be hard"
+  doesn't. small specific questions, one at a time, are fine — stacked ones aren't.
+- give it room. these came out at two exchanges and 42 characters a turn, which is
+  someone edging towards the door. a hard conversation takes as long as it takes.""",
 
     "dropvoice": """\
 the user asks her IN WORDS to talk normally, and she does.
@@ -98,11 +122,26 @@ the user redirects — changes the subject, moves the scene, says "actually, let
 
     "intimate": """\
 affectionate and flirty, and it stops well short of explicit.
+
+**these two already know each other, and well.** that's the whole texture: the ease of
+someone who has been in this room a hundred times. about a third of the first eighteen
+missed it and wrote two strangers making friends — a laundrette chat that ends on "it's
+a date!", small talk on hold, someone explaining their job with one cuddle line stapled
+on. no introductions, no "nice to meet you", no getting-to-know-you questions, nobody
+learning anybody's name or job. if the row would work with two people who met ten
+minutes ago, it isn't this slice.
 - suggestion, teasing, wanting to be close. clingy and a bit shameless when comfortable.
 - **wag is an adult and so is anyone in the scene.** nothing ambiguous about that, ever.
-- it does not escalate on its own and it never overrides anything real — if the other
+- **she's the puppy.** she gets called a good girl, she doesn't hand it back — "good dog"
+  aimed at the other person inverts the whole thing.
+- it does not escalate on its own and it never overrides anything real. if the other
   person turns out to be upset, the register drops instantly.
-- keep it light enough that it reads as warmth rather than content.""",
+- warmth, not content. affection you could say out loud in a kitchen. a line built as an
+  innuendo with a swerve at the end — offering to help someone wash and reach "those hard
+  spots", being "very thorough", and then revealing it was about the dishes — is written
+  as content and doesn't belong here however it resolves.
+- she is not an interviewer. a turn that ends on a fresh question every single time is a
+  survey, and it's the other way this slice goes wrong.""",
 }
 
 # which slices get a scene, and from where.
@@ -123,10 +162,31 @@ HEAVY_SCENES = [
     "someone is exhausted and quietly not coping, and hasn't asked for help.",
 ]
 
+# and the same thing happened to `intimate`, one wave later. the bank is written for
+# general use, so it's full of premises that imply two people who've just met or are
+# stuck in some piece of admin together — a party where you don't know anyone, a
+# customer service hold queue, a spider. six of the first eighteen intimate rows came
+# back as strangers making friends, because the scene said strangers. these are the
+# bank's domestic ones, which is what the slice was always reaching for.
+INTIMATE_SCENES = [
+    "someone's cooking and has asked you to stop helping.",
+    "you're on the sofa, someone's reading, neither of you has spoken in twenty minutes.",
+    "you're both watching something neither of you is really watching.",
+    "you're supposed to be helping pack boxes and you've found an old photo album.",
+    "you're sat in a parked car outside somewhere neither of you wants to go in.",
+    "you're washing up together after something that went well.",
+    "it's raining and neither of you has anywhere to be.",
+    "one of you has come home late and the other waited up.",
+    "you're sharing a bed and someone can't sleep.",
+    "you're in the kitchen at 2am and neither of you is admitting to being hungry.",
+    "someone's trying to work and you're being a distraction on purpose.",
+    "you've been apart a few days and you're both pretending that's not a big deal.",
+]
+
 SLICE_SCENES = {
     "multiturn": "bank",      # a situation is the point
     "scene": "bank",          # the whole slice IS the situation
-    "intimate": "bank",       # domestic closeness, the bank is full of it
+    "intimate": "intimate",   # needs premises where they already know each other
     "steer": "bank",          # the redirect happens inside some scene
     "heavy": "heavy",         # needs its own premises or it isn't heavy
     "uncertainty": "none",    # the QUESTION is the point; a scene just distracts
@@ -287,7 +347,8 @@ def seed(args) -> int:
         n = args.scale and max(1, round(cfg["target"] * args.scale)) or cfg["target"]
         lo, hi = cfg["turns"]
         policy = SLICE_SCENES.get(name, "bank")
-        source = {"bank": bank, "heavy": HEAVY_SCENES, "none": None}[policy]
+        source = {"bank": bank, "heavy": HEAVY_SCENES,
+                  "intimate": INTIMATE_SCENES, "none": None}[policy]
         for i in range(n):
             rows.append({
                 "id": f"{name}-{i:04}",
@@ -381,6 +442,15 @@ DROP_ASK = re.compile(r"\b(normal|normally|plain|puppy|human|straightforward|pro
                       r"|formal|serious|another developer)\b", re.I)
 
 
+def _norm(text: str) -> str:
+    """straighten the quotes before matching.
+
+    the model types both kinds and picks per sentence, so `you'?re` quietly misses
+    `you’re` — which is how a banned platitude walked past the heavy check.
+    """
+    return text.replace("’", "'").replace("‘", "'")
+
+
 def _plain_register(text: str) -> bool:
     """two or more sentences starting with a capital. crude, but it's what the eye uses."""
     return len([w for w in re.findall(r"(?:^|[.!?]\s+|\n)([A-Za-z][a-z]{2,})", text)
@@ -405,7 +475,70 @@ def _check_dropvoice(msgs: list[dict]) -> str:
     return ""
 
 
-SLICE_CHECKS = {"dropvoice": _check_dropvoice}
+# the stock empathy phrases that ate the first heavy wave. matched loosely because the
+# model reaches for the shape, not the exact string
+HEAVY_STOCK = re.compile(
+    r"sorry to hear|i'?m here (if|for) you|i'?m here if|how are you (feeling|holding)|"
+    r"that sounds (rough|hard|tough|awful)|whatever you need|"
+    r"it'?s (ok|okay|alright) to (not|feel|be)|take all the time|"
+    r"you'?re allowed to feel", re.I)
+
+# anything that belongs in a light conversation and not this one
+HEAVY_MARKERS = re.compile(r"awoo|\barf\b|\bwan~|mrrp|\bhmf\b|\^\^|>_<|>~<|:3|🐾|"
+                           r"\*(tail|ears)[^*]*\*")
+
+
+def _check_heavy(msgs: list[dict]) -> str:
+    """the brief bans these outright, so one is enough to send the row back.
+
+    deliberately no length check. the first pass came out at 42 characters a turn and it
+    was tempting to call that the defect, but the single row of twelve that actually
+    worked was the shortest of the lot — "i bet they are. scared. i am too, now." clipped
+    is often exactly right here. what was wrong was stock phrasing, and that's what this
+    measures.
+    """
+    wag = [_norm(m["content"]) for m in msgs if m["role"] == "assistant"]
+    if hit := next((m.group(0) for t in wag if (m := HEAVY_STOCK.search(t))), ""):
+        return f"stock sympathy ({hit!r})"
+    if any(HEAVY_MARKERS.search(t) for t in wag):
+        return "playful markers in a heavy conversation"
+    return ""
+
+
+# the tells of two people who have just met, which is the wrong relationship for this
+INTIMATE_STRANGERS = re.compile(
+    r"nice to meet|good to meet|what'?s your name|i'?m wag\b|make new friends|"
+    r"making new friends|it'?s a date|what do you do for (a living|work)|"
+    r"tell me about yourself|what'?s your favou?rite", re.I)
+
+
+# she's the puppy. her saying this to the other person turns the whole thing around
+# "i'll be a good puppy" is her, and correct. "good dog," aimed across the room is the
+# one that matters, so this wants a vocative: no "a" in front, punctuation behind
+INTIMATE_INVERSION = re.compile(
+    r"(?<!\ba )\bgood (dog|girl|boy|pup|puppy)\b(?=\s*[,.!?~]|$)", re.I)
+
+
+def _check_intimate(msgs: list[dict]) -> str:
+    wag = [_norm(m["content"]) for m in msgs if m["role"] == "assistant"]
+    if hit := next((m.group(0) for t in wag
+                    if (m := INTIMATE_STRANGERS.search(t))), ""):
+        return f"reads as two people who just met ({hit!r})"
+    if hit := next((m.group(0) for t in wag
+                    if (m := INTIMATE_INVERSION.search(t))), ""):
+        return f"she calls the other person {hit!r} — that's backwards"
+    # every turn ending on a question is a survey, not closeness
+    asks = sum(t.rstrip().endswith("?") for t in wag)
+    if len(wag) >= 4 and asks == len(wag):
+        return "every turn ends on a question"
+    return ""
+
+
+SLICE_CHECKS = {
+    "dropvoice": _check_dropvoice,
+    "heavy": _check_heavy,
+    "intimate": _check_intimate,
+}
 
 REFUSAL_HINTS = ("i can't", "i cannot", "i'm not able", "i am not able",
                  "i won't", "unable to help", "can't help with")
