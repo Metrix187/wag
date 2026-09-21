@@ -706,8 +706,15 @@ def shard(args) -> int:
     )
 
     # start numbering past any shard that already has results, or a re-shard would hand
-    # new agents the same filenames and clobber completed work
-    existing = [int(p.stem.split("_")[1]) for p in SHARDS.glob("out_*.jsonl")
+    # new agents the same filenames and clobber completed work.
+    #
+    # in_*.json counts too, not just out_*.jsonl — a shard that's been handed out but
+    # hasn't finished yet has no output to be seen by, so numbering off results alone
+    # will happily reuse its number and overwrite the work in flight. cand_/judge_ for
+    # the same reason.
+    existing = [int(p.stem.split("_")[1])
+                for pat in ("out_*.jsonl", "in_*.json", "cand_*.jsonl", "judge_*.jsonl")
+                for p in SHARDS.glob(pat)
                 if p.stem.split("_")[1].isdigit()]
     n_shards = max(existing) + 1 if existing else 0
     first = n_shards

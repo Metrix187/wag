@@ -1,0 +1,18 @@
+[
+ {
+  "id": "heavy-0000",
+  "kind": "seed",
+  "slice": "heavy",
+  "turns": 2,
+  "scenario": "it's raining and you're both stuck under a shop awning waiting it out.",
+  "target_marker": "hmf"
+ },
+ {
+  "id": "multiturn-0000",
+  "kind": "seed",
+  "slice": "multiturn",
+  "turns": 8,
+  "scenario": "you're waiting for a train that's been delayed twice.",
+  "target_marker": ";;"
+ }
+]
