@@ -320,15 +320,24 @@ def seed(args) -> int:
 # ------------------------------------------------------------------ fill
 
 
-def build_prompt(row: dict) -> str:
+def build_prompt(row: dict, turn_scale: float = 1.0) -> str:
+    """the per-row half of the prompt. `turn_scale` inflates the length we ask for.
+
+    measured on mistral-small-24b over 60 rows: it delivers about 0.6 of the exchanges
+    you ask for and tops out near 5, and saying "exactly N, that's 2N tags, don't stop
+    early" made it *worse* at the short end rather than better. so this asks for more
+    instead of asking harder. the shard still records the length we actually want —
+    this only changes what the model is told, and gemini gets the default 1.0.
+    """
     sl = row["slice"]
     brief = SLICE_BRIEFS.get(sl, "")
     marker = row.get("target_marker", "")
     mood = MARKER_MOODS.get(marker, "")
+    asked = max(1, round(row["turns"] * turn_scale))
 
     parts = [
-        f"write a conversation of about {row['turns']} exchanges "
-        f"({row['turns']} user turns, {row['turns']} wag turns).",
+        f"write a conversation of about {asked} exchanges "
+        f"({asked} user turns, {asked} wag turns).",
         f"\n# this row's job — slice `{sl}`\n\n{brief}",
     ]
     if row.get("scenario"):
@@ -390,9 +399,11 @@ def parse_convo(text: str) -> tuple[list[dict], str]:
     return turns, ""
 
 
-def do_row(client, model: str, prefix: str, row: dict, temperature: float) -> dict:
+def do_row(client, model: str, prefix: str, row: dict, temperature: float,
+           turn_scale: float = 1.0) -> dict:
     try:
-        got = _one_call(client, model, prefix, build_prompt(row), temperature)
+        got = _one_call(client, model, prefix, build_prompt(row, turn_scale),
+                        temperature)
     except Exception as e:  # noqa: BLE001
         return {"id": row["id"], "error": str(e)[:300]}
 
@@ -459,7 +470,7 @@ def fill(args) -> int:
 
     if args.dry_run:
         print("\ndry run — nothing spent.\n" + "-" * 60)
-        print(build_prompt(todo[0][1])[:1500])
+        print(build_prompt(todo[0][1], args.turn_scale)[:1500])
         print("-" * 60)
         return 0
 
@@ -480,7 +491,8 @@ def fill(args) -> int:
 
     try:
         with ThreadPoolExecutor(max_workers=args.concurrency) as pool:
-            futs = {pool.submit(do_row, client, args.model, prefix, r, args.temperature): (n, r)
+            futs = {pool.submit(do_row, client, args.model, prefix, r,
+                                args.temperature, args.turn_scale): (n, r)
                     for n, r in todo}
             for i, fut in enumerate(as_completed(futs), 1):
                 n, row = futs[fut]
@@ -546,6 +558,9 @@ def main() -> int:
     fl.add_argument("--model", default=DEFAULT_MODEL)
     fl.add_argument("--concurrency", type=int, default=8)
     fl.add_argument("--temperature", type=float, default=1.1)
+    # local models under-deliver on length; gemini doesn't, so this stays 1.0 unless
+    # you ask. 1.6 is what mistral-small-24b needed to land on the asked-for average
+    fl.add_argument("--turn-scale", type=float, default=1.0)
     fl.add_argument("--limit", type=int, default=0)
     fl.add_argument("--dry-run", action="store_true")
     fl.add_argument("--backend", choices=["aistudio", "vertex", "local"],
