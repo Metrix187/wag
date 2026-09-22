@@ -64,7 +64,20 @@
 > - piping to `tail` hides everything until the process ends, which is exactly the wrong
 >   behaviour when the process never ends. write to a log and read the log.
 >
-> **not done yet:** MODEL_CARD's slice table and gguf table below the banner still describe
+> **traps this round set, so the next one doesn't:**
+>
+> - a `<think>` fix has to reach *every* copy. I patched the three ggufs and almost shipped
+>   the safetensors with its own unpatched `chat_template.jinja` — caught while staging the
+>   upload, not by design. enumerate the copies before calling something fixed.
+> - `fix_gguf_blocks.py` saying "already fine" only means the header agrees with itself.
+>   the bug it guards fails at *load*. load the thing (`llama-bench`) before believing it.
+> - don't write up model behaviour from one generation. did it twice here and was wrong
+>   both times; `eval.py math` defaults to 5 samples a prompt for exactly that reason.
+> - bash heredocs eat backslash escapes on this machine. `
+` lands as a real newline and
+>   `` as 0x08. use the Write tool, or build escapes with `chr(92)`/`chr(10)`.
+>
+> > **not done yet:** MODEL_CARD's slice table and gguf table below the banner still describe
 > v1, and the helpfulness axis hasn't been scored by hand for v2 (the harness only automates
 > voice, and helpfulness is the half a script can't judge).
 
