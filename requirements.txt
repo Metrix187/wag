@@ -1,5 +1,13 @@
-# local dataset tooling only. training deps live in train.ipynb (colab installs its own).
-anthropic>=0.40.0
+# local dataset tooling only. training deps live in the notebooks (colab installs its own).
+#
+# the core is stdlib on purpose: gen_anchors.py, fetch/shard/merge/filter/build, the eval
+# metrics, the tests, and --backend local — which is what v2 actually shipped with. that
+# one talks to any openai-compatible server (vllm, lm studio) over urllib, no sdk needed.
+#
+# everything below is optional, and each is only imported by the path that needs it.
 
-# gen_anchors.py and the fetch/filter/build stages are pure stdlib on purpose —
-# only `gen_bulk.py rewrite` needs the sdk above.
+# gemini_rewrite.py / gemini_convo.py / gemini_judge.py with --backend gemini or vertex
+google-genai
+
+# gen_bulk.py rewrite — v1's metered anthropic path. v1 itself ran on subagents instead
+anthropic>=0.40.0
