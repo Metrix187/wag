@@ -82,7 +82,7 @@ def encode(rec):
     """mask the user's turns, supervise every one of wag's.
 
     the v1 notebook supervised only the LAST assistant turn and masked everything before
-    it. fine when 14% of rows were multi-turn; v2 is 54%, so it threw away five of wag's
+    it. fine when none of v1's rows were multi-turn; v2 is 54%, so it threw away five of wag's
     six replies in a six-exchange conversation — the smoke test put supervision at 31%.
 
     spans are found by character offset rather than by tokenising prefixes and trusting

@@ -4,7 +4,7 @@
 
 > ## status — 2026-09-21 — v2 is trained, and epoch 3 ships
 >
-> dataset came out at 8,242 training rows, 54% multi-turn (v1: 1,564 and 14%). trained as
+> dataset came out at 8,242 training rows, 54% multi-turn (v1: 1,564, all single-turn). trained as
 > LoRA r=32 on Qwen3.5-4B, 3 epochs, 1,515 steps, 3h36m on a 40GB A100. merged model is at
 > `MyDrive/wag/wag-final-v2`; the epoch-1 and epoch-2 adapters are kept beside it as
 > `keep-step500` and `keep-step1000`.
