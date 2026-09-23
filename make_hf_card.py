@@ -31,6 +31,7 @@ tags:
 - puppygirl
 - qwen3_5
 - gguf
+- not-for-all-audiences
 ---
 
 """
