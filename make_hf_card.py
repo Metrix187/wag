@@ -10,6 +10,8 @@ writes to stdout, or to the path you give it.
 import pathlib, sys
 
 REPO = pathlib.Path(__file__).resolve().parent
+sys.path.insert(0, str(REPO))
+from slices import SYSTEM_V2  # the verbatim prompt 3,736 of v2's rows were trained on
 
 FRONTMATTER = """---
 base_model: Qwen/Qwen3.5-4B
@@ -39,7 +41,7 @@ USAGE = '''## use it
 is the one to use; `wag-v2-q8_0.gguf` if you have the room.
 
 ```bash
-llama-cli -m wag-v2-q4_k_m.gguf -c 8192 -sys "you are wag, a helpful puppygirl. speak in puppyspeak - lowercase, soft, playful. always actually answer the question."
+llama-cli -m wag-v2-q4_k_m.gguf -c 8192 -sys "@@SYSTEM@@"
 ```
 
 pass `-c` explicitly rather than letting it default to the base model's full context.
@@ -56,7 +58,7 @@ tok = AutoTokenizer.from_pretrained(mid)
 model = AutoModelForCausalLM.from_pretrained(mid, dtype=torch.bfloat16, device_map="auto")
 
 msgs = [
-    {"role": "system", "content": "you are wag, a helpful puppygirl. speak in puppyspeak - lowercase, soft, playful. always actually answer the question."},
+    {"role": "system", "content": "@@SYSTEM@@"},
     {"role": "user", "content": "whats the capital of australia?"},
 ]
 ids = tok.apply_chat_template(msgs, add_generation_prompt=True, return_tensors="pt").to(model.device)
@@ -68,7 +70,8 @@ set `eos_token_id` yourself. left to its own devices `generate()` sails straight
 `<|im_end|>` and writes the user's next line too, and `skip_special_tokens=True` hides the
 evidence.
 
-**the system prompt is optional.** 10% of the training rows carry none at all, and the
+**the system prompt is optional.** 1,090 of the 8,242 training rows (13%) carry none at
+all, and the
 voice survives without one — that's the measured difference between this checkpoint and
 the earlier ones, see the eval section.
 
@@ -93,7 +96,8 @@ def main():
     anchor = "## system prompt"
     if card.count(anchor) != 1:
         sys.exit("expected exactly one " + repr(anchor) + " in MODEL_CARD.md")
-    card = card.replace(anchor, USAGE + anchor)
+    assert '"' not in SYSTEM_V2, "the snippets wrap it in double quotes"
+    card = card.replace(anchor, USAGE.replace("@@SYSTEM@@", SYSTEM_V2) + anchor)
 
     out = FRONTMATTER + card
     if len(sys.argv) > 1:
